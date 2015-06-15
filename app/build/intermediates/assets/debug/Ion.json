@@ -1,0 +1,137 @@
+{
+    "Author": "Liviu Rebreanu",
+    "Finished": false,
+    "Favorite": false,
+    "LastPage": 0,
+    "2":[
+        false,
+        1,
+        {
+            "Question":"Unde se petrece actiunea?",
+            "Answers":[
+                "In satul Pripas",
+                "la Cluj",
+                "Mai sus de Armandia",
+                "In Bucovina"
+            ],
+            "Answer":1
+        },
+        {
+            "Question":"Ce se afla la marginea satului Pripas?",
+            "Answers":[
+                "Rapele Dracului",
+                "O cununa de flori",
+                "Un alt sat",
+                "O cruce pe care e rastignit Hristos"
+            ],
+            "Answer":4        }],
+    "3":[
+        false,
+        1,
+        {
+            "Question":"Cine detine prima casa de la intrarea in sat?",
+            "Answers":[
+                "Ion",
+                "Invatatorul satului",
+                "Florica",
+                "Oloaga satului"
+            ],
+            "Answer":1       },
+        {
+            "Question":"Cine e Herdelea?",
+            "Answers":[
+                "Tatal lui Ion",
+            "Invatatorul satului",
+            "Detinatorul carciumii din sat",
+            "Unchiul lui Ion"
+        ],
+            "Answer":2        },
+        {
+            "Question":"Cine detine carciuma din sat?",
+            "Answers":[
+                "Maxim Oprea",
+                "Ion",
+                "Avrum",
+                "Florica"
+            ],
+            "Answer":3        }],
+    "4":[
+        false,
+        1,
+
+        {
+            "Question":"Cine canta la vioara in timpul horei?",
+            "Answers":[
+                "Holbea",
+                "Gavan",
+                "Nu este mentionat",
+                "Briceag"
+            ],
+            "Answer":4        }],
+    "5":[
+        false,
+        1,{
+            "Question":"Ce faceau copiii la hora?",
+            "Answers":[
+                "Urmaresc dansul fetelor",
+            "Se joaca unii cu al?ii",
+            "Mananca",
+            "Stau cu mamele lor"
+        ],
+            "Answer":1       },
+        {
+            "Question":"Cum este descris primarul?",
+            "Answers":[
+                "Cu ochi caprui si burta mare",
+            "Cu mustati albe si ochi albastri",
+            "Vaduv si slabanog",
+            "Cu ochi albastri si ochelari"
+        ],
+            "Answer":2       }],
+    "6":[
+        false,
+        1,
+        {
+            "Question":"Cine este poreclita oloaga satului?",
+            "Answers":[
+                "Mama lui Ion",
+            "Florica",
+            "Savista",
+            "Ana"
+        ],
+            "Answer":3       }
+
+    ],
+    "10":[
+        false,
+        1,
+        {
+            "Question":"Cu cine a dansat Ion la hora?",
+            "Answers":[
+                "Cu Savista",
+            "Cu nimeni",
+            "Cu Florica",
+            "Cu Ana"
+        ],
+            "Answer":4       },
+        {
+            "Question":"Unde s-au intalnit Ana si Ion?",
+            "Answers":[
+                "In livada",
+                "Langa pamanturile lui Ion",
+                "Acasa la Ion",
+                "In fata carciumii"
+            ],
+            "Answer":1       },
+        {
+            "Question":"Cine i-a vazut pe Ana si pe Ion In livada?",
+            "Answers":[
+                "George al Tomii",
+                "Ilie Onu",
+                "Mama lui Ion",
+                "Vasile Baciu"
+            ],
+            "Answer":2       }] }
+		
+		
+ 
