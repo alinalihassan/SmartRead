@@ -942,8 +942,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
             myView.setVisibility(View.VISIBLE);
             openAbout = true;
             refreshLayout.setEnabled(false);
-
-
         } else {
             openAbout = false;
             refreshLayout.setEnabled(true);
@@ -1059,8 +1057,10 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
                     if (radioGroup.getCheckedRadioButtonId() != -1) {
                         try {
                             RadioButton rdio = (RadioButton) findViewById(getResources().getIdentifier("Option" + String.valueOf(obj.getInt("Answer")), "id", getBaseContext().getPackageName()));
+                            if (rdio.isChecked()) correctAnswers++;
+
                             if (array.isNull(i + 1)) {
-                                if((array.getInt(1)==1 && rdio.isChecked()?correctAnswers+1:correctAnswers)>=array.getInt(1)) {
+                                if(correctAnswers>=array.getInt(1)) {
                                     array.put(0, true);
                                     Write(null, null);
                                     correctAnswers=0;
@@ -1093,7 +1093,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
                             }
                             else if (rdio.isChecked()) {
                                 QuestionPage(array, i + 1, main);
-                                correctAnswers++;
                             }
                             else {
                                 WrongAnim(radioGroup);
