@@ -77,8 +77,8 @@
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="color_accent">#448AFF</color>
-    <color name="color_primary">#3F51B5</color>
-    <color name="color_primary_dark">#303F9F</color>
+    <color name="color_primary">#009688</color>
+    <color name="color_primary_dark">#00877A</color>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.2.0/res/values/values.xml -->
     <eat-comment/>
     <color name="com_facebook_blue">#3B5998</color>

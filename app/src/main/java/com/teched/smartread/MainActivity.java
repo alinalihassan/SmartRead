@@ -884,6 +884,24 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         if (bool) {
             myView.setVisibility(View.VISIBLE);
             drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
+            View myView1 = findViewById(R.id.QuestionLayout);
+            myView1.setVisibility(View.VISIBLE);
+            View quest = findViewById(R.id.Question);
+            quest.setVisibility(View.VISIBLE);
+            RadioButton quest1 = (RadioButton)findViewById(R.id.Option1);
+            quest1.setTextColor(Color.BLACK);
+            quest1.setVisibility(View.VISIBLE);
+            quest1 = (RadioButton)findViewById(R.id.Option2);
+            quest1.setTextColor(Color.BLACK);
+            quest1.setVisibility(View.VISIBLE);
+            quest1 = (RadioButton)findViewById(R.id.Option3);
+            quest1.setTextColor(Color.BLACK);
+            quest1.setVisibility(View.VISIBLE);
+            quest1 = (RadioButton)findViewById(R.id.Option4);
+            quest1.setTextColor(Color.BLACK);
+            quest1.setVisibility(View.VISIBLE);
+            quest = findViewById(R.id.button);
+            quest.setVisibility(View.VISIBLE);
         } else {
             anim = ViewAnimationUtils.createCircularReveal(myView, cx, cy, initialRadius, 0);
             anim.setDuration(500);
@@ -1058,7 +1076,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
                         try {
                             RadioButton rdio = (RadioButton) findViewById(getResources().getIdentifier("Option" + String.valueOf(obj.getInt("Answer")), "id", getBaseContext().getPackageName()));
                             if (rdio.isChecked()) correctAnswers++;
-
                             if (array.isNull(i + 1)) {
                                 if(correctAnswers>=array.getInt(1)) {
                                     array.put(0, true);
@@ -1132,7 +1149,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
     public void fade(final View view, final String txt) {
         final boolean visible = view.getVisibility() == View.VISIBLE;
-        if (!visible) view.setVisibility(View.VISIBLE);
         view.animate()
                 .alpha(visible ? 0.0f : 1.0f)
                 .setDuration(200)
@@ -1151,7 +1167,17 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
                                     .setListener(null);
                         }
                         TextView view1 = (TextView) view;
-                        view1.setText(txt);
+                        if(txt.equals(""))
+                            view.setVisibility(View.GONE);
+                        else {
+                            view.setVisibility(View.VISIBLE);
+                            view.setAlpha(0.0f);
+                            view.animate()
+                                    .alpha(1.0f)
+                                    .setDuration(200)
+                                    .setListener(null);
+                            view1.setText(txt);
+                        }
                     }
                 });
     }
