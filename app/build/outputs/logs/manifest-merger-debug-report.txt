@@ -50,7 +50,6 @@ MERGED from com.google.android.gms:play-services-maps:7.5.0:22:5
 		ADDED from AndroidManifest.xml:9:22
 uses-permission#com.android.vending.BILLING
 ADDED from AndroidManifest.xml:10:5
-MERGED from com.anjlab.android.iab.v3:library:1.0.26:11:5
 	android:name
 		ADDED from AndroidManifest.xml:10:22
 provider#com.facebook.FacebookContentProvider
@@ -174,7 +173,6 @@ MERGED from com.android.support:support-v4:22.2.0:22:5
 MERGED from com.google.android.gms:play-services-wearable:7.5.0:19:5
 MERGED from com.google.android.gms:play-services-base:7.5.0:20:5
 MERGED from com.android.support:support-v4:22.2.0:22:5
-MERGED from com.anjlab.android.iab.v3:library:1.0.26:13:5
 MERGED from com.balysv.materialmenu:material-menu:1.5.1:12:5
 	android:label
 		ADDED from AndroidManifest.xml:20:9
@@ -411,7 +409,6 @@ MERGED from com.android.support:support-v4:22.2.0:20:5
 MERGED from com.google.android.gms:play-services-wearable:7.5.0:18:5
 MERGED from com.google.android.gms:play-services-base:7.5.0:18:5
 MERGED from com.android.support:support-v4:22.2.0:20:5
-MERGED from com.anjlab.android.iab.v3:library:1.0.26:7:5
 MERGED from SmartRead2:PersistentSearch:unspecified:7:5
 MERGED from com.balysv.materialmenu:material-menu:1.5.1:8:5
 	android:targetSdkVersion

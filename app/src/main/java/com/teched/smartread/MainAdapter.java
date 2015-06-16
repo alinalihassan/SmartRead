@@ -107,10 +107,10 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(final ViewHolder viewHolder, int i) {
         final Card card = visibleCards.get(i);
-        viewHolder.cardName.setText(card.name);
         try {
             JSONObject mainObject = new JSONObject(MainActivity.readFromFile(mPath + "/" + card.name + ".json"));
             viewHolder.cardAuthor.setText(mainObject.getString("Author"));
+            viewHolder.cardName.setText(mainObject.getString("Title"));
             card.author = mainObject.getString("Author");
             viewHolder.cardHeart.setAlpha(mainObject.getBoolean("Favorite") ? 1.0f : 0.0f);
         } catch(Exception ignore) {}

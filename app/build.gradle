@@ -8,7 +8,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 22
         versionCode 42
-        versionName "2.8.3"
+        versionName "2.8.5"
     }
     lintOptions {
         checkReleaseBuilds false
@@ -47,6 +47,6 @@ dependencies {
     compile 'com.sothree.slidinguppanel:library:3.0.0'
     compile 'com.nononsenseapps:filepicker:2.0.5'
     compile 'com.google.android.gms:play-services:7.5.0'
-    compile 'com.anjlab.android.iab.v3:library:1.0.+@aar'
+    compile 'com.anjlab.android.iab.v3:library:1.0.26'
     compile project(':PersistentSearch')
 }

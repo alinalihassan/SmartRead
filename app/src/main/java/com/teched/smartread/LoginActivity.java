@@ -67,14 +67,14 @@ public class LoginActivity extends AppCompatActivity implements
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
+                loginButton.setVisibility(View.GONE);
+                gLogin.setVisibility(View.GONE);
                 GraphRequest request = GraphRequest.newMeRequest(
                         loginResult.getAccessToken(),
                         new GraphRequest.GraphJSONObjectCallback() {
                             @Override
                             public void onCompleted(JSONObject user,GraphResponse response) {
                                 try {
-                                    loginButton.setVisibility(View.GONE);
-                                    gLogin.setVisibility(View.GONE);
                                     String image_value = "https://graph.facebook.com/" + user.getString("id") + "/picture?type=large";
                                     String coverPicUrl = user.getJSONObject("cover").getString("source");
                                     Transfer(user.getString("name"), user.getString("email"), image_value, coverPicUrl);
@@ -159,9 +159,7 @@ public class LoginActivity extends AppCompatActivity implements
             if (resultCode != RESULT_OK) {
                 mSignInClicked = false;
             }
-
             mIntentInProgress = false;
-
             if (!mGoogleApiClient.isConnected()) {
                 mGoogleApiClient.reconnect();
             }
@@ -181,19 +179,22 @@ public class LoginActivity extends AppCompatActivity implements
         try {
             JSONObject jsonObject = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_user.php?email=" + email));
             if (jsonObject.getInt("success")==1) {
-                JSONObject books = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_books.php?email=" + email));
-                JSONArray booksArray= books.getJSONArray("books");
-                for (int i = 0; i<booksArray.length();i++) {
-                    JsonClass.DownloadBook(this, booksArray.getString(i) + ".pdf");
-                    JsonClass.DownloadBook(this,booksArray.getString(i)+".json");
-                }
+
             }
             else {
                 JSONObject jsonObject1 = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/create_user.php?name=" + user + "&email=" + email));
+                jsonObject1 = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/add_book_user.php?email=" + email + "&book=" + "1"));
+            }
+        } catch (Exception e) { e.printStackTrace(); }
+        try {
+            JSONObject books = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_books.php?email=" + email));
+            JSONArray booksArray= books.getJSONArray("books");
+            for (int i = 0; i<booksArray.length();i++) {
+                JsonClass.DownloadBook(this, booksArray.getString(i) + ".pdf");
+                JsonClass.DownloadBook(this,booksArray.getString(i)+".json");
             }
         } catch (Exception e) { e.printStackTrace(); }
         SharedPreferences prefs = this.getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE);
-        copyAssets();
         prefs.edit().putString("ProfileName",user).apply();
         prefs.edit().putString("Email",email).apply();
         prefs.edit().putString("ProfilePicture", ProfilePic).apply();
@@ -203,51 +204,4 @@ public class LoginActivity extends AppCompatActivity implements
         getBaseContext().startActivity(startScreen);
         finish();
     }
-    private void copyAssets() {
-        AssetManager assetManager = getAssets();
-        String[] files = null;
-        try {
-            files = assetManager.list("");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        if (files != null) {
-            for (String filename : files) {
-                if (filename.endsWith(".pdf") || filename.endsWith(".json")) {
-                    InputStream in;
-                    OutputStream out;
-                    try {
-                        in = assetManager.open(filename);
-
-                        PackageManager m = getPackageManager();
-                        String s = getPackageName();
-                        try {
-                            PackageInfo p = m.getPackageInfo(s, 0);
-                            s = p.applicationInfo.dataDir + "/app_book";
-                        } catch (PackageManager.NameNotFoundException e) {
-                            e.printStackTrace();
-                        }
-                        final String outString = s;
-                        File outFile = new File(outString, filename);
-
-                        out = new FileOutputStream(outFile);
-                        copyFile(in, out);
-                        in.close();
-                        out.flush();
-                        out.close();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        }
-    }
-    private void copyFile(InputStream in, OutputStream out) throws Exception {
-        byte[] buffer = new byte[1024];
-        int read;
-        while((read = in.read(buffer)) != -1){
-            out.write(buffer, 0, read);
-        }
-    }
-
 }
