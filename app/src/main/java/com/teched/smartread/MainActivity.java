@@ -33,6 +33,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -254,7 +255,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
                     newObject = new JSONObject(readFromFile(teacherFile.getPath().replace(".pdf", ".json")));
                     pdf.invalidate();
                     PDFMode = "Teacher";
-                    TextView title = (TextView) findViewById(R.id.pdfTitle);
+                    EditText title = (EditText) findViewById(R.id.pdfTitle);
                     title.setText(teacherFile.getName().replace(".pdf", ""));
                     pdf.fromFile(teacherFile)
                             .defaultPage(1)
@@ -272,18 +273,20 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         checkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!AuthorEdit.getText().toString().equals("")) {
+                if (!AuthorEdit.getText().toString().equals("") && !((((EditText) findViewById(R.id.pdfTitle)).getText().toString().equals("")))) {
                     try {
                         newObject.put("Author", AuthorEdit.getText().toString());
-                        copyFile(teacherFile.getPath(), TeacherPath + "/" + teacherFile.getName());
-                        File file = new File(TeacherPath + "/" + teacherFile.getName().replace(".pdf", ".json"));
+                        newObject.put("Title", ((EditText) findViewById(R.id.pdfTitle)).getText());
+                        copyFile(teacherFile.getPath(), TeacherPath + "/" + ((EditText) findViewById(R.id.pdfTitle)).getText() + ".pdf");
+                        File file = new File(TeacherPath + "/" + ((EditText) findViewById(R.id.pdfTitle)).getText() + ".json");
                         if (!file.exists())
                             file.createNewFile();
                         OutputStream fo = new FileOutputStream(file, false);
                         fo.write(newObject.toString().getBytes());
                         fo.close();
-                        copyFile(teacherFile.getPath(), Path + "/" + teacherFile.getName());
-                        copyFile(file.getPath(), Path + "/" + teacherFile.getName().replace(".pdf", ".json"));
+                        copyFile(teacherFile.getPath(), Path + "/" + ((EditText) findViewById(R.id.pdfTitle)).getText() + ".pdf");
+                        copyFile(file.getPath(), Path + "/" + ((EditText) findViewById(R.id.pdfTitle)).getText() + ".json");
+                        JsonClass.uploadFile(teacherFile.getPath(), file.getPath());
                         myList.clear();
                         File teacherFolder = new File(TeacherPath);
                         final File TList[] = teacherFolder.listFiles();

@@ -8,7 +8,9 @@ import org.apache.http.util.ByteArrayBuffer;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
+import java.io.DataOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -73,7 +75,7 @@ public class JsonClass {
             InputStream is = ucon.getInputStream();
             BufferedInputStream bis = new BufferedInputStream(is);
             ByteArrayBuffer baf = new ByteArrayBuffer(50);
-            int current = 0;
+            int current;
             while ((current = bis.read()) != -1) {
                 baf.append((byte) current);
             }
@@ -81,6 +83,96 @@ public class JsonClass {
             fos.write(baf.toByteArray());
             fos.close();
         } catch (Exception e) { e.printStackTrace();
+        }
+    }
+    public static void uploadFile(String sourceFileUri, String sourceFileUri2) {
+        HttpURLConnection conn;
+        DataOutputStream dos;
+        String lineEnd = "\r\n";
+        String twoHyphens = "--";
+        String boundary = "*****";
+        int bytesRead, bytesAvailable, bufferSize;
+        byte[] buffer;
+        int maxBufferSize = 1024 * 1024;
+        File sourceFile = new File(sourceFileUri);
+        File sourceFile2 = new File(sourceFileUri2);
+        try {
+
+            FileInputStream fileInputStream = new FileInputStream(sourceFile);
+            FileInputStream fileInputStream2 = new FileInputStream(sourceFile2);
+            URL url = new URL("http://php-smartread.rhcloud.com/create_book.php");
+
+            // Open a HTTP  connection to  the URL
+            conn = (HttpURLConnection) url.openConnection();
+            conn.setDoInput(true); // Allow Inputs
+            conn.setDoOutput(true); // Allow Outputs
+            conn.setUseCaches(false); // Don't use a Cached Copy
+            conn.setRequestMethod("POST");
+            conn.setRequestProperty("Connection", "Keep-Alive");
+            conn.setRequestProperty("ENCTYPE", "multipart/form-data");
+            conn.setRequestProperty("Content-Type", "multipart/form-data;boundary=" + boundary);
+            conn.setRequestProperty("uploaded_file", sourceFileUri);
+            conn.setRequestProperty("uploaded_file2", sourceFileUri2);
+
+            //PDF
+            dos = new DataOutputStream(conn.getOutputStream());
+
+            dos.writeBytes(twoHyphens + boundary + lineEnd);
+            dos.writeBytes("Content-Disposition: form-data; name=uploaded_file;filename=tmp.pdf" + lineEnd);
+
+            dos.writeBytes(lineEnd);
+
+            bytesAvailable = fileInputStream.available();
+
+            bufferSize = Math.min(bytesAvailable, maxBufferSize);
+            buffer = new byte[bufferSize];
+
+            bytesRead = fileInputStream.read(buffer, 0, bufferSize);
+
+            while (bytesRead > 0) {
+
+                dos.write(buffer, 0, bufferSize);
+                bytesAvailable = fileInputStream.available();
+                bufferSize = Math.min(bytesAvailable, maxBufferSize);
+                bytesRead = fileInputStream.read(buffer, 0, bufferSize);
+
+            }
+
+            dos.writeBytes(lineEnd);
+            dos.writeBytes(twoHyphens + boundary + twoHyphens + lineEnd);
+
+            fileInputStream.close();
+
+            dos.writeBytes(twoHyphens + boundary + lineEnd);
+            dos.writeBytes("Content-Disposition: form-data; name=uploaded_file2;filename=tmp.json" + lineEnd);
+
+            dos.writeBytes(lineEnd);
+
+            bytesAvailable = fileInputStream2.available();
+
+            bufferSize = Math.min(bytesAvailable, maxBufferSize);
+            buffer = new byte[bufferSize];
+
+            bytesRead = fileInputStream2.read(buffer, 0, bufferSize);
+
+            while (bytesRead > 0) {
+
+                dos.write(buffer, 0, bufferSize);
+                bytesAvailable = fileInputStream2.available();
+                bufferSize = Math.min(bytesAvailable, maxBufferSize);
+                bytesRead = fileInputStream2.read(buffer, 0, bufferSize);
+
+            }
+
+            dos.writeBytes(lineEnd);
+            dos.writeBytes(twoHyphens + boundary + twoHyphens + lineEnd);
+
+            fileInputStream2.close();
+            dos.flush();
+            dos.close();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
