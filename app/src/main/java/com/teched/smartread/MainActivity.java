@@ -290,7 +290,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                         fo.close();
                         copyFile(teacherFile.getPath(), Path + "/" + ((EditText) findViewById(R.id.pdfTitle)).getText() + ".pdf");
                         copyFile(file.getPath(), Path + "/" + ((EditText) findViewById(R.id.pdfTitle)).getText() + ".json");
-                        jobManager.addJobInBackground(new UploadJob(teacherFile.getPath(), file.getPath()));
                         myList.clear();
                         File teacherFolder = new File(TeacherPath);
                         final File TList[] = teacherFolder.listFiles();
@@ -300,6 +299,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                     myList.add(file2.getName().replace(".pdf", ""));
                                 }
                         }
+                        jobManager.addJobInBackground(new UploadJob(Path , ((EditText) findViewById(R.id.pdfTitle)).getText().toString(),teacherFile.getPath(), file.getPath()));
                         adapter2.notifyDataSetChanged();
                         hideKeyboard();
                         AnimateTeacher(false);

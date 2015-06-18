@@ -18,93 +18,14 @@
     </layouts>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="hey" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53af16ed-6082-410a-aef7-3350c985e7c9" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\android_pdfview_1_0_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\appcompat_v7_22_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\bolts_android_1_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\cardview_v7_22_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\facebook_android_sdk_4_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\filepicker_2_0_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\library_1_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\library_1_0_26.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\library_1_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\library_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\library_2_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\library_3_0_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\material_menu_1_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\material_menu_toolbar_1_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\mediarouter_v7_22_0_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\palette_v7_21_0_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\play_services_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\play_services_ads_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\play_services_analytics_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\play_services_appindexing_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\play_services_appinvite_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\play_services_appstate_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\play_services_base_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\play_services_cast_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\play_services_drive_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\play_services_fitness_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\play_services_games_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\play_services_gcm_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\play_services_identity_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\play_services_location_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\play_services_maps_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\play_services_nearby_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\play_services_panorama_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\play_services_plus_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\play_services_safetynet_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\play_services_wallet_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\play_services_wearable_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\recyclerview_v7_22_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\support_annotations_22_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\.idea\libraries\support_v4_22_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\debug\androidasync-2.1.6-060aeb1faee4b2771e74caae5a71c902f824836a.jar" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/JsonClass.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/JsonClass.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/LoginActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/LoginActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$12$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$12$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$12.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$13$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$13$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$13.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$13.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$14.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$14.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$15.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$15.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$16.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$16.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$17.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$17.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$18.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$18.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$19.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$19.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$20.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$20.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$21$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$21$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$21.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$21.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$22.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$22.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$23.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$23.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$24.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$24.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$25.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$25.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$26.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$26.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$28.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$28.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$30.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$30.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$31.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$31.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$32.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$32.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$33.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$33.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/UploadJob.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/UploadJob.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
@@ -112,18 +33,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/gradle_project_sync_data.bin" afterPath="$PROJECT_DIR$/build/intermediates/gradle_project_sync_data.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/JsonClass.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/JsonClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/LoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/LoginActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/UploadJob.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/UploadJob.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SmartRead2.iws" />
@@ -152,102 +66,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15384616">
-              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+            <state vertical-scroll-proportion="-9.586206">
+              <caret line="301" column="136" selection-start-line="301" selection-start-column="136" selection-end-line="301" selection-end-column="136" />
               <folding>
-                <element signature="e#5040#5086#0" expanded="true" />
-                <element signature="e#9451#9471#0" expanded="true" />
-                <element signature="e#9489#9510#0" expanded="true" />
-                <element signature="e#9574#9575#0" expanded="true" />
-                <element signature="e#9629#9630#0" expanded="true" />
-                <element signature="e#9688#9689#0" expanded="true" />
-                <element signature="e#9743#9744#0" expanded="true" />
-                <element signature="e#10133#10134#0" expanded="true" />
-                <element signature="e#10179#10180#0" expanded="true" />
-                <element signature="e#11049#12167#0" expanded="true" />
-                <element signature="e#12166#12167#0" expanded="true" />
-                <element signature="e#12210#14358#0" expanded="true" />
-                <element signature="e#14357#14358#0" expanded="true" />
-                <element signature="e#14401#17896#0" expanded="true" />
-                <element signature="e#17895#17896#0" expanded="true" />
-                <element signature="e#17935#18178#0" expanded="true" />
-                <element signature="e#18102#18150#0" expanded="true" />
-                <element signature="e#18177#18178#0" expanded="true" />
-                <element signature="e#18215#18460#0" expanded="true" />
-                <element signature="e#18382#18432#0" expanded="true" />
-                <element signature="e#18459#18460#0" expanded="true" />
-                <element signature="e#18499#18738#0" expanded="true" />
-                <element signature="e#18666#18710#0" expanded="true" />
-                <element signature="e#18737#18738#0" expanded="true" />
-                <element signature="e#18779#19021#0" expanded="true" />
-                <element signature="e#18946#18993#0" expanded="true" />
-                <element signature="e#19020#19021#0" expanded="true" />
-                <element signature="e#19069#19258#0" expanded="true" />
-                <element signature="e#19257#19258#0" expanded="true" />
-                <element signature="e#19304#20327#0" expanded="true" />
-                <element signature="e#20326#20327#0" expanded="true" />
-                <element signature="e#20469#21383#0" expanded="true" />
-                <element signature="e#20616#21351#0" expanded="true" />
-                <element signature="e#21350#21351#0" expanded="true" />
-                <element signature="e#21382#21383#0" expanded="true" />
-                <element signature="e#21429#23122#0" expanded="true" />
-                <element signature="e#21576#23090#0" expanded="true" />
-                <element signature="e#22071#22110#0" expanded="true" />
-                <element signature="e#23089#23090#0" expanded="true" />
-                <element signature="e#23121#23122#0" expanded="true" />
-                <element signature="e#24827#24859#0" expanded="true" />
-                <element signature="e#24927#24966#0" expanded="true" />
-                <element signature="e#25233#26324#0" expanded="true" />
-                <element signature="e#26323#26324#0" expanded="true" />
-                <element signature="e#26585#27676#0" expanded="true" />
-                <element signature="e#27675#27676#0" expanded="true" />
-                <element signature="e#27944#29037#0" expanded="true" />
-                <element signature="e#29036#29037#0" expanded="true" />
-                <element signature="e#29297#30211#0" expanded="true" />
-                <element signature="e#30210#30211#0" expanded="true" />
-                <element signature="e#30469#31376#0" expanded="true" />
-                <element signature="e#31375#31376#0" expanded="true" />
-                <element signature="e#31670#31992#0" expanded="true" />
-                <element signature="e#31991#31992#0" expanded="true" />
-                <element signature="e#32257#32599#0" expanded="true" />
-                <element signature="e#32598#32599#0" expanded="true" />
-                <element signature="e#36221#37533#0" expanded="true" />
-                <element signature="e#37532#37533#0" expanded="true" />
-                <element signature="e#39456#39457#0" expanded="true" />
-                <element signature="e#39494#39495#0" expanded="true" />
-                <element signature="e#41255#41480#0" expanded="true" />
-                <element signature="e#41479#41480#0" expanded="true" />
-                <element signature="e#42208#42515#0" expanded="true" />
-                <element signature="e#42514#42515#0" expanded="true" />
-                <element signature="e#44469#45896#0" expanded="true" />
-                <element signature="e#45895#45896#0" expanded="true" />
-                <element signature="e#46631#46856#0" expanded="true" />
-                <element signature="e#46855#46856#0" expanded="true" />
-                <element signature="e#47316#47689#0" expanded="true" />
-                <element signature="e#47688#47689#0" expanded="true" />
-                <element signature="e#48386#48697#0" expanded="true" />
-                <element signature="e#48696#48697#0" expanded="true" />
-                <element signature="e#49504#50577#0" expanded="true" />
-                <element signature="e#50576#50577#0" expanded="true" />
-                <element signature="e#52070#55194#0" expanded="true" />
-                <element signature="e#52967#53241#0" expanded="true" />
-                <element signature="e#53240#53241#0" expanded="true" />
-                <element signature="e#53520#54290#0" expanded="true" />
-                <element signature="e#54289#54290#0" expanded="true" />
-                <element signature="e#54663#54927#0" expanded="true" />
-                <element signature="e#54926#54927#0" expanded="true" />
-                <element signature="e#55193#55194#0" expanded="true" />
-                <element signature="e#55703#55942#0" expanded="true" />
-                <element signature="e#55941#55942#0" expanded="true" />
-                <element signature="e#56244#57516#0" expanded="true" />
-                <element signature="e#57515#57516#0" expanded="true" />
-                <element signature="e#59802#59803#0" expanded="true" />
-                <element signature="e#59885#59886#0" expanded="true" />
-                <element signature="e#61566#61567#0" expanded="true" />
-                <element signature="e#61603#61604#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#19373#20396#0" expanded="true" />
+                <element signature="e#20395#20396#0" expanded="true" />
+                <element signature="e#20538#21452#0" expanded="true" />
+                <element signature="e#21451#21452#0" expanded="true" />
+                <element signature="e#21498#23191#0" expanded="true" />
+                <element signature="e#23190#23191#0" expanded="true" />
+                <element signature="e#25302#26393#0" expanded="true" />
+                <element signature="e#26392#26393#0" expanded="true" />
+                <element signature="e#26654#27745#0" expanded="true" />
+                <element signature="e#27744#27745#0" expanded="true" />
+                <element signature="e#28013#29106#0" expanded="true" />
+                <element signature="e#29105#29106#0" expanded="true" />
+                <element signature="e#29366#30280#0" expanded="true" />
+                <element signature="e#30279#30280#0" expanded="true" />
+                <element signature="e#30538#31445#0" expanded="true" />
+                <element signature="e#31444#31445#0" expanded="true" />
+                <element signature="e#31739#32061#0" expanded="true" />
+                <element signature="e#32060#32061#0" expanded="true" />
+                <element signature="e#32326#32668#0" expanded="true" />
+                <element signature="e#32667#32668#0" expanded="true" />
+                <element signature="e#36290#37602#0" expanded="true" />
+                <element signature="e#37601#37602#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -257,7 +104,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/UploadJob.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -269,7 +116,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/RefreshJob.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -277,11 +124,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JsonClass.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="JsonClass.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/JsonClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+            <state vertical-scroll-proportion="-4.5609756">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -3565,12 +3412,12 @@
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/AsyncRefresh.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/JsonClass.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/LoginActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/RefreshJob.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/LoginJob.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/RefreshJob.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/UploadJob.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/JsonClass.java" />
       </list>
     </option>
   </component>
@@ -3613,6 +3460,19 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches">
+        <subPane />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -3717,19 +3577,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches">
-        <subPane />
-      </pane>
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -3772,17 +3620,12 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smartread" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+              <option name="myItemId" value="manifests" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -4087,7 +3930,13 @@
       <option name="project" value="LOCAL" />
       <updated>1434578636170</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="The books are now sent to server using a pending system&#10;No longer networking on ui thread&#10;Refresh slowly load all books in background">
+      <created>1434614459744</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1434614459744</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -4101,7 +3950,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -4114,13 +3963,13 @@
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270869" sideWeight="0.49394855" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4633731" sideWeight="0.49394855" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4633731" sideWeight="0.49394855" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270869" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="584" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -4136,15 +3985,15 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -4156,8 +4005,8 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.4969743" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -4178,7 +4027,8 @@
     <MESSAGE value="Fix" />
     <MESSAGE value="Remake to books database&#10;Reworked login screen&#10;Initial books now stored online&#10;" />
     <MESSAGE value="Teacher's books are now stored online" />
-    <option name="LAST_COMMIT_MESSAGE" value="Teacher's books are now stored online" />
+    <MESSAGE value="The books are now sent to server using a pending system&#10;No longer networking on ui thread&#10;Refresh slowly load all books in background" />
+    <option name="LAST_COMMIT_MESSAGE" value="The books are now sent to server using a pending system&#10;No longer networking on ui thread&#10;Refresh slowly load all books in background" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -4187,10 +4037,17 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/JsonClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="135" column="34" selection-start-line="135" selection-start-column="29" selection-end-line="135" selection-end-column="34" />
@@ -4203,6 +4060,9 @@
             <element signature="e#17776#17800#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/MainActivity.java">
@@ -4234,13 +4094,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/LoginActivity.java">
@@ -4258,13 +4118,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
@@ -4373,13 +4233,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PersistentSearch/res/layout/searchbox.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.101886794">
           <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PersistentSearch/build.gradle">
@@ -4446,13 +4306,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/3.23.0/res/layout/com_facebook_usersettingsfragment.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13717695">
           <caret line="31" column="15" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
@@ -4493,9 +4353,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.135659">
           <caret line="250" column="27" selection-start-line="250" selection-start-column="27" selection-end-line="250" selection-end-column="27" />
@@ -4509,11 +4366,11 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.59302324">
           <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
@@ -4522,22 +4379,15 @@
           </folding>
         </state>
       </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.1184669">
           <caret line="45" column="53" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29616725">
-          <caret line="5" column="78" selection-start-line="5" selection-start-column="78" selection-end-line="5" selection-end-column="78" />
-          <folding>
-            <element signature="e#1167#1206#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4557,30 +4407,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15205725">
+          <caret line="5" column="78" selection-start-line="5" selection-start-column="78" selection-end-line="5" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/RefreshJob.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/JsonClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/UploadJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -4589,99 +4427,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15384616">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        <state vertical-scroll-proportion="-9.586206">
+          <caret line="301" column="136" selection-start-line="301" selection-start-column="136" selection-end-line="301" selection-end-column="136" />
           <folding>
-            <element signature="e#5040#5086#0" expanded="true" />
-            <element signature="e#9451#9471#0" expanded="true" />
-            <element signature="e#9489#9510#0" expanded="true" />
-            <element signature="e#9574#9575#0" expanded="true" />
-            <element signature="e#9629#9630#0" expanded="true" />
-            <element signature="e#9688#9689#0" expanded="true" />
-            <element signature="e#9743#9744#0" expanded="true" />
-            <element signature="e#10133#10134#0" expanded="true" />
-            <element signature="e#10179#10180#0" expanded="true" />
-            <element signature="e#11049#12167#0" expanded="true" />
-            <element signature="e#12166#12167#0" expanded="true" />
-            <element signature="e#12210#14358#0" expanded="true" />
-            <element signature="e#14357#14358#0" expanded="true" />
-            <element signature="e#14401#17896#0" expanded="true" />
-            <element signature="e#17895#17896#0" expanded="true" />
-            <element signature="e#17935#18178#0" expanded="true" />
-            <element signature="e#18102#18150#0" expanded="true" />
-            <element signature="e#18177#18178#0" expanded="true" />
-            <element signature="e#18215#18460#0" expanded="true" />
-            <element signature="e#18382#18432#0" expanded="true" />
-            <element signature="e#18459#18460#0" expanded="true" />
-            <element signature="e#18499#18738#0" expanded="true" />
-            <element signature="e#18666#18710#0" expanded="true" />
-            <element signature="e#18737#18738#0" expanded="true" />
-            <element signature="e#18779#19021#0" expanded="true" />
-            <element signature="e#18946#18993#0" expanded="true" />
-            <element signature="e#19020#19021#0" expanded="true" />
-            <element signature="e#19069#19258#0" expanded="true" />
-            <element signature="e#19257#19258#0" expanded="true" />
-            <element signature="e#19304#20327#0" expanded="true" />
-            <element signature="e#20326#20327#0" expanded="true" />
-            <element signature="e#20469#21383#0" expanded="true" />
-            <element signature="e#20616#21351#0" expanded="true" />
-            <element signature="e#21350#21351#0" expanded="true" />
-            <element signature="e#21382#21383#0" expanded="true" />
-            <element signature="e#21429#23122#0" expanded="true" />
-            <element signature="e#21576#23090#0" expanded="true" />
-            <element signature="e#22071#22110#0" expanded="true" />
-            <element signature="e#23089#23090#0" expanded="true" />
-            <element signature="e#23121#23122#0" expanded="true" />
-            <element signature="e#24827#24859#0" expanded="true" />
-            <element signature="e#24927#24966#0" expanded="true" />
-            <element signature="e#25233#26324#0" expanded="true" />
-            <element signature="e#26323#26324#0" expanded="true" />
-            <element signature="e#26585#27676#0" expanded="true" />
-            <element signature="e#27675#27676#0" expanded="true" />
-            <element signature="e#27944#29037#0" expanded="true" />
-            <element signature="e#29036#29037#0" expanded="true" />
-            <element signature="e#29297#30211#0" expanded="true" />
-            <element signature="e#30210#30211#0" expanded="true" />
-            <element signature="e#30469#31376#0" expanded="true" />
-            <element signature="e#31375#31376#0" expanded="true" />
-            <element signature="e#31670#31992#0" expanded="true" />
-            <element signature="e#31991#31992#0" expanded="true" />
-            <element signature="e#32257#32599#0" expanded="true" />
-            <element signature="e#32598#32599#0" expanded="true" />
-            <element signature="e#36221#37533#0" expanded="true" />
-            <element signature="e#37532#37533#0" expanded="true" />
-            <element signature="e#39456#39457#0" expanded="true" />
-            <element signature="e#39494#39495#0" expanded="true" />
-            <element signature="e#41255#41480#0" expanded="true" />
-            <element signature="e#41479#41480#0" expanded="true" />
-            <element signature="e#42208#42515#0" expanded="true" />
-            <element signature="e#42514#42515#0" expanded="true" />
-            <element signature="e#44469#45896#0" expanded="true" />
-            <element signature="e#45895#45896#0" expanded="true" />
-            <element signature="e#46631#46856#0" expanded="true" />
-            <element signature="e#46855#46856#0" expanded="true" />
-            <element signature="e#47316#47689#0" expanded="true" />
-            <element signature="e#47688#47689#0" expanded="true" />
-            <element signature="e#48386#48697#0" expanded="true" />
-            <element signature="e#48696#48697#0" expanded="true" />
-            <element signature="e#49504#50577#0" expanded="true" />
-            <element signature="e#50576#50577#0" expanded="true" />
-            <element signature="e#52070#55194#0" expanded="true" />
-            <element signature="e#52967#53241#0" expanded="true" />
-            <element signature="e#53240#53241#0" expanded="true" />
-            <element signature="e#53520#54290#0" expanded="true" />
-            <element signature="e#54289#54290#0" expanded="true" />
-            <element signature="e#54663#54927#0" expanded="true" />
-            <element signature="e#54926#54927#0" expanded="true" />
-            <element signature="e#55193#55194#0" expanded="true" />
-            <element signature="e#55703#55942#0" expanded="true" />
-            <element signature="e#55941#55942#0" expanded="true" />
-            <element signature="e#56244#57516#0" expanded="true" />
-            <element signature="e#57515#57516#0" expanded="true" />
-            <element signature="e#59802#59803#0" expanded="true" />
-            <element signature="e#59885#59886#0" expanded="true" />
-            <element signature="e#61566#61567#0" expanded="true" />
-            <element signature="e#61603#61604#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#19373#20396#0" expanded="true" />
+            <element signature="e#20395#20396#0" expanded="true" />
+            <element signature="e#20538#21452#0" expanded="true" />
+            <element signature="e#21451#21452#0" expanded="true" />
+            <element signature="e#21498#23191#0" expanded="true" />
+            <element signature="e#23190#23191#0" expanded="true" />
+            <element signature="e#25302#26393#0" expanded="true" />
+            <element signature="e#26392#26393#0" expanded="true" />
+            <element signature="e#26654#27745#0" expanded="true" />
+            <element signature="e#27744#27745#0" expanded="true" />
+            <element signature="e#28013#29106#0" expanded="true" />
+            <element signature="e#29105#29106#0" expanded="true" />
+            <element signature="e#29366#30280#0" expanded="true" />
+            <element signature="e#30279#30280#0" expanded="true" />
+            <element signature="e#30538#31445#0" expanded="true" />
+            <element signature="e#31444#31445#0" expanded="true" />
+            <element signature="e#31739#32061#0" expanded="true" />
+            <element signature="e#32060#32061#0" expanded="true" />
+            <element signature="e#32326#32668#0" expanded="true" />
+            <element signature="e#32667#32668#0" expanded="true" />
+            <element signature="e#36290#37602#0" expanded="true" />
+            <element signature="e#37601#37602#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/UploadJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/JsonClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.5609756">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

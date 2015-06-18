@@ -1,10 +1,7 @@
 package com.teched.smartread;
 
-import android.content.Context;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-
 import org.apache.http.util.ByteArrayBuffer;
+import org.json.JSONObject;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -81,7 +78,7 @@ public class JsonClass {
         } catch (Exception e) { e.printStackTrace();
         }
     }
-    public static void uploadFile(String sourceFileUri, String sourceFileUri2) {
+    public static int uploadFile(String sourceFileUri, String sourceFileUri2) {
         HttpURLConnection conn;
         DataOutputStream dos;
         String lineEnd = "\r\n";
@@ -98,11 +95,10 @@ public class JsonClass {
             FileInputStream fileInputStream2 = new FileInputStream(sourceFile2);
             URL url = new URL("http://php-smartread.rhcloud.com/create_book.php");
 
-            // Open a HTTP  connection to  the URL
             conn = (HttpURLConnection) url.openConnection();
-            conn.setDoInput(true); // Allow Inputs
-            conn.setDoOutput(true); // Allow Outputs
-            conn.setUseCaches(false); // Don't use a Cached Copy
+            conn.setDoInput(true);
+            conn.setDoOutput(true);
+            conn.setUseCaches(false);
             conn.setRequestMethod("POST");
             conn.setRequestProperty("Connection", "Keep-Alive");
             conn.setRequestProperty("ENCTYPE", "multipart/form-data");
@@ -110,7 +106,6 @@ public class JsonClass {
             conn.setRequestProperty("uploaded_file", sourceFileUri);
             conn.setRequestProperty("uploaded_file2", sourceFileUri2);
 
-            //PDF
             dos = new DataOutputStream(conn.getOutputStream());
 
             dos.writeBytes(twoHyphens + boundary + lineEnd);
@@ -166,9 +161,13 @@ public class JsonClass {
             fileInputStream2.close();
             dos.flush();
             dos.close();
+            InputStream is = conn.getInputStream();
+            String parsedString = convertinputStreamToString(is);
+            return new JSONObject(parsedString).getInt("id");
         }
         catch (Exception e) {
             e.printStackTrace();
         }
+        return 0;
     }
 }
