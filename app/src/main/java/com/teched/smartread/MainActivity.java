@@ -18,6 +18,8 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -33,7 +35,6 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -65,6 +66,7 @@ import com.heinrichreimersoftware.materialdrawer.structure.DrawerProfile;
 import com.joanzapata.pdfview.PDFView;
 import com.joanzapata.pdfview.listener.OnPageChangeListener;
 import com.nononsenseapps.filepicker.FilePickerActivity;
+import com.path.android.jobqueue.JobManager;
 import com.quinny898.library.persistentsearch.SearchBox;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 
@@ -82,13 +84,13 @@ import java.io.IOException;
 
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.Serializable;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements BillingProcessor.IBillingHandler {
+public class MainActivity extends AppCompatActivity implements Serializable,BillingProcessor.IBillingHandler {
 
     private static final int FILE_CODE = 1;
     private ActionBarDrawerToggle drawerToggle;
@@ -118,6 +120,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
     private int correctAnswers = 0;
     private BillingProcessor bp;
     private boolean readyToPurchase = false;
+    private transient JobManager jobManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,6 +130,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         StrictMode.setThreadPolicy(policy);
         firstTime();
         bp = new BillingProcessor(this, getResources().getString(R.string.license_key), this);
+        jobManager = new JobManager(this);
         final SharedPreferences prefs = this.getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE);
         GregorianCalendar c = new GregorianCalendar();
         c.getTime();
@@ -286,7 +290,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
                         fo.close();
                         copyFile(teacherFile.getPath(), Path + "/" + ((EditText) findViewById(R.id.pdfTitle)).getText() + ".pdf");
                         copyFile(file.getPath(), Path + "/" + ((EditText) findViewById(R.id.pdfTitle)).getText() + ".json");
-                        JsonClass.uploadFile(teacherFile.getPath(), file.getPath());
+                        jobManager.addJobInBackground(new UploadJob(teacherFile.getPath(), file.getPath()));
                         myList.clear();
                         File teacherFolder = new File(TeacherPath);
                         final File TList[] = teacherFolder.listFiles();
@@ -450,21 +454,15 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
                         list.clear();
                         File folder = new File(Path);
                         File[] files = folder.listFiles();
+                        boolean online = isOnline();
                         try {
-                            JSONObject books = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_books.php?email=" + prefs.getString("Email", getString(R.string.profile_description))));
-                            JSONArray booksArray = books.getJSONArray("books");
-                            List<String> files2 = new ArrayList<>();
-                            if (files != null) {
-                                for (File file : files)
-                                    files2.add(file.getName());
+                            if (online) {
+                                RefreshJob job = new RefreshJob(Path,prefs.getString("Email", getString(R.string.profile_description)),files);
+                                jobManager.addJobInBackground(job);
                             }
-                            for (int i = 0; i < booksArray.length(); i++) {
-                                if(!files2.contains(booksArray.getString(i) + ".pdf")) {
-                                    JsonClass.DownloadBook(getApplicationContext(), booksArray.getString(i) + ".pdf");
-                                    JsonClass.DownloadBook(getApplicationContext(), booksArray.getString(i) + ".json");
-                                }
-                            }
-                        } catch (Exception e) { e.printStackTrace(); }
+                        }catch(Exception e) {
+                            e.printStackTrace();
+                        }
                         if (files != null) {
                             for (File file : files)
                                 if (file.getName().endsWith(".pdf")) {
@@ -478,7 +476,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
                         adapter.notifyDataSetChanged();
                         refreshLayout.setRefreshing(false);
                     }
-                }, 1000);
+                }, 1500);
             }
         });
 
@@ -1372,5 +1370,10 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
         drawable.draw(canvas);
         return bitmap;
+    }
+    public boolean isOnline() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        return netInfo != null && netInfo.isConnected();
     }
 }

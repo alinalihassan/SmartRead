@@ -61,12 +61,8 @@ public class JsonClass {
             return "";
         }
     }
-    public static void DownloadBook(Context context, String bookName) {
+    public static void DownloadBook(String s, String bookName) {
         try {
-            PackageManager m = context.getPackageManager();
-            String s = context.getPackageName();
-            PackageInfo p = m.getPackageInfo(s, 0);
-            s = p.applicationInfo.dataDir + "/app_book";
 
             URL url = new URL("http://php-smartread.rhcloud.com/books/" + bookName.replace(" ", "%20"));
             File file = new File(s,bookName);

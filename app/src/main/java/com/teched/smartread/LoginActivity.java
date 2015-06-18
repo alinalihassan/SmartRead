@@ -175,6 +175,14 @@ public class LoginActivity extends AppCompatActivity implements
     }
     public void Transfer(String user, String email, String ProfilePic, String ProfileCover)
     {
+        PackageManager m = getPackageManager();
+        String s = getPackageName();
+        try {
+            PackageInfo p = m.getPackageInfo(s, 0);
+            s = p.applicationInfo.dataDir+"/app_book";
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
         WritePreferences();
         try {
             JSONObject jsonObject = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_user.php?email=" + email));
@@ -190,8 +198,8 @@ public class LoginActivity extends AppCompatActivity implements
             JSONObject books = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_books.php?email=" + email));
             JSONArray booksArray= books.getJSONArray("books");
             for (int i = 0; i<booksArray.length();i++) {
-                JsonClass.DownloadBook(this, booksArray.getString(i) + ".pdf");
-                JsonClass.DownloadBook(this,booksArray.getString(i)+".json");
+                JsonClass.DownloadBook(s, booksArray.getString(i) + ".pdf");
+                JsonClass.DownloadBook(s,booksArray.getString(i)+".json");
             }
         } catch (Exception e) { e.printStackTrace(); }
         SharedPreferences prefs = this.getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE);
