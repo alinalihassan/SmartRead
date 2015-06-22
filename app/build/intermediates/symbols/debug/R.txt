@@ -195,11 +195,11 @@ int attr mediaRoutePlayDrawable 0x7f010008
 int attr mediaRouteSettingsDrawable 0x7f010009
 int attr middleBarArrowSize 0x7f010040
 int attr mm_color 0x7f01005b
-int attr mm_pressedDuration 0x7f01005e
 int attr mm_rtlEnabled 0x7f010060
-int attr mm_scale 0x7f01005c
+int attr mm_scale 0x7f01005d
 int attr mm_strokeWidth 0x7f01005f
-int attr mm_transformDuration 0x7f01005d
+int attr mm_transformDuration 0x7f01005e
+int attr mm_visible 0x7f01005c
 int attr multiChoiceItemLayout 0x7f01002b
 int attr navigationContentDescription 0x7f0100ff
 int attr navigationIcon 0x7f0100fe
@@ -1650,11 +1650,11 @@ int styleable MapAttrs_useViewLifecycle 13
 int styleable MapAttrs_zOrderOnTop 14
 int[] styleable MaterialMenuView { 0x7f01005b, 0x7f01005c, 0x7f01005d, 0x7f01005e, 0x7f01005f, 0x7f010060 }
 int styleable MaterialMenuView_mm_color 0
-int styleable MaterialMenuView_mm_pressedDuration 3
 int styleable MaterialMenuView_mm_rtlEnabled 5
-int styleable MaterialMenuView_mm_scale 1
+int styleable MaterialMenuView_mm_scale 2
 int styleable MaterialMenuView_mm_strokeWidth 4
-int styleable MaterialMenuView_mm_transformDuration 2
+int styleable MaterialMenuView_mm_transformDuration 3
+int styleable MaterialMenuView_mm_visible 1
 int[] styleable MediaRouteButton { 0x0101013f, 0x01010140, 0x7f010061 }
 int styleable MediaRouteButton_android_minHeight 1
 int styleable MediaRouteButton_android_minWidth 0

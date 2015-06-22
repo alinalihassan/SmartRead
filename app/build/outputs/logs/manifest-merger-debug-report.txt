@@ -74,11 +74,11 @@ ADDED from AndroidManifest.xml:13:5
 		ADDED from AndroidManifest.xml:14:9
 application
 ADDED from AndroidManifest.xml:17:5
-MERGED from com.balysv.materialmenu:material-menu-toolbar:1.5.1:12:5
-MERGED from com.balysv.materialmenu:material-menu:1.5.1:12:5
+MERGED from com.balysv.materialmenu:material-menu-toolbar:1.5.4:12:5
 MERGED from com.android.support:appcompat-v7:22.2.0:22:5
 MERGED from com.android.support:support-v4:22.2.0:22:5
-MERGED from com.balysv.materialmenu:material-menu:1.5.1:12:5
+MERGED from com.balysv.materialmenu:material-menu:1.5.4:12:5
+MERGED from com.balysv.materialmenu:material-menu:1.5.4:12:5
 MERGED from com.android.support:cardview-v7:22.2.0:22:5
 MERGED from com.android.support:recyclerview-v7:22.1.1:22:5
 MERGED from com.android.support:support-v4:22.2.0:22:5
@@ -95,7 +95,7 @@ MERGED from com.facebook.android:facebook-android-sdk:4.2.0:28:5
 MERGED from com.android.support:support-v4:22.2.0:22:5
 MERGED from com.sothree.slidinguppanel:library:3.0.0:9:5
 MERGED from com.android.support:support-v4:22.2.0:22:5
-MERGED from com.nononsenseapps:filepicker:2.0.5:27:5
+MERGED from com.nononsenseapps:filepicker:2.1:27:5
 MERGED from com.android.support:appcompat-v7:22.2.0:22:5
 MERGED from com.android.support:support-v4:22.2.0:22:5
 MERGED from com.android.support:support-v4:22.2.0:22:5
@@ -185,7 +185,7 @@ MERGED from com.android.support:support-v4:22.2.0:22:5
 MERGED from com.google.android.gms:play-services-wearable:7.5.0:19:5
 MERGED from com.google.android.gms:play-services-base:7.5.0:20:5
 MERGED from com.android.support:support-v4:22.2.0:22:5
-MERGED from com.balysv.materialmenu:material-menu:1.5.1:12:5
+MERGED from com.balysv.materialmenu:material-menu:1.5.4:12:5
 	android:label
 		ADDED from AndroidManifest.xml:21:9
 	android:allowBackup
@@ -307,14 +307,14 @@ ADDED from AndroidManifest.xml:68:17
 		ADDED from AndroidManifest.xml:68:27
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
-MERGED from com.joanzapata.pdfview:android-pdfview:1.0.2:25:2
+MERGED from com.joanzapata.pdfview:android-pdfview:1.0.4:23:2
 MERGED from com.daimajia.easing:library:1.0.1:8:5
 MERGED from com.daimajia.androidanimations:library:1.1.3:8:5
-MERGED from com.balysv.materialmenu:material-menu-toolbar:1.5.1:8:5
-MERGED from com.balysv.materialmenu:material-menu:1.5.1:8:5
+MERGED from com.balysv.materialmenu:material-menu-toolbar:1.5.4:8:5
 MERGED from com.android.support:appcompat-v7:22.2.0:20:5
 MERGED from com.android.support:support-v4:22.2.0:20:5
-MERGED from com.balysv.materialmenu:material-menu:1.5.1:8:5
+MERGED from com.balysv.materialmenu:material-menu:1.5.4:8:5
+MERGED from com.balysv.materialmenu:material-menu:1.5.4:8:5
 MERGED from com.android.support:cardview-v7:22.2.0:20:5
 MERGED from com.android.support:recyclerview-v7:22.1.1:20:5
 MERGED from com.android.support:support-v4:22.2.0:20:5
@@ -331,7 +331,7 @@ MERGED from com.facebook.android:facebook-android-sdk:4.2.0:24:5
 MERGED from com.android.support:support-v4:22.2.0:20:5
 MERGED from com.sothree.slidinguppanel:library:3.0.0:7:5
 MERGED from com.android.support:support-v4:22.2.0:20:5
-MERGED from com.nononsenseapps:filepicker:2.0.5:23:5
+MERGED from com.nononsenseapps:filepicker:2.1:23:5
 MERGED from com.android.support:appcompat-v7:22.2.0:20:5
 MERGED from com.android.support:support-v4:22.2.0:20:5
 MERGED from com.android.support:support-v4:22.2.0:20:5
@@ -422,7 +422,7 @@ MERGED from com.google.android.gms:play-services-wearable:7.5.0:18:5
 MERGED from com.google.android.gms:play-services-base:7.5.0:18:5
 MERGED from com.android.support:support-v4:22.2.0:20:5
 MERGED from SmartRead2:PersistentSearch:unspecified:7:5
-MERGED from com.balysv.materialmenu:material-menu:1.5.1:8:5
+MERGED from com.balysv.materialmenu:material-menu:1.5.4:8:5
 	android:targetSdkVersion
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0

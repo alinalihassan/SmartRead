@@ -190,7 +190,7 @@ public class LoginActivity extends AppCompatActivity implements
 
             }
             else {
-                JSONObject jsonObject1 = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/create_user.php?name=" + user + "&email=" + email));
+                JSONObject jsonObject1 = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/create_user.php?name=" + user + "&email=" + email + "&profileUrl=" + ProfilePic));
                 jsonObject1 = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/add_book_user.php?email=" + email + "&book=" + "1"));
             }
         } catch (Exception e) { e.printStackTrace(); }

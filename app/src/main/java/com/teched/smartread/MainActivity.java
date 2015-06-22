@@ -422,7 +422,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             }
         });
         toolbar.setNavigationIcon(materialMenu);
-        materialMenu.setNeverDrawTouch(true);
         refreshTeacher.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {

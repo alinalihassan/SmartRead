@@ -36,4 +36,4 @@
         style="?android:textAppearanceMedium"
         android:inputType="textAutoComplete|textAutoCorrect"
         tools:ignore="UnusedAttribute" />
-</FrameLayout><!-- From: file:/home/jonas/workspace/NoNonsenseFilePicker/library/src/main/res/layout/dialog_folder_name.xml --><!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.nononsenseapps/filepicker/2.0.5/res/layout/dialog_folder_name.xml -->
+</FrameLayout><!-- From: file:/home/jonas/workspace/NoNonsenseFilePicker/library/src/main/res/layout/dialog_folder_name.xml --><!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.nononsenseapps/filepicker/2.1/res/layout/dialog_folder_name.xml -->

@@ -1313,14 +1313,6 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int mm_color=0x7f01005b;
-        /** <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int mm_pressedDuration=0x7f01005e;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -1336,7 +1328,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int mm_scale=0x7f01005c;
+        public static final int mm_scale=0x7f01005d;
         /** <p>Must be an integer value, such as "<code>100</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -1352,7 +1344,15 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int mm_transformDuration=0x7f01005d;
+        public static final int mm_transformDuration=0x7f01005e;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int mm_visible=0x7f01005c;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -5094,18 +5094,18 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #MaterialMenuView_mm_color com.teched.smartread:mm_color}</code></td><td></td></tr>
-           <tr><td><code>{@link #MaterialMenuView_mm_pressedDuration com.teched.smartread:mm_pressedDuration}</code></td><td></td></tr>
            <tr><td><code>{@link #MaterialMenuView_mm_rtlEnabled com.teched.smartread:mm_rtlEnabled}</code></td><td></td></tr>
            <tr><td><code>{@link #MaterialMenuView_mm_scale com.teched.smartread:mm_scale}</code></td><td></td></tr>
            <tr><td><code>{@link #MaterialMenuView_mm_strokeWidth com.teched.smartread:mm_strokeWidth}</code></td><td></td></tr>
            <tr><td><code>{@link #MaterialMenuView_mm_transformDuration com.teched.smartread:mm_transformDuration}</code></td><td></td></tr>
+           <tr><td><code>{@link #MaterialMenuView_mm_visible com.teched.smartread:mm_visible}</code></td><td></td></tr>
            </table>
            @see #MaterialMenuView_mm_color
-           @see #MaterialMenuView_mm_pressedDuration
            @see #MaterialMenuView_mm_rtlEnabled
            @see #MaterialMenuView_mm_scale
            @see #MaterialMenuView_mm_strokeWidth
            @see #MaterialMenuView_mm_transformDuration
+           @see #MaterialMenuView_mm_visible
          */
         public static final int[] MaterialMenuView = {
             0x7f01005b, 0x7f01005c, 0x7f01005d, 0x7f01005e,
@@ -5126,20 +5126,6 @@ containing a value of this type.
           @attr name com.teched.smartread:mm_color
         */
         public static final int MaterialMenuView_mm_color = 0;
-        /**
-          <p>This symbol is the offset where the {@link com.teched.smartread.R.attr#mm_pressedDuration}
-          attribute's value can be found in the {@link #MaterialMenuView} array.
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.teched.smartread:mm_pressedDuration
-        */
-        public static final int MaterialMenuView_mm_pressedDuration = 3;
         /**
           <p>This symbol is the offset where the {@link com.teched.smartread.R.attr#mm_rtlEnabled}
           attribute's value can be found in the {@link #MaterialMenuView} array.
@@ -5167,7 +5153,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.teched.smartread:mm_scale
         */
-        public static final int MaterialMenuView_mm_scale = 1;
+        public static final int MaterialMenuView_mm_scale = 2;
         /**
           <p>This symbol is the offset where the {@link com.teched.smartread.R.attr#mm_strokeWidth}
           attribute's value can be found in the {@link #MaterialMenuView} array.
@@ -5195,7 +5181,21 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.teched.smartread:mm_transformDuration
         */
-        public static final int MaterialMenuView_mm_transformDuration = 2;
+        public static final int MaterialMenuView_mm_transformDuration = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.teched.smartread.R.attr#mm_visible}
+          attribute's value can be found in the {@link #MaterialMenuView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.teched.smartread:mm_visible
+        */
+        public static final int MaterialMenuView_mm_visible = 1;
         /** Attributes that can be used with a MediaRouteButton.
            <p>Includes the following attributes:</p>
            <table>

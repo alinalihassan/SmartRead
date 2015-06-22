@@ -190,7 +190,7 @@
     <declare-styleable name="ListPopupWindow"><attr name="android:dropDownVerticalOffset"/><attr name="android:dropDownHorizontalOffset"/></declare-styleable>
     <declare-styleable name="LoadingImageView"><attr format="enum" name="imageAspectRatioAdjust"><enum name="none" value="0"/><enum name="adjust_width" value="1"/><enum name="adjust_height" value="2"/></attr><attr format="float" name="imageAspectRatio"/><attr format="boolean" name="circleCrop"/></declare-styleable>
     <declare-styleable name="MapAttrs"><attr format="enum" name="mapType"><enum name="none" value="0"/><enum name="normal" value="1"/><enum name="satellite" value="2"/><enum name="terrain" value="3"/><enum name="hybrid" value="4"/></attr><attr format="float" name="cameraBearing"/><attr format="float" name="cameraTargetLat"/><attr format="float" name="cameraTargetLng"/><attr format="float" name="cameraTilt"/><attr format="float" name="cameraZoom"/><attr format="boolean" name="liteMode"/><attr format="boolean" name="uiCompass"/><attr format="boolean" name="uiRotateGestures"/><attr format="boolean" name="uiScrollGestures"/><attr format="boolean" name="uiTiltGestures"/><attr format="boolean" name="uiZoomControls"/><attr format="boolean" name="uiZoomGestures"/><attr format="boolean" name="useViewLifecycle"/><attr format="boolean" name="zOrderOnTop"/><attr format="boolean" name="uiMapToolbar"/></declare-styleable>
-    <declare-styleable name="MaterialMenuView"><attr format="color" name="mm_color"/><attr format="integer" name="mm_scale"/><attr format="integer" name="mm_transformDuration"/><attr format="integer" name="mm_pressedDuration"/><attr format="integer" name="mm_strokeWidth"/><attr format="boolean" name="mm_rtlEnabled"/></declare-styleable>
+    <declare-styleable name="MaterialMenuView"><attr format="color" name="mm_color"/><attr format="boolean" name="mm_visible"/><attr format="integer" name="mm_scale"/><attr format="integer" name="mm_transformDuration"/><attr format="integer" name="mm_strokeWidth"/><attr format="boolean" name="mm_rtlEnabled"/></declare-styleable>
     <declare-styleable name="MediaRouteButton"><attr format="reference" name="externalRouteEnabledDrawable"/><attr name="android:minWidth"/><attr name="android:minHeight"/></declare-styleable>
     <declare-styleable name="MenuGroup"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:checkableBehavior"/><attr name="android:visible"/><attr name="android:enabled"/></declare-styleable>
     <declare-styleable name="MenuItem"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:title"/><attr name="android:titleCondensed"/><attr name="android:icon"/><attr name="android:alphabeticShortcut"/><attr name="android:numericShortcut"/><attr name="android:checkable"/><attr name="android:checked"/><attr name="android:visible"/><attr name="android:enabled"/><attr name="android:onClick"/><attr name="showAsAction"><flag name="never" value="0"/><flag name="ifRoom" value="1"/><flag name="always" value="2"/><flag name="withText" value="4"/><flag name="collapseActionView" value="8"/></attr><attr format="reference" name="actionLayout"/><attr format="string" name="actionViewClass"/><attr format="string" name="actionProviderClass"/></declare-styleable>
@@ -324,7 +324,7 @@
     <dimen name="md_list_item_height_two_line">72dp</dimen>
     <dimen name="md_list_item_margin">16dp</dimen>
     <dimen name="md_list_item_text_secondary_margin">0dp</dimen>
-    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.balysv.materialmenu/material-menu/1.5.1/res/values/values.xml -->
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.balysv.materialmenu/material-menu/1.5.4/res/values/values.xml -->
     <eat-comment/>
     <dimen name="mm_up_arrow_margin">-16dp</dimen>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/res/values/values.xml -->
@@ -495,7 +495,7 @@
     <eat-comment/>
     <string name="create_calendar_message">Allow Ad to create a calendar event?</string>
     <string name="create_calendar_title">Create calendar event</string>
-    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.nononsenseapps/filepicker/2.0.5/res/values/values.xml -->
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.nononsenseapps/filepicker/2.1/res/values/values.xml -->
     <eat-comment/>
     <string name="create_folder_error">Failed to create folder</string>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.5.0/res/values/admob_strings.xml -->
@@ -538,7 +538,7 @@
     <string name="mr_media_route_controller_stop">Stop casting</string>
     <string name="mr_system_route_name">System</string>
     <string name="mr_user_route_category_name">Devices</string>
-    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.nononsenseapps/filepicker/2.0.5/res/values/values.xml -->
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.nononsenseapps/filepicker/2.1/res/values/values.xml -->
     <eat-comment/>
     <string name="name">Name</string>
     <string name="new_folder">New folder</string>
@@ -547,7 +547,7 @@
     <string name="profile_description">user@gmail.com</string>
     <string name="profile_name">User</string>
     <string name="programmer">Developer: Hassan Alin Ali</string>
-    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.nononsenseapps/filepicker/2.0.5/res/values/values.xml -->
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.nononsenseapps/filepicker/2.1/res/values/values.xml -->
     <eat-comment/>
     <string name="select_something_first">Please select something first</string>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/SmartRead2/PersistentSearch/unspecified/res/values/values.xml -->

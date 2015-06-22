@@ -21,4 +21,4 @@
     <item android:state_pressed="false" android:state_focused="true" android:drawable="@drawable/list_focused_filepickertheme" />
     <item android:state_pressed="true" android:drawable="@drawable/list_pressed_filepickertheme" />
     <item android:drawable="@android:color/transparent" />
-</selector><!-- From: file:/home/jonas/workspace/NoNonsenseFilePicker/library/src/main/res/drawable/selectable_background_filepickertheme.xml --><!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.nononsenseapps/filepicker/2.0.5/res/drawable/selectable_background_filepickertheme.xml -->
+</selector><!-- From: file:/home/jonas/workspace/NoNonsenseFilePicker/library/src/main/res/drawable/selectable_background_filepickertheme.xml --><!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.nononsenseapps/filepicker/2.1/res/drawable/selectable_background_filepickertheme.xml -->
