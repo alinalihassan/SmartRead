@@ -1,6 +1,8 @@
 package com.teched.smartread;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.SharedPreferences;
@@ -30,8 +32,10 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 
 import org.json.JSONArray;
@@ -112,6 +116,23 @@ public class LoginActivity extends AppCompatActivity implements
                 mGoogleApiClient.connect();
             }
         });
+        final AlertDialog alertDialogBuilder =
+                new AlertDialog.Builder(this)
+                        .setView(R.layout.dialog)
+                .setCancelable(false)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                })
+                .create();
+        alertDialogBuilder.show();
+        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+        lp.copyFrom(alertDialogBuilder.getWindow().getAttributes());
+        lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+        lp.height = WindowManager.LayoutParams.MATCH_PARENT;
+        alertDialogBuilder.getWindow().setAttributes(lp);
     }
 
     @Override

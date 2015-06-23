@@ -10,10 +10,11 @@
     <string name="googleplus_page">https://plus.google.com/115704014014540003143</string>
     <string name="hasssan_page">https://plus.google.com/+HassanAlin</string>
     <string name="dinu_page">https://plus.google.com/118188707662348232873</string>
-    <string name="google_backup_key">AEdPqrEAAAAIKj9JEpBNY620E5F6DwOtMKLFkvJI5aLC4jMgHg</string>
-    <string name="license_key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoUx601UPT9SZy3H2hPdmU8MeICPDzj2Vc4Ja/F4o4/7TPakJDcWntXSdJ90pwVDFc6Odc84YQEnz5wOjeynEDBwYfNFDKDjU+UpPqFfD2qRv+aNI6L9gr8HzEv91b2Zc6IDc/VlEigLqnOUz+L6NXcKSvTGdH7SPxk7h6jnFJHY4X7K0w4QjzB88fAC/dA15BDMyICjc9V921Lgp3mzPYDxZs82tSmj8vGYOjaO0KHajmTWoPzNByYo0YuCqLZg+SCqFjRNhogmoqR+LlWYqpFDuq3V/j5F+G4S7dc7P9HMEnIz3zDJo3HM8pL6eIdgg9ELNxo/oD2OgBcnT31lUNQIDAQAB</string>
-    <string name="facebook_app_id">372820882902011</string>
     <string name="drawer_open">Drawer Open</string>
     <string name="drawer_close">Drawer Close</string>
     <string name="google_signin">LOG IN WITH GOOGLE+</string>
+    <string name="google_backup_key">AEdPqrEAAAAIKj9JEpBNY620E5F6DwOtMKLFkvJI5aLC4jMgHg</string>
+    <string name="license_key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoUx601UPT9SZy3H2hPdmU8MeICPDzj2Vc4Ja/F4o4/7TPakJDcWntXSdJ90pwVDFc6Odc84YQEnz5wOjeynEDBwYfNFDKDjU+UpPqFfD2qRv+aNI6L9gr8HzEv91b2Zc6IDc/VlEigLqnOUz+L6NXcKSvTGdH7SPxk7h6jnFJHY4X7K0w4QjzB88fAC/dA15BDMyICjc9V921Lgp3mzPYDxZs82tSmj8vGYOjaO0KHajmTWoPzNByYo0YuCqLZg+SCqFjRNhogmoqR+LlWYqpFDuq3V/j5F+G4S7dc7P9HMEnIz3zDJo3HM8pL6eIdgg9ELNxo/oD2OgBcnT31lUNQIDAQAB</string>
+    <string name="facebook_app_id">372820882902011</string>
+    <string name="banner_ad_unit_id">ca-app-pub-9149546541078633/5812125704</string>
 </resources>

@@ -35,6 +35,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -60,6 +61,10 @@ import com.anjlab.android.iab.v3.TransactionDetails;
 import com.balysv.materialmenu.MaterialMenuDrawable;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
 import com.heinrichreimersoftware.materialdrawer.DrawerFrameLayout;
 import com.heinrichreimersoftware.materialdrawer.structure.DrawerItem;
 import com.heinrichreimersoftware.materialdrawer.structure.DrawerProfile;
@@ -131,6 +136,19 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         firstTime();
         bp = new BillingProcessor(this, getResources().getString(R.string.license_key), this);
         jobManager = new JobManager(this);
+        final AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice("BE01DBD21BBECA7BF954E996DDA21410")
+                .build();
+        mAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                super.onAdLoaded();
+                findViewById(R.id.swipeRefreshLayout).setPadding(0,0,0,AdSize.SMART_BANNER.getHeightInPixels(getApplicationContext()));
+                findViewById(R.id.teacher).setPadding(0, 0, 0, AdSize.SMART_BANNER.getHeightInPixels(getApplicationContext()));
+            }
+        });
+        mAdView.loadAd(adRequest);
         final SharedPreferences prefs = this.getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE);
         GregorianCalendar c = new GregorianCalendar();
         c.getTime();
