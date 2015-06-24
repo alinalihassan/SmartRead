@@ -399,13 +399,18 @@
                     style="?android:attr/borderlessButtonStyle"/>
             </RelativeLayout>
         </com.sothree.slidinguppanel.SlidingUpPanelLayout>
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/adView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            sothree:adSize="BANNER"
-            sothree:adUnitId="@string/banner_ad_unit_id"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                sothree:adSize="SMART_BANNER"
+                sothree:adUnitId="@string/banner_ad_unit_id"/>
+        </RelativeLayout>
     </FrameLayout>
 
 </com.heinrichreimersoftware.materialdrawer.DrawerFrameLayout><!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/layout/activity_main.xml -->

@@ -3,21 +3,21 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
+        android:id="@+id/dialogTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Beta warning!"
         android:layout_centerHorizontal="true"
-        android:textSize="36sp"
-        android:paddingTop="16dp"
+        android:textSize="32sp"
+        android:padding="16dp"
         android:textColor="#009688"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="This is a beta version of SmartRead which MAY contain bugs. Also, some of the features such as class overview are still in development and not released in this beta, please be patient and understanding."
-        android:layout_centerHorizontal="true"
-        android:layout_centerInParent="true"
+        android:layout_below="@id/dialogTitle"
         android:padding="8dp"
-        android:textSize="26sp"
+        android:textSize="24sp"
         android:textColor="#000000"/>
     <TextView
         android:layout_width="wrap_content"

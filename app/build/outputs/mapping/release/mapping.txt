@@ -39658,38 +39658,36 @@ com.teched.smartread.MainActivity -> com.teched.smartread.MainActivity:
     int access$2402(com.teched.smartread.MainActivity,int) -> a
 com.teched.smartread.MainActivity$1 -> com.teched.smartread.g:
     com.teched.smartread.MainActivity this$0 -> a
-    void onDrawerClosed(android.view.View) -> b
-    void onDrawerOpened(android.view.View) -> a
+    void onAdLoaded() -> a
 com.teched.smartread.MainActivity$10 -> com.teched.smartread.h:
     com.teched.smartread.MainActivity this$0 -> a
     void onClick(android.view.View) -> onClick
 com.teched.smartread.MainActivity$11 -> com.teched.smartread.i:
+    com.teched.smartread.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.teched.smartread.MainActivity$12 -> com.teched.smartread.j:
     android.support.v4.widget.SwipeRefreshLayout val$refreshLayout -> a
     com.teched.smartread.MainActivity this$0 -> b
     boolean onMenuItemClick(android.view.MenuItem) -> a
-com.teched.smartread.MainActivity$12 -> com.teched.smartread.j:
+com.teched.smartread.MainActivity$13 -> com.teched.smartread.k:
     java.util.ArrayList val$myList -> a
     java.lang.String val$TeacherPath -> b
     android.widget.ArrayAdapter val$adapter2 -> c
     android.support.v4.widget.SwipeRefreshLayout val$refreshTeacher -> d
     com.teched.smartread.MainActivity this$0 -> e
     void onRefresh() -> a
-com.teched.smartread.MainActivity$12$1 -> com.teched.smartread.k:
-    com.teched.smartread.MainActivity$12 this$1 -> a
+com.teched.smartread.MainActivity$13$1 -> com.teched.smartread.l:
+    com.teched.smartread.MainActivity$13 this$1 -> a
     void run() -> run
-com.teched.smartread.MainActivity$13 -> com.teched.smartread.l:
+com.teched.smartread.MainActivity$14 -> com.teched.smartread.m:
     java.lang.String val$Path -> a
     android.content.SharedPreferences val$prefs -> b
     android.support.v4.widget.SwipeRefreshLayout val$refreshLayout -> c
     com.teched.smartread.MainActivity this$0 -> d
     void onRefresh() -> a
-com.teched.smartread.MainActivity$13$1 -> com.teched.smartread.m:
-    com.teched.smartread.MainActivity$13 this$1 -> a
+com.teched.smartread.MainActivity$14$1 -> com.teched.smartread.n:
+    com.teched.smartread.MainActivity$14 this$1 -> a
     void run() -> run
-com.teched.smartread.MainActivity$14 -> com.teched.smartread.n:
-    android.support.v4.widget.SwipeRefreshLayout val$refreshLayout -> a
-    com.teched.smartread.MainActivity this$0 -> b
-    void onClick(com.heinrichreimersoftware.materialdrawer.structure.DrawerItem,long,int) -> a
 com.teched.smartread.MainActivity$15 -> com.teched.smartread.o:
     android.support.v4.widget.SwipeRefreshLayout val$refreshLayout -> a
     com.teched.smartread.MainActivity this$0 -> b
@@ -39707,37 +39705,35 @@ com.teched.smartread.MainActivity$18 -> com.teched.smartread.r:
     com.teched.smartread.MainActivity this$0 -> b
     void onClick(com.heinrichreimersoftware.materialdrawer.structure.DrawerItem,long,int) -> a
 com.teched.smartread.MainActivity$19 -> com.teched.smartread.s:
-    com.teched.smartread.MainActivity this$0 -> a
+    android.support.v4.widget.SwipeRefreshLayout val$refreshLayout -> a
+    com.teched.smartread.MainActivity this$0 -> b
     void onClick(com.heinrichreimersoftware.materialdrawer.structure.DrawerItem,long,int) -> a
 com.teched.smartread.MainActivity$2 -> com.teched.smartread.t:
     com.teched.smartread.MainActivity this$0 -> a
-    void onPanelSlide(android.view.View,float) -> a
-    void onPanelCollapsed(android.view.View) -> a
-    void onPanelExpanded(android.view.View) -> b
-    void onPanelAnchored(android.view.View) -> c
-    void onPanelHidden(android.view.View) -> d
+    void onDrawerClosed(android.view.View) -> b
+    void onDrawerOpened(android.view.View) -> a
 com.teched.smartread.MainActivity$20 -> com.teched.smartread.u:
     com.teched.smartread.MainActivity this$0 -> a
     void onClick(com.heinrichreimersoftware.materialdrawer.structure.DrawerItem,long,int) -> a
 com.teched.smartread.MainActivity$21 -> com.teched.smartread.v:
+    com.teched.smartread.MainActivity this$0 -> a
+    void onClick(com.heinrichreimersoftware.materialdrawer.structure.DrawerItem,long,int) -> a
+com.teched.smartread.MainActivity$22 -> com.teched.smartread.w:
     java.lang.String val$Path -> a
     android.content.SharedPreferences val$prefs -> b
     com.teched.smartread.MainActivity this$0 -> c
     void onItemLongClick(android.view.View,int) -> a
     void onItemClick(android.view.View,int) -> b
-com.teched.smartread.MainActivity$21$1 -> com.teched.smartread.w:
+com.teched.smartread.MainActivity$22$1 -> com.teched.smartread.x:
     org.json.JSONObject val$mainObject2 -> a
-    com.teched.smartread.MainActivity$21 this$1 -> b
+    com.teched.smartread.MainActivity$22 this$1 -> b
     void onPageChanged(int,int) -> a
-com.teched.smartread.MainActivity$22 -> com.teched.smartread.x:
-    com.teched.smartread.MainActivity this$0 -> a
-    void onAnimationEnd(android.animation.Animator) -> onAnimationEnd
 com.teched.smartread.MainActivity$23 -> com.teched.smartread.y:
-    android.view.View val$myView -> a
-    com.teched.smartread.MainActivity this$0 -> b
+    com.teched.smartread.MainActivity this$0 -> a
     void onAnimationEnd(android.animation.Animator) -> onAnimationEnd
 com.teched.smartread.MainActivity$24 -> com.teched.smartread.z:
-    com.teched.smartread.MainActivity this$0 -> a
+    android.view.View val$myView -> a
+    com.teched.smartread.MainActivity this$0 -> b
     void onAnimationEnd(android.animation.Animator) -> onAnimationEnd
 com.teched.smartread.MainActivity$25 -> com.teched.smartread.aa:
     com.teched.smartread.MainActivity this$0 -> a
@@ -39749,10 +39745,20 @@ com.teched.smartread.MainActivity$27 -> com.teched.smartread.ac:
     com.teched.smartread.MainActivity this$0 -> a
     void onAnimationEnd(android.animation.Animator) -> onAnimationEnd
 com.teched.smartread.MainActivity$28 -> com.teched.smartread.ad:
+    com.teched.smartread.MainActivity this$0 -> a
+    void onAnimationEnd(android.animation.Animator) -> onAnimationEnd
+com.teched.smartread.MainActivity$29 -> com.teched.smartread.ae:
     android.view.View val$myView -> a
     com.teched.smartread.MainActivity this$0 -> b
     void onAnimationEnd(android.animation.Animator) -> onAnimationEnd
-com.teched.smartread.MainActivity$29 -> com.teched.smartread.ae:
+com.teched.smartread.MainActivity$3 -> com.teched.smartread.af:
+    com.teched.smartread.MainActivity this$0 -> a
+    void onPanelSlide(android.view.View,float) -> a
+    void onPanelCollapsed(android.view.View) -> a
+    void onPanelExpanded(android.view.View) -> b
+    void onPanelAnchored(android.view.View) -> c
+    void onPanelHidden(android.view.View) -> d
+com.teched.smartread.MainActivity$30 -> com.teched.smartread.ag:
     android.widget.RadioGroup val$radioGroup -> a
     org.json.JSONObject val$obj -> b
     org.json.JSONArray val$array -> c
@@ -39761,48 +39767,48 @@ com.teched.smartread.MainActivity$29 -> com.teched.smartread.ae:
     org.json.JSONObject val$main -> f
     com.teched.smartread.MainActivity this$0 -> g
     void onClick(android.view.View) -> onClick
-com.teched.smartread.MainActivity$29$1 -> com.teched.smartread.af:
-    com.teched.smartread.MainActivity$29 this$1 -> a
+com.teched.smartread.MainActivity$30$1 -> com.teched.smartread.ah:
+    com.teched.smartread.MainActivity$30 this$1 -> a
     void run() -> run
-com.teched.smartread.MainActivity$29$2 -> com.teched.smartread.ag:
-    com.teched.smartread.MainActivity$29 this$1 -> a
+com.teched.smartread.MainActivity$30$2 -> com.teched.smartread.ai:
+    com.teched.smartread.MainActivity$30 this$1 -> a
     void run() -> run
-com.teched.smartread.MainActivity$29$3 -> com.teched.smartread.ah:
-    com.teched.smartread.MainActivity$29 this$1 -> a
+com.teched.smartread.MainActivity$30$3 -> com.teched.smartread.aj:
+    com.teched.smartread.MainActivity$30 this$1 -> a
     void run() -> run
-com.teched.smartread.MainActivity$3 -> com.teched.smartread.ai:
-    java.lang.String val$TeacherPath -> a
-    android.widget.ListView val$teacherList -> b
-    android.content.SharedPreferences val$prefs -> c
-    com.teched.smartread.MainActivity this$0 -> d
-    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.teched.smartread.MainActivity$30 -> com.teched.smartread.aj:
+com.teched.smartread.MainActivity$31 -> com.teched.smartread.ak:
     android.widget.RadioButton val$radioButton -> a
     com.teched.smartread.MainActivity this$0 -> b
     void onAnimationUpdate(android.animation.ValueAnimator) -> onAnimationUpdate
-com.teched.smartread.MainActivity$31 -> com.teched.smartread.ak:
+com.teched.smartread.MainActivity$32 -> com.teched.smartread.al:
     boolean val$visible -> a
     android.view.View val$view -> b
     java.lang.String val$txt -> c
     com.teched.smartread.MainActivity this$0 -> d
     void onAnimationEnd(android.animation.Animator) -> onAnimationEnd
-com.teched.smartread.MainActivity$32 -> com.teched.smartread.al:
+com.teched.smartread.MainActivity$33 -> com.teched.smartread.am:
     com.teched.smartread.MainActivity this$0 -> a
     void onMenuClick() -> a
-com.teched.smartread.MainActivity$33 -> com.teched.smartread.am:
+com.teched.smartread.MainActivity$34 -> com.teched.smartread.an:
     com.teched.smartread.MainActivity this$0 -> a
     void onSearchOpened() -> a
     void onSearchClosed() -> b
     void onSearchTermChanged() -> c
     void onSearch(java.lang.String) -> a
-com.teched.smartread.MainActivity$4 -> com.teched.smartread.an:
+com.teched.smartread.MainActivity$4 -> com.teched.smartread.ao:
+    java.lang.String val$TeacherPath -> a
+    android.widget.ListView val$teacherList -> b
+    android.content.SharedPreferences val$prefs -> c
+    com.teched.smartread.MainActivity this$0 -> d
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.teched.smartread.MainActivity$5 -> com.teched.smartread.ap:
     java.lang.String val$TeacherPath -> a
     java.lang.String val$Path -> b
     java.util.ArrayList val$myList -> c
     android.widget.ArrayAdapter val$adapter2 -> d
     com.teched.smartread.MainActivity this$0 -> e
     void onClick(android.view.View) -> onClick
-com.teched.smartread.MainActivity$5 -> com.teched.smartread.ao:
+com.teched.smartread.MainActivity$6 -> com.teched.smartread.aq:
     android.widget.EditText val$answer1 -> a
     android.widget.EditText val$answer2 -> b
     android.widget.EditText val$answer3 -> c
@@ -39810,19 +39816,16 @@ com.teched.smartread.MainActivity$5 -> com.teched.smartread.ao:
     android.widget.EditText val$pageEdit -> e
     com.teched.smartread.MainActivity this$0 -> f
     void onClick(android.view.View) -> onClick
-com.teched.smartread.MainActivity$6 -> com.teched.smartread.ap:
+com.teched.smartread.MainActivity$7 -> com.teched.smartread.ar:
     com.teched.smartread.MainActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.teched.smartread.MainActivity$7 -> com.teched.smartread.aq:
+com.teched.smartread.MainActivity$8 -> com.teched.smartread.as:
     com.teched.smartread.MainActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.teched.smartread.MainActivity$8 -> com.teched.smartread.ar:
+com.teched.smartread.MainActivity$9 -> com.teched.smartread.at:
     com.teched.smartread.MainActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.teched.smartread.MainActivity$9 -> com.teched.smartread.as:
-    com.teched.smartread.MainActivity this$0 -> a
-    void onClick(android.view.View) -> onClick
-com.teched.smartread.MainAdapter -> com.teched.smartread.at:
+com.teched.smartread.MainAdapter -> com.teched.smartread.au:
     java.lang.String Type -> b
     android.content.SharedPreferences prefs -> c
     java.util.List cards -> d
@@ -39842,29 +39845,29 @@ com.teched.smartread.MainAdapter -> com.teched.smartread.at:
     android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int) -> a
     android.content.SharedPreferences access$000(com.teched.smartread.MainAdapter) -> a
     java.lang.String access$100(com.teched.smartread.MainAdapter) -> b
-com.teched.smartread.MainAdapter$1 -> com.teched.smartread.au:
+com.teched.smartread.MainAdapter$1 -> com.teched.smartread.av:
     com.teched.smartread.MainAdapter this$0 -> a
     int compare(com.teched.smartread.Card,com.teched.smartread.Card) -> a
     int compare(java.lang.Object,java.lang.Object) -> compare
-com.teched.smartread.MainAdapter$ViewHolder -> com.teched.smartread.av:
+com.teched.smartread.MainAdapter$ViewHolder -> com.teched.smartread.aw:
     android.widget.TextView cardName -> j
     android.widget.TextView cardAuthor -> k
     android.widget.ImageView cardHeart -> l
-com.teched.smartread.RecyclerItemClickListener -> com.teched.smartread.aw:
+com.teched.smartread.RecyclerItemClickListener -> com.teched.smartread.ax:
     com.teched.smartread.RecyclerItemClickListener$OnItemClickListener mListener -> a
     android.view.GestureDetector mGestureDetector -> b
     boolean onInterceptTouchEvent(android.support.v7.widget.RecyclerView,android.view.MotionEvent) -> a
     void onTouchEvent(android.support.v7.widget.RecyclerView,android.view.MotionEvent) -> b
     com.teched.smartread.RecyclerItemClickListener$OnItemClickListener access$000(com.teched.smartread.RecyclerItemClickListener) -> a
-com.teched.smartread.RecyclerItemClickListener$1 -> com.teched.smartread.ax:
+com.teched.smartread.RecyclerItemClickListener$1 -> com.teched.smartread.ay:
     android.support.v7.widget.RecyclerView val$recyclerView -> a
     com.teched.smartread.RecyclerItemClickListener this$0 -> b
     boolean onSingleTapConfirmed(android.view.MotionEvent) -> onSingleTapConfirmed
     boolean onDoubleTap(android.view.MotionEvent) -> onDoubleTap
-com.teched.smartread.RecyclerItemClickListener$OnItemClickListener -> com.teched.smartread.ay:
+com.teched.smartread.RecyclerItemClickListener$OnItemClickListener -> com.teched.smartread.az:
     void onItemClick(android.view.View,int) -> b
     void onItemLongClick(android.view.View,int) -> a
-com.teched.smartread.RefreshJob -> com.teched.smartread.az:
+com.teched.smartread.RefreshJob -> com.teched.smartread.ba:
     java.lang.String email -> a
     java.io.File[] files -> b
     java.lang.String path -> c
@@ -39884,25 +39887,25 @@ com.teched.smartread.SettingsActivity -> com.teched.smartread.SettingsActivity:
     java.lang.String readFromFile(java.lang.String) -> a
     void Write(java.lang.String,org.json.JSONObject) -> a
     void Reset() -> b
-com.teched.smartread.SettingsActivity$1 -> com.teched.smartread.ba:
+com.teched.smartread.SettingsActivity$1 -> com.teched.smartread.bb:
     com.teched.smartread.SettingsActivity this$0 -> a
     void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String) -> onSharedPreferenceChanged
-com.teched.smartread.SettingsActivity$2 -> com.teched.smartread.bb:
+com.teched.smartread.SettingsActivity$2 -> com.teched.smartread.bc:
     com.teched.smartread.SettingsActivity this$0 -> a
     boolean onPreferenceClick(android.preference.Preference) -> onPreferenceClick
-com.teched.smartread.SettingsActivity$3 -> com.teched.smartread.bc:
+com.teched.smartread.SettingsActivity$3 -> com.teched.smartread.bd:
     com.teched.smartread.SettingsActivity this$0 -> a
     boolean onPreferenceClick(android.preference.Preference) -> onPreferenceClick
-com.teched.smartread.SettingsActivity$4 -> com.teched.smartread.bd:
+com.teched.smartread.SettingsActivity$4 -> com.teched.smartread.be:
     com.teched.smartread.SettingsActivity this$0 -> a
     boolean onPreferenceClick(android.preference.Preference) -> onPreferenceClick
-com.teched.smartread.SettingsActivity$5 -> com.teched.smartread.be:
+com.teched.smartread.SettingsActivity$5 -> com.teched.smartread.bf:
     com.teched.smartread.SettingsActivity this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.teched.smartread.SettingsActivity$6 -> com.teched.smartread.bf:
+com.teched.smartread.SettingsActivity$6 -> com.teched.smartread.bg:
     com.teched.smartread.SettingsActivity this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.teched.smartread.UploadJob -> com.teched.smartread.bg:
+com.teched.smartread.UploadJob -> com.teched.smartread.bh:
     java.lang.String Path -> c
     java.lang.String Name -> d
     java.lang.String s1 -> e

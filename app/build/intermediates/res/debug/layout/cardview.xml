@@ -18,7 +18,7 @@
             android:paddingTop="8dp"
             android:paddingStart="8dp"
             android:paddingBottom="8dp"
-            android:paddingEnd="32dp"
+            android:paddingEnd="40dp"
             android:gravity="start"
             android:background="?android:selectableItemBackground"
             android:focusable="true"
@@ -30,7 +30,6 @@
             />
         <ImageView
             android:id="@+id/heart"
-            android:contentDescription="Heart"
             android:src="@drawable/ic_heart"
             android:alpha="0"
             android:layout_alignParentEnd="true"

@@ -5,10 +5,10 @@ android {
     buildToolsVersion '22.0.1'
     defaultConfig {
         applicationId "com.teched.smartread"
-        minSdkVersion 21
+        minSdkVersion 17
         targetSdkVersion 22
-        versionCode 44
-        versionName "2.9.0"
+        versionCode 46
+        versionName "2.9.4"
     }
     lintOptions {
         checkReleaseBuilds false
@@ -49,5 +49,6 @@ dependencies {
     compile 'com.google.android.gms:play-services:7.5.0'
     compile 'com.anjlab.android.iab.v3:library:1.0.26'
     compile 'com.path:android-priority-jobqueue:1.1.2'
+    compile 'com.nineoldandroids:library:2.4.0+'
     compile project(':PersistentSearch')
 }

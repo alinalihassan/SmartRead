@@ -290,7 +290,7 @@
     </style>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/values-v21/styles.xml -->
     <eat-comment/>
-    <style name="SettingsTheme" parent="android:Theme.Material.Light.DarkActionBar">
+    <style name="SettingsTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="android:statusBarColor">@color/color_primary_dark</item>
         <item name="android:colorPrimary">@color/color_primary</item>
         <item name="actionBarStyle">@style/SettingsTheme.ActionBar</item>

@@ -434,7 +434,7 @@ public final class R {
 		public static final int selectable_background_filepickertheme = 0x7f0200c1;
 	}
 	public static final class id {
-		public static final int action0 = 0x7f0f00ee;
+		public static final int action0 = 0x7f0f00f1;
 		public static final int action_bar = 0x7f0f008e;
 		public static final int action_bar_activity_content = 0x7f0f0000;
 		public static final int action_bar_container = 0x7f0f008d;
@@ -443,8 +443,8 @@ public final class R {
 		public static final int action_bar_subtitle = 0x7f0f0072;
 		public static final int action_bar_title = 0x7f0f0071;
 		public static final int action_context_bar = 0x7f0f008f;
-		public static final int action_createdir = 0x7f0f0106;
-		public static final int action_divider = 0x7f0f00f2;
+		public static final int action_createdir = 0x7f0f0109;
+		public static final int action_divider = 0x7f0f00f5;
 		public static final int action_menu_divider = 0x7f0f0002;
 		public static final int action_menu_presenter = 0x7f0f0003;
 		public static final int action_mode_bar = 0x7f0f008b;
@@ -455,15 +455,15 @@ public final class R {
 		public static final int always = 0x7f0f003f;
 		public static final int beginning = 0x7f0f0037;
 		public static final int buttonPanel = 0x7f0f0084;
-		public static final int button_cancel = 0x7f0f00de;
-		public static final int button_container = 0x7f0f00dd;
-		public static final int button_ok = 0x7f0f00df;
-		public static final int cancel_action = 0x7f0f00ef;
+		public static final int button_cancel = 0x7f0f00e1;
+		public static final int button_container = 0x7f0f00e0;
+		public static final int button_ok = 0x7f0f00e2;
+		public static final int cancel_action = 0x7f0f00f2;
 		public static final int checkbox = 0x7f0f0086;
-		public static final int chronometer = 0x7f0f00f5;
+		public static final int chronometer = 0x7f0f00f8;
 		public static final int collapseActionView = 0x7f0f0040;
 		public static final int contentPanel = 0x7f0f007f;
-		public static final int current_dir = 0x7f0f00dc;
+		public static final int current_dir = 0x7f0f00df;
 		public static final int custom = 0x7f0f0083;
 		public static final int customPanel = 0x7f0f0082;
 		public static final int decor_content_parent = 0x7f0f008c;
@@ -472,9 +472,9 @@ public final class R {
 		public static final int disableHome = 0x7f0f002f;
 		public static final int dropdown = 0x7f0f0049;
 		public static final int edit_query = 0x7f0f0090;
-		public static final int edit_text = 0x7f0f00d9;
+		public static final int edit_text = 0x7f0f00dc;
 		public static final int end = 0x7f0f0038;
-		public static final int end_padder = 0x7f0f00fa;
+		public static final int end_padder = 0x7f0f00fd;
 		public static final int expand_activities_button = 0x7f0f0075;
 		public static final int expanded_menu = 0x7f0f0085;
 		public static final int fragment = 0x7f0f009d;
@@ -483,20 +483,20 @@ public final class R {
 		public static final int icon = 0x7f0f0079;
 		public static final int ifRoom = 0x7f0f0041;
 		public static final int image = 0x7f0f0076;
-		public static final int info = 0x7f0f00f9;
-		public static final int item_icon = 0x7f0f00da;
-		public static final int line1 = 0x7f0f00f3;
-		public static final int line3 = 0x7f0f00f7;
+		public static final int info = 0x7f0f00fc;
+		public static final int item_icon = 0x7f0f00dd;
+		public static final int line1 = 0x7f0f00f6;
+		public static final int line3 = 0x7f0f00fa;
 		public static final int listMode = 0x7f0f002c;
 		public static final int list_item = 0x7f0f0078;
-		public static final int media_actions = 0x7f0f00f1;
+		public static final int media_actions = 0x7f0f00f4;
 		public static final int middle = 0x7f0f0039;
 		public static final int multiply = 0x7f0f004b;
 		public static final int never = 0x7f0f0042;
 		public static final int none = 0x7f0f0031;
 		public static final int normal = 0x7f0f002d;
 		public static final int parentPanel = 0x7f0f007b;
-		public static final int picker_toolbar = 0x7f0f00db;
+		public static final int picker_toolbar = 0x7f0f00de;
 		public static final int progress_circular = 0x7f0f0028;
 		public static final int progress_horizontal = 0x7f0f0029;
 		public static final int radio = 0x7f0f0088;
@@ -521,13 +521,13 @@ public final class R {
 		public static final int src_atop = 0x7f0f004d;
 		public static final int src_in = 0x7f0f004e;
 		public static final int src_over = 0x7f0f004f;
-		public static final int status_bar_latest_event_content = 0x7f0f00f0;
+		public static final int status_bar_latest_event_content = 0x7f0f00f3;
 		public static final int submit_area = 0x7f0f0099;
 		public static final int tabMode = 0x7f0f002e;
-		public static final int text = 0x7f0f00f8;
-		public static final int text2 = 0x7f0f00f6;
+		public static final int text = 0x7f0f00fb;
+		public static final int text2 = 0x7f0f00f9;
 		public static final int textSpacerNoButtons = 0x7f0f0081;
-		public static final int time = 0x7f0f00f4;
+		public static final int time = 0x7f0f00f7;
 		public static final int title = 0x7f0f007a;
 		public static final int title_template = 0x7f0f007d;
 		public static final int topPanel = 0x7f0f007c;
@@ -609,11 +609,11 @@ public final class R {
 		public static final int abc_shareactionprovider_share_with_application = 0x7f08000c;
 		public static final int abc_toolbar_collapse_description = 0x7f08004d;
 		public static final int app_name = 0x7f08004f;
-		public static final int create_folder_error = 0x7f080058;
-		public static final int name = 0x7f08006c;
-		public static final int new_folder = 0x7f08006d;
-		public static final int select_something_first = 0x7f080071;
-		public static final int status_bar_notification_info_overflow = 0x7f080073;
+		public static final int create_folder_error = 0x7f080059;
+		public static final int name = 0x7f08006f;
+		public static final int new_folder = 0x7f080070;
+		public static final int select_something_first = 0x7f080076;
+		public static final int status_bar_notification_info_overflow = 0x7f080078;
 	}
 	public static final class style {
 		public static final int AlertDialog_AppCompat = 0x7f0a007f;

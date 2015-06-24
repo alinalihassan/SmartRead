@@ -10764,8 +10764,8 @@ com.teched.smartread.LoginActivity:
     private static final int RC_SIGN_IN
 com.teched.smartread.MainActivity:
     private static final int FILE_CODE
-com.teched.smartread.MainActivity$33:
-    1264:1265:public void onSearchCleared()
+com.teched.smartread.MainActivity$34:
+    1277:1278:public void onSearchCleared()
 com.teched.smartread.R
 com.teched.smartread.R$anim
 com.teched.smartread.R$array

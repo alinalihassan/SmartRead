@@ -21,6 +21,7 @@ import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.StrictMode;
@@ -35,13 +36,11 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewAnimationUtils;
 import android.view.WindowManager;
 import android.view.animation.AccelerateInterpolator;
 import android.view.inputmethod.InputMethodManager;
@@ -138,7 +137,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         jobManager = new JobManager(this);
         final AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice("BE01DBD21BBECA7BF954E996DDA21410")
                 .build();
         mAdView.setAdListener(new AdListener() {
             @Override
@@ -185,7 +183,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         drawer = (DrawerFrameLayout) findViewById(R.id.drawer);
         search = (SearchBox) findViewById(R.id.searchbox);
         teacher = (RelativeLayout) findViewById(R.id.teacher);
-        toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
         panelLayout = (SlidingUpPanelLayout) findViewById(R.id.sliding_layout);
         pdf = (PDFView) findViewById(R.id.pdfcontent);
         Button nextQuestion = (Button) findViewById(R.id.questionNext);
@@ -206,6 +203,15 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         TextView google = (TextView) findViewById(R.id.aboutGoogle);
         TextView facebook = (TextView) findViewById(R.id.aboutFacebook);
         TextView aboutVersion = (TextView) findViewById(R.id.aboutVersion);
+
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP) {
+            toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
+            findViewById(R.id.toolbarCard).setVisibility(View.VISIBLE);
+        }
+        else {
+            toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar2);
+            toolbar.setVisibility(View.VISIBLE);
+        }
         refreshLayout.setColorSchemeResources(R.color.color_primary);
         refreshTeacher.setColorSchemeResources(R.color.color_primary);
         toolbar.setTitleTextColor(Color.WHITE);
@@ -521,22 +527,22 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         drawer.addProfile(
                 new DrawerProfile()
                         .setRoundedAvatar(this.getBaseContext(), profile[0] == null ? BitmapFactory.decodeResource(getResources(), R.drawable.profile_avatar) : profile[0])
-                        .setBackground(cover == null ? getResources().getDrawable(R.drawable.profile_background, null) : cover)
+                        .setBackground(cover == null ? getResources().getDrawable(R.drawable.profile_background) : cover)
                         .setName(prefs.getString("ProfileName", getString(R.string.profile_name)))
                         .setDescription(prefs.getString("Email", getString(R.string.profile_description)))
         );
         drawer.addItem(
                 new DrawerItem()
-                        .setImage(getResources().getDrawable(R.drawable.ic_library, null), 1)
+                        .setImage(getResources().getDrawable(R.drawable.ic_library), 1)
                         .setTextPrimary("My Library")
                         .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
                             @Override
                             public void onClick(DrawerItem drawerItem, long l, int i) {
                                 ((MainAdapter) listView.getAdapter()).setType("Library");
                                 ((MainAdapter) listView.getAdapter()).flushFilter();
-                                if(openPdf && menuString.equals("Library"))
+                                if (openPdf && menuString.equals("Library"))
                                     AnimatePDF(false);
-                                if(openPdf && menuString.equals("Teacher"))
+                                if (openPdf && menuString.equals("Teacher"))
                                     AnimateTeacher(false);
                                 drawer.closeDrawer();
                                 drawer.selectItem(i);
@@ -550,7 +556,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         );
         drawer.addItem(
                 new DrawerItem()
-                        .setImage(getResources().getDrawable(R.drawable.ic_started,null),1)
+                        .setImage(getResources().getDrawable(R.drawable.ic_started),1)
                         .setTextPrimary("Started")
                         .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
                             @Override
@@ -573,7 +579,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         );
         drawer.addItem(
                 new DrawerItem()
-                        .setImage(getResources().getDrawable(R.drawable.ic_heart_grey, null), 1)
+                        .setImage(getResources().getDrawable(R.drawable.ic_heart_grey), 1)
                         .setTextPrimary("Favorites")
                         .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
                             @Override
@@ -596,7 +602,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         );
         drawer.addItem(
                 new DrawerItem()
-                        .setImage(getResources().getDrawable(R.drawable.ic_school,null),1)
+                        .setImage(getResources().getDrawable(R.drawable.ic_school),1)
                         .setTextPrimary("Teacher")
                         .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
                             @Override
@@ -617,14 +623,14 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         );
         drawer.addItem(
                 new DrawerItem()
-                        .setImage(getResources().getDrawable(R.drawable.ic_shop, null), 1)
+                        .setImage(getResources().getDrawable(R.drawable.ic_shop), 1)
                         .setTextPrimary("Store")
                         .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
                             @Override
                             public void onClick(DrawerItem drawerItem, long l, int i) {
-                                if(openPdf && menuString.equals("Library"))
+                                if (openPdf && menuString.equals("Library"))
                                     AnimatePDF(false);
-                                if(openPdf && menuString.equals("Teacher"))
+                                if (openPdf && menuString.equals("Teacher"))
                                     AnimateTeacher(false);
                                 drawer.closeDrawer();
                                 drawer.selectItem(i);
@@ -639,7 +645,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         drawer.addDivider();
         drawer.addItem(
                 new DrawerItem()
-                        .setImage(getResources().getDrawable(R.drawable.ic_settings, null), 1)
+                        .setImage(getResources().getDrawable(R.drawable.ic_settings), 1)
                         .setTextPrimary("Settings")
                         .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
                             @Override
@@ -651,7 +657,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         );
         drawer.addItem(
                 new DrawerItem()
-                        .setImage(getResources().getDrawable(R.drawable.ic_information, null), 1)
+                        .setImage(getResources().getDrawable(R.drawable.ic_information), 1)
                         .setTextPrimary("About")
                         .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
                             @Override
@@ -844,22 +850,28 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         if(inTransition) return;
         inTransition = true;
         final View myView = findViewById(R.id.sliding_layout);
+        YoYo.with(Techniques.ZoomIn)
+                .duration(400)
+                .interpolate(new AccelerateInterpolator())
+                .withListener(new com.nineoldandroids.animation.Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(com.nineoldandroids.animation.Animator animation) {
+                    }
 
-        int cx = (myView.getLeft() + myView.getRight()) / 2;
-        int cy = (myView.getTop() + myView.getBottom());
+                    @Override
+                    public void onAnimationEnd(com.nineoldandroids.animation.Animator animation) {
+                        inTransition = false;
+                    }
 
-        int finalRadius = (int) (Math.max(myView.getWidth(), myView.getHeight()) * 1.1);
-        int initialRadius = (int) (myView.getWidth() * 1.8);
-        Animator anim = ViewAnimationUtils.createCircularReveal(myView, cx, cy, 0, finalRadius);
-        anim.setInterpolator(new AccelerateInterpolator());
-        anim.setDuration(500);
-        anim.addListener(new AnimatorListenerAdapter() {
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                super.onAnimationEnd(animation);
-                inTransition = false;
-            }
-        });
+                    @Override
+                    public void onAnimationCancel(com.nineoldandroids.animation.Animator animation) {
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(com.nineoldandroids.animation.Animator animation) {
+                    }
+                })
+                .playOn(myView);
         if (bool) {
             myView.setVisibility(View.VISIBLE);
             openPdf = true;
@@ -870,40 +882,45 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             pdf.enableSwipe(false);
             openPdf = false;
             getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-            anim = ViewAnimationUtils.createCircularReveal(myView, cx, cy, initialRadius, 0);
-            anim.setInterpolator(new AccelerateInterpolator());
-            anim.setDuration(500);
-            anim.addListener(new AnimatorListenerAdapter() {
-                @Override
-                public void onAnimationEnd(Animator animation) {
-                    super.onAnimationEnd(animation);
-                    myView.setVisibility(View.INVISIBLE);
-                    inTransition = false;
-                }
-            });
+            YoYo.with(Techniques.ZoomOut)
+                    .duration(400)
+                    .interpolate(new AccelerateInterpolator())
+                    .withListener(new com.nineoldandroids.animation.Animator.AnimatorListener() {
+                        @Override
+                        public void onAnimationStart(com.nineoldandroids.animation.Animator animation) {
+                        }
+
+                        @Override
+                        public void onAnimationEnd(com.nineoldandroids.animation.Animator animation) {
+                            inTransition = false;
+                            myView.setVisibility(View.INVISIBLE);
+                        }
+
+                        @Override
+                        public void onAnimationCancel(com.nineoldandroids.animation.Animator animation) {
+                        }
+
+                        @Override
+                        public void onAnimationRepeat(com.nineoldandroids.animation.Animator animation) {
+                        }
+                    })
+                    .playOn(myView);
         }
         Write(null,null);
-        anim.start();
     }
 
     public void AnimateQuestion(boolean bool) {
 
-        View myView = findViewById(R.id.QuestionLayout);
+        final View myView = findViewById(R.id.QuestionLayout);
 
 
-        int cx = (myView.getLeft() + myView.getRight()) / 2;
-        int cy = (myView.getTop() + myView.getBottom());
-
-        int finalRadius = (int) (Math.max(myView.getWidth(), myView.getHeight())*1.1);
-        int initialRadius = (int) (myView.getWidth()*1.8);
-        Animator anim = ViewAnimationUtils.createCircularReveal(myView, cx, cy, 0, finalRadius);
-        anim.setInterpolator(new AccelerateInterpolator());
-        anim.setDuration(500);
+        YoYo.with(Techniques.ZoomIn)
+                .duration(400)
+                .interpolate(new AccelerateInterpolator())
+                .playOn(myView);
         if (bool) {
             myView.setVisibility(View.VISIBLE);
             drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
-            View myView1 = findViewById(R.id.QuestionLayout);
-            myView1.setVisibility(View.VISIBLE);
             View quest = findViewById(R.id.Question);
             quest.setVisibility(View.VISIBLE);
             RadioButton quest1 = (RadioButton)findViewById(R.id.Option1);
@@ -921,59 +938,78 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             quest = findViewById(R.id.button);
             quest.setVisibility(View.VISIBLE);
         } else {
-            anim = ViewAnimationUtils.createCircularReveal(myView, cx, cy, initialRadius, 0);
-            anim.setDuration(500);
-            anim.setInterpolator(new AccelerateInterpolator());
-            anim.addListener(new AnimatorListenerAdapter() {
-                @Override
-                public void onAnimationEnd(Animator animation) {
-                    super.onAnimationEnd(animation);
-                    View myView = findViewById(R.id.QuestionLayout);
-                    myView.setVisibility(View.INVISIBLE);
-                    View quest = findViewById(R.id.Question);
-                    quest.setVisibility(View.INVISIBLE);
-                    RadioButton quest1 = (RadioButton)findViewById(R.id.Option1);
-                    quest1.setTextColor(Color.BLACK);
-                    quest1.setVisibility(View.INVISIBLE);
-                    quest1 = (RadioButton)findViewById(R.id.Option2);
-                    quest1.setTextColor(Color.BLACK);
-                    quest1.setVisibility(View.INVISIBLE);
-                    quest1 = (RadioButton)findViewById(R.id.Option3);
-                    quest1.setTextColor(Color.BLACK);
-                    quest1.setVisibility(View.INVISIBLE);
-                    quest1 = (RadioButton)findViewById(R.id.Option4);
-                    quest1.setTextColor(Color.BLACK);
-                    quest1.setVisibility(View.INVISIBLE);
-                    quest = findViewById(R.id.button);
-                    quest.setVisibility(View.INVISIBLE);
-                    pdf.enableSwipe(true);
-                    drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
-                }
-            });
+            YoYo.with(Techniques.ZoomOut)
+                    .duration(400)
+                    .interpolate(new AccelerateInterpolator())
+                    .withListener(new com.nineoldandroids.animation.Animator.AnimatorListener() {
+                        @Override
+                        public void onAnimationStart(com.nineoldandroids.animation.Animator animation) {
+                        }
+
+                        @Override
+                        public void onAnimationEnd(com.nineoldandroids.animation.Animator animation) {
+                            myView.setVisibility(View.INVISIBLE);
+                            View myView = findViewById(R.id.QuestionLayout);
+                            myView.setVisibility(View.INVISIBLE);
+                            View quest = findViewById(R.id.Question);
+                            quest.setVisibility(View.INVISIBLE);
+                            RadioButton quest1 = (RadioButton)findViewById(R.id.Option1);
+                            quest1.setTextColor(Color.BLACK);
+                            quest1.setVisibility(View.INVISIBLE);
+                            quest1 = (RadioButton)findViewById(R.id.Option2);
+                            quest1.setTextColor(Color.BLACK);
+                            quest1.setVisibility(View.INVISIBLE);
+                            quest1 = (RadioButton)findViewById(R.id.Option3);
+                            quest1.setTextColor(Color.BLACK);
+                            quest1.setVisibility(View.INVISIBLE);
+                            quest1 = (RadioButton)findViewById(R.id.Option4);
+                            quest1.setTextColor(Color.BLACK);
+                            quest1.setVisibility(View.INVISIBLE);
+                            quest = findViewById(R.id.button);
+                            quest.setVisibility(View.INVISIBLE);
+                            pdf.enableSwipe(true);
+                            drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
+                        }
+
+                        @Override
+                        public void onAnimationCancel(com.nineoldandroids.animation.Animator animation) {
+                        }
+
+                        @Override
+                        public void onAnimationRepeat(com.nineoldandroids.animation.Animator animation) {
+                        }
+                    })
+                    .playOn(myView);
         }
-        anim.start();
     }
 
     public void AnimateAbout(boolean bool) {
         inTransition = true;
-        View myView = findViewById(R.id.aboutScreen);
+        final View myView = findViewById(R.id.aboutScreen);
         SwipeRefreshLayout refreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout);
 
-        int cx = (myView.getLeft() + myView.getRight()) / 2;
-        int cy = (myView.getTop() + myView.getBottom()) / 2;
+        YoYo.with(Techniques.ZoomIn)
+                .duration(400)
+                .interpolate(new AccelerateInterpolator())
+                .withListener(new com.nineoldandroids.animation.Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(com.nineoldandroids.animation.Animator animation) {
+                    }
 
-        int finalRadius = (Math.max(myView.getWidth(),myView.getHeight()));
-        int initialRadius = (myView.getWidth());
-        Animator anim = ViewAnimationUtils.createCircularReveal(myView, cx, cy, 0, finalRadius);
-        anim.setDuration(500);
-        anim.setInterpolator(new AccelerateInterpolator());
-        anim.addListener(new AnimatorListenerAdapter() {
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                super.onAnimationEnd(animation);
-                inTransition = false;
-            }
-        });
+                    @Override
+                    public void onAnimationEnd(com.nineoldandroids.animation.Animator animation) {
+                        inTransition = false;
+                    }
+
+                    @Override
+                    public void onAnimationCancel(com.nineoldandroids.animation.Animator animation) {
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(com.nineoldandroids.animation.Animator animation) {
+                    }
+                })
+                .playOn(myView);
         if (bool) {
             myView.setVisibility(View.VISIBLE);
             openAbout = true;
@@ -981,20 +1017,30 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         } else {
             openAbout = false;
             refreshLayout.setEnabled(true);
-            anim = ViewAnimationUtils.createCircularReveal(myView, cx, cy, initialRadius, 0);
-            anim.setDuration(500);
-            anim.setInterpolator(new AccelerateInterpolator());
-            anim.addListener(new AnimatorListenerAdapter() {
-                @Override
-                public void onAnimationEnd(Animator animation) {
-                    super.onAnimationEnd(animation);
-                    View myView = findViewById(R.id.aboutScreen);
-                    myView.setVisibility(View.INVISIBLE);
-                    inTransition = false;
-                }
-            });
+            YoYo.with(Techniques.ZoomOut)
+                    .duration(400)
+                    .interpolate(new AccelerateInterpolator())
+                    .withListener(new com.nineoldandroids.animation.Animator.AnimatorListener() {
+                        @Override
+                        public void onAnimationStart(com.nineoldandroids.animation.Animator animation) {
+                        }
+
+                        @Override
+                        public void onAnimationEnd(com.nineoldandroids.animation.Animator animation) {
+                            inTransition = false;
+                            myView.setVisibility(View.INVISIBLE);
+                        }
+
+                        @Override
+                        public void onAnimationCancel(com.nineoldandroids.animation.Animator animation) {
+                        }
+
+                        @Override
+                        public void onAnimationRepeat(com.nineoldandroids.animation.Animator animation) {
+                        }
+                    })
+                    .playOn(myView);
         }
-        anim.start();
     }
 
     public void AnimateTeacher(boolean bool) {
@@ -1002,22 +1048,29 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         inTransition = true;
         final View myView = findViewById(R.id.sliding_layout);
 
-        int cx = (myView.getLeft() + myView.getRight()) / 2;
-        int cy = (myView.getTop() + myView.getBottom());
+        YoYo.with(Techniques.ZoomIn)
+                .duration(400)
+                .interpolate(new AccelerateInterpolator())
+                .withListener(new com.nineoldandroids.animation.Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(com.nineoldandroids.animation.Animator animation) {
+                    }
 
-        int finalRadius = (int) (Math.max(myView.getWidth(), myView.getHeight()) * 1.1);
-        int initialRadius = (int) (myView.getWidth() * 1.8);
-        Animator anim = ViewAnimationUtils.createCircularReveal(myView, cx, cy, 0, finalRadius);
-        anim.setInterpolator(new AccelerateInterpolator());
-        anim.setDuration(700);
-        anim.addListener(new AnimatorListenerAdapter() {
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                super.onAnimationEnd(animation);
-                panelLayout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
-                inTransition = false;
-            }
-        });
+                    @Override
+                    public void onAnimationEnd(com.nineoldandroids.animation.Animator animation) {
+                        panelLayout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
+                        inTransition = false;
+                    }
+
+                    @Override
+                    public void onAnimationCancel(com.nineoldandroids.animation.Animator animation) {
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(com.nineoldandroids.animation.Animator animation) {
+                    }
+                })
+                .playOn(myView);
         if (bool) {
             myView.setVisibility(View.VISIBLE);
             openPdf = true;
@@ -1029,32 +1082,43 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             openPdf = false;
             panelLayout.setPanelState(SlidingUpPanelLayout.PanelState.HIDDEN);
             getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-            anim = ViewAnimationUtils.createCircularReveal(myView, cx, cy, initialRadius, 0);
-            anim.setInterpolator(new AccelerateInterpolator());
-            anim.setDuration(500);
-            anim.addListener(new AnimatorListenerAdapter() {
-                @Override
-                public void onAnimationEnd(Animator animation) {
-                    super.onAnimationEnd(animation);
-                    final EditText pageEdit = (EditText) findViewById(R.id.pageEdit);
-                    final EditText answer1 = (EditText) findViewById(R.id.answer1);
-                    final EditText answer2 = (EditText) findViewById(R.id.answer2);
-                    final EditText answer3 = (EditText) findViewById(R.id.answer3);
-                    final EditText answer4 = (EditText) findViewById(R.id.answer4);
-                    myView.setVisibility(View.INVISIBLE);
-                    AuthorEdit.setText("");
-                    QuestionEdit.setText("");
-                    QuestionRadio.clearCheck();
-                    pageEdit.setText("");
-                    answer1.setText("");
-                    answer2.setText("");
-                    answer3.setText("");
-                    answer4.setText("");
-                    inTransition = false;
-                }
-            });
+            YoYo.with(Techniques.ZoomIn)
+                    .duration(400)
+                    .interpolate(new AccelerateInterpolator())
+                    .withListener(new com.nineoldandroids.animation.Animator.AnimatorListener() {
+                        @Override
+                        public void onAnimationStart(com.nineoldandroids.animation.Animator animation) {
+                        }
+
+                        @Override
+                        public void onAnimationEnd(com.nineoldandroids.animation.Animator animation) {
+                            myView.setVisibility(View.INVISIBLE);
+                            final EditText pageEdit = (EditText) findViewById(R.id.pageEdit);
+                            final EditText answer1 = (EditText) findViewById(R.id.answer1);
+                            final EditText answer2 = (EditText) findViewById(R.id.answer2);
+                            final EditText answer3 = (EditText) findViewById(R.id.answer3);
+                            final EditText answer4 = (EditText) findViewById(R.id.answer4);
+                            AuthorEdit.setText("");
+                            QuestionEdit.setText("");
+                            QuestionRadio.clearCheck();
+                            pageEdit.setText("");
+                            answer1.setText("");
+                            answer2.setText("");
+                            answer3.setText("");
+                            answer4.setText("");
+                            inTransition = false;
+                        }
+
+                        @Override
+                        public void onAnimationCancel(com.nineoldandroids.animation.Animator animation) {
+                        }
+
+                        @Override
+                        public void onAnimationRepeat(com.nineoldandroids.animation.Animator animation) {
+                        }
+                    })
+                    .playOn(myView);
         }
-        anim.start();
     }
 
     public static String readFromFile(String fileName) {

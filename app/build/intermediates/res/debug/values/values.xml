@@ -436,6 +436,7 @@
     <string name="auth_google_play_services_client_google_display_name">Google</string>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="author_title">Author</string>
     <string name="banner_ad_unit_id">ca-app-pub-9149546541078633/5812125704</string>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.5.0/res/values/cast_strings.xml -->
     <eat-comment/>
@@ -510,8 +511,10 @@
     <string name="dinu_page">https://plus.google.com/118188707662348232873</string>
     <string name="drawer_close">Drawer Close</string>
     <string name="drawer_open">Drawer Open</string>
+    <string name="facebook_about">Facebook</string>
     <string name="facebook_app_id">372820882902011</string>
     <string name="facebook_page">https://www.facebook.com/SmartRead</string>
+    <string name="google_about">Google+</string>
     <string name="google_backup_key">AEdPqrEAAAAIKj9JEpBNY620E5F6DwOtMKLFkvJI5aLC4jMgHg</string>
     <string name="google_signin">LOG IN WITH GOOGLE+</string>
     <string name="googleplus_page">https://plus.google.com/115704014014540003143</string>
@@ -547,9 +550,11 @@
     <string name="new_folder">New folder</string>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="page_title">Page</string>
     <string name="profile_description">user@gmail.com</string>
     <string name="profile_name">User</string>
     <string name="programmer">Developer: Hassan Alin Ali</string>
+    <string name="question_title">Question</string>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.nononsenseapps/filepicker/2.1/res/values/values.xml -->
     <eat-comment/>
     <string name="select_something_first">Please select something first</string>
@@ -575,6 +580,13 @@
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+    </style>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <eat-comment/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
         <item name="listLayout">@layout/abc_select_dialog_material</item>
@@ -1505,6 +1517,28 @@
     <style name="CardView.Light">
         <item name="cardBackgroundColor">@color/cardview_light_background</item>
     </style>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="FilePickerAlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+    </style>
+    <style name="FilePickerTheme" parent="Theme.AppCompat.Light.DialogWhenLarge">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+
+        <item name="alertDialogTheme">@style/FilePickerAlertDialogTheme</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="LoginTheme" parent="Theme.AppCompat.NoActionBar">
+
+        <item name="android:background">#ffffff</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="MessengerButton">
@@ -1708,6 +1742,20 @@
     <style name="RtlOverlay.Widget.AppCompat.Toolbar.Button.Navigation" parent="Base.Widget.AppCompat.Toolbar.Button.Navigation">
         <item name="android:paddingLeft">@dimen/abc_action_bar_navigation_padding_start_material</item>
     </style>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="SettingsTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="actionBarStyle">@style/SettingsTheme.ActionBar</item>
+        <item name="alertDialogTheme">@style/FilePickerAlertDialogTheme</item>
+    </style>
+    <style name="SettingsTheme.ActionBar" parent="@style/Widget.AppCompat.ActionBar.Solid">
+        <item name="titleTextStyle">@style/SettingsTheme.TitleTextStyle</item>
+    </style>
+    <style name="SettingsTheme.TitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <eat-comment/>
     <style name="TextAppearance.AppCompat" parent="Base.TextAppearance.AppCompat"/>
     <style name="TextAppearance.AppCompat.Body1" parent="Base.TextAppearance.AppCompat.Body1"/>
     <style name="TextAppearance.AppCompat.Body2" parent="Base.TextAppearance.AppCompat.Body2"/>
@@ -1850,6 +1898,11 @@
     <style name="ThemeOverlay.AppCompat.Dark" parent="Base.ThemeOverlay.AppCompat.Dark"/>
     <style name="ThemeOverlay.AppCompat.Dark.ActionBar" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="ThemeOverlay.AppCompat.Light" parent="Base.ThemeOverlay.AppCompat.Light"/>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="ToolbarColoredBackArrow" parent="AppTheme">
+        <item name="android:textColorSecondary">#ffffff</item>
+    </style>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/res/values/wallet_styles.xml -->
     <eat-comment/>
     <style name="WalletFragmentDefaultButtonTextAppearance">

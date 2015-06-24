@@ -1,6 +1,5 @@
 package com.teched.smartread;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -8,7 +7,6 @@ import android.content.IntentSender;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.content.res.AssetManager;
 import android.os.StrictMode;
 import android.os.Bundle;
 
@@ -24,11 +22,6 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.plus.Plus;
 import com.google.android.gms.plus.model.people.Person;
-
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -116,23 +109,7 @@ public class LoginActivity extends AppCompatActivity implements
                 mGoogleApiClient.connect();
             }
         });
-        final AlertDialog alertDialogBuilder =
-                new AlertDialog.Builder(this)
-                        .setView(R.layout.dialog)
-                .setCancelable(false)
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                    }
-                })
-                .create();
-        alertDialogBuilder.show();
-        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
-        lp.copyFrom(alertDialogBuilder.getWindow().getAttributes());
-        lp.width = WindowManager.LayoutParams.MATCH_PARENT;
-        lp.height = WindowManager.LayoutParams.MATCH_PARENT;
-        alertDialogBuilder.getWindow().setAttributes(lp);
+        showDialog();
     }
 
     @Override
@@ -232,5 +209,23 @@ public class LoginActivity extends AppCompatActivity implements
         startScreen.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         getBaseContext().startActivity(startScreen);
         finish();
+    }
+    private void showDialog() {
+        AlertDialog alertDialogBuilder = new AlertDialog.Builder(this)
+                .setView(R.layout.dialog)
+                .setCancelable(false)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                })
+                .create();
+        alertDialogBuilder.show();
+        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+        lp.copyFrom(alertDialogBuilder.getWindow().getAttributes());
+        lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+        lp.height = WindowManager.LayoutParams.MATCH_PARENT;
+        alertDialogBuilder.getWindow().setAttributes(lp);
     }
 }

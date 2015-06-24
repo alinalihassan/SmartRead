@@ -30,17 +30,17 @@ public final class R {
 		public static final int search_frame = 0x7f0200c0;
 	}
 	public static final class id {
-		public static final int border = 0x7f0f00fb;
-		public static final int card_view = 0x7f0f00ff;
+		public static final int border = 0x7f0f00fe;
+		public static final int card_view = 0x7f0f0102;
 		public static final int icon = 0x7f0f0079;
-		public static final int logo = 0x7f0f0100;
-		public static final int material_menu_button = 0x7f0f0101;
-		public static final int mic = 0x7f0f0102;
-		public static final int pb = 0x7f0f0104;
-		public static final int results = 0x7f0f00fe;
-		public static final int search = 0x7f0f0103;
-		public static final int search_root = 0x7f0f00fd;
-		public static final int searchbox_rfl = 0x7f0f00fc;
+		public static final int logo = 0x7f0f0103;
+		public static final int material_menu_button = 0x7f0f0104;
+		public static final int mic = 0x7f0f0105;
+		public static final int pb = 0x7f0f0107;
+		public static final int results = 0x7f0f0101;
+		public static final int search = 0x7f0f0106;
+		public static final int search_root = 0x7f0f0100;
+		public static final int searchbox_rfl = 0x7f0f00ff;
 		public static final int title = 0x7f0f007a;
 		public static final int up = 0x7f0f002b;
 	}
@@ -49,7 +49,7 @@ public final class R {
 		public static final int searchbox = 0x7f04003c;
 	}
 	public static final class string {
-		public static final int speak_now = 0x7f080072;
+		public static final int speak_now = 0x7f080077;
 	}
 	public static final class styleable {
 		public static final int[] MaterialMenuView = { 0x7f01005b, 0x7f01005c, 0x7f01005d, 0x7f01005e, 0x7f01005f, 0x7f010060 };
