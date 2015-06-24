@@ -8,12 +8,18 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.CardView;
+import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.LinearLayout;
 
 import org.json.JSONObject;
 
@@ -26,15 +32,16 @@ import java.io.IOException;
 
 public class SettingsActivity extends PreferenceActivity {
 
-    SharedPreferences prefs;
-    SharedPreferences preferences;
-    SharedPreferences.OnSharedPreferenceChangeListener listener;
-    String Path;
+    private SharedPreferences prefs;
+    private SharedPreferences preferences;
+    private SharedPreferences.OnSharedPreferenceChangeListener listener;
+    private String Path;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle("Settings");
+        initializeToolbar();
         addPreferencesFromResource(R.xml.prefs);
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         PackageManager m = getPackageManager();
@@ -80,7 +87,7 @@ public class SettingsActivity extends PreferenceActivity {
         feedback.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             public boolean onPreferenceClick(Preference preference) {
                 String uriText =
-                        "mailto:superalin40@gmail.com" +
+                        "mailto:" +getResources().getString(R.string.email) +
                                 "?subject=" + Uri.encode("SmartRead Feedback") +
                                 "&body=" + Uri.encode("");
 
@@ -188,5 +195,28 @@ public class SettingsActivity extends PreferenceActivity {
                 }
             })
             .show();
+    }
+    private void initializeToolbar() {
+        LinearLayout root = (LinearLayout)findViewById(android.R.id.list).getParent().getParent().getParent();
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP) {
+            CardView bar = (CardView) LayoutInflater.from(this).inflate(R.layout.settings_toolbar_l, root, false);
+            root.addView(bar, 0);
+            ((Toolbar)bar.findViewById(R.id.settingsToolbar)).setNavigationOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finish();
+                }
+            });
+        }
+        else {
+            Toolbar bar = (Toolbar) LayoutInflater.from(this).inflate(R.layout.settings_toolbar, root, false);
+            root.addView(bar, 0);
+            bar.setNavigationOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finish();
+                }
+            });
+        }
     }
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:id="@+id/cardName"
+            android:singleLine="true"
+            android:paddingTop="8dp"
+            android:paddingStart="8dp"
+            android:paddingBottom="8dp"
+            android:paddingEnd="8dp"
+            android:gravity="start"
+            android:background="?android:selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
+            />
+    </RelativeLayout>

@@ -28,6 +28,7 @@ import android.os.StrictMode;
 import android.speech.RecognizerIntent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -67,6 +68,7 @@ import com.google.android.gms.ads.AdView;
 import com.heinrichreimersoftware.materialdrawer.DrawerFrameLayout;
 import com.heinrichreimersoftware.materialdrawer.structure.DrawerItem;
 import com.heinrichreimersoftware.materialdrawer.structure.DrawerProfile;
+import com.heinrichreimersoftware.materialdrawer.theme.DrawerTheme;
 import com.joanzapata.pdfview.PDFView;
 import com.joanzapata.pdfview.listener.OnPageChangeListener;
 import com.nononsenseapps.filepicker.FilePickerActivity;
@@ -111,6 +113,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     private boolean openSearch = false;
     private boolean openAbout = false;
     private boolean openPdf = false;
+    private boolean openDistribute = false;
     private File teacherFile;
     private android.support.v7.widget.Toolbar toolbar;
     private ArrayList<Card> list = new ArrayList<>();
@@ -216,6 +219,10 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         refreshTeacher.setColorSchemeResources(R.color.color_primary);
         toolbar.setTitleTextColor(Color.WHITE);
         drawer.setStatusBarBackgroundColor(getResources().getColor(R.color.color_primary_dark));
+        drawer.setDrawerTheme(
+                new DrawerTheme(this)
+                        .setHighlightColorRes(R.color.color_primary)
+        );
         aboutVersion.setText("Version " + BuildConfig.VERSION_NAME);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         drawerToggle = new ActionBarDrawerToggle(
@@ -279,6 +286,9 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 try {
+                    distribute();
+
+                /*
                     teacherFile = new File(TeacherPath + "/" + teacherList.getItemAtPosition(i) + ".pdf");
                     newObject = new JSONObject(readFromFile(teacherFile.getPath().replace(".pdf", ".json")));
                     pdf.invalidate();
@@ -291,7 +301,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                             .enableSwipe(true)
                             .load();
                     AuthorEdit.setText(newObject.getString("Author"));
-                    AnimateTeacher(true);
+                    AnimateTeacher(true); */
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -542,8 +552,10 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 ((MainAdapter) listView.getAdapter()).flushFilter();
                                 if (openPdf && menuString.equals("Library"))
                                     AnimatePDF(false);
-                                if (openPdf && menuString.equals("Teacher"))
+                                else if (openPdf && menuString.equals("Teacher"))
                                     AnimateTeacher(false);
+                                else if(openDistribute)
+                                    AnimateDistribute(false);
                                 drawer.closeDrawer();
                                 drawer.selectItem(i);
                                 menuString = "Library";
@@ -565,8 +577,10 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 ((MainAdapter) listView.getAdapter()).flushFilter();
                                 if(openPdf && menuString.equals("Library"))
                                     AnimatePDF(false);
-                                if(openPdf && menuString.equals("Teacher"))
+                                else if(openPdf && menuString.equals("Teacher"))
                                     AnimateTeacher(false);
+                                else if(openDistribute)
+                                    AnimateDistribute(false);
                                 drawer.closeDrawer();
                                 drawer.selectItem(i);
                                 menuString = "Library";
@@ -588,8 +602,10 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 ((MainAdapter) listView.getAdapter()).flushFilter();
                                 if(openPdf && menuString.equals("Library"))
                                     AnimatePDF(false);
-                                if(openPdf && menuString.equals("Teacher"))
+                                else if(openPdf && menuString.equals("Teacher"))
                                     AnimateTeacher(false);
+                                else if(openDistribute)
+                                    AnimateDistribute(false);
                                 drawer.closeDrawer();
                                 drawer.selectItem(i);
                                 menuString = "Library";
@@ -609,8 +625,10 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                             public void onClick(DrawerItem drawerItem, long l, int i) {
                                 if(openPdf && menuString.equals("Library"))
                                     AnimatePDF(false);
-                                if(openPdf && menuString.equals("Teacher"))
+                                else if(openPdf && menuString.equals("Teacher"))
                                     AnimateTeacher(false);
+                                else if(openDistribute)
+                                    AnimateDistribute(false);
                                 drawer.closeDrawer();
                                 drawer.selectItem(i);
                                 menuString = "Teacher";
@@ -630,8 +648,10 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                             public void onClick(DrawerItem drawerItem, long l, int i) {
                                 if (openPdf && menuString.equals("Library"))
                                     AnimatePDF(false);
-                                if (openPdf && menuString.equals("Teacher"))
+                                else if (openPdf && menuString.equals("Teacher"))
                                     AnimateTeacher(false);
+                                else if(openDistribute)
+                                    AnimateDistribute(false);
                                 drawer.closeDrawer();
                                 drawer.selectItem(i);
                                 menuString = "";
@@ -834,12 +854,15 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                 AnimateAbout(false);
             else if (findViewById(R.id.QuestionLayout).getVisibility() != View.VISIBLE) {
                 View myView = findViewById(R.id.sliding_layout);
+                View myView3 = findViewById(R.id.distributeScreen);
                 if(panelLayout.getPanelState()== SlidingUpPanelLayout.PanelState.EXPANDED)
                     panelLayout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
                 else if (myView.getVisibility() == View.VISIBLE && PDFMode.equals("PDF"))
                     AnimatePDF(false);
                 else if(myView.getVisibility() == View.VISIBLE && PDFMode.equals("Teacher"))
                     AnimateTeacher(false);
+                else if(myView3.getVisibility() == View.VISIBLE)
+                    AnimateDistribute(false);
                 else
                     super.onBackPressed();
             }
@@ -1107,6 +1130,62 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                             answer3.setText("");
                             answer4.setText("");
                             inTransition = false;
+                        }
+
+                        @Override
+                        public void onAnimationCancel(com.nineoldandroids.animation.Animator animation) {
+                        }
+
+                        @Override
+                        public void onAnimationRepeat(com.nineoldandroids.animation.Animator animation) {
+                        }
+                    })
+                    .playOn(myView);
+        }
+    }
+    public void AnimateDistribute(boolean bool) {
+        if(inTransition) return;
+        inTransition = true;
+        final View myView = findViewById(R.id.distributeScreen);
+        YoYo.with(Techniques.ZoomIn)
+                .duration(400)
+                .interpolate(new AccelerateInterpolator())
+                .withListener(new com.nineoldandroids.animation.Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(com.nineoldandroids.animation.Animator animation) {
+                    }
+
+                    @Override
+                    public void onAnimationEnd(com.nineoldandroids.animation.Animator animation) {
+                        inTransition = false;
+                    }
+
+                    @Override
+                    public void onAnimationCancel(com.nineoldandroids.animation.Animator animation) {
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(com.nineoldandroids.animation.Animator animation) {
+                    }
+                })
+                .playOn(myView);
+        if (bool) {
+            myView.setVisibility(View.VISIBLE);
+            openDistribute=true;
+        } else {
+            YoYo.with(Techniques.ZoomOut)
+                    .duration(400)
+                    .interpolate(new AccelerateInterpolator())
+                    .withListener(new com.nineoldandroids.animation.Animator.AnimatorListener() {
+                        @Override
+                        public void onAnimationStart(com.nineoldandroids.animation.Animator animation) {
+                        }
+
+                        @Override
+                        public void onAnimationEnd(com.nineoldandroids.animation.Animator animation) {
+                            inTransition = false;
+                            openDistribute=false;
+                            myView.setVisibility(View.INVISIBLE);
                         }
 
                         @Override
@@ -1456,5 +1535,26 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo netInfo = cm.getActiveNetworkInfo();
         return netInfo != null && netInfo.isConnected();
+    }
+
+    public void distribute() {
+        if(isOnline()) {
+            RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.distributeList);
+            mRecyclerView.setHasFixedSize(true);
+
+            RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
+            mRecyclerView.setLayoutManager(mLayoutManager);
+            mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+
+            ArrayList<Card> distributeList = new ArrayList<>();
+
+            RecyclerView.Adapter adapter2 = new DistributeAdapter(distributeList,R.layout.classview, this);
+            mRecyclerView.setAdapter(adapter2);
+            AnimateDistribute(true);
+        }
+        else {
+            Snackbar.make(findViewById(R.id.mainFrame), R.string.no_connection, Snackbar.LENGTH_SHORT)
+                    .show();
+        }
     }
 }

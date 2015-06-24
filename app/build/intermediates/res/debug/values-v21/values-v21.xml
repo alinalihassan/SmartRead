@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values-v21/values-v21.xml -->
+    <eat-comment/>
+    <dimen name="navigation_padding_top_default">24dp</dimen>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/values-v21/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -245,11 +248,8 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-    <style name="LoginTheme" parent="Theme.AppCompat.NoActionBar">
-
-
+    <style name="LoginTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:statusBarColor">@android:color/darker_gray</item>
-        <item name="android:background">#ffffff</item>
         <item name="android:windowAnimationStyle">@null</item>
     </style>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values-v21/values-v21.xml -->
@@ -293,14 +293,8 @@
     <style name="SettingsTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="android:statusBarColor">@color/color_primary_dark</item>
         <item name="android:colorPrimary">@color/color_primary</item>
-        <item name="actionBarStyle">@style/SettingsTheme.ActionBar</item>
+        <item name="android:colorAccent">@color/color_accent</item>
         <item name="alertDialogTheme">@style/FilePickerAlertDialogTheme</item>
-    </style>
-    <style name="SettingsTheme.ActionBar" parent="@style/Widget.AppCompat.ActionBar.Solid">
-        <item name="titleTextStyle">@style/SettingsTheme.TitleTextStyle</item>
-    </style>
-    <style name="SettingsTheme.TitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
-        <item name="android:textColor">#FFFFFF</item>
     </style>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.heinrichreimersoftware.materialdrawer/library/2.1/res/values-v21/values.xml -->
     <eat-comment/>
@@ -326,5 +320,9 @@
     <eat-comment/>
     <style name="ToolbarColoredBackArrow" parent="AppTheme">
         <item name="android:textColorSecondary">#ffffff</item>
+    </style>
+    <style name="ToolbarColoredSettings" parent="AppTheme">
+        <item name="android:textColorSecondary">#ffffff</item>
+        <item name="android:textColorPrimary">#ffffff</item>
     </style>
 </resources>

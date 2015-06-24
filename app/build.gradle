@@ -7,8 +7,8 @@ android {
         applicationId "com.teched.smartread"
         minSdkVersion 17
         targetSdkVersion 22
-        versionCode 46
-        versionName "2.9.4"
+        versionCode 48
+        versionName "2.9.6"
     }
     lintOptions {
         checkReleaseBuilds false
@@ -49,6 +49,7 @@ dependencies {
     compile 'com.google.android.gms:play-services:7.5.0'
     compile 'com.anjlab.android.iab.v3:library:1.0.26'
     compile 'com.path:android-priority-jobqueue:1.1.2'
-    compile 'com.nineoldandroids:library:2.4.0+'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.android.support:design:22.2.0'
     compile project(':PersistentSearch')
 }

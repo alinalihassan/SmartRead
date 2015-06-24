@@ -185,6 +185,10 @@ MERGED from com.android.support:support-v4:22.2.0:22:5
 MERGED from com.google.android.gms:play-services-wearable:7.5.0:19:5
 MERGED from com.google.android.gms:play-services-base:7.5.0:20:5
 MERGED from com.android.support:support-v4:22.2.0:22:5
+MERGED from com.android.support:design:22.2.0:22:5
+MERGED from com.android.support:appcompat-v7:22.2.0:22:5
+MERGED from com.android.support:support-v4:22.2.0:22:5
+MERGED from com.android.support:support-v4:22.2.0:22:5
 MERGED from com.balysv.materialmenu:material-menu:1.5.4:12:5
 	android:label
 		ADDED from AndroidManifest.xml:21:9
@@ -429,6 +433,10 @@ MERGED from com.google.android.gms:play-services-base:7.5.0:18:5
 MERGED from com.android.support:support-v4:22.2.0:20:5
 MERGED from com.google.android.gms:play-services-wearable:7.5.0:18:5
 MERGED from com.google.android.gms:play-services-base:7.5.0:18:5
+MERGED from com.android.support:support-v4:22.2.0:20:5
+MERGED from com.android.support:design:22.2.0:20:5
+MERGED from com.android.support:appcompat-v7:22.2.0:20:5
+MERGED from com.android.support:support-v4:22.2.0:20:5
 MERGED from com.android.support:support-v4:22.2.0:20:5
 MERGED from SmartRead2:PersistentSearch:unspecified:7:5
 MERGED from com.balysv.materialmenu:material-menu:1.5.4:8:5

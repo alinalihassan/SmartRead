@@ -11,26 +11,23 @@
     <style name="SettingsTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="android:statusBarColor">@color/color_primary_dark</item>
         <item name="android:colorPrimary">@color/color_primary</item>
-        <item name="actionBarStyle">@style/SettingsTheme.ActionBar</item>
+        <item name="android:colorAccent">@color/color_accent</item>
         <item name="alertDialogTheme">@style/FilePickerAlertDialogTheme</item>
     </style>
 
-    <style name="LoginTheme" parent="Theme.AppCompat.NoActionBar">
-
-
-        <item name="android:statusBarColor">@android:color/darker_gray</item>
-        <item name="android:background">#ffffff</item>
-        <item name="android:windowAnimationStyle">@null</item>
+    <style name="ToolbarColoredSettings" parent="AppTheme">
+        <item name="android:textColorSecondary">#ffffff</item>
+        <item name="android:textColorPrimary">#ffffff</item>
     </style>
 
-    <style name="SettingsTheme.ActionBar" parent="@style/Widget.AppCompat.ActionBar.Solid">
-        <item name="titleTextStyle">@style/SettingsTheme.TitleTextStyle</item>
-    </style>
-    <style name="SettingsTheme.TitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
-        <item name="android:textColor">#FFFFFF</item>
-    </style>
     <style name="ToolbarColoredBackArrow" parent="AppTheme">
         <item name="android:textColorSecondary">#ffffff</item>
+    </style>
+
+
+    <style name="LoginTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor">@android:color/darker_gray</item>
+        <item name="android:windowAnimationStyle">@null</item>
     </style>
 
     <style name="FilePickerTheme" parent="Theme.AppCompat.Light.DialogWhenLarge">

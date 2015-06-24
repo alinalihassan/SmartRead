@@ -7,6 +7,8 @@ import android.content.IntentSender;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.StrictMode;
 import android.os.Bundle;
 
@@ -25,8 +27,10 @@ import com.google.android.gms.plus.model.people.Person;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -61,6 +65,7 @@ public class LoginActivity extends AppCompatActivity implements
         permissions.add("email");
         permissions.add("public_profile");
         loginButton.setReadPermissions(permissions);
+        loginButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
@@ -92,7 +97,9 @@ public class LoginActivity extends AppCompatActivity implements
 
             @Override
             public void onError(FacebookException exception) {
-
+                Log.d("ERROR",exception.toString());
+                Snackbar.make(findViewById(R.id.loginScreen), R.string.no_connection, Snackbar.LENGTH_SHORT)
+                        .show();
             }
         });
         mGoogleApiClient = new GoogleApiClient.Builder(this)
@@ -105,8 +112,13 @@ public class LoginActivity extends AppCompatActivity implements
         gLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mSignInClicked = true;
-                mGoogleApiClient.connect();
+                if(isOnline()) {
+                    mSignInClicked = true;
+                    mGoogleApiClient.connect();
+                }
+                else
+                    Snackbar.make(findViewById(R.id.loginScreen), R.string.no_connection, Snackbar.LENGTH_SHORT)
+                            .show();
             }
         });
         showDialog();
@@ -227,5 +239,10 @@ public class LoginActivity extends AppCompatActivity implements
         lp.width = WindowManager.LayoutParams.MATCH_PARENT;
         lp.height = WindowManager.LayoutParams.MATCH_PARENT;
         alertDialogBuilder.getWindow().setAttributes(lp);
+    }
+    public boolean isOnline() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        return netInfo != null && netInfo.isConnected();
     }
 }
