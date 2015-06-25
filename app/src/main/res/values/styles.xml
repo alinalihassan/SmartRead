@@ -6,7 +6,6 @@
     </style>
 
     <style name="SettingsTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="actionBarStyle">@style/SettingsTheme.ActionBar</item>
         <item name="alertDialogTheme">@style/FilePickerAlertDialogTheme</item>
     </style>
 
@@ -16,12 +15,11 @@
         <item name="android:windowAnimationStyle">@null</item>
     </style>
 
-    <style name="SettingsTheme.ActionBar" parent="@style/Widget.AppCompat.ActionBar.Solid">
-        <item name="titleTextStyle">@style/SettingsTheme.TitleTextStyle</item>
+    <style name="ToolbarColoredSettings" parent="AppTheme">
+        <item name="android:textColorSecondary">#ffffff</item>
+        <item name="android:textColorPrimary">#ffffff</item>
     </style>
-    <style name="SettingsTheme.TitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
-        <item name="android:textColor">#FFFFFF</item>
-    </style>
+
     <style name="ToolbarColoredBackArrow" parent="AppTheme">
         <item name="android:textColorSecondary">#ffffff</item>
     </style>
@@ -30,9 +28,7 @@
         <item name="colorPrimary">@color/color_primary</item>
         <item name="colorPrimaryDark">@color/color_primary_dark</item>
         <item name="colorAccent">@color/color_accent</item>
-
         <item name="alertDialogTheme">@style/FilePickerAlertDialogTheme</item>
-
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>

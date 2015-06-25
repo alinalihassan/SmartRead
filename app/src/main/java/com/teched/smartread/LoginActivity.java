@@ -1,7 +1,6 @@
 package com.teched.smartread;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.SharedPreferences;
@@ -9,7 +8,6 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.os.StrictMode;
 import android.os.Bundle;
 
 import com.facebook.CallbackManager;
@@ -28,11 +26,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 
 import org.json.JSONArray;
@@ -56,8 +52,6 @@ public class LoginActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_login);
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-        StrictMode.setThreadPolicy(policy);
         callbackManager = CallbackManager.Factory.create();
         loginButton = (LoginButton) findViewById(R.id.fbLogin);
         gLogin = (Button) findViewById(R.id.gLogin);
@@ -121,7 +115,6 @@ public class LoginActivity extends AppCompatActivity implements
                             .show();
             }
         });
-        showDialog();
     }
 
     @Override
@@ -221,24 +214,6 @@ public class LoginActivity extends AppCompatActivity implements
         startScreen.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         getBaseContext().startActivity(startScreen);
         finish();
-    }
-    private void showDialog() {
-        AlertDialog alertDialogBuilder = new AlertDialog.Builder(this)
-                .setView(R.layout.dialog)
-                .setCancelable(false)
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                    }
-                })
-                .create();
-        alertDialogBuilder.show();
-        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
-        lp.copyFrom(alertDialogBuilder.getWindow().getAttributes());
-        lp.width = WindowManager.LayoutParams.MATCH_PARENT;
-        lp.height = WindowManager.LayoutParams.MATCH_PARENT;
-        alertDialogBuilder.getWindow().setAttributes(lp);
     }
     public boolean isOnline() {
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);

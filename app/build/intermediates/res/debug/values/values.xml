@@ -649,6 +649,7 @@
     <string name="store_picture_title">Save image</string>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="string_distribute">Distribute</string>
     <string name="title_activity_settings">SettingsActivity</string>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/res/values/wallet_strings.xml -->
     <eat-comment/>
@@ -1619,9 +1620,7 @@
         <item name="colorPrimary">@color/color_primary</item>
         <item name="colorPrimaryDark">@color/color_primary_dark</item>
         <item name="colorAccent">@color/color_accent</item>
-
         <item name="alertDialogTheme">@style/FilePickerAlertDialogTheme</item>
-
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
@@ -1836,14 +1835,7 @@
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="SettingsTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="actionBarStyle">@style/SettingsTheme.ActionBar</item>
         <item name="alertDialogTheme">@style/FilePickerAlertDialogTheme</item>
-    </style>
-    <style name="SettingsTheme.ActionBar" parent="@style/Widget.AppCompat.ActionBar.Solid">
-        <item name="titleTextStyle">@style/SettingsTheme.TitleTextStyle</item>
-    </style>
-    <style name="SettingsTheme.TitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
-        <item name="android:textColor">#FFFFFF</item>
     </style>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
@@ -2015,6 +2007,10 @@
     <eat-comment/>
     <style name="ToolbarColoredBackArrow" parent="AppTheme">
         <item name="android:textColorSecondary">#ffffff</item>
+    </style>
+    <style name="ToolbarColoredSettings" parent="AppTheme">
+        <item name="android:textColorSecondary">#ffffff</item>
+        <item name="android:textColorPrimary">#ffffff</item>
     </style>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/res/values/wallet_styles.xml -->
     <eat-comment/>

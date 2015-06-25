@@ -68,7 +68,6 @@ import com.google.android.gms.ads.AdView;
 import com.heinrichreimersoftware.materialdrawer.DrawerFrameLayout;
 import com.heinrichreimersoftware.materialdrawer.structure.DrawerItem;
 import com.heinrichreimersoftware.materialdrawer.structure.DrawerProfile;
-import com.heinrichreimersoftware.materialdrawer.theme.DrawerTheme;
 import com.joanzapata.pdfview.PDFView;
 import com.joanzapata.pdfview.listener.OnPageChangeListener;
 import com.nononsenseapps.filepicker.FilePickerActivity;
@@ -95,6 +94,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.LinkedHashSet;
 
 public class MainActivity extends AppCompatActivity implements Serializable,BillingProcessor.IBillingHandler {
 
@@ -128,6 +128,10 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     private BillingProcessor bp;
     private boolean readyToPurchase = false;
     private transient JobManager jobManager;
+    private ArrayList<Class> distributeList;
+    private RecyclerView.Adapter adapter3;
+    private ArrayList<Integer> distribution;
+    private String currentBook;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -201,6 +205,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         final SwipeRefreshLayout refreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout);
         final SwipeRefreshLayout refreshTeacher = (SwipeRefreshLayout) findViewById(R.id.refreshTeacher);
         final ListView teacherList = (ListView) findViewById(R.id.teacherList);
+        final Button distributeButton = (Button)findViewById(R.id.distributeButton);
         TextView programmer = (TextView) findViewById(R.id.aboutProgrammer);
         TextView producer = (TextView) findViewById(R.id.aboutProducer);
         TextView google = (TextView) findViewById(R.id.aboutGoogle);
@@ -219,10 +224,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         refreshTeacher.setColorSchemeResources(R.color.color_primary);
         toolbar.setTitleTextColor(Color.WHITE);
         drawer.setStatusBarBackgroundColor(getResources().getColor(R.color.color_primary_dark));
-        drawer.setDrawerTheme(
-                new DrawerTheme(this)
-                        .setHighlightColorRes(R.color.color_primary)
-        );
         aboutVersion.setText("Version " + BuildConfig.VERSION_NAME);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         drawerToggle = new ActionBarDrawerToggle(
@@ -286,8 +287,8 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 try {
+                    currentBook = teacherList.getItemAtPosition(i).toString();
                     distribute();
-
                 /*
                     teacherFile = new File(TeacherPath + "/" + teacherList.getItemAtPosition(i) + ".pdf");
                     newObject = new JSONObject(readFromFile(teacherFile.getPath().replace(".pdf", ".json")));
@@ -333,7 +334,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                     myList.add(file2.getName().replace(".pdf", ""));
                                 }
                         }
-                        jobManager.addJobInBackground(new UploadJob(Path , ((EditText) findViewById(R.id.pdfTitle)).getText().toString(),teacherFile.getPath(), file.getPath()));
+                        jobManager.addJobInBackground(new UploadJob(Path ,TeacherPath, ((EditText) findViewById(R.id.pdfTitle)).getText().toString(),teacherFile.getPath(), file.getPath()));
                         adapter2.notifyDataSetChanged();
                         hideKeyboard();
                         AnimateTeacher(false);
@@ -688,6 +689,58 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                         })
         );
         drawer.selectItem(0);
+
+        distribution = new ArrayList<>();
+        RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.distributeList);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+        distributeList = new ArrayList<>();
+        adapter3 = new DistributeAdapter(distributeList, R.layout.classview, this);
+        mRecyclerView.setAdapter(adapter3);
+        ((DistributeAdapter) mRecyclerView.getAdapter()).flushFilter();
+        mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getApplicationContext(), mRecyclerView, new RecyclerItemClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                try {
+                    DistributeAdapter.ViewHolder viewHolder = new DistributeAdapter.ViewHolder(view);
+                    Class currentClass = distributeList.get(position);
+                    if (viewHolder.cardName.isChecked()) {
+                        viewHolder.cardName.setChecked(false);
+                        for (int i = 0; i < currentClass.users.length(); i++) {
+                            Integer r = currentClass.users.getInt(i);
+                            distribution.remove(r);
+                        }
+                    } else {
+                        viewHolder.cardName.setChecked(true);
+                        for (int i = 0; i < currentClass.users.length(); i++) {
+                            Integer r = currentClass.users.getInt(i);
+                            distribution.add(r);
+                        }
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onItemLongClick(View view, int position) {
+
+            }
+
+        }));
+        distributeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                distribution = new ArrayList<>(new LinkedHashSet<>(distribution));
+                for(int i = 0;i<distribution.size();i++) {
+                    JsonClass.getJSON("http://php-smartread.rhcloud.com/add_book_user.php?id=" + String.valueOf(distribution.get(i))  + "&book=" + currentBook);
+                }
+                AnimateDistribute(false);
+            }
+        });
+
+
         adapter = new MainAdapter(list,R.layout.cardview, this, Path);
         listView = (RecyclerView)findViewById(R.id.list);
         File[] files = folder.listFiles();
@@ -1105,7 +1158,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             openPdf = false;
             panelLayout.setPanelState(SlidingUpPanelLayout.PanelState.HIDDEN);
             getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-            YoYo.with(Techniques.ZoomIn)
+            YoYo.with(Techniques.ZoomOut)
                     .duration(400)
                     .interpolate(new AccelerateInterpolator())
                     .withListener(new com.nineoldandroids.animation.Animator.AnimatorListener() {
@@ -1143,6 +1196,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     .playOn(myView);
         }
     }
+
     public void AnimateDistribute(boolean bool) {
         if(inTransition) return;
         inTransition = true;
@@ -1539,18 +1593,21 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
 
     public void distribute() {
         if(isOnline()) {
-            RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.distributeList);
-            mRecyclerView.setHasFixedSize(true);
-
-            RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
-            mRecyclerView.setLayoutManager(mLayoutManager);
-            mRecyclerView.setItemAnimator(new DefaultItemAnimator());
-
-            ArrayList<Card> distributeList = new ArrayList<>();
-
-            RecyclerView.Adapter adapter2 = new DistributeAdapter(distributeList,R.layout.classview, this);
-            mRecyclerView.setAdapter(adapter2);
-            AnimateDistribute(true);
+            try {
+                distributeList.clear();
+                JSONArray Classes = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_user_classes.php?email=" + this.getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE).getString("Email", getString(R.string.profile_description)))).getJSONArray("classes");
+                for(int i = 0; i<Classes.length();i++) {
+                    distributeList.add(new Class());
+                    JSONObject Class = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_class.php?id=" + Classes.getString(i)));
+                    Class currentClass = distributeList.get(distributeList.size() - 1);
+                    currentClass.name = Class.getString("name");
+                    currentClass.users = Class.getJSONArray("users");
+                }
+                adapter3.notifyDataSetChanged();
+                AnimateDistribute(true);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         else {
             Snackbar.make(findViewById(R.id.mainFrame), R.string.no_connection, Snackbar.LENGTH_SHORT)
