@@ -26,4 +26,5 @@
     <string name="facebook_app_id">372820882902011</string>
     <string name="banner_ad_unit_id">ca-app-pub-9149546541078633/5812125704</string>
     <string name="string_add_class">Create Class</string>
+    <string name="string_menu_title">Search</string>
 </resources>

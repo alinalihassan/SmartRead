@@ -28,6 +28,7 @@ import android.os.StrictMode;
 import android.speech.RecognizerIntent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -214,6 +215,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         final RelativeLayout classes = (RelativeLayout) findViewById(R.id.classes);
         final RelativeLayout overview = (RelativeLayout) findViewById(R.id.overview);
         final RelativeLayout store = (RelativeLayout) findViewById(R.id.store);
+        final FloatingActionButton teacherFab = (FloatingActionButton) findViewById(R.id.teacherFab);
         TextView programmer = (TextView) findViewById(R.id.aboutProgrammer);
         TextView producer = (TextView) findViewById(R.id.aboutProducer);
         TextView google = (TextView) findViewById(R.id.aboutGoogle);
@@ -253,6 +255,20 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         drawer.setDrawerListener(drawerToggle);
         drawer.closeDrawer();
         setSupportActionBar(toolbar);
+        teacherFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), FilePickerActivity.class);
+
+                i.putExtra(FilePickerActivity.EXTRA_ALLOW_MULTIPLE, false);
+                i.putExtra(FilePickerActivity.EXTRA_ALLOW_CREATE_DIR, false);
+                i.putExtra(FilePickerActivity.EXTRA_MODE, FilePickerActivity.MODE_FILE);
+
+                i.putExtra(FilePickerActivity.EXTRA_START_PATH, "/storage/emulated/0/");
+
+                startActivityForResult(i, FILE_CODE);
+            }
+        });
         panelLayout.setPanelSlideListener(new SlidingUpPanelLayout.PanelSlideListener() {
             @Override
             public void onPanelSlide(View view, float v) {
@@ -448,17 +464,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     if (refreshLayout.getVisibility() == View.VISIBLE) {
                         openSearch = true;
                         openSearch();
-                    }
-                    else if (teacher.getVisibility() == View.VISIBLE) {
-                        Intent i = new Intent(getApplicationContext(), FilePickerActivity.class);
-
-                        i.putExtra(FilePickerActivity.EXTRA_ALLOW_MULTIPLE, false);
-                        i.putExtra(FilePickerActivity.EXTRA_ALLOW_CREATE_DIR, false);
-                        i.putExtra(FilePickerActivity.EXTRA_MODE, FilePickerActivity.MODE_FILE);
-
-                        i.putExtra(FilePickerActivity.EXTRA_START_PATH, "/storage/emulated/0/");
-
-                        startActivityForResult(i, FILE_CODE);
                     }
                 }
                 return true;
@@ -1005,10 +1010,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             case "Library":
                 menu.getItem(0).setVisible(true);
                 menu.getItem(0).setIcon(R.drawable.ic_action_search);
-                break;
-            case "Teacher":
-                menu.getItem(0).setVisible(true);
-                menu.getItem(0).setIcon(R.drawable.ic_create);
                 break;
             default:
                 menu.getItem(0).setVisible(false);

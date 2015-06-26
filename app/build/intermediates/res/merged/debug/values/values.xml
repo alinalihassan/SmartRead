@@ -661,6 +661,7 @@
     <eat-comment/>
     <string name="string_add_class">Create Class</string>
     <string name="string_distribute">Distribute</string>
+    <string name="string_menu_title">Search</string>
     <string name="title_activity_settings">SettingsActivity</string>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/res/values/wallet_strings.xml -->
     <eat-comment/>
