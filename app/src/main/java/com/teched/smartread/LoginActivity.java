@@ -101,6 +101,7 @@ public class LoginActivity extends AppCompatActivity implements
                 .addOnConnectionFailedListener(this)
                 .addApi(Plus.API)
                 .addScope(Plus.SCOPE_PLUS_PROFILE)
+                .addScope(Plus.SCOPE_PLUS_LOGIN)
                 .build();
 
         gLogin.setOnClickListener(new View.OnClickListener() {

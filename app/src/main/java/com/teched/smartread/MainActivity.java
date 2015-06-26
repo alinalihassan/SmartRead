@@ -58,6 +58,7 @@ import android.widget.TextView;
 
 import com.anjlab.android.iab.v3.BillingProcessor;
 import com.anjlab.android.iab.v3.TransactionDetails;
+import com.arasthel.asyncjob.AsyncJob;
 import com.balysv.materialmenu.MaterialMenuDrawable;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
@@ -66,6 +67,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.heinrichreimersoftware.materialdrawer.DrawerFrameLayout;
+import com.heinrichreimersoftware.materialdrawer.structure.DrawerHeaderItem;
 import com.heinrichreimersoftware.materialdrawer.structure.DrawerItem;
 import com.heinrichreimersoftware.materialdrawer.structure.DrawerProfile;
 import com.joanzapata.pdfview.PDFView;
@@ -95,6 +97,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.LinkedHashSet;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements Serializable,BillingProcessor.IBillingHandler {
 
@@ -132,6 +135,8 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     private RecyclerView.Adapter adapter3;
     private ArrayList<Integer> distribution;
     private String currentBook;
+    private ArrayList<Class> classList;
+    private RecyclerView.Adapter adapter4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -206,6 +211,9 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         final SwipeRefreshLayout refreshTeacher = (SwipeRefreshLayout) findViewById(R.id.refreshTeacher);
         final ListView teacherList = (ListView) findViewById(R.id.teacherList);
         final Button distributeButton = (Button)findViewById(R.id.distributeButton);
+        final RelativeLayout classes = (RelativeLayout) findViewById(R.id.classes);
+        final RelativeLayout overview = (RelativeLayout) findViewById(R.id.overview);
+        final RelativeLayout store = (RelativeLayout) findViewById(R.id.store);
         TextView programmer = (TextView) findViewById(R.id.aboutProgrammer);
         TextView producer = (TextView) findViewById(R.id.aboutProducer);
         TextView google = (TextView) findViewById(R.id.aboutGoogle);
@@ -487,30 +495,66 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                         pdfs.clear();
                         list.clear();
                         File folder = new File(Path);
-                        File[] files = folder.listFiles();
-                        boolean online = isOnline();
-                        try {
-                            if (online) {
-                                RefreshJob job = new RefreshJob(Path,prefs.getString("Email", getString(R.string.profile_description)),files);
-                                jobManager.addJobInBackground(job);
+                        final File[] files = folder.listFiles();
+                        if (isOnline()) {
+                            new AsyncJob.AsyncJobBuilder<Boolean>()
+                                    .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
+                                        @Override
+                                        public Boolean doAsync() {
+                                            try {
+                                                JSONObject books = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_books.php?email=" + prefs.getString("Email", getString(R.string.profile_description))));
+                                                JSONArray booksArray = books.getJSONArray("books");
+                                                List<String> files2 = new ArrayList<>();
+                                                if (files != null) {
+                                                    for (File file : files)
+                                                        files2.add(file.getName());
+                                                }
+                                                for (int i = 0; i < booksArray.length(); i++) {
+                                                    if (!files2.contains(booksArray.getString(i) + ".pdf")) {
+                                                        JsonClass.DownloadBook(Path, booksArray.getString(i) + ".pdf");
+                                                        JsonClass.DownloadBook(Path, booksArray.getString(i) + ".json");
+                                                    }
+                                                }
+                                                if (files != null) {
+                                                    for (File file : files)
+                                                        if (file.getName().endsWith(".pdf")) {
+                                                            pdfs.add(file);
+                                                            list.add(new Card());
+                                                            list.get(list.size() - 1).name = pdfs.get(pdfs.size() - 1).getName().replace(".pdf", "");
+                                                        }
+                                                }
+                                            } catch (Exception e) {
+                                                e.printStackTrace();
+                                            }
+                                            return true;
+                                        }
+                                    })
+                                    .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
+                                        @Override
+                                        public void onResult(Boolean result) {
+                                            toolbar.setTitle("SmartRead");
+                                            ((MainAdapter) listView.getAdapter()).flushFilter();
+                                            adapter.notifyDataSetChanged();
+                                            refreshLayout.setRefreshing(false);
+                                        }
+                                    }).create().start();
+                        }
+                        else {
+                            if (files != null) {
+                                for (File file : files)
+                                    if (file.getName().endsWith(".pdf")) {
+                                        pdfs.add(file);
+                                        list.add(new Card());
+                                        list.get(list.size() - 1).name = pdfs.get(pdfs.size() - 1).getName().replace(".pdf", "");
+                                    }
                             }
-                        }catch(Exception e) {
-                            e.printStackTrace();
+                            toolbar.setTitle("SmartRead");
+                            ((MainAdapter) listView.getAdapter()).flushFilter();
+                            adapter.notifyDataSetChanged();
+                            refreshLayout.setRefreshing(false);
                         }
-                        if (files != null) {
-                            for (File file : files)
-                                if (file.getName().endsWith(".pdf")) {
-                                    pdfs.add(file);
-                                    list.add(new Card());
-                                    list.get(list.size() - 1).name = pdfs.get(pdfs.size() - 1).getName().replace(".pdf", "");
-                                }
-                        }
-                        toolbar.setTitle("SmartRead");
-                        ((MainAdapter) listView.getAdapter()).flushFilter();
-                        adapter.notifyDataSetChanged();
-                        refreshLayout.setRefreshing(false);
                     }
-                }, 1500);
+                }, isOnline()?250:750);
             }
         });
 
@@ -563,6 +607,9 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 invalidateOptionsMenu();
                                 refreshLayout.setVisibility(View.VISIBLE);
                                 teacher.setVisibility(View.INVISIBLE);
+                                classes.setVisibility(View.INVISIBLE);
+                                overview.setVisibility(View.INVISIBLE);
+                                store.setVisibility(View.INVISIBLE);
                                 toolbar.setTitle("SmartRead");
                             }
                         })
@@ -588,6 +635,9 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 invalidateOptionsMenu();
                                 refreshLayout.setVisibility(View.VISIBLE);
                                 teacher.setVisibility(View.INVISIBLE);
+                                classes.setVisibility(View.INVISIBLE);
+                                overview.setVisibility(View.INVISIBLE);
+                                store.setVisibility(View.INVISIBLE);
                                 toolbar.setTitle("SmartRead");
                             }
                         })
@@ -613,30 +663,10 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 invalidateOptionsMenu();
                                 refreshLayout.setVisibility(View.VISIBLE);
                                 teacher.setVisibility(View.INVISIBLE);
+                                classes.setVisibility(View.INVISIBLE);
+                                overview.setVisibility(View.INVISIBLE);
+                                store.setVisibility(View.INVISIBLE);
                                 toolbar.setTitle("SmartRead");
-                            }
-                        })
-        );
-        drawer.addItem(
-                new DrawerItem()
-                        .setImage(getResources().getDrawable(R.drawable.ic_school),1)
-                        .setTextPrimary("Teacher")
-                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
-                            @Override
-                            public void onClick(DrawerItem drawerItem, long l, int i) {
-                                if(openPdf && menuString.equals("Library"))
-                                    AnimatePDF(false);
-                                else if(openPdf && menuString.equals("Teacher"))
-                                    AnimateTeacher(false);
-                                else if(openDistribute)
-                                    AnimateDistribute(false);
-                                drawer.closeDrawer();
-                                drawer.selectItem(i);
-                                menuString = "Teacher";
-                                invalidateOptionsMenu();
-                                refreshLayout.setVisibility(View.INVISIBLE);
-                                teacher.setVisibility(View.VISIBLE);
-                                toolbar.setTitle("Teacher");
                             }
                         })
         );
@@ -659,10 +689,96 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 invalidateOptionsMenu();
                                 refreshLayout.setVisibility(View.INVISIBLE);
                                 teacher.setVisibility(View.INVISIBLE);
+                                classes.setVisibility(View.INVISIBLE);
+                                overview.setVisibility(View.INVISIBLE);
+                                store.setVisibility(View.VISIBLE);
                                 toolbar.setTitle("Store");
                             }
                         })
         );
+        drawer.addItem(new DrawerHeaderItem()
+                .setTitle("Teacher")
+        );
+        drawer.addItem(
+                new DrawerItem()
+                        .setImage(getResources().getDrawable(R.drawable.ic_school), 1)
+                        .setTextPrimary("My Classes")
+                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
+                            @Override
+                            public void onClick(DrawerItem drawerItem, long l, int i) {
+                                if (openPdf && menuString.equals("Library"))
+                                    AnimatePDF(false);
+                                else if (openPdf && menuString.equals("Teacher"))
+                                    AnimateTeacher(false);
+                                else if (openDistribute)
+                                    AnimateDistribute(false);
+                                drawer.closeDrawer();
+                                drawer.selectItem(i);
+                                menuString = "";
+                                invalidateOptionsMenu();
+                                refreshLayout.setVisibility(View.INVISIBLE);
+                                teacher.setVisibility(View.INVISIBLE);
+                                classes.setVisibility(View.VISIBLE);
+                                overview.setVisibility(View.INVISIBLE);
+                                store.setVisibility(View.INVISIBLE);
+                                toolbar.setTitle("My Classes");
+                            }
+                        })
+        );
+        drawer.addItem(
+                new DrawerItem()
+                        .setImage(getResources().getDrawable(R.drawable.ic_books),1)
+                        .setTextPrimary("My Books")
+                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
+                            @Override
+                            public void onClick(DrawerItem drawerItem, long l, int i) {
+                                if(openPdf && menuString.equals("Library"))
+                                    AnimatePDF(false);
+                                else if(openPdf && menuString.equals("Teacher"))
+                                    AnimateTeacher(false);
+                                else if(openDistribute)
+                                    AnimateDistribute(false);
+                                drawer.closeDrawer();
+                                drawer.selectItem(i);
+                                menuString = "Teacher";
+                                invalidateOptionsMenu();
+                                refreshLayout.setVisibility(View.INVISIBLE);
+                                teacher.setVisibility(View.VISIBLE);
+                                classes.setVisibility(View.INVISIBLE);
+                                overview.setVisibility(View.INVISIBLE);
+                                store.setVisibility(View.INVISIBLE);
+                                toolbar.setTitle("My Books");
+                            }
+                        })
+        );
+
+        drawer.addItem(
+                new DrawerItem()
+                        .setImage(getResources().getDrawable(R.drawable.ic_account_multiple),1)
+                        .setTextPrimary("Overview")
+                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
+                            @Override
+                            public void onClick(DrawerItem drawerItem, long l, int i) {
+                                if (openPdf && menuString.equals("Library"))
+                                    AnimatePDF(false);
+                                else if (openPdf && menuString.equals("Teacher"))
+                                    AnimateTeacher(false);
+                                else if (openDistribute)
+                                    AnimateDistribute(false);
+                                drawer.closeDrawer();
+                                drawer.selectItem(i);
+                                menuString = "";
+                                invalidateOptionsMenu();
+                                refreshLayout.setVisibility(View.INVISIBLE);
+                                teacher.setVisibility(View.INVISIBLE);
+                                classes.setVisibility(View.INVISIBLE);
+                                overview.setVisibility(View.VISIBLE);
+                                store.setVisibility(View.INVISIBLE);
+                                toolbar.setTitle("Overview");
+                            }
+                        })
+        );
+
         drawer.addDivider();
         drawer.addItem(
                 new DrawerItem()
@@ -690,13 +806,49 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         );
         drawer.selectItem(0);
 
+        classList = new ArrayList<>();
+        RecyclerView mRecyclerView2 = (RecyclerView) findViewById(R.id.classList);
+        RecyclerView.LayoutManager mLayoutManager2 = new LinearLayoutManager(this);
+        mRecyclerView2.setLayoutManager(mLayoutManager2);
+        mRecyclerView2.setItemAnimator(new DefaultItemAnimator());
+        adapter4 = new ClassAdapter(classList, R.layout.classview, this);
+        mRecyclerView2.setAdapter(adapter4);
+        ((ClassAdapter) mRecyclerView2.getAdapter()).flushFilter();
+        new AsyncJob.AsyncJobBuilder<Boolean>()
+                .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
+                    @Override
+                    public Boolean doAsync() {
+                        try {
+                            JSONArray Classes = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_user_classes.php?email=" + getApplication().getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE).getString("Email", getString(R.string.profile_description)))).getJSONArray("classes");
+                            for(int i = 0; i<Classes.length();i++) {
+                                classList.add(new Class());
+                                JSONObject Class = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_class.php?id=" + Classes.getString(i)));
+                                Class currentClass = classList.get(classList.size() - 1);
+                                currentClass.name = Class.getString("name");
+                                currentClass.users = Class.getJSONArray("users");
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        return true;
+                    }
+                })
+                .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
+                    @Override
+                    public void onResult(Boolean result) {
+                        adapter4.notifyDataSetChanged();
+                    }
+                }).create().start();
+
+
+
         distribution = new ArrayList<>();
         RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.distributeList);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         distributeList = new ArrayList<>();
-        adapter3 = new DistributeAdapter(distributeList, R.layout.classview, this);
+        adapter3 = new DistributeAdapter(distributeList, R.layout.distributeview, this);
         mRecyclerView.setAdapter(adapter3);
         ((DistributeAdapter) mRecyclerView.getAdapter()).flushFilter();
         mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getApplicationContext(), mRecyclerView, new RecyclerItemClickListener.OnItemClickListener() {

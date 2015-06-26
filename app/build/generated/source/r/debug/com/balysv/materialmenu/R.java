@@ -16,7 +16,7 @@ public final class R {
 		public static final int mm_visible = 0x7f010074;
 	}
 	public static final class dimen {
-		public static final int mm_up_arrow_margin = 0x7f090077;
+		public static final int mm_up_arrow_margin = 0x7f090078;
 	}
 	public static final class styleable {
 		public static final int[] MaterialMenuView = { 0x7f010073, 0x7f010074, 0x7f010075, 0x7f010076, 0x7f010077, 0x7f010078 };

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="asyncjob-library-1.0.3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.arasthel/asyncjob-library/1.0.3/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.arasthel/asyncjob-library/1.0.3/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

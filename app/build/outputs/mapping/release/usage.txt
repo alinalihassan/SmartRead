@@ -4524,11 +4524,11 @@ com.daimajia.androidanimations.library.YoYo$YoYoString:
     133:137:public void stop(boolean)
 com.daimajia.androidanimations.library.flippers.FlipYAnimator
 com.daimajia.easing.BaseEasingMethod:
-    42:43:public void addEasingListener(com.daimajia.easing.BaseEasingMethod$EasingListener)
-    50:51:public void removeEasingListener(com.daimajia.easing.BaseEasingMethod$EasingListener)
-    54:55:public void clearEasingListeners()
-    35:59:public BaseEasingMethod(float)
-    62:63:public void setDuration(float)
+    41:42:public void addEasingListener(com.daimajia.easing.BaseEasingMethod$EasingListener)
+    51:52:public void removeEasingListener(com.daimajia.easing.BaseEasingMethod$EasingListener)
+    55:56:public void clearEasingListeners()
+    34:60:public BaseEasingMethod(float)
+    63:64:public void setDuration(float)
 com.daimajia.easing.BuildConfig
 com.daimajia.easing.Glider:
     30:30:public Glider()

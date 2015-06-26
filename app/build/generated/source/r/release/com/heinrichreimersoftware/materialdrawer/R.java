@@ -552,13 +552,13 @@ public final class R {
 		public static final int abc_shareactionprovider_share_with = 0x7f08000b;
 		public static final int abc_shareactionprovider_share_with_application = 0x7f08000c;
 		public static final int abc_toolbar_collapse_description = 0x7f08004d;
-		public static final int md_content_description_drawer_close = 0x7f08006a;
-		public static final int md_content_description_drawer_open = 0x7f08006b;
-		public static final int md_content_description_open_profile_list = 0x7f08006c;
-		public static final int md_content_description_profile_avatar = 0x7f08006d;
-		public static final int md_content_description_profile_avatar_secondary = 0x7f08006e;
-		public static final int md_content_description_profile_background = 0x7f08006f;
-		public static final int md_content_description_profile_background_overlay = 0x7f080070;
+		public static final int md_content_description_drawer_close = 0x7f08006b;
+		public static final int md_content_description_drawer_open = 0x7f08006c;
+		public static final int md_content_description_open_profile_list = 0x7f08006d;
+		public static final int md_content_description_profile_avatar = 0x7f08006e;
+		public static final int md_content_description_profile_avatar_secondary = 0x7f08006f;
+		public static final int md_content_description_profile_background = 0x7f080070;
+		public static final int md_content_description_profile_background_overlay = 0x7f080071;
 	}
 	public static final class style {
 		public static final int Animation_AppCompat_DropDownUp = 0x7f0a0082;

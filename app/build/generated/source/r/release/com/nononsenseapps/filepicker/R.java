@@ -610,10 +610,10 @@ public final class R {
 		public static final int abc_toolbar_collapse_description = 0x7f08004d;
 		public static final int app_name = 0x7f08004f;
 		public static final int create_folder_error = 0x7f08005a;
-		public static final int name = 0x7f080071;
-		public static final int new_folder = 0x7f080072;
-		public static final int select_something_first = 0x7f080079;
-		public static final int status_bar_notification_info_overflow = 0x7f08007b;
+		public static final int name = 0x7f080072;
+		public static final int new_folder = 0x7f080073;
+		public static final int select_something_first = 0x7f08007a;
+		public static final int status_bar_notification_info_overflow = 0x7f08007c;
 	}
 	public static final class style {
 		public static final int AlertDialog_AppCompat = 0x7f0a007f;

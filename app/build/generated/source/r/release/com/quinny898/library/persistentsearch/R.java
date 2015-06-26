@@ -49,7 +49,7 @@ public final class R {
 		public static final int searchbox = 0x7f040043;
 	}
 	public static final class string {
-		public static final int speak_now = 0x7f08007a;
+		public static final int speak_now = 0x7f08007b;
 	}
 	public static final class styleable {
 		public static final int[] MaterialMenuView = { 0x7f010073, 0x7f010074, 0x7f010075, 0x7f010076, 0x7f010077, 0x7f010078 };
