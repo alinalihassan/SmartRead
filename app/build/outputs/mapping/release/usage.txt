@@ -47,7 +47,8 @@ android.support.design.R$anim:
 android.support.design.R$attr:
     26:26:public R$attr()
 android.support.design.R$bool
-android.support.design.R$color
+android.support.design.R$color:
+    289:289:public R$color()
 android.support.design.R$dimen:
     362:362:public R$dimen()
 android.support.design.R$drawable
@@ -57,7 +58,8 @@ android.support.design.R$integer
 android.support.design.R$layout:
     650:650:public R$layout()
 android.support.design.R$string
-android.support.design.R$style
+android.support.design.R$style:
+    717:717:public R$style()
 android.support.design.R$styleable:
     1026:1026:public R$styleable()
 android.support.design.internal.NavigationMenuItemView:
@@ -89,7 +91,6 @@ android.support.design.internal.ScrimInsetsFrameLayout$1
 android.support.design.widget.AnimationUtils:
     25:42:AnimationUtils()
     35:35:static float lerp(float,float,float)
-android.support.design.widget.AnimationUtils$AnimationListenerAdapter
 android.support.design.widget.AppBarLayout:
     private static final int INVALID_SCROLL_RANGE
     129:130:public AppBarLayout(android.content.Context)
@@ -116,8 +117,8 @@ android.support.design.widget.AppBarLayout$LayoutParams:
     564:565:public void setScrollInterpolator(android.view.animation.Interpolator)
 android.support.design.widget.AppBarLayout$LayoutParams$ScrollFlags
 android.support.design.widget.AppBarLayout$ScrollingViewBehavior
-android.support.design.widget.CircularBorderDrawable
-android.support.design.widget.CircularBorderDrawableLollipop
+android.support.design.widget.CircularBorderDrawable:
+    private static final float DRAW_STROKE_WIDTH_MULTIPLE
 android.support.design.widget.CollapsingTextHelper
 android.support.design.widget.CollapsingToolbarLayout
 android.support.design.widget.CollapsingToolbarLayout$1
@@ -126,15 +127,6 @@ android.support.design.widget.CollapsingToolbarLayout$LayoutParams
 android.support.design.widget.CollapsingToolbarLayout$OffsetUpdateListener
 android.support.design.widget.CoordinatorLayout:
     static final java.lang.String TAG
-    private final java.util.List mTempDependenciesList
-    155:156:public CoordinatorLayout(android.content.Context)
-    159:160:public CoordinatorLayout(android.content.Context,android.util.AttributeSet)
-    107:183:public CoordinatorLayout(android.content.Context,android.util.AttributeSet,int)
-    1154:1169:public java.util.List getDependencies(android.view.View)
-    1313:1322:public boolean doViewsOverlap(android.view.View,android.view.View)
-    85:85:static synthetic void access$000(android.support.design.widget.CoordinatorLayout,android.support.v4.view.WindowInsetsCompat)
-android.support.design.widget.CoordinatorLayout$1
-android.support.design.widget.CoordinatorLayout$ApplyInsetsListener
 android.support.design.widget.CoordinatorLayout$Behavior:
     1583:1584:public CoordinatorLayout$Behavior(android.content.Context,android.util.AttributeSet)
     1814:1816:public static void setTag(android.view.View,java.lang.Object)
@@ -143,22 +135,11 @@ android.support.design.widget.CoordinatorLayout$LayoutParams:
     2192:2192:public int getAnchorId()
     2206:2208:public void setAnchorId(int)
     2351:2352:void invalidateAnchor()
-android.support.design.widget.CoordinatorLayoutInsetsHelper:
-    public abstract void setupForWindowInsets(android.view.View,android.support.v4.view.OnApplyWindowInsetsListener)
-android.support.design.widget.CoordinatorLayoutInsetsHelperLollipop:
-    26:33:public void setupForWindowInsets(android.view.View,android.support.v4.view.OnApplyWindowInsetsListener)
-android.support.design.widget.FloatingActionButton
-android.support.design.widget.FloatingActionButton$1
-android.support.design.widget.FloatingActionButton$Behavior
-android.support.design.widget.FloatingActionButton$Behavior$1
-android.support.design.widget.FloatingActionButton$Behavior$2
-android.support.design.widget.FloatingActionButtonEclairMr1
-android.support.design.widget.FloatingActionButtonEclairMr1$1
-android.support.design.widget.FloatingActionButtonEclairMr1$BaseShadowAnimation
-android.support.design.widget.FloatingActionButtonEclairMr1$ElevateToTranslationZAnimation
-android.support.design.widget.FloatingActionButtonEclairMr1$ResetElevationAnimation
-android.support.design.widget.FloatingActionButtonImpl
-android.support.design.widget.FloatingActionButtonLollipop
+android.support.design.widget.FloatingActionButton:
+    private static final int SIZE_MINI
+    private static final int SIZE_NORMAL
+android.support.design.widget.FloatingActionButton$Behavior:
+    296:296:public FloatingActionButton$Behavior()
 android.support.design.widget.MathUtils:
     19:19:MathUtils()
     26:26:static float constrain(float,float,float)
@@ -176,8 +157,16 @@ android.support.design.widget.NavigationView:
 android.support.design.widget.NavigationView$1
 android.support.design.widget.NavigationView$OnNavigationItemSelectedListener:
     public abstract boolean onNavigationItemSelected(android.view.MenuItem)
-android.support.design.widget.ShadowDrawableWrapper
-android.support.design.widget.ShadowViewDelegate
+android.support.design.widget.ShadowDrawableWrapper:
+    static final float SHADOW_MULTIPLIER
+    static final float SHADOW_TOP_SCALE
+    static final float SHADOW_HORIZ_SCALE
+    static final float SHADOW_BOTTOM_SCALE
+    179:186:public void setCornerRadius(float)
+    321:321:public float getCornerRadius()
+    337:337:public float getMaxShadowSize()
+    341:343:public float getMinWidth()
+    347:349:public float getMinHeight()
 android.support.design.widget.Snackbar:
     public static final int LENGTH_SHORT
     public static final int LENGTH_LONG
@@ -198,9 +187,12 @@ android.support.design.widget.SnackbarManager:
     private static final int MSG_TIMEOUT
     private static final int SHORT_DURATION_MS
     private static final int LONG_DURATION_MS
-android.support.design.widget.StateListAnimator
-android.support.design.widget.StateListAnimator$1
-android.support.design.widget.StateListAnimator$Tuple
+android.support.design.widget.StateListAnimator:
+    73:73:android.view.animation.Animation getRunningAnimation()
+    156:156:java.util.ArrayList getTuples()
+android.support.design.widget.StateListAnimator$Tuple:
+    182:182:int[] getSpecs()
+    186:186:android.view.animation.Animation getAnimation()
 android.support.design.widget.SwipeDismissBehavior:
     public static final int STATE_IDLE
     public static final int STATE_DRAGGING
@@ -1841,7 +1833,6 @@ android.support.v4.view.ViewPropertyAnimatorCompat:
     935:938:public android.support.v4.view.ViewPropertyAnimatorCompat rotationXBy(float)
     952:955:public android.support.v4.view.ViewPropertyAnimatorCompat rotationY(float)
     969:972:public android.support.v4.view.ViewPropertyAnimatorCompat rotationYBy(float)
-    986:989:public android.support.v4.view.ViewPropertyAnimatorCompat scaleX(float)
     1003:1006:public android.support.v4.view.ViewPropertyAnimatorCompat scaleXBy(float)
     1037:1040:public android.support.v4.view.ViewPropertyAnimatorCompat scaleYBy(float)
     1064:1067:public android.support.v4.view.ViewPropertyAnimatorCompat x(float)
@@ -1854,7 +1845,6 @@ android.support.v4.view.ViewPropertyAnimatorCompat:
     1183:1186:public android.support.v4.view.ViewPropertyAnimatorCompat translationZ(float)
     1200:1203:public android.support.v4.view.ViewPropertyAnimatorCompat z(float)
     1217:1220:public android.support.v4.view.ViewPropertyAnimatorCompat zBy(float)
-    1271:1274:public android.support.v4.view.ViewPropertyAnimatorCompat withLayer()
     1296:1299:public android.support.v4.view.ViewPropertyAnimatorCompat withStartAction(java.lang.Runnable)
     24:24:static synthetic java.lang.Runnable access$002(android.support.v4.view.ViewPropertyAnimatorCompat,java.lang.Runnable)
     24:24:static synthetic java.lang.Runnable access$102(android.support.v4.view.ViewPropertyAnimatorCompat,java.lang.Runnable)
@@ -1870,7 +1860,6 @@ android.support.v4.view.ViewPropertyAnimatorCompat$BaseViewPropertyAnimatorCompa
     165:166:public void rotationXBy(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
     171:172:public void rotationY(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
     177:178:public void rotationYBy(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
-    183:184:public void scaleX(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
     189:190:public void scaleXBy(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
     201:202:public void scaleYBy(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
     213:214:public void x(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
@@ -1883,7 +1872,6 @@ android.support.v4.view.ViewPropertyAnimatorCompat$BaseViewPropertyAnimatorCompa
     253:254:public void translationYBy(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
     259:259:public void translationZ(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
     264:264:public void translationZBy(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
-    275:275:public void withLayer(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View)
     279:281:public void withStartAction(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,java.lang.Runnable)
 android.support.v4.view.ViewPropertyAnimatorCompat$ICSViewPropertyAnimatorCompatImpl:
     387:387:public long getDuration(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View)
@@ -1895,7 +1883,6 @@ android.support.v4.view.ViewPropertyAnimatorCompat$ICSViewPropertyAnimatorCompat
     427:428:public void rotationXBy(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
     432:433:public void rotationY(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
     437:438:public void rotationYBy(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
-    442:443:public void scaleX(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
     447:448:public void scaleXBy(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
     457:458:public void scaleYBy(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
     467:468:public void x(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
@@ -1906,13 +1893,11 @@ android.support.v4.view.ViewPropertyAnimatorCompat$ICSViewPropertyAnimatorCompat
     492:493:public void translationYBy(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
     508:510:public void withEndAction(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,java.lang.Runnable)
     514:516:public void withStartAction(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,java.lang.Runnable)
-    520:522:public void withLayer(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View)
 android.support.v4.view.ViewPropertyAnimatorCompat$JBMr2ViewPropertyAnimatorCompatImpl:
     610:610:public android.view.animation.Interpolator getInterpolator(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View)
 android.support.v4.view.ViewPropertyAnimatorCompat$JBViewPropertyAnimatorCompatImpl:
     592:593:public void withStartAction(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,java.lang.Runnable)
     597:598:public void withEndAction(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,java.lang.Runnable)
-    602:603:public void withLayer(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View)
 android.support.v4.view.ViewPropertyAnimatorCompat$LollipopViewPropertyAnimatorCompatImpl:
     624:625:public void translationZ(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
     629:630:public void translationZBy(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
@@ -1929,7 +1914,6 @@ android.support.v4.view.ViewPropertyAnimatorCompat$ViewPropertyAnimatorCompatImp
     public abstract void rotationXBy(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
     public abstract void rotationY(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
     public abstract void rotationYBy(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
-    public abstract void scaleX(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
     public abstract void scaleXBy(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
     public abstract void scaleYBy(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
     public abstract void x(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
@@ -1942,7 +1926,6 @@ android.support.v4.view.ViewPropertyAnimatorCompat$ViewPropertyAnimatorCompatImp
     public abstract void translationYBy(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
     public abstract void translationZ(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
     public abstract void translationZBy(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,float)
-    public abstract void withLayer(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View)
     public abstract void withStartAction(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,java.lang.Runnable)
     public abstract void withEndAction(android.support.v4.view.ViewPropertyAnimatorCompat,android.view.View,java.lang.Runnable)
 android.support.v4.view.ViewPropertyAnimatorCompatICS:
@@ -1956,7 +1939,6 @@ android.support.v4.view.ViewPropertyAnimatorCompatICS:
     74:75:public static void rotationXBy(android.view.View,float)
     78:79:public static void rotationY(android.view.View,float)
     82:83:public static void rotationYBy(android.view.View,float)
-    86:87:public static void scaleX(android.view.View,float)
     90:91:public static void scaleXBy(android.view.View,float)
     98:99:public static void scaleYBy(android.view.View,float)
     106:107:public static void x(android.view.View,float)
@@ -1969,7 +1951,6 @@ android.support.v4.view.ViewPropertyAnimatorCompatJB:
     22:22:ViewPropertyAnimatorCompatJB()
     25:26:public static void withStartAction(android.view.View,java.lang.Runnable)
     29:30:public static void withEndAction(android.view.View,java.lang.Runnable)
-    33:34:public static void withLayer(android.view.View)
 android.support.v4.view.ViewPropertyAnimatorCompatJellybeanMr2
 android.support.v4.view.ViewPropertyAnimatorCompatKK:
     21:21:ViewPropertyAnimatorCompatKK()
@@ -1979,7 +1960,6 @@ android.support.v4.view.WindowInsetsCompat:
     95:95:public boolean hasSystemWindowInsets()
     104:104:public boolean hasInsets()
     135:135:public boolean isRound()
-    144:144:public android.support.v4.view.WindowInsetsCompat consumeSystemWindowInsets()
     170:170:public android.support.v4.view.WindowInsetsCompat replaceSystemWindowInsets(android.graphics.Rect)
     185:185:public int getStableInsetTop()
     201:201:public int getStableInsetLeft()
@@ -1991,7 +1971,6 @@ android.support.v4.view.WindowInsetsCompatApi21:
     52:52:public boolean hasSystemWindowInsets()
     57:57:public boolean hasInsets()
     67:67:public boolean isRound()
-    72:72:public android.support.v4.view.WindowInsetsCompat consumeSystemWindowInsets()
     82:82:public android.support.v4.view.WindowInsetsCompat replaceSystemWindowInsets(android.graphics.Rect)
     87:87:public int getStableInsetTop()
     92:92:public int getStableInsetLeft()
@@ -2986,7 +2965,6 @@ android.support.v7.app.AlertDialog$Builder:
     745:749:public android.support.v7.app.AlertDialog$Builder setSingleChoiceItems(java.lang.CharSequence[],int,android.content.DialogInterface$OnClickListener)
     771:775:public android.support.v7.app.AlertDialog$Builder setSingleChoiceItems(android.widget.ListAdapter,int,android.content.DialogInterface$OnClickListener)
     787:788:public android.support.v7.app.AlertDialog$Builder setOnItemSelectedListener(android.widget.AdapterView$OnItemSelectedListener)
-    814:817:public android.support.v7.app.AlertDialog$Builder setView(android.view.View)
     844:851:public android.support.v7.app.AlertDialog$Builder setView(android.view.View,int,int,int,int)
     862:863:public android.support.v7.app.AlertDialog$Builder setInverseBackgroundForced(boolean)
     870:871:public android.support.v7.app.AlertDialog$Builder setRecycleOnMeasureEnabled(boolean)
@@ -3136,8 +3114,6 @@ android.support.v7.graphics.Palette:
     315:315:public int getDarkMutedColor(int)
 android.support.v7.graphics.Palette$Swatch:
     602:603:public int getBodyTextColor()
-android.support.v7.graphics.drawable.DrawableWrapper:
-    211:211:public android.graphics.drawable.Drawable getWrappedDrawable()
 android.support.v7.internal.VersionUtils:
     10:10:private VersionUtils()
 android.support.v7.internal.app.AppCompatViewInflater:
@@ -4443,6 +4419,34 @@ com.anjlab.android.iab.v3.Security:
     private static final java.lang.String SIGNATURE_ALGORITHM
     40:40:Security()
 com.anjlab.android.iab.v3.SkuDetails
+com.arasthel.asyncjob.AsyncJob:
+    43:49:public static void doOnMainThread(com.arasthel.asyncjob.AsyncJob$OnMainThreadJob)
+    56:62:public static void doInBackground(com.arasthel.asyncjob.AsyncJob$OnBackgroundJob)
+    71:78:public static java.util.concurrent.FutureTask doInBackground(com.arasthel.asyncjob.AsyncJob$OnBackgroundJob,java.util.concurrent.ExecutorService)
+    109:116:public void cancel()
+    139:139:public com.arasthel.asyncjob.AsyncJob$AsyncAction getActionInBackground()
+    151:151:public com.arasthel.asyncjob.AsyncJob$AsyncResultAction getActionOnResult()
+com.arasthel.asyncjob.AsyncJob$1
+com.arasthel.asyncjob.AsyncJob$2
+com.arasthel.asyncjob.AsyncJob$3
+com.arasthel.asyncjob.AsyncJob$AsyncJobBuilder:
+    218:219:public com.arasthel.asyncjob.AsyncJob$AsyncJobBuilder withExecutor(java.util.concurrent.ExecutorService)
+com.arasthel.asyncjob.AsyncJob$OnBackgroundJob
+com.arasthel.asyncjob.AsyncJob$OnMainThreadJob
+com.arasthel.asyncjob.BuildConfig
+com.arasthel.asyncjob.R
+com.arasthel.asyncjob.R$anim
+com.arasthel.asyncjob.R$attr
+com.arasthel.asyncjob.R$bool
+com.arasthel.asyncjob.R$color
+com.arasthel.asyncjob.R$dimen
+com.arasthel.asyncjob.R$drawable
+com.arasthel.asyncjob.R$id
+com.arasthel.asyncjob.R$integer
+com.arasthel.asyncjob.R$layout
+com.arasthel.asyncjob.R$string
+com.arasthel.asyncjob.R$style
+com.arasthel.asyncjob.R$styleable
 com.balysv.materialmenu.BuildConfig
 com.balysv.materialmenu.MaterialMenu
 com.balysv.materialmenu.MaterialMenuBase
@@ -9287,7 +9291,6 @@ com.google.android.gms.plus.internal.model.people.PersonEntity:
     public boolean hasCover()
     public java.lang.String getCurrentLocation()
     public boolean hasCurrentLocation()
-    public java.lang.String getDisplayName()
     public boolean hasDisplayName()
     public int getGender()
     public boolean hasGender()
@@ -9298,6 +9301,7 @@ com.google.android.gms.plus.internal.model.people.PersonEntity:
     public boolean hasIsPlusUser()
     public java.lang.String getLanguage()
     public boolean hasLanguage()
+    public com.google.android.gms.plus.model.people.Person$Name getName()
     public boolean hasName()
     public java.lang.String getNickname()
     public boolean hasNickname()
@@ -9351,9 +9355,11 @@ com.google.android.gms.plus.internal.model.people.PersonEntity$ImageEntity:
     public boolean hasUrl()
     public boolean isDataValid()
 com.google.android.gms.plus.internal.model.people.PersonEntity$NameEntity:
+    public java.lang.String getFamilyName()
     public boolean hasFamilyName()
     public java.lang.String getFormatted()
     public boolean hasFormatted()
+    public java.lang.String getGivenName()
     public boolean hasGivenName()
     public java.lang.String getHonorificPrefix()
     public boolean hasHonorificPrefix()
@@ -9560,7 +9566,6 @@ com.google.android.gms.plus.model.people.Person:
     public abstract boolean hasCover()
     public abstract java.lang.String getCurrentLocation()
     public abstract boolean hasCurrentLocation()
-    public abstract java.lang.String getDisplayName()
     public abstract boolean hasDisplayName()
     public abstract int getGender()
     public abstract boolean hasGender()
@@ -9571,6 +9576,7 @@ com.google.android.gms.plus.model.people.Person:
     public abstract boolean hasIsPlusUser()
     public abstract java.lang.String getLanguage()
     public abstract boolean hasLanguage()
+    public abstract com.google.android.gms.plus.model.people.Person$Name getName()
     public abstract boolean hasName()
     public abstract java.lang.String getNickname()
     public abstract boolean hasNickname()
@@ -9619,9 +9625,11 @@ com.google.android.gms.plus.model.people.Person$Gender
 com.google.android.gms.plus.model.people.Person$Image:
     public abstract boolean hasUrl()
 com.google.android.gms.plus.model.people.Person$Name:
+    public abstract java.lang.String getFamilyName()
     public abstract boolean hasFamilyName()
     public abstract java.lang.String getFormatted()
     public abstract boolean hasFormatted()
+    public abstract java.lang.String getGivenName()
     public abstract boolean hasGivenName()
     public abstract java.lang.String getHonorificPrefix()
     public abstract boolean hasHonorificPrefix()
@@ -10419,7 +10427,6 @@ com.heinrichreimersoftware.materialdrawer.drawable.RoundedAvatarDrawable:
 com.heinrichreimersoftware.materialdrawer.structure.DrawerDividerItem
 com.heinrichreimersoftware.materialdrawer.structure.DrawerFragmentItem
 com.heinrichreimersoftware.materialdrawer.structure.DrawerHeaderItem:
-    34:35:public com.heinrichreimersoftware.materialdrawer.structure.DrawerItem setTitle(java.lang.String)
     61:62:public com.heinrichreimersoftware.materialdrawer.structure.DrawerItem removeTitle()
 com.heinrichreimersoftware.materialdrawer.structure.DrawerItem:
     public static final int ICON
@@ -10954,8 +10961,8 @@ com.teched.smartread.LoginActivity:
     private static final int RC_SIGN_IN
 com.teched.smartread.MainActivity:
     private static final int FILE_CODE
-com.teched.smartread.MainActivity$38:
-    1474:1475:public void onSearchCleared()
+com.teched.smartread.MainActivity$42:
+    1599:1600:public void onSearchCleared()
 com.teched.smartread.R
 com.teched.smartread.R$anim
 com.teched.smartread.R$array
@@ -10974,8 +10981,6 @@ com.teched.smartread.R$string
 com.teched.smartread.R$style
 com.teched.smartread.R$styleable
 com.teched.smartread.R$xml
-com.teched.smartread.RefreshJob:
-    public static final int PRIORITY
 com.teched.smartread.UploadJob:
     public static final int PRIORITY
 io.codetail.animation.RevealAnimator:

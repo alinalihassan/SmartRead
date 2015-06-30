@@ -4,6 +4,13 @@
 # view res/layout/design_navigation_menu.xml #generated:17
 -keep class android.support.design.internal.NavigationMenuView { <init>(...); }
 
+# view res/layout/activity_main.xml #generated:290
+-keep class android.support.design.widget.CoordinatorLayout { <init>(...); }
+
+# view res/layout/activity_main.xml #generated:181
+# view res/layout/activity_main.xml #generated:305
+-keep class android.support.design.widget.FloatingActionButton { <init>(...); }
+
 # view res/layout/layout_snackbar.xml #generated:18
 # view sw600dp-v13\res/layout-sw600dp-v13/layout_snackbar.xml #generated:18
 -keep class android.support.design.widget.Snackbar$SnackbarLayout { <init>(...); }
@@ -11,7 +18,7 @@
 # view res/layout/abc_alert_dialog_material.xml #generated:130
 -keep class android.support.v4.widget.Space { <init>(...); }
 
-# view res/layout/activity_main.xml #generated:260
+# view res/layout/activity_main.xml #generated:295
 # view res/layout/activity_main.xml #generated:46
 -keep class android.support.v4.widget.SwipeRefreshLayout { <init>(...); }
 
@@ -75,6 +82,7 @@
 -keep class android.support.v7.widget.CardView { <init>(...); }
 
 # view res/layout/activity_main.xml #generated:153
+# view res/layout/activity_main.xml #generated:175
 # view res/layout/activity_main.xml #generated:50
 # view res/layout/fragment_filepicker.xml #generated:45
 -keep class android.support.v7.widget.RecyclerView { <init>(...); }
@@ -100,13 +108,13 @@
 # view AndroidManifest.xml #generated:65
 -keep class com.facebook.FacebookActivity { <init>(...); }
 
-# view res/layout/activity_login.xml #generated:17
+# view res/layout/activity_login.xml #generated:27
 -keep class com.facebook.login.widget.LoginButton { <init>(...); }
 
 # view AndroidManifest.xml #generated:83
 -keep class com.google.android.gms.ads.AdActivity { <init>(...); }
 
-# view res/layout/activity_main.xml #generated:439
+# view res/layout/activity_main.xml #generated:482
 -keep class com.google.android.gms.ads.AdView { <init>(...); }
 
 # view AndroidManifest.xml #generated:90
@@ -127,16 +135,16 @@
 # view res/layout/md_drawer_view.xml #generated:233
 -keep class com.heinrichreimersoftware.materialdrawer.widget.LinearListView { <init>(...); }
 
-# view res/layout/activity_main.xml #generated:282
+# view res/layout/activity_main.xml #generated:325
 -keep class com.joanzapata.pdfview.PDFView { <init>(...); }
 
 # view AndroidManifest.xml #generated:73
 -keep class com.nononsenseapps.filepicker.FilePickerActivity { <init>(...); }
 
-# view res/layout/activity_main.xml #generated:246
+# view res/layout/activity_main.xml #generated:281
 -keep class com.quinny898.library.persistentsearch.SearchBox { <init>(...); }
 
-# view res/layout/activity_main.xml #generated:271
+# view res/layout/activity_main.xml #generated:314
 -keep class com.sothree.slidinguppanel.SlidingUpPanelLayout { <init>(...); }
 
 # view AndroidManifest.xml #generated:32

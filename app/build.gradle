@@ -2,14 +2,22 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'Key'
+            keyPassword 'alin123456'
+            storeFile file('C:/Users/superalin98/Documents/SmartRead.jks')
+            storePassword 'alin123456'
+        }
+    }
     compileSdkVersion 22
     buildToolsVersion '22.0.1'
     defaultConfig {
         applicationId "com.teched.smartread"
         minSdkVersion 17
         targetSdkVersion 22
-        versionCode 52
-        versionName "3.1.0"
+        versionCode 57
+        versionName "3.2.0"
     }
     lintOptions {
         checkReleaseBuilds false
@@ -17,12 +25,13 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            proguardFile 'proguard-rules.pro'
+
         }
     }
     repositories {
+        maven {
+            url 'http://dl.bintray.com/amulyakhare/maven'
+        }
         maven {
             url "https://jitpack.io"
         }
@@ -53,5 +62,6 @@ dependencies {
     compile 'com.path:android-priority-jobqueue:1.1.2'
     compile 'com.nineoldandroids:library:2.4.0'
     compile 'com.arasthel:asyncjob-library:1.0.3'
+    compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
     compile project(':PersistentSearch')
 }

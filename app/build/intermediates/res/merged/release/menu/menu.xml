@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:mlns="http://schemas.android.com/tools"
-    mlns:tools="http://schemas.android.com/tools">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto">
         <item
-            android:title="Search"
+            android:title="@string/string_menu_title"
             android:id="@+id/action_search"
             android:orderInCategory="100"
             android:icon="@drawable/ic_action_search"

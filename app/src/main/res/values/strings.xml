@@ -27,4 +27,6 @@
     <string name="banner_ad_unit_id">ca-app-pub-9149546541078633/5812125704</string>
     <string name="string_add_class">Create Class</string>
     <string name="string_menu_title">Search</string>
+    <string name="string_menu_title2">Join Class</string>
+    <string name="no_sync_ready">Book not available for distribution</string>
 </resources>

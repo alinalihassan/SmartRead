@@ -345,6 +345,11 @@
     <dimen name="fab_border_width">0.5dp</dimen>
     <dimen name="fab_content_size">24dp</dimen>
     <dimen name="fab_elevation">8dp</dimen>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/values/dimen.xml -->
+    <eat-comment/>
+    <dimen name="fab_margin">16dp</dimen>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
+    <eat-comment/>
     <dimen name="fab_size_mini">40dp</dimen>
     <dimen name="fab_size_normal">56dp</dimen>
     <dimen name="fab_translation_z_pressed">6dp</dimen>
@@ -634,6 +639,7 @@
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="no_connection">No internet connection available</string>
+    <string name="no_sync_ready">Book not available for distribution</string>
     <string name="page_title">Page</string>
     <string name="profile_description">user@gmail.com</string>
     <string name="profile_name">User</string>
@@ -654,7 +660,9 @@
     <string name="store_picture_title">Save image</string>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="string_add_class">Create Class</string>
     <string name="string_distribute">Distribute</string>
+    <string name="string_menu_title">Search</string>
     <string name="title_activity_settings">SettingsActivity</string>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/res/values/wallet_strings.xml -->
     <eat-comment/>

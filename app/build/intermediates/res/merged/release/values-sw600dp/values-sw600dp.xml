@@ -10,6 +10,9 @@
     <dimen name="abc_config_prefDialogWidth">580dp</dimen>
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/values-sw600dp/dimen.xml -->
+    <eat-comment/>
+    <dimen name="fab_margin">24dp</dimen>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values-sw600dp/values-sw600dp.xml -->
     <eat-comment/>
     <dimen name="snackbar_action_inline_max_width">0dp</dimen>

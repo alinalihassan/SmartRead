@@ -4,10 +4,9 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:padding="8dp">
-        <CheckedTextView
+        <TextView
             android:id="@+id/className"
             android:singleLine="true"
-            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
             android:padding="2dp"
             android:layout_margin="6dp"
             android:gravity="start"

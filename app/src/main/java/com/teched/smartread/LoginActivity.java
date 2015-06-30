@@ -1,11 +1,13 @@
 package com.teched.smartread;
 
+import android.animation.Animator;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -27,9 +29,11 @@ import java.util.List;
 
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -41,6 +45,8 @@ public class LoginActivity extends AppCompatActivity implements
 
     private LoginButton loginButton;
     private Button gLogin;
+    private TextView Logo;
+    private ImageView LogoImage;
     private static final int RC_SIGN_IN = 0;
     private GoogleApiClient mGoogleApiClient;
     private boolean mIntentInProgress = false;
@@ -55,6 +61,8 @@ public class LoginActivity extends AppCompatActivity implements
         callbackManager = CallbackManager.Factory.create();
         loginButton = (LoginButton) findViewById(R.id.fbLogin);
         gLogin = (Button) findViewById(R.id.gLogin);
+        Logo = (TextView) findViewById(R.id.LogoText);
+        LogoImage = (ImageView) findViewById(R.id.aboutImage);
         List<String> permissions = new ArrayList<>();
         permissions.add("email");
         permissions.add("public_profile");
@@ -63,25 +71,46 @@ public class LoginActivity extends AppCompatActivity implements
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
+                final LoginResult loginResult2 = loginResult;
                 loginButton.setVisibility(View.GONE);
                 gLogin.setVisibility(View.GONE);
-                GraphRequest request = GraphRequest.newMeRequest(
-                        loginResult.getAccessToken(),
-                        new GraphRequest.GraphJSONObjectCallback() {
+                DisplayMetrics displayMetrics = getApplicationContext().getResources().getDisplayMetrics();
+                Logo.animate().alpha(1.0f).setDuration(750);
+                LogoImage.animate().y(displayMetrics.heightPixels / 2 - Math.round(100 * displayMetrics.density)).scaleXBy(0.60f).scaleYBy(0.60f).setDuration(750)
+                        .setListener(new Animator.AnimatorListener() {
                             @Override
-                            public void onCompleted(JSONObject user,GraphResponse response) {
-                                try {
-                                    String image_value = "https://graph.facebook.com/" + user.getString("id") + "/picture?type=large";
-                                    String coverPicUrl = user.getJSONObject("cover").getString("source");
-                                    Transfer(user.getString("name"), user.getString("email"), image_value, coverPicUrl);
-                                } catch (Exception ignored) {}
+                            public void onAnimationStart(Animator animation) {
+                            }
+
+                            @Override
+                            public void onAnimationEnd(Animator animation) {
+                                GraphRequest request = GraphRequest.newMeRequest(
+                                        loginResult2.getAccessToken(),
+                                        new GraphRequest.GraphJSONObjectCallback() {
+                                            @Override
+                                            public void onCompleted(JSONObject user, GraphResponse response) {
+                                                try {
+                                                    String image_value = "https://graph.facebook.com/" + user.getString("id") + "/picture?type=large";
+                                                    String coverPicUrl = user.getJSONObject("cover").getString("source");
+                                                    Transfer(user.getString("name"), user.getString("email"), image_value, coverPicUrl);
+                                                } catch (Exception ignored) {
+                                                }
+                                            }
+                                        });
+                                Bundle parameters = new Bundle();
+                                parameters.putString("fields", "id,name,link,email,cover");
+                                request.setParameters(parameters);
+                                request.executeAsync();
+                            }
+
+                            @Override
+                            public void onAnimationCancel(Animator animation) {
+                            }
+
+                            @Override
+                            public void onAnimationRepeat(Animator animation) {
                             }
                         });
-                Bundle parameters = new Bundle();
-                parameters.putString("fields", "id,name,link,email,cover");
-                request.setParameters(parameters);
-                request.executeAsync();
-
             }
 
             @Override
@@ -91,7 +120,6 @@ public class LoginActivity extends AppCompatActivity implements
 
             @Override
             public void onError(FacebookException exception) {
-                Log.d("ERROR",exception.toString());
                 Snackbar.make(findViewById(R.id.loginScreen), R.string.no_connection, Snackbar.LENGTH_SHORT)
                         .show();
             }
@@ -148,10 +176,29 @@ public class LoginActivity extends AppCompatActivity implements
         mSignInClicked = false;
         loginButton.setVisibility(View.GONE);
         gLogin.setVisibility(View.GONE);
-        Person currentPerson = Plus.PeopleApi.getCurrentPerson(mGoogleApiClient);
-        Transfer(currentPerson.getName().getGivenName()+" " + currentPerson.getName().getFamilyName(), Plus.AccountApi.getAccountName(mGoogleApiClient), currentPerson.getImage().getUrl().subSequence(0,currentPerson.getImage().getUrl().length()-2).toString() + "400", currentPerson.getCover().getCoverPhoto().getUrl());
-    }
+        DisplayMetrics displayMetrics = getApplicationContext().getResources().getDisplayMetrics();
+        Logo.animate().alpha(1.0f).setDuration(750);
+        LogoImage.animate().y(displayMetrics.heightPixels / 2 - Math.round(100 * displayMetrics.density)).scaleXBy(0.60f).scaleYBy(0.60f).setDuration(750)
+                .setListener(new Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+                    }
 
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        Person currentPerson = Plus.PeopleApi.getCurrentPerson(mGoogleApiClient);
+                        Transfer(currentPerson.getName().getGivenName() + " " + currentPerson.getName().getFamilyName(), Plus.AccountApi.getAccountName(mGoogleApiClient), currentPerson.getImage().getUrl().subSequence(0, currentPerson.getImage().getUrl().length() - 2).toString() + "400", currentPerson.getCover().getCoverPhoto().getUrl());
+                    }
+
+                    @Override
+                    public void onAnimationCancel(Animator animation) {
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animator animation) {
+                    }
+                });
+    }
     @Override
     public void onConnectionSuspended(int cause) {
         mGoogleApiClient.connect();

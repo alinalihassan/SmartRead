@@ -168,6 +168,41 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/classes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/classList"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?attr/actionBarSize"/>
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/classFab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                sothree:borderWidth="0dp"
+                android:layout_margin="@dimen/fab_margin"
+                android:src="@drawable/ic_add_class" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/overview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"/>
+
+        <RelativeLayout
+            android:id="@+id/store"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"/>
+
+        <RelativeLayout
             android:id="@+id/QuestionLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -252,7 +287,7 @@
             android:layout_marginTop="-6dp"
             android:layout_marginLeft="-6dp"
             android:layout_marginRight="-6dp" />
-        <RelativeLayout
+        <android.support.design.widget.CoordinatorLayout
             android:id="@+id/teacher"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -267,7 +302,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
             </android.support.v4.widget.SwipeRefreshLayout>
-        </RelativeLayout>
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/teacherFab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                sothree:borderWidth="0dp"
+                android:layout_margin="@dimen/fab_margin"
+                android:src="@drawable/ic_create" />
+        </android.support.design.widget.CoordinatorLayout>
         <com.sothree.slidinguppanel.SlidingUpPanelLayout
             android:id="@+id/sliding_layout"
             android:layout_width="match_parent"

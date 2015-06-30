@@ -7,6 +7,7 @@ import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.content.Context;
 import android.content.ContextWrapper;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
@@ -28,16 +29,20 @@ import android.os.StrictMode;
 import android.speech.RecognizerIntent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.text.InputFilter;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -111,7 +116,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     private SlidingUpPanelLayout panelLayout;
     private EditText AuthorEdit;
     private EditText QuestionEdit;
-    private RelativeLayout teacher;
+    private CoordinatorLayout teacher;
     private RadioGroup QuestionRadio;
     private SearchBox search;
     private boolean openSearch = false;
@@ -195,7 +200,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         final MaterialMenuDrawable materialMenu = new MaterialMenuDrawable(this, Color.WHITE, MaterialMenuDrawable.Stroke.THIN);
         drawer = (DrawerFrameLayout) findViewById(R.id.drawer);
         search = (SearchBox) findViewById(R.id.searchbox);
-        teacher = (RelativeLayout) findViewById(R.id.teacher);
+        teacher = (CoordinatorLayout) findViewById(R.id.teacher);
         panelLayout = (SlidingUpPanelLayout) findViewById(R.id.sliding_layout);
         pdf = (PDFView) findViewById(R.id.pdfcontent);
         Button nextQuestion = (Button) findViewById(R.id.questionNext);
@@ -216,6 +221,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         final RelativeLayout overview = (RelativeLayout) findViewById(R.id.overview);
         final RelativeLayout store = (RelativeLayout) findViewById(R.id.store);
         final FloatingActionButton teacherFab = (FloatingActionButton) findViewById(R.id.teacherFab);
+        final FloatingActionButton classFab = (FloatingActionButton) findViewById(R.id.classFab);
         TextView programmer = (TextView) findViewById(R.id.aboutProgrammer);
         TextView producer = (TextView) findViewById(R.id.aboutProducer);
         TextView google = (TextView) findViewById(R.id.aboutGoogle);
@@ -269,6 +275,12 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                 startActivityForResult(i, FILE_CODE);
             }
         });
+        classFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                createClass();
+            }
+        });
         panelLayout.setPanelSlideListener(new SlidingUpPanelLayout.PanelSlideListener() {
             @Override
             public void onPanelSlide(View view, float v) {
@@ -313,20 +325,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                 try {
                     currentBook = teacherList.getItemAtPosition(i).toString();
                     distribute();
-                /*
-                    teacherFile = new File(TeacherPath + "/" + teacherList.getItemAtPosition(i) + ".pdf");
-                    newObject = new JSONObject(readFromFile(teacherFile.getPath().replace(".pdf", ".json")));
-                    pdf.invalidate();
-                    PDFMode = "Teacher";
-                    EditText title = (EditText) findViewById(R.id.pdfTitle);
-                    title.setText(teacherFile.getName().replace(".pdf", ""));
-                    pdf.fromFile(teacherFile)
-                            .defaultPage(1)
-                            .showMinimap(prefs.getBoolean("pref_minimap", false))
-                            .enableSwipe(true)
-                            .load();
-                    AuthorEdit.setText(newObject.getString("Author"));
-                    AnimateTeacher(true); */
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -461,9 +459,12 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 if (!openAbout) {
-                    if (refreshLayout.getVisibility() == View.VISIBLE) {
+                    if (item.getItemId()==R.id.action_search) {
                         openSearch = true;
                         openSearch();
+                    }
+                    else if(item.getItemId()==R.id.action_join) {
+                        joinClass();
                     }
                 }
                 return true;
@@ -745,7 +746,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                     AnimateDistribute(false);
                                 drawer.closeDrawer();
                                 drawer.selectItem(i);
-                                menuString = "Teacher";
+                                menuString = "";
                                 invalidateOptionsMenu();
                                 refreshLayout.setVisibility(View.INVISIBLE);
                                 teacher.setVisibility(View.VISIBLE);
@@ -819,33 +820,15 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         adapter4 = new ClassAdapter(classList, R.layout.classview, this);
         mRecyclerView2.setAdapter(adapter4);
         ((ClassAdapter) mRecyclerView2.getAdapter()).flushFilter();
-        new AsyncJob.AsyncJobBuilder<Boolean>()
-                .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
-                    @Override
-                    public Boolean doAsync() {
-                        try {
-                            JSONArray Classes = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_user_classes.php?email=" + getApplication().getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE).getString("Email", getString(R.string.profile_description)))).getJSONArray("classes");
-                            for(int i = 0; i<Classes.length();i++) {
-                                classList.add(new Class());
-                                JSONObject Class = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_class.php?id=" + Classes.getString(i)));
-                                Class currentClass = classList.get(classList.size() - 1);
-                                currentClass.name = Class.getString("name");
-                                currentClass.users = Class.getJSONArray("users");
-                            }
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                        return true;
-                    }
-                })
-                .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
-                    @Override
-                    public void onResult(Boolean result) {
-                        adapter4.notifyDataSetChanged();
-                    }
-                }).create().start();
-
-
+        refreshClass();
+        mRecyclerView2.addOnItemTouchListener(new RecyclerItemClickListener(getApplicationContext(), mRecyclerView2, new RecyclerItemClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+            }
+            @Override
+            public void onItemLongClick(View view, int position) {
+            }
+        }));
 
         distribution = new ArrayList<>();
         RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.distributeList);
@@ -974,7 +957,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                                 if (array != null) canDo = true;
                                                 if (canDo && !array.getBoolean(0)) {
                                                     QuestionPage(array, 2, mainObject2);
-                                                    pdf.loadPages();
+                                                    //pdf.loadPages();
                                                     AnimateQuestion(true);
                                                 }
                                             } catch (JSONException ignored) { }
@@ -1009,10 +992,11 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         switch (menuString) {
             case "Library":
                 menu.getItem(0).setVisible(true);
-                menu.getItem(0).setIcon(R.drawable.ic_action_search);
+                menu.getItem(1).setVisible(true);
                 break;
             default:
                 menu.getItem(0).setVisible(false);
+                menu.getItem(1).setVisible(false);
                 break;
         }
         return true;
@@ -1139,9 +1123,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     }
 
     public void AnimateQuestion(boolean bool) {
-
         final View myView = findViewById(R.id.QuestionLayout);
-
 
         YoYo.with(Techniques.ZoomIn)
                 .duration(400)
@@ -1745,7 +1727,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     }
 
     public void distribute() {
-        if(isOnline()) {
+        if(isOnline() && currentBook.matches("^-?\\d+$")) {
             try {
                 distributeList.clear();
                 JSONArray Classes = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_user_classes.php?email=" + this.getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE).getString("Email", getString(R.string.profile_description)))).getJSONArray("classes");
@@ -1763,8 +1745,117 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             }
         }
         else {
-            Snackbar.make(findViewById(R.id.mainFrame), R.string.no_connection, Snackbar.LENGTH_SHORT)
+            Snackbar.make(findViewById(R.id.teacher), !isOnline()?R.string.no_connection:R.string.no_sync_ready, Snackbar.LENGTH_SHORT)
                     .show();
         }
+    }
+
+    public void createClass() {
+        final SharedPreferences prefs = this.getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE);
+        final EditText input = new EditText(this);
+        final AlertDialog alert = new AlertDialog.Builder(this)
+                .setTitle("Create Class")
+                .setMessage("Choose a name for your class")
+                .setView(input)
+                .setPositiveButton("Ok", null)
+                .setNegativeButton("Cancel", null)
+                .create();
+
+        alert.setOnShowListener(new DialogInterface.OnShowListener() {
+
+            @Override
+            public void onShow(DialogInterface dialog) {
+
+                Button b = alert.getButton(AlertDialog.BUTTON_POSITIVE);
+                Button c = alert.getButton(AlertDialog.BUTTON_NEGATIVE);
+                b.setTextColor(Color.rgb(68,138,255));
+                c.setTextColor(Color.rgb(68,138,255));
+                b.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View view) {
+                        if(input.getText().toString().length()>0 && input.getText().toString().length()<30) {
+                            try {
+                                JSONObject books = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/create_class.php?name=" + input.getText().toString() + "&teacher=" + prefs.getString("Email", getString(R.string.profile_description))));
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                            alert.dismiss();
+                            refreshClass();
+                        }
+                    }
+                });
+            }
+        });
+        alert.show();
+    }
+    private void refreshClass() {
+        new AsyncJob.AsyncJobBuilder<Boolean>()
+                .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
+                    @Override
+                    public Boolean doAsync() {
+                        try {
+                            classList.clear();
+                            JSONArray Classes = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_user_classes.php?email=" + getApplication().getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE).getString("Email", getString(R.string.profile_description)))).getJSONArray("classes");
+                            for(int i = 0; i<Classes.length();i++) {
+                                classList.add(new Class());
+                                JSONObject Class = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_class.php?id=" + Classes.getString(i)));
+                                Class currentClass = classList.get(classList.size() - 1);
+                                currentClass.name = Class.getString("name");
+                                currentClass.users = Class.getJSONArray("users");
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        return true;
+                    }
+                })
+                .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
+                    @Override
+                    public void onResult(Boolean result) {
+                        adapter4.notifyDataSetChanged();
+                    }
+                }).create().start();
+    }
+    private void joinClass() {
+        final SharedPreferences prefs = this.getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE);
+        final EditText input = new EditText(this);
+        input.setFilters(new InputFilter[]{new InputFilter.LengthFilter(5)});
+        final AlertDialog alert = new AlertDialog.Builder(this)
+                .setTitle("Join Class")
+                .setMessage("Enter the access code for your class")
+                .setView(input)
+                .setPositiveButton("Ok", null)
+                .setNegativeButton("Cancel", null)
+                .create();
+
+        alert.setOnShowListener(new DialogInterface.OnShowListener() {
+
+            @Override
+            public void onShow(DialogInterface dialog) {
+
+                Button b = alert.getButton(AlertDialog.BUTTON_POSITIVE);
+                Button c = alert.getButton(AlertDialog.BUTTON_NEGATIVE);
+                b.setTextColor(Color.rgb(68,138,255));
+                c.setTextColor(Color.rgb(68,138,255));
+                b.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View view) {
+                        if(input.getText().toString().length()>0) {
+                            try {
+                                Log.d("TEST","http://php-smartread.rhcloud.com/add_class_user.php?email=" + prefs.getString("Email", getString(R.string.profile_description)) + "&access_code=" + input.getText().toString());
+                                JsonClass.getJSON("http://php-smartread.rhcloud.com/add_class_user.php?email=" + prefs.getString("Email", getString(R.string.profile_description)) + "&access_code=" + input.getText().toString());
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                            alert.dismiss();
+                            refreshClass();
+                        }
+                    }
+                });
+            }
+        });
+        alert.show();
     }
 }
