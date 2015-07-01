@@ -61,6 +61,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.ViewFlipper;
 
 import com.anjlab.android.iab.v3.BillingProcessor;
 import com.anjlab.android.iab.v3.TransactionDetails;
@@ -143,6 +144,11 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     private String currentBook;
     private ArrayList<Class> classList;
     private RecyclerView.Adapter adapter4;
+    private ArrayList<Users> usersList;
+    private RecyclerView.Adapter adapter5;
+    private ViewFlipper viewFlipper;
+    private FloatingActionButton classFab;
+    private FloatingActionButton teacherFab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -208,6 +214,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         AuthorEdit = (EditText) findViewById(R.id.authorEdit);
         QuestionEdit = (EditText) findViewById(R.id.questionEdit);
         QuestionRadio = (RadioGroup) findViewById(R.id.questionGroup);
+        viewFlipper = (ViewFlipper) findViewById(R.id.viewFlipper);
         final EditText pageEdit = (EditText) findViewById(R.id.pageEdit);
         final EditText answer1 = (EditText) findViewById(R.id.answer1);
         final EditText answer2 = (EditText) findViewById(R.id.answer2);
@@ -220,14 +227,13 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         final RelativeLayout classes = (RelativeLayout) findViewById(R.id.classes);
         final RelativeLayout overview = (RelativeLayout) findViewById(R.id.overview);
         final RelativeLayout store = (RelativeLayout) findViewById(R.id.store);
-        final FloatingActionButton teacherFab = (FloatingActionButton) findViewById(R.id.teacherFab);
-        final FloatingActionButton classFab = (FloatingActionButton) findViewById(R.id.classFab);
+        teacherFab = (FloatingActionButton) findViewById(R.id.teacherFab);
+        classFab = (FloatingActionButton) findViewById(R.id.classFab);
         TextView programmer = (TextView) findViewById(R.id.aboutProgrammer);
         TextView producer = (TextView) findViewById(R.id.aboutProducer);
         TextView google = (TextView) findViewById(R.id.aboutGoogle);
         TextView facebook = (TextView) findViewById(R.id.aboutFacebook);
         TextView aboutVersion = (TextView) findViewById(R.id.aboutVersion);
-
         if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP) {
             toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
             findViewById(R.id.toolbarCard).setVisibility(View.VISIBLE);
@@ -728,6 +734,9 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 overview.setVisibility(View.INVISIBLE);
                                 store.setVisibility(View.INVISIBLE);
                                 toolbar.setTitle("My Classes");
+                                viewFlipper.setInAnimation(getApplicationContext(), R.anim.slide_in_instant);
+                                viewFlipper.setOutAnimation(getApplicationContext(), R.anim.slide_out_instant);
+                                viewFlipper.setDisplayedChild(0);
                             }
                         })
         );
@@ -812,8 +821,19 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         );
         drawer.selectItem(0);
 
+        usersList = new ArrayList<>();
+        final RecyclerView mRecyclerView3 = (RecyclerView) findViewById(R.id.usersList);
+        RecyclerView.LayoutManager mLayoutManager3 = new LinearLayoutManager(this);
+        mRecyclerView3.setLayoutManager(mLayoutManager3);
+        mRecyclerView3.setItemAnimator(new DefaultItemAnimator());
+        adapter5 = new UsersAdapter(usersList, R.layout.classview, this);
+        mRecyclerView3.setAdapter(adapter5);
+        ((UsersAdapter) mRecyclerView3.getAdapter()).flushFilter();
+
+
+
         classList = new ArrayList<>();
-        RecyclerView mRecyclerView2 = (RecyclerView) findViewById(R.id.classList);
+        final RecyclerView mRecyclerView2 = (RecyclerView) findViewById(R.id.classList);
         RecyclerView.LayoutManager mLayoutManager2 = new LinearLayoutManager(this);
         mRecyclerView2.setLayoutManager(mLayoutManager2);
         mRecyclerView2.setItemAnimator(new DefaultItemAnimator());
@@ -824,6 +844,11 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         mRecyclerView2.addOnItemTouchListener(new RecyclerItemClickListener(getApplicationContext(), mRecyclerView2, new RecyclerItemClickListener.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
+                refreshUsers(((ClassAdapter) mRecyclerView2.getAdapter()).getUsers(position));
+                viewFlipper.setInAnimation(getApplicationContext(), R.anim.slide_in_from_right);
+                viewFlipper.setOutAnimation(getApplicationContext(), R.anim.slide_out_to_left);
+                viewFlipper.showNext();
+                toolbar.setTitle(((ClassAdapter) mRecyclerView2.getAdapter()).getName(position));
             }
             @Override
             public void onItemLongClick(View view, int position) {
@@ -1053,6 +1078,13 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     AnimateTeacher(false);
                 else if(myView3.getVisibility() == View.VISIBLE)
                     AnimateDistribute(false);
+                else if(viewFlipper.getDisplayedChild()==1) {
+                    viewFlipper.setInAnimation(getApplicationContext(), R.anim.slide_in_from_left);
+                    viewFlipper.setOutAnimation(getApplicationContext(), R.anim.slide_out_to_right);
+                    viewFlipper.showPrevious();
+                    toolbar.setTitle("My Classes");
+                    classFab.animate().scaleY(1f).scaleX(1f).setDuration(300);
+                }
                 else
                     super.onBackPressed();
             }
@@ -1803,6 +1835,8 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 Class currentClass = classList.get(classList.size() - 1);
                                 currentClass.name = Class.getString("name");
                                 currentClass.users = Class.getJSONArray("users");
+                                currentClass.pending = Class.getJSONArray("pending");
+                                currentClass.id = Classes.getString(i);
                             }
                         } catch (Exception e) {
                             e.printStackTrace();
@@ -1814,6 +1848,35 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     @Override
                     public void onResult(Boolean result) {
                         adapter4.notifyDataSetChanged();
+                    }
+                }).create().start();
+    }
+
+    private void refreshUsers(final JSONArray Classes) {
+        new AsyncJob.AsyncJobBuilder<Boolean>()
+            .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
+                @Override
+                public Boolean doAsync() {
+                    try {
+                        usersList.clear();
+                        for (int i = 0; i < Classes.length(); i++) {
+                            usersList.add(new Users());
+                            JSONObject Class = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_user.php?id=" + Classes.getString(i))).getJSONArray("users").getJSONObject(0);
+                            Users currentClass = usersList.get(usersList.size() - 1);
+                            currentClass.name = Class.getString("name");
+                            currentClass.id = Classes.getString(i);
+                            currentClass.email = Class.getString("email");
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    return true;
+                }
+            })
+                .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
+                    @Override
+                    public void onResult(Boolean result) {
+                        adapter5.notifyDataSetChanged();
                     }
                 }).create().start();
     }

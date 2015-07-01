@@ -87,22 +87,42 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="invisible">
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/classList"
-                android:padding="8dp"
+            <ViewFlipper
+                android:id="@+id/viewFlipper"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="?attr/actionBarSize"/>
-            <android.support.design.widget.FloatingActionButton
-                android:id="@+id/classFab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true"
-                sothree:borderWidth="0dp"
-                android:layout_margin="@dimen/fab_margin"
-                android:src="@drawable/ic_add_class" />
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="?attr/actionBarSize">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/classList"
+                        android:padding="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/classFab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        sothree:borderWidth="0dp"
+                        android:layout_margin="@dimen/fab_margin"
+                        android:src="@drawable/ic_add_class" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="?attr/actionBarSize">
 
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/usersList"
+                        android:padding="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+            </ViewFlipper>
         </RelativeLayout>
 
         <RelativeLayout

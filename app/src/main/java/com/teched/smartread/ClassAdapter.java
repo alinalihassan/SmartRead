@@ -17,6 +17,8 @@ import android.widget.TextView;
 
 import com.amulyakhare.textdrawable.TextDrawable;
 
+import org.json.JSONArray;
+
 import java.util.List;
 
 public class ClassAdapter extends RecyclerView.Adapter<ClassAdapter.ViewHolder> {
@@ -34,6 +36,13 @@ public class ClassAdapter extends RecyclerView.Adapter<ClassAdapter.ViewHolder> 
 
     public void flushFilter(){
         visibleCards = cards;
+    }
+
+    public String getName(int position) {
+        return visibleCards.get(position).name;
+    }
+    public JSONArray getUsers(int position) {
+        return visibleCards.get(position).users;
     }
 
     @Override
