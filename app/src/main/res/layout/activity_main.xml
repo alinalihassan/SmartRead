@@ -509,6 +509,10 @@
                 sothree:adSize="SMART_BANNER"
                 sothree:adUnitId="@string/banner_ad_unit_id"/>
         </RelativeLayout>
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/snackLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </FrameLayout>
 
 </com.heinrichreimersoftware.materialdrawer.DrawerFrameLayout>

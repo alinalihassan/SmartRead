@@ -75,7 +75,6 @@ ADDED from C:\Users\superalin98\Documents\SmartRead2\app\src\main\AndroidManifes
 application
 ADDED from C:\Users\superalin98\Documents\SmartRead2\app\src\main\AndroidManifest.xml:17:5-74:19
 MERGED from [com.android.support:cardview-v7:22.2.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\22.2.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:recyclerview-v7:22.1.1] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.1.1\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:support-v4:22.2.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:22.2.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:22.2.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\AndroidManifest.xml:22:5-20
@@ -103,7 +102,6 @@ MERGED from [com.nononsenseapps:filepicker:2.1] C:\Users\superalin98\Documents\S
 MERGED from [com.android.support:appcompat-v7:22.2.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:22.2.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:22.2.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:recyclerview-v7:22.1.1] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.1.1\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:support-v4:22.2.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services:7.5.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\7.5.0\AndroidManifest.xml:19:5-20
 MERGED from [com.google.android.gms:play-services-ads:7.5.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.5.0\AndroidManifest.xml:24:5-32:19
@@ -322,7 +320,7 @@ MERGED from [com.google.android.gms:play-services-ads:7.5.0] C:\Users\superalin9
 uses-sdk
 INJECTED from C:\Users\superalin98\Documents\SmartRead2\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:cardview-v7:22.2.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\22.2.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:22.1.1] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.1.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:22.2.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.0\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:22.2.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:22.2.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:appcompat-v7:22.2.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\AndroidManifest.xml:20:5-43
@@ -353,7 +351,7 @@ MERGED from [com.nononsenseapps:filepicker:2.1] C:\Users\superalin98\Documents\S
 MERGED from [com.android.support:appcompat-v7:22.2.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:22.2.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:22.2.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:22.1.1] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.1.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:22.2.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.0\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:22.2.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
 MERGED from [com.google.android.gms:play-services:7.5.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\7.5.0\AndroidManifest.xml:18:5-42
 MERGED from [com.google.android.gms:play-services-ads:7.5.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.5.0\AndroidManifest.xml:23:5-42
@@ -449,13 +447,6 @@ MERGED from [com.balysv.materialmenu:material-menu:1.5.4] C:\Users\superalin98\D
 	android:minSdkVersion
 		INJECTED from C:\Users\superalin98\Documents\SmartRead2\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\superalin98\Documents\SmartRead2\app\src\main\AndroidManifest.xml
-activity#android.support.v7.widget.TestActivity
-ADDED from [com.android.support:recyclerview-v7:22.1.1] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.1.1\AndroidManifest.xml:23:9-25:56
-MERGED from [com.android.support:recyclerview-v7:22.1.1] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.1.1\AndroidManifest.xml:23:9-25:56
-	android:label
-		ADDED from [com.android.support:recyclerview-v7:22.1.1] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.1.1\AndroidManifest.xml:25:13-53
-	android:name
-		ADDED from [com.android.support:recyclerview-v7:22.1.1] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.1.1\AndroidManifest.xml:24:13-66
 activity#com.google.android.gms.ads.purchase.InAppPurchaseActivity
 ADDED from [com.google.android.gms:play-services-ads:7.5.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.5.0\AndroidManifest.xml:30:9-31:52
 	android:theme

@@ -41,6 +41,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.text.InputFilter;
 import android.util.Log;
 import android.view.Menu;
@@ -149,6 +150,9 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     private ViewFlipper viewFlipper;
     private FloatingActionButton classFab;
     private FloatingActionButton teacherFab;
+    private Users lastUser;
+    private int lastUserPosition;
+    private String currentClassId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -829,6 +833,70 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         adapter5 = new UsersAdapter(usersList, R.layout.classview, this);
         mRecyclerView3.setAdapter(adapter5);
         ((UsersAdapter) mRecyclerView3.getAdapter()).flushFilter();
+        ItemTouchHelper swipeToDismissTouchHelper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(
+                ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
+
+            @Override
+            public void onChildDraw(Canvas c, RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
+                super.onChildDraw(c,recyclerView,viewHolder,dX,dY,actionState,isCurrentlyActive);
+                if (actionState == ItemTouchHelper.ACTION_STATE_SWIPE) {
+                    TextView currentView = ((TextView)viewHolder.itemView.findViewById(R.id.className));
+                    float ratio = Math.abs(dX)>=300?1:Math.abs(dX)/300;
+                    int red = (int)Math.abs((ratio * 244));
+                    int green = (int)Math.abs((ratio * 67));
+                    int blue = (int)Math.abs((ratio * 54));
+                    currentView.setTextColor(Color.rgb(red,green,blue));
+                }
+            }
+            @Override
+            public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
+                return false;
+            }
+
+            @Override
+            public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
+                lastUser = usersList.get(viewHolder.getAdapterPosition());
+                lastUserPosition = viewHolder.getAdapterPosition();
+                usersList.remove(viewHolder.getAdapterPosition());
+                adapter5.notifyItemRemoved(viewHolder.getAdapterPosition());
+                new AsyncJob.AsyncJobBuilder<Boolean>()
+                        .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
+                            @Override
+                            public Boolean doAsync() {
+                                JsonClass.getJSON("http://php-smartread.rhcloud.com/remove_class_user.php?id=" + lastUser.id  + "&classid=" + currentClassId);
+                                return true;
+                            }
+                        })
+                        .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
+                            @Override
+                            public void onResult(Boolean result) {
+                            }
+                        }).create().start();
+                Snackbar.make(findViewById(R.id.snackLayout), "User removed", Snackbar.LENGTH_LONG)
+                        .setAction(R.string.undo, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                usersList.add(lastUserPosition,lastUser);
+                                adapter5.notifyItemInserted(lastUserPosition);
+                                new AsyncJob.AsyncJobBuilder<Boolean>()
+                                        .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
+                                            @Override
+                                            public Boolean doAsync() {
+                                                JsonClass.getJSON("http://php-smartread.rhcloud.com/add_class_user_instant.php?id=" + lastUser.id  + "&classid=" + currentClassId);
+                                                return true;
+                                            }
+                                        })
+                                        .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
+                                            @Override
+                                            public void onResult(Boolean result) {
+                                            }
+                                        }).create().start();
+                            }
+                        })
+                        .show();
+            }
+        });
+        swipeToDismissTouchHelper.attachToRecyclerView(mRecyclerView3);
 
 
 
@@ -845,6 +913,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             @Override
             public void onItemClick(View view, int position) {
                 refreshUsers(((ClassAdapter) mRecyclerView2.getAdapter()).getUsers(position));
+                currentClassId = ((ClassAdapter) mRecyclerView2.getAdapter()).getId(position);
                 viewFlipper.setInAnimation(getApplicationContext(), R.anim.slide_in_from_right);
                 viewFlipper.setOutAnimation(getApplicationContext(), R.anim.slide_out_to_left);
                 viewFlipper.showNext();
@@ -1777,7 +1846,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             }
         }
         else {
-            Snackbar.make(findViewById(R.id.teacher), !isOnline()?R.string.no_connection:R.string.no_sync_ready, Snackbar.LENGTH_SHORT)
+            Snackbar.make(findViewById(R.id.snackLayout), !isOnline()?R.string.no_connection:R.string.no_sync_ready, Snackbar.LENGTH_SHORT)
                     .show();
         }
     }
@@ -1907,8 +1976,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     public void onClick(View view) {
                         if(input.getText().toString().length()>0) {
                             try {
-                                Log.d("TEST","http://php-smartread.rhcloud.com/add_class_user.php?email=" + prefs.getString("Email", getString(R.string.profile_description)) + "&access_code=" + input.getText().toString());
-                                JsonClass.getJSON("http://php-smartread.rhcloud.com/add_class_user.php?email=" + prefs.getString("Email", getString(R.string.profile_description)) + "&access_code=" + input.getText().toString());
+                                jobManager.addJobInBackground(new JoinJob(prefs.getString("Email", getString(R.string.profile_description)), input.getText().toString()));
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }

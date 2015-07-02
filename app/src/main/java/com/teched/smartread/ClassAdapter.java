@@ -44,6 +44,7 @@ public class ClassAdapter extends RecyclerView.Adapter<ClassAdapter.ViewHolder> 
     public JSONArray getUsers(int position) {
         return visibleCards.get(position).users;
     }
+    public String getId(int position) { return visibleCards.get(position).id;}
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {

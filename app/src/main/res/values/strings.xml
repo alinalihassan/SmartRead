@@ -29,4 +29,5 @@
     <string name="string_menu_title">Search</string>
     <string name="string_menu_title2">Join Class</string>
     <string name="no_sync_ready">Book not available for distribution</string>
+    <string name="undo">Undo</string>
 </resources>
