@@ -57,7 +57,7 @@ public class ClassAdapter extends RecyclerView.Adapter<ClassAdapter.ViewHolder> 
         final Class card = visibleCards.get(i);
         viewHolder.cardName.setText(card.name);
         TextDrawable drawable = TextDrawable.builder()
-                .buildRound(viewHolder.cardName.getText().toString().length()>0?String.valueOf(viewHolder.cardName.getText().toString().charAt(0)):"A", calculateColor(viewHolder.cardName.getText().toString()));
+                .buildRound(viewHolder.cardName.getText().toString().length()>0?firstChar(viewHolder.cardName.getText().toString()):" ", calculateColor(viewHolder.cardName.getText().toString()));
         viewHolder.cardImage.setImageDrawable(drawable);
     }
 
@@ -100,5 +100,13 @@ public class ClassAdapter extends RecyclerView.Adapter<ClassAdapter.ViewHolder> 
         Palette palette = Palette.generate(bitmap);
 
         return palette.getVibrantColor(0xff00bcd4);
+    }
+    public String firstChar(String str) {
+        for(int i = 0; i<str.length();i++) {
+            if(Character.isLetter(str.charAt(i))) {
+                return str.substring(i,i+1);
+            }
+        }
+        return " ";
     }
 }

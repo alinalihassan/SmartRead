@@ -43,7 +43,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.text.InputFilter;
-import android.util.Log;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -149,10 +149,12 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     private RecyclerView.Adapter adapter5;
     private ViewFlipper viewFlipper;
     private FloatingActionButton classFab;
+    private FloatingActionButton usersFab;
     private FloatingActionButton teacherFab;
     private Users lastUser;
     private int lastUserPosition;
     private String currentClassId;
+    JSONArray currentClass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -233,11 +235,14 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         final RelativeLayout store = (RelativeLayout) findViewById(R.id.store);
         teacherFab = (FloatingActionButton) findViewById(R.id.teacherFab);
         classFab = (FloatingActionButton) findViewById(R.id.classFab);
+        usersFab = (FloatingActionButton) findViewById(R.id.usersFab);
         TextView programmer = (TextView) findViewById(R.id.aboutProgrammer);
         TextView producer = (TextView) findViewById(R.id.aboutProducer);
         TextView google = (TextView) findViewById(R.id.aboutGoogle);
         TextView facebook = (TextView) findViewById(R.id.aboutFacebook);
         TextView aboutVersion = (TextView) findViewById(R.id.aboutVersion);
+        DisplayMetrics displaymetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
         if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP) {
             toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
             findViewById(R.id.toolbarCard).setVisibility(View.VISIBLE);
@@ -289,6 +294,12 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             @Override
             public void onClick(View v) {
                 createClass();
+            }
+        });
+        usersFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addUser();
             }
         });
         panelLayout.setPanelSlideListener(new SlidingUpPanelLayout.PanelSlideListener() {
@@ -912,7 +923,8 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         mRecyclerView2.addOnItemTouchListener(new RecyclerItemClickListener(getApplicationContext(), mRecyclerView2, new RecyclerItemClickListener.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                refreshUsers(((ClassAdapter) mRecyclerView2.getAdapter()).getUsers(position));
+                currentClass = ((ClassAdapter) mRecyclerView2.getAdapter()).getUsers(position);
+                refreshUsers(currentClass);
                 currentClassId = ((ClassAdapter) mRecyclerView2.getAdapter()).getId(position);
                 viewFlipper.setInAnimation(getApplicationContext(), R.anim.slide_in_from_right);
                 viewFlipper.setOutAnimation(getApplicationContext(), R.anim.slide_out_to_left);
@@ -1982,6 +1994,63 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                             }
                             alert.dismiss();
                             refreshClass();
+                        }
+                    }
+                });
+            }
+        });
+        alert.show();
+    }
+    private void addUser() {
+        final EditText input = new EditText(this);
+        input.setFilters(new InputFilter[]{new InputFilter.LengthFilter(254)});
+        final AlertDialog alert = new AlertDialog.Builder(this)
+                .setTitle("Add User")
+                .setMessage("Enter the email of your user")
+                .setView(input)
+                .setPositiveButton("Ok", null)
+                .setNegativeButton("Cancel", null)
+                .create();
+
+        alert.setOnShowListener(new DialogInterface.OnShowListener() {
+
+            @Override
+            public void onShow(DialogInterface dialog) {
+
+                Button b = alert.getButton(AlertDialog.BUTTON_POSITIVE);
+                Button c = alert.getButton(AlertDialog.BUTTON_NEGATIVE);
+                b.setTextColor(Color.rgb(68,138,255));
+                c.setTextColor(Color.rgb(68,138,255));
+                b.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View view) {
+                        if(input.getText().toString().length()>0) {
+                            try {
+                                if(isOnline()) {
+                                    new AsyncJob.AsyncJobBuilder<Boolean>()
+                                            .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
+                                                @Override
+                                                public Boolean doAsync() {
+                                                    JsonClass.getJSON("http://php-smartread.rhcloud.com/add_class_user_instant.php?email=" + input.getText().toString() + "&classid=" + currentClassId);
+                                                    return true;
+                                                }
+                                            })
+                                            .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
+                                                @Override
+                                                public void onResult(Boolean result) {
+                                                    refreshClass();
+                                                    refreshUsers(currentClass);
+                                                }
+                                            }).create().start();
+                                }
+                                else {
+                                    jobManager.addJobInBackground(new AddJob(input.getText().toString(), currentClassId));
+                                }
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                            alert.dismiss();
                         }
                     }
                 });
