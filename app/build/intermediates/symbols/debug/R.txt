@@ -2207,4 +2207,5 @@ int styleable com_facebook_login_view_com_facebook_tooltip_mode 3
 int[] styleable com_facebook_profile_picture_view { 0x7f010155, 0x7f010156 }
 int styleable com_facebook_profile_picture_view_com_facebook_is_cropped 1
 int styleable com_facebook_profile_picture_view_com_facebook_preset_size 0
-int xml prefs 0x7f060000
+int xml nfc 0x7f060000
+int xml prefs 0x7f060001

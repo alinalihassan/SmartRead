@@ -5,10 +5,12 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;
 import android.app.Activity;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -17,11 +19,17 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
+import android.nfc.NdefMessage;
+import android.nfc.NdefRecord;
+import android.nfc.NfcAdapter;
+import android.nfc.Tag;
+import android.nfc.tech.Ndef;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -44,6 +52,7 @@ import android.support.v7.widget.Toolbar;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.text.InputFilter;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -84,6 +93,8 @@ import com.nononsenseapps.filepicker.FilePickerActivity;
 import com.path.android.jobqueue.JobManager;
 import com.quinny898.library.persistentsearch.SearchBox;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
+import com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration;
+import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -100,8 +111,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.Serializable;
+import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.LinkedHashSet;
@@ -153,8 +166,13 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     private FloatingActionButton teacherFab;
     private Users lastUser;
     private int lastUserPosition;
+    private Users lastUserPending;
+    private int lastUserPositionPending;
     private String currentClassId;
-    JSONArray currentClass;
+    private JSONArray currentClass;
+    private JSONArray currentClassPending;
+    private DisplayMetrics displaymetrics;
+    private NfcAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -195,6 +213,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             prefs.edit().putInt("Year", c.get(Calendar.YEAR)).apply();
         }
         PackageManager m = getPackageManager();
+        mAdapter = NfcAdapter.getDefaultAdapter(this);
         String s = getPackageName();
         String s2 = "";
         try {
@@ -241,7 +260,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         TextView google = (TextView) findViewById(R.id.aboutGoogle);
         TextView facebook = (TextView) findViewById(R.id.aboutFacebook);
         TextView aboutVersion = (TextView) findViewById(R.id.aboutVersion);
-        DisplayMetrics displaymetrics = new DisplayMetrics();
+        displaymetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
         if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP) {
             toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
@@ -835,6 +854,23 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                         })
         );
         drawer.selectItem(0);
+        final HorizontalDividerItemDecoration decoration = new HorizontalDividerItemDecoration.Builder(this)
+                .paintProvider(new FlexibleDividerDecoration.PaintProvider() {
+                    @Override
+                    public Paint dividerPaint(int i, RecyclerView recyclerView) {
+                        Paint paint = new Paint();
+                        paint.setColor(Color.GRAY);
+                        paint.setStrokeWidth(1);
+                        return paint;
+                    }
+                })
+                .visibilityProvider(new FlexibleDividerDecoration.VisibilityProvider() {
+                    @Override
+                    public boolean shouldHideDivider(int i, RecyclerView recyclerView) {
+                        return getPendingLength() == 0 || i == getPendingLength();
+                    }
+                })
+                .build();
 
         usersList = new ArrayList<>();
         final RecyclerView mRecyclerView3 = (RecyclerView) findViewById(R.id.usersList);
@@ -843,6 +879,8 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         mRecyclerView3.setItemAnimator(new DefaultItemAnimator());
         adapter5 = new UsersAdapter(usersList, R.layout.classview, this);
         mRecyclerView3.setAdapter(adapter5);
+        mRecyclerView3.addItemDecoration(decoration);
+
         ((UsersAdapter) mRecyclerView3.getAdapter()).flushFilter();
         ItemTouchHelper swipeToDismissTouchHelper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(
                 ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
@@ -850,13 +888,29 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             @Override
             public void onChildDraw(Canvas c, RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
                 super.onChildDraw(c,recyclerView,viewHolder,dX,dY,actionState,isCurrentlyActive);
+                TextView currentView = ((TextView) viewHolder.itemView.findViewById(R.id.className));
                 if (actionState == ItemTouchHelper.ACTION_STATE_SWIPE) {
-                    TextView currentView = ((TextView)viewHolder.itemView.findViewById(R.id.className));
-                    float ratio = Math.abs(dX)>=300?1:Math.abs(dX)/300;
-                    int red = (int)Math.abs((ratio * 244));
-                    int green = (int)Math.abs((ratio * 67));
-                    int blue = (int)Math.abs((ratio * 54));
-                    currentView.setTextColor(Color.rgb(red,green,blue));
+                    if (viewHolder.getAdapterPosition() >= getPendingLength()) {
+                        float ratio = Math.abs(dX) >= 300 ? 1 : Math.abs(dX) / 300;
+                        int red = (int) Math.abs((ratio * 244));
+                        int green = (int) Math.abs((ratio * 67));
+                        int blue = (int) Math.abs((ratio * 54));
+                        currentView.setTextColor(Color.rgb(red, green, blue));
+                    } else {
+                        if (dX < 0) {
+                            float ratio = Math.abs(dX) >= 300 ? 1 : Math.abs(dX) / 300;
+                            int red = (int) Math.abs((ratio * 244));
+                            int green = (int) Math.abs((ratio * 67));
+                            int blue = (int) Math.abs((ratio * 54));
+                            currentView.setTextColor(Color.rgb(red, green, blue));
+                        } else {
+                            float ratio = Math.abs(dX) >= 300 ? 1 : Math.abs(dX) / 300;
+                            int red = (int) Math.abs((ratio * 76));
+                            int green = (int) Math.abs((ratio * 175));
+                            int blue = (int) Math.abs((ratio * 80));
+                            currentView.setTextColor(Color.rgb(red, green, blue));
+                        }
+                    }
                 }
             }
             @Override
@@ -866,45 +920,125 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
 
             @Override
             public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
-                lastUser = usersList.get(viewHolder.getAdapterPosition());
-                lastUserPosition = viewHolder.getAdapterPosition();
-                usersList.remove(viewHolder.getAdapterPosition());
-                adapter5.notifyItemRemoved(viewHolder.getAdapterPosition());
-                new AsyncJob.AsyncJobBuilder<Boolean>()
-                        .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
-                            @Override
-                            public Boolean doAsync() {
-                                JsonClass.getJSON("http://php-smartread.rhcloud.com/remove_class_user.php?id=" + lastUser.id  + "&classid=" + currentClassId);
-                                return true;
-                            }
-                        })
-                        .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
-                            @Override
-                            public void onResult(Boolean result) {
-                            }
-                        }).create().start();
-                Snackbar.make(findViewById(R.id.snackLayout), "User removed", Snackbar.LENGTH_LONG)
-                        .setAction(R.string.undo, new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                usersList.add(lastUserPosition,lastUser);
-                                adapter5.notifyItemInserted(lastUserPosition);
-                                new AsyncJob.AsyncJobBuilder<Boolean>()
-                                        .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
-                                            @Override
-                                            public Boolean doAsync() {
-                                                JsonClass.getJSON("http://php-smartread.rhcloud.com/add_class_user_instant.php?id=" + lastUser.id  + "&classid=" + currentClassId);
-                                                return true;
-                                            }
-                                        })
-                                        .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
-                                            @Override
-                                            public void onResult(Boolean result) {
-                                            }
-                                        }).create().start();
-                            }
-                        })
-                        .show();
+                final RecyclerView.ViewHolder viewHolderf = viewHolder;
+                if (viewHolder.getAdapterPosition() >= currentClassPending.length()) {
+                    lastUser = usersList.get(viewHolder.getAdapterPosition());
+                    lastUserPosition = viewHolder.getAdapterPosition();
+                    usersList.remove(viewHolder.getAdapterPosition());
+                    adapter5.notifyItemRemoved(viewHolder.getAdapterPosition());
+                    new AsyncJob.AsyncJobBuilder<Boolean>()
+                            .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
+                                @Override
+                                public Boolean doAsync() {
+                                    JsonClass.getJSON("http://php-smartread.rhcloud.com/remove_class_user.php?id=" + lastUser.id + "&classid=" + currentClassId);
+                                    currentClass = RemoveJSONArray(currentClass, lastUser.id);
+                                    return true;
+                                }
+                            })
+                            .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
+                                @Override
+                                public void onResult(Boolean result) {
+                                }
+                            }).create().start();
+                    Snackbar.make(findViewById(R.id.snackLayout), "User removed", Snackbar.LENGTH_LONG)
+                            .setAction(R.string.undo, new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    usersList.add(lastUserPosition, lastUser);
+                                    TextView currentView = ((TextView) viewHolderf.itemView.findViewById(R.id.className));
+                                    currentView.setTextColor(Color.rgb(0, 0, 0));
+                                    adapter5.notifyItemInserted(lastUserPosition);
+                                    new AsyncJob.AsyncJobBuilder<Boolean>()
+                                            .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
+                                                @Override
+                                                public Boolean doAsync() {
+                                                    JsonClass.getJSON("http://php-smartread.rhcloud.com/add_class_user_instant.php?id=" + lastUser.id + "&classid=" + currentClassId);
+                                                    currentClass.put(lastUser.id);
+                                                    return true;
+                                                }
+                                            })
+                                            .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
+                                                @Override
+                                                public void onResult(Boolean result) {
+                                                }
+                                            }).create().start();
+                                }
+                            })
+                            .show();
+                }
+                else {
+                    lastUserPending = usersList.get(viewHolder.getAdapterPosition());
+                    lastUserPositionPending = viewHolder.getAdapterPosition();
+                    if(direction == ItemTouchHelper.LEFT) {
+                        usersList.remove(viewHolder.getAdapterPosition());
+                        adapter5.notifyItemRemoved(viewHolder.getAdapterPosition());
+                        new AsyncJob.AsyncJobBuilder<Boolean>()
+                                .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
+                                    @Override
+                                    public Boolean doAsync() {
+                                        try {
+                                            JsonClass.getJSON("http://php-smartread.rhcloud.com/remove_class_pending_user.php?id=" + lastUserPending.id + "&classid=" + currentClassId);
+                                            currentClassPending = RemoveJSONArray(currentClassPending,lastUserPending.id);
+                                        } catch (Exception e) {e.printStackTrace();}
+                                        return true;
+                                    }
+                                })
+                                .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
+                                    @Override
+                                    public void onResult(Boolean result) {
+                                    }
+                                }).create().start();
+                        Snackbar.make(findViewById(R.id.snackLayout), "Pending user removed", Snackbar.LENGTH_LONG)
+                                .setAction(R.string.undo, new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        usersList.add(lastUserPositionPending, lastUserPending);
+                                        TextView currentView = ((TextView) viewHolderf.itemView.findViewById(R.id.className));
+                                        currentView.setTextColor(Color.rgb(0, 0, 0));
+                                        adapter5.notifyItemInserted(lastUserPositionPending);
+                                        new AsyncJob.AsyncJobBuilder<Boolean>()
+                                                .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
+                                                    @Override
+                                                    public Boolean doAsync() {
+                                                        JsonClass.getJSON("http://php-smartread.rhcloud.com/add_class_user.php?id=" + lastUserPending.id + "&classid=" + currentClassId);
+                                                        currentClassPending.put(lastUserPending.id);
+                                                        return true;
+                                                    }
+                                                })
+                                                .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
+                                                    @Override
+                                                    public void onResult(Boolean result) {
+                                                    }
+                                                }).create().start();
+                                    }
+                                })
+                                .show();
+                    }
+                    else {
+                        usersList.remove(viewHolder.getAdapterPosition());
+                        adapter5.notifyItemRemoved(viewHolder.getAdapterPosition());
+                        int pos = usersList.size();
+                        usersList.add(pos,lastUserPending);
+                        adapter5.notifyItemInserted(pos);
+                        ((TextView) viewHolder.itemView.findViewById(R.id.className)).setTextColor(Color.BLACK);
+                        new AsyncJob.AsyncJobBuilder<Boolean>()
+                                .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
+                                    @Override
+                                    public Boolean doAsync() {
+                                        JsonClass.getJSON("http://php-smartread.rhcloud.com/remove_class_pending_user.php?id=" + lastUserPending.id + "&classid=" + currentClassId);
+                                        JsonClass.getJSON("http://php-smartread.rhcloud.com/add_class_user_instant.php?id=" + lastUserPending.id + "&classid=" + currentClassId);
+                                        currentClassPending = RemoveJSONArray(currentClassPending,lastUserPending.id);
+                                        currentClass.put(lastUserPending.id);
+                                        return true;
+                                    }
+                                })
+                                .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
+                                    @Override
+                                    public void onResult(Boolean result) {
+                                    }
+                                }).create().start();
+                    }
+                }
             }
         });
         swipeToDismissTouchHelper.attachToRecyclerView(mRecyclerView3);
@@ -924,7 +1058,8 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             @Override
             public void onItemClick(View view, int position) {
                 currentClass = ((ClassAdapter) mRecyclerView2.getAdapter()).getUsers(position);
-                refreshUsers(currentClass);
+                currentClassPending = ((ClassAdapter) mRecyclerView2.getAdapter()).getPending(position);
+                refreshUsers(currentClassPending, currentClass);
                 currentClassId = ((ClassAdapter) mRecyclerView2.getAdapter()).getId(position);
                 viewFlipper.setInAnimation(getApplicationContext(), R.anim.slide_in_from_right);
                 viewFlipper.setOutAnimation(getApplicationContext(), R.anim.slide_out_to_left);
@@ -1063,7 +1198,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                                 if (array != null) canDo = true;
                                                 if (canDo && !array.getBoolean(0)) {
                                                     QuestionPage(array, 2, mainObject2);
-                                                    //pdf.loadPages();
                                                     AnimateQuestion(true);
                                                 }
                                             } catch (JSONException ignored) { }
@@ -1079,6 +1213,52 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             }
         }));
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if(mAdapter!=null)
+            setupForegroundDispatch(this, mAdapter);
+        handleIntent(getIntent());
+    }
+
+    @Override
+    protected void onPause() {
+        if(mAdapter!=null)
+           stopForegroundDispatch(this,mAdapter);
+        super.onPause();
+    }
+    @Override
+    protected void onNewIntent(Intent intent) {
+        handleIntent(intent);
+    }
+
+    private void handleIntent(Intent intent) {
+        String action = intent.getAction();
+        if (NfcAdapter.ACTION_NDEF_DISCOVERED.equals(action)) {
+
+            String type = intent.getType();
+            if ("text/plain".equals(type)) {
+
+                final Tag tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
+                TagRead(tag);
+            }
+        } else if (NfcAdapter.ACTION_TECH_DISCOVERED.equals(action)) {
+
+            Tag tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
+            String[] techList = tag.getTechList();
+            String searchedTech = Ndef.class.getName();
+
+            for (String tech : techList) {
+                if (searchedTech.equals(tech)) {
+                    TagRead(tag);
+                    break;
+                }
+            }
+        }
+
+    }
+
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
@@ -1889,7 +2069,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     public void onClick(View view) {
                         if(input.getText().toString().length()>0 && input.getText().toString().length()<30) {
                             try {
-                                JSONObject books = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/create_class.php?name=" + input.getText().toString() + "&teacher=" + prefs.getString("Email", getString(R.string.profile_description))));
+                                /*JSONObject books = */new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/create_class.php?name=" + input.getText().toString() + "&teacher=" + prefs.getString("Email", getString(R.string.profile_description))));
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }
@@ -1933,7 +2113,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                 }).create().start();
     }
 
-    private void refreshUsers(final JSONArray Classes) {
+    private void refreshUsers(final JSONArray Classes,final JSONArray Classes2) {
         new AsyncJob.AsyncJobBuilder<Boolean>()
             .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
                 @Override
@@ -1946,6 +2126,14 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                             Users currentClass = usersList.get(usersList.size() - 1);
                             currentClass.name = Class.getString("name");
                             currentClass.id = Classes.getString(i);
+                            currentClass.email = Class.getString("email");
+                        }
+                        for (int i = 0; i < Classes2.length(); i++) {
+                            usersList.add(new Users());
+                            JSONObject Class = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_user.php?id=" + Classes2.getString(i))).getJSONArray("users").getJSONObject(0);
+                            Users currentClass = usersList.get(usersList.size() - 1);
+                            currentClass.name = Class.getString("name");
+                            currentClass.id = Classes2.getString(i);
                             currentClass.email = Class.getString("email");
                         }
                     } catch (Exception e) {
@@ -2003,7 +2191,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     }
     private void addUser() {
         final EditText input = new EditText(this);
-        input.setFilters(new InputFilter[]{new InputFilter.LengthFilter(254)});
+        input.setFilters(new InputFilter[]{new InputFilter.LengthFilter(320)});
         final AlertDialog alert = new AlertDialog.Builder(this)
                 .setTitle("Add User")
                 .setMessage("Enter the email of your user")
@@ -2040,7 +2228,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                                 @Override
                                                 public void onResult(Boolean result) {
                                                     refreshClass();
-                                                    refreshUsers(currentClass);
+                                                    refreshUsers(currentClass,currentClassPending);
                                                 }
                                             }).create().start();
                                 }
@@ -2057,5 +2245,96 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             }
         });
         alert.show();
+    }
+    public static JSONArray RemoveJSONArray( JSONArray jarray,String value) {
+
+        JSONArray Njarray = new JSONArray();
+        try {
+            for (int i = 0; i < jarray.length(); i++) {
+                if (!jarray.getString(i).equals(value)) {
+                    Njarray.put(jarray.get(i));
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return Njarray;
+    }
+    private int getPendingLength() {
+        return currentClassPending.length();
+    }
+    public static void setupForegroundDispatch(final Activity activity, NfcAdapter adapter) {
+        final Intent intent = new Intent(activity.getApplicationContext(), activity.getClass());
+        intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+
+        final PendingIntent pendingIntent = PendingIntent.getActivity(activity.getApplicationContext(), 0, intent, 0);
+
+        IntentFilter[] filters = new IntentFilter[1];
+        String[][] techList = new String[][]{};
+
+        filters[0] = new IntentFilter();
+        filters[0].addAction(NfcAdapter.ACTION_NDEF_DISCOVERED);
+        filters[0].addAction(NfcAdapter.ACTION_TAG_DISCOVERED);
+        filters[0].addCategory(Intent.CATEGORY_DEFAULT);
+        try {
+            filters[0].addDataType("text/plain");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        adapter.enableForegroundDispatch(activity, pendingIntent, filters, techList);
+    }
+
+    public static void stopForegroundDispatch(final Activity activity, NfcAdapter adapter) {
+        adapter.disableForegroundDispatch(activity);
+    }
+    private String readNFCText(NdefRecord record) throws UnsupportedEncodingException {
+
+        byte[] payload = record.getPayload();
+
+        String textEncoding;
+        if((payload[0] & 128) == 0)
+            textEncoding = "UTF-8";
+        else
+            textEncoding = "UTF-16";
+
+        int languageCodeLength = payload[0] & 0063;
+
+        return new String(payload, languageCodeLength + 1, payload.length - languageCodeLength - 1, textEncoding);
+    }
+    private void TagRead(final Tag tag) {
+        AsyncJob.doInBackground(new AsyncJob.OnBackgroundJob() {
+            @Override
+            public void doOnBackground() {
+                Ndef ndef = Ndef.get(tag);
+                if (ndef != null) {
+
+                    NdefMessage ndefMessage = ndef.getCachedNdefMessage();
+
+                    NdefRecord[] records = ndefMessage.getRecords();
+                    for (NdefRecord ndefRecord : records) {
+                        if (ndefRecord.getTnf() == NdefRecord.TNF_WELL_KNOWN && Arrays.equals(ndefRecord.getType(), NdefRecord.RTD_TEXT)) {
+                            try {
+                                String result = readNFCText(ndefRecord);
+                                if (result != null) {
+                                    if (result.substring(0, 9).equals("SmartRead")) {
+                                        jobManager.addJobInBackground(new AddBookJob(getApplicationContext().getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE).getString("Email", getString(R.string.profile_description)), result.substring(9)));
+                                    }
+                                }
+                            }
+                            catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                }
+                AsyncJob.doOnMainThread(new AsyncJob.OnMainThreadJob() {
+                    @Override
+                    public void doInUIThread() {
+                        Snackbar.make(findViewById(R.id.snackLayout), "Book added", Snackbar.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        });
     }
 }

@@ -3927,7 +3927,8 @@ containing a value of this type.
         public static final int tooltip_bubble_text=0x7f0a015e;
     }
     public static final class xml {
-        public static final int prefs=0x7f060000;
+        public static final int nfc=0x7f060000;
+        public static final int prefs=0x7f060001;
     }
     public static final class styleable {
         /** Attributes that can be used with a ActionBar.
