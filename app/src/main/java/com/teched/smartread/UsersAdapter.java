@@ -27,9 +27,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.ViewHolder> 
         visibleCards = cards;
     }
 
-    public String getName(int position) {
-        return visibleCards.get(position).name;
-    }
+    //public String getName(int position) {return visibleCards.get(position).name;}
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {

@@ -21397,7 +21397,9 @@ com.teched.smartread.R$id: int checkbox
 com.teched.smartread.R$id: int chronometer
 com.teched.smartread.R$id: int classFab
 com.teched.smartread.R$id: int classList
+com.teched.smartread.R$id: int classListLayout
 com.teched.smartread.R$id: int className
+com.teched.smartread.R$id: int classUsersLayout
 com.teched.smartread.R$id: int classes
 com.teched.smartread.R$id: int classic
 com.teched.smartread.R$id: int clip_horizontal

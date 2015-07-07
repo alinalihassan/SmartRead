@@ -8,4 +8,5 @@ public class Class {
     public JSONArray users;
     public JSONArray pending;
     public String id;
+    public String access_code;
 }

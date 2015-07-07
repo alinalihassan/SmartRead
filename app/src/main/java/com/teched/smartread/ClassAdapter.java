@@ -40,6 +40,7 @@ public class ClassAdapter extends RecyclerView.Adapter<ClassAdapter.ViewHolder> 
         return visibleCards.get(position).pending;
     }
     public String getId(int position) { return visibleCards.get(position).id;}
+    public String getAccessCode(int position) { return visibleCards.get(position).access_code;}
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {

@@ -122,7 +122,20 @@
                         android:id="@+id/usersList"
                         android:layout_width="match_parent"
                         android:scrollbars="vertical"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="48dp"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/access_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="4dp"
+                            android:elegantTextHeight="true"
+                            android:textSize="24sp"/>
+                    </RelativeLayout>
 
                     <android.support.design.widget.FloatingActionButton
                         android:id="@+id/usersFab"
@@ -137,17 +150,10 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/overview"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="invisible"/>
-
-        <RelativeLayout
             android:id="@+id/store"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="invisible"/>
-
 
         <com.quinny898.library.persistentsearch.SearchBox
             android:layout_width="wrap_content"
@@ -508,7 +514,7 @@
 
             </RadioGroup>
         </RelativeLayout>
-        <RelativeLayout
+        <!--<RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <com.google.android.gms.ads.AdView
@@ -519,7 +525,7 @@
                 android:layout_alignParentBottom="true"
                 sothree:adSize="SMART_BANNER"
                 sothree:adUnitId="@string/banner_ad_unit_id"/>
-        </RelativeLayout>
+        </RelativeLayout>-->
         <android.support.design.widget.CoordinatorLayout
             android:id="@+id/snackLayout"
             android:layout_width="match_parent"

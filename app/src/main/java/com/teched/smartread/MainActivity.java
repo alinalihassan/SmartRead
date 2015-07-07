@@ -161,8 +161,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     private RecyclerView.Adapter adapter5;
     private ViewFlipper viewFlipper;
     private FloatingActionButton classFab;
-    private FloatingActionButton usersFab;
-    private FloatingActionButton teacherFab;
     private Users lastUser;
     private int lastUserPosition;
     private Users lastUserPending;
@@ -170,12 +168,11 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     private String currentClassId;
     private JSONArray currentClass;
     private JSONArray currentClassPending;
-    private DisplayMetrics displaymetrics;
     private NfcAdapter mAdapter;
     private SwipeRefreshLayout refreshLayout;
     private RelativeLayout classes;
-    private RelativeLayout overview;
     private RelativeLayout store;
+    private TextView accessText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -186,7 +183,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         firstTime();
         bp = new BillingProcessor(this, getResources().getString(R.string.license_key), this);
         jobManager = new JobManager(this);
-        final AdView mAdView = (AdView) findViewById(R.id.adView);
+        /*final AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder()
                 .build();
         mAdView.setAdListener(new AdListener() {
@@ -197,7 +194,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                 findViewById(R.id.teacher).setPadding(0, 0, 0, AdSize.SMART_BANNER.getHeightInPixels(getApplicationContext()));
             }
         });
-        mAdView.loadAd(adRequest);
+        mAdView.loadAd(adRequest);*/
         final SharedPreferences prefs = this.getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE);
         GregorianCalendar c = new GregorianCalendar();
         c.getTime();
@@ -253,17 +250,17 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         final ListView teacherList = (ListView) findViewById(R.id.teacherList);
         final Button distributeButton = (Button)findViewById(R.id.distributeButton);
         classes = (RelativeLayout) findViewById(R.id.classes);
-        overview = (RelativeLayout) findViewById(R.id.overview);
         store = (RelativeLayout) findViewById(R.id.store);
-        teacherFab = (FloatingActionButton) findViewById(R.id.teacherFab);
+        FloatingActionButton teacherFab = (FloatingActionButton) findViewById(R.id.teacherFab);
         classFab = (FloatingActionButton) findViewById(R.id.classFab);
-        usersFab = (FloatingActionButton) findViewById(R.id.usersFab);
+        FloatingActionButton usersFab = (FloatingActionButton) findViewById(R.id.usersFab);
+        accessText = (TextView) findViewById(R.id.access_text);
         TextView programmer = (TextView) findViewById(R.id.aboutProgrammer);
         TextView producer = (TextView) findViewById(R.id.aboutProducer);
         TextView google = (TextView) findViewById(R.id.aboutGoogle);
         TextView facebook = (TextView) findViewById(R.id.aboutFacebook);
         TextView aboutVersion = (TextView) findViewById(R.id.aboutVersion);
-        displaymetrics = new DisplayMetrics();
+        DisplayMetrics displaymetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
         if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP) {
             toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
@@ -657,7 +654,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 refreshLayout.setVisibility(View.VISIBLE);
                                 teacher.setVisibility(View.INVISIBLE);
                                 classes.setVisibility(View.INVISIBLE);
-                                overview.setVisibility(View.INVISIBLE);
                                 store.setVisibility(View.INVISIBLE);
                                 toolbar.setTitle("SmartRead");
                             }
@@ -685,7 +681,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 refreshLayout.setVisibility(View.VISIBLE);
                                 teacher.setVisibility(View.INVISIBLE);
                                 classes.setVisibility(View.INVISIBLE);
-                                overview.setVisibility(View.INVISIBLE);
                                 store.setVisibility(View.INVISIBLE);
                                 toolbar.setTitle("SmartRead");
                             }
@@ -713,7 +708,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 refreshLayout.setVisibility(View.VISIBLE);
                                 teacher.setVisibility(View.INVISIBLE);
                                 classes.setVisibility(View.INVISIBLE);
-                                overview.setVisibility(View.INVISIBLE);
                                 store.setVisibility(View.INVISIBLE);
                                 toolbar.setTitle("SmartRead");
                             }
@@ -739,7 +733,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 refreshLayout.setVisibility(View.INVISIBLE);
                                 teacher.setVisibility(View.INVISIBLE);
                                 classes.setVisibility(View.INVISIBLE);
-                                overview.setVisibility(View.INVISIBLE);
                                 store.setVisibility(View.VISIBLE);
                                 toolbar.setTitle("Store");
                             }
@@ -768,7 +761,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 refreshLayout.setVisibility(View.INVISIBLE);
                                 teacher.setVisibility(View.INVISIBLE);
                                 classes.setVisibility(View.VISIBLE);
-                                overview.setVisibility(View.INVISIBLE);
                                 store.setVisibility(View.INVISIBLE);
                                 toolbar.setTitle("My Classes");
                                 viewFlipper.setInAnimation(getApplicationContext(), R.anim.slide_in_instant);
@@ -797,36 +789,8 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 refreshLayout.setVisibility(View.INVISIBLE);
                                 teacher.setVisibility(View.VISIBLE);
                                 classes.setVisibility(View.INVISIBLE);
-                                overview.setVisibility(View.INVISIBLE);
                                 store.setVisibility(View.INVISIBLE);
                                 toolbar.setTitle("My Books");
-                            }
-                        })
-        );
-
-        drawer.addItem(
-                new DrawerItem()
-                        .setImage(getResources().getDrawable(R.drawable.ic_account_multiple),1)
-                        .setTextPrimary("Overview")
-                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
-                            @Override
-                            public void onClick(DrawerItem drawerItem, long l, int i) {
-                                if (openPdf && menuString.equals("Library"))
-                                    AnimatePDF(false);
-                                else if (openPdf && menuString.equals("Teacher"))
-                                    AnimateTeacher(false);
-                                else if (openDistribute)
-                                    AnimateDistribute(false);
-                                drawer.closeDrawer();
-                                drawer.selectItem(i);
-                                menuString = "";
-                                invalidateOptionsMenu();
-                                refreshLayout.setVisibility(View.INVISIBLE);
-                                teacher.setVisibility(View.INVISIBLE);
-                                classes.setVisibility(View.INVISIBLE);
-                                overview.setVisibility(View.VISIBLE);
-                                store.setVisibility(View.INVISIBLE);
-                                toolbar.setTitle("Overview");
                             }
                         })
         );
@@ -1063,6 +1027,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                 currentClass = ((ClassAdapter) mRecyclerView2.getAdapter()).getUsers(position);
                 currentClassPending = ((ClassAdapter) mRecyclerView2.getAdapter()).getPending(position);
                 refreshUsers(currentClassPending, currentClass);
+                accessText.setText("Access Code: " + ((ClassAdapter) mRecyclerView2.getAdapter()).getAccessCode(position));
                 currentClassId = ((ClassAdapter) mRecyclerView2.getAdapter()).getId(position);
                 viewFlipper.setInAnimation(getApplicationContext(), R.anim.slide_in_from_right);
                 viewFlipper.setOutAnimation(getApplicationContext(), R.anim.slide_out_to_left);
@@ -2100,6 +2065,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 currentClass.users = Class.getJSONArray("users");
                                 currentClass.pending = Class.getJSONArray("pending");
                                 currentClass.id = Classes.getString(i);
+                                currentClass.access_code = Class.getString("access_code");
                             }
                         } catch (Exception e) {
                             e.printStackTrace();
@@ -2178,7 +2144,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     public void onClick(View view) {
                         if(input.getText().toString().length()>0) {
                             try {
-                                jobManager.addJobInBackground(new JoinJob(prefs.getString("Email", getString(R.string.profile_description)), input.getText().toString()));
+                                jobManager.addJobInBackground(new JoinJob(prefs.getString("Email", getString(R.string.profile_description)), input.getText().toString().toLowerCase()));
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }
@@ -2340,7 +2306,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         });
     }
     private void showSnackbar(String text, int length) {
-        if(refreshLayout.getVisibility()==View.VISIBLE || store.getVisibility()==View.VISIBLE || overview.getVisibility()==View.VISIBLE)
+        if(refreshLayout.getVisibility()==View.VISIBLE || store.getVisibility()==View.VISIBLE)
             Snackbar.make(findViewById(R.id.snackLayout), text, length).show();
         else if(teacher.getVisibility()==View.VISIBLE)
             Snackbar.make(teacher, text, length).show();

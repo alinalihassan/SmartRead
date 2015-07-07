@@ -4386,35 +4386,6 @@ bolts.WebViewAppLinkResolver$2
 bolts.WebViewAppLinkResolver$2$1
 bolts.WebViewAppLinkResolver$2$2
 bolts.WebViewAppLinkResolver$3
-com.amulyakhare.textdrawable.BuildConfig
-com.amulyakhare.textdrawable.TextDrawable:
-    private static final float SHADE_FACTOR
-com.amulyakhare.textdrawable.TextDrawable$Builder:
-    180:181:public com.amulyakhare.textdrawable.TextDrawable$IConfigBuilder width(int)
-    185:186:public com.amulyakhare.textdrawable.TextDrawable$IConfigBuilder height(int)
-    190:191:public com.amulyakhare.textdrawable.TextDrawable$IConfigBuilder textColor(int)
-    195:196:public com.amulyakhare.textdrawable.TextDrawable$IConfigBuilder withBorder(int)
-    200:201:public com.amulyakhare.textdrawable.TextDrawable$IConfigBuilder useFont(android.graphics.Typeface)
-    205:206:public com.amulyakhare.textdrawable.TextDrawable$IConfigBuilder fontSize(int)
-    210:211:public com.amulyakhare.textdrawable.TextDrawable$IConfigBuilder bold()
-    215:216:public com.amulyakhare.textdrawable.TextDrawable$IConfigBuilder toUpperCase()
-    221:221:public com.amulyakhare.textdrawable.TextDrawable$IConfigBuilder beginConfig()
-    226:226:public com.amulyakhare.textdrawable.TextDrawable$IShapeBuilder endConfig()
-    231:232:public com.amulyakhare.textdrawable.TextDrawable$IBuilder rect()
-    243:246:public com.amulyakhare.textdrawable.TextDrawable$IBuilder roundRect(int)
-    251:252:public com.amulyakhare.textdrawable.TextDrawable buildRect(java.lang.String,int)
-    257:258:public com.amulyakhare.textdrawable.TextDrawable buildRoundRect(java.lang.String,int,int)
-com.amulyakhare.textdrawable.TextDrawable$IBuilder:
-    public abstract com.amulyakhare.textdrawable.TextDrawable build(java.lang.String,int)
-com.amulyakhare.textdrawable.TextDrawable$IConfigBuilder
-com.amulyakhare.textdrawable.TextDrawable$IShapeBuilder:
-    public abstract com.amulyakhare.textdrawable.TextDrawable$IConfigBuilder beginConfig()
-    public abstract com.amulyakhare.textdrawable.TextDrawable$IBuilder rect()
-    public abstract com.amulyakhare.textdrawable.TextDrawable$IBuilder round()
-    public abstract com.amulyakhare.textdrawable.TextDrawable$IBuilder roundRect(int)
-    public abstract com.amulyakhare.textdrawable.TextDrawable buildRect(java.lang.String,int)
-    public abstract com.amulyakhare.textdrawable.TextDrawable buildRoundRect(java.lang.String,int,int)
-com.amulyakhare.textdrawable.util.ColorGenerator
 com.android.vending.billing.IInAppBillingService$Stub:
     private static final java.lang.String DESCRIPTOR
     static final int TRANSACTION_isBillingSupported
@@ -11013,7 +10984,7 @@ com.teched.smartread.LoginActivity:
 com.teched.smartread.MainActivity:
     private static final int FILE_CODE
 com.teched.smartread.MainActivity$47:
-    1902:1903:public void onSearchCleared()
+    1905:1906:public void onSearchCleared()
 com.teched.smartread.R
 com.teched.smartread.R$anim
 com.teched.smartread.R$array
@@ -11032,16 +11003,39 @@ com.teched.smartread.R$string
 com.teched.smartread.R$style
 com.teched.smartread.R$styleable
 com.teched.smartread.R$xml
-com.teched.smartread.TextDrawable
-com.teched.smartread.TextDrawable$1
-com.teched.smartread.TextDrawable$Builder
-com.teched.smartread.TextDrawable$IBuilder
+com.teched.smartread.TextDrawable:
+    private static final float SHADE_FACTOR
+com.teched.smartread.TextDrawable$Builder:
+    176:177:public com.teched.smartread.TextDrawable$IConfigBuilder width(int)
+    181:182:public com.teched.smartread.TextDrawable$IConfigBuilder height(int)
+    186:187:public com.teched.smartread.TextDrawable$IConfigBuilder textColor(int)
+    191:192:public com.teched.smartread.TextDrawable$IConfigBuilder withBorder(int)
+    196:197:public com.teched.smartread.TextDrawable$IConfigBuilder useFont(android.graphics.Typeface)
+    201:202:public com.teched.smartread.TextDrawable$IConfigBuilder fontSize(int)
+    206:207:public com.teched.smartread.TextDrawable$IConfigBuilder bold()
+    211:212:public com.teched.smartread.TextDrawable$IConfigBuilder toUpperCase()
+    217:217:public com.teched.smartread.TextDrawable$IConfigBuilder beginConfig()
+    222:222:public com.teched.smartread.TextDrawable$IShapeBuilder endConfig()
+    227:228:public com.teched.smartread.TextDrawable$IBuilder rect()
+    239:242:public com.teched.smartread.TextDrawable$IBuilder roundRect(int)
+    247:248:public com.teched.smartread.TextDrawable buildRect(java.lang.String,int)
+    253:254:public com.teched.smartread.TextDrawable buildRoundRect(java.lang.String,int,int)
+com.teched.smartread.TextDrawable$IBuilder:
+    public abstract com.teched.smartread.TextDrawable build(java.lang.String,int)
 com.teched.smartread.TextDrawable$IConfigBuilder
-com.teched.smartread.TextDrawable$IShapeBuilder
+com.teched.smartread.TextDrawable$IShapeBuilder:
+    public abstract com.teched.smartread.TextDrawable$IConfigBuilder beginConfig()
+    public abstract com.teched.smartread.TextDrawable$IBuilder rect()
+    public abstract com.teched.smartread.TextDrawable$IBuilder round()
+    public abstract com.teched.smartread.TextDrawable$IBuilder roundRect(int)
+    public abstract com.teched.smartread.TextDrawable buildRect(java.lang.String,int)
+    public abstract com.teched.smartread.TextDrawable buildRoundRect(java.lang.String,int,int)
 com.teched.smartread.UploadJob:
     public static final int PRIORITY
 com.teched.smartread.UsersAdapter:
-    43:43:public java.lang.String getName(int)
+    31:31:public java.lang.String getName(int)
+com.teched.smartread.Utils:
+    10:10:public Utils()
 com.yqritc.recyclerviewflexibledivider.BuildConfig
 com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration:
     private static final int DEFAULT_SIZE

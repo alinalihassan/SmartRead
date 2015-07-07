@@ -14176,70 +14176,16 @@ bolts.Task$TaskCompletionSource -> a.t:
     void setResult(java.lang.Object) -> b
     void setError(java.lang.Exception) -> b
     void <init>(bolts.Task,bolts.Task$1) -> <init>
-com.amulyakhare.textdrawable.TextDrawable -> com.a.a.a:
-    android.graphics.Paint textPaint -> a
-    android.graphics.Paint borderPaint -> b
-    java.lang.String text -> c
-    int color -> d
-    android.graphics.drawable.shapes.RectShape shape -> e
-    int height -> f
-    int width -> g
-    int fontSize -> h
-    float radius -> i
-    int borderThickness -> j
-    void <init>(com.amulyakhare.textdrawable.TextDrawable$Builder) -> <init>
-    int getDarkerShade(int) -> a
-    void draw(android.graphics.Canvas) -> draw
-    void drawBorder(android.graphics.Canvas) -> a
-    void setAlpha(int) -> setAlpha
-    void setColorFilter(android.graphics.ColorFilter) -> setColorFilter
-    int getOpacity() -> getOpacity
-    int getIntrinsicWidth() -> getIntrinsicWidth
-    int getIntrinsicHeight() -> getIntrinsicHeight
-    com.amulyakhare.textdrawable.TextDrawable$IShapeBuilder builder() -> a
-    void <init>(com.amulyakhare.textdrawable.TextDrawable$Builder,com.amulyakhare.textdrawable.TextDrawable$1) -> <init>
-com.amulyakhare.textdrawable.TextDrawable$1 -> com.a.a.b:
-com.amulyakhare.textdrawable.TextDrawable$Builder -> com.a.a.c:
-    java.lang.String text -> c
-    int color -> d
-    int borderThickness -> e
-    int width -> f
-    int height -> g
-    android.graphics.Typeface font -> h
-    android.graphics.drawable.shapes.RectShape shape -> i
-    int textColor -> a
-    int fontSize -> j
-    boolean isBold -> k
-    boolean toUpperCase -> l
-    float radius -> b
-    void <init>() -> <init>
-    com.amulyakhare.textdrawable.TextDrawable$IBuilder round() -> a
-    com.amulyakhare.textdrawable.TextDrawable buildRound(java.lang.String,int) -> a
-    com.amulyakhare.textdrawable.TextDrawable build(java.lang.String,int) -> b
-    android.graphics.drawable.shapes.RectShape access$000(com.amulyakhare.textdrawable.TextDrawable$Builder) -> a
-    int access$100(com.amulyakhare.textdrawable.TextDrawable$Builder) -> b
-    int access$200(com.amulyakhare.textdrawable.TextDrawable$Builder) -> c
-    boolean access$300(com.amulyakhare.textdrawable.TextDrawable$Builder) -> d
-    java.lang.String access$400(com.amulyakhare.textdrawable.TextDrawable$Builder) -> e
-    int access$500(com.amulyakhare.textdrawable.TextDrawable$Builder) -> f
-    int access$600(com.amulyakhare.textdrawable.TextDrawable$Builder) -> g
-    boolean access$700(com.amulyakhare.textdrawable.TextDrawable$Builder) -> h
-    android.graphics.Typeface access$800(com.amulyakhare.textdrawable.TextDrawable$Builder) -> i
-    int access$900(com.amulyakhare.textdrawable.TextDrawable$Builder) -> j
-    void <init>(com.amulyakhare.textdrawable.TextDrawable$1) -> <init>
-com.amulyakhare.textdrawable.TextDrawable$IBuilder -> com.a.a.d:
-com.amulyakhare.textdrawable.TextDrawable$IShapeBuilder -> com.a.a.e:
-    com.amulyakhare.textdrawable.TextDrawable buildRound(java.lang.String,int) -> a
-com.android.vending.billing.IInAppBillingService -> com.b.a.a.a:
+com.android.vending.billing.IInAppBillingService -> com.a.a.a.a:
     int isBillingSupported(int,java.lang.String,java.lang.String) -> a
     android.os.Bundle getSkuDetails(int,java.lang.String,java.lang.String,android.os.Bundle) -> a
     android.os.Bundle getBuyIntent(int,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> a
     android.os.Bundle getPurchases(int,java.lang.String,java.lang.String,java.lang.String) -> a
     int consumePurchase(int,java.lang.String,java.lang.String) -> b
-com.android.vending.billing.IInAppBillingService$Stub -> com.b.a.a.b:
+com.android.vending.billing.IInAppBillingService$Stub -> com.a.a.a.b:
     com.android.vending.billing.IInAppBillingService asInterface(android.os.IBinder) -> a
     boolean onTransact(int,android.os.Parcel,android.os.Parcel,int) -> onTransact
-com.android.vending.billing.IInAppBillingService$Stub$Proxy -> com.b.a.a.c:
+com.android.vending.billing.IInAppBillingService$Stub$Proxy -> com.a.a.a.c:
     android.os.IBinder mRemote -> a
     void <init>(android.os.IBinder) -> <init>
     android.os.IBinder asBinder() -> asBinder
@@ -14248,7 +14194,7 @@ com.android.vending.billing.IInAppBillingService$Stub$Proxy -> com.b.a.a.c:
     android.os.Bundle getBuyIntent(int,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> a
     android.os.Bundle getPurchases(int,java.lang.String,java.lang.String,java.lang.String) -> a
     int consumePurchase(int,java.lang.String,java.lang.String) -> b
-com.anjlab.android.iab.v3.BillingBase -> com.c.a.a.a.a:
+com.anjlab.android.iab.v3.BillingBase -> com.b.a.a.a.a:
     java.lang.ref.WeakReference contextReference -> a
     void <init>(android.content.Context) -> <init>
     android.content.Context getContext() -> a
@@ -14259,7 +14205,7 @@ com.anjlab.android.iab.v3.BillingBase -> com.c.a.a.a.a:
     java.lang.String loadString(java.lang.String,java.lang.String) -> b
     boolean saveBoolean(java.lang.String,java.lang.Boolean) -> a
     boolean loadBoolean(java.lang.String,boolean) -> a
-com.anjlab.android.iab.v3.BillingCache -> com.c.a.a.a.b:
+com.anjlab.android.iab.v3.BillingCache -> com.b.a.a.a.b:
     java.util.HashMap data -> a
     java.lang.String cacheKey -> b
     java.lang.String version -> c
@@ -14273,7 +14219,7 @@ com.anjlab.android.iab.v3.BillingCache -> com.c.a.a.a.b:
     java.lang.String getCurrentVersion() -> i
     void reloadDataIfNeeded() -> j
     java.lang.String toString() -> toString
-com.anjlab.android.iab.v3.BillingProcessor -> com.c.a.a.a.c:
+com.anjlab.android.iab.v3.BillingProcessor -> com.b.a.a.a.c:
     com.android.vending.billing.IInAppBillingService billingService -> a
     java.lang.String contextPackageName -> b
     java.lang.String signatureBase64 -> c
@@ -14296,25 +14242,25 @@ com.anjlab.android.iab.v3.BillingProcessor -> com.c.a.a.a.c:
     com.android.vending.billing.IInAppBillingService access$002(com.anjlab.android.iab.v3.BillingProcessor,com.android.vending.billing.IInAppBillingService) -> a
     boolean access$100(com.anjlab.android.iab.v3.BillingProcessor) -> a
     com.anjlab.android.iab.v3.BillingProcessor$IBillingHandler access$200(com.anjlab.android.iab.v3.BillingProcessor) -> b
-com.anjlab.android.iab.v3.BillingProcessor$1 -> com.c.a.a.a.d:
+com.anjlab.android.iab.v3.BillingProcessor$1 -> com.b.a.a.a.d:
     com.anjlab.android.iab.v3.BillingProcessor this$0 -> a
     void <init>(com.anjlab.android.iab.v3.BillingProcessor) -> <init>
     void onServiceDisconnected(android.content.ComponentName) -> onServiceDisconnected
     void onServiceConnected(android.content.ComponentName,android.os.IBinder) -> onServiceConnected
-com.anjlab.android.iab.v3.BillingProcessor$IBillingHandler -> com.c.a.a.a.e:
+com.anjlab.android.iab.v3.BillingProcessor$IBillingHandler -> com.b.a.a.a.e:
     void onProductPurchased(java.lang.String,com.anjlab.android.iab.v3.TransactionDetails) -> a
     void onPurchaseHistoryRestored() -> j_
     void onBillingError(int,java.lang.Throwable) -> a
     void onBillingInitialized() -> i_
-com.anjlab.android.iab.v3.PurchaseInfo -> com.c.a.a.a.f:
+com.anjlab.android.iab.v3.PurchaseInfo -> com.b.a.a.a.f:
     java.lang.String responseData -> a
     java.lang.String signature -> b
     void <init>(java.lang.String,java.lang.String) -> <init>
-com.anjlab.android.iab.v3.Security -> com.c.a.a.a.g:
+com.anjlab.android.iab.v3.Security -> com.b.a.a.a.g:
     boolean verifyPurchase(java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> a
     java.security.PublicKey generatePublicKey(java.lang.String) -> a
     boolean verify(java.security.PublicKey,java.lang.String,java.lang.String) -> a
-com.anjlab.android.iab.v3.TransactionDetails -> com.c.a.a.a.h:
+com.anjlab.android.iab.v3.TransactionDetails -> com.b.a.a.a.h:
     java.lang.String productId -> a
     java.lang.String orderId -> b
     java.lang.String purchaseToken -> c
@@ -14322,7 +14268,7 @@ com.anjlab.android.iab.v3.TransactionDetails -> com.c.a.a.a.h:
     com.anjlab.android.iab.v3.PurchaseInfo purchaseInfo -> e
     void <init>(com.anjlab.android.iab.v3.PurchaseInfo) -> <init>
     java.lang.String toString() -> toString
-com.arasthel.asyncjob.AsyncJob -> com.d.a.a:
+com.arasthel.asyncjob.AsyncJob -> com.c.a.a:
     android.os.Handler uiHandler -> a
     com.arasthel.asyncjob.AsyncJob$AsyncAction actionInBackground -> b
     com.arasthel.asyncjob.AsyncJob$AsyncResultAction actionOnMainThread -> c
@@ -14345,25 +14291,25 @@ com.arasthel.asyncjob.AsyncJob -> com.d.a.a:
     java.lang.Object access$000(com.arasthel.asyncjob.AsyncJob) -> c
     com.arasthel.asyncjob.AsyncJob$AsyncResultAction access$300(com.arasthel.asyncjob.AsyncJob) -> d
     void <clinit>() -> <clinit>
-com.arasthel.asyncjob.AsyncJob$1 -> com.d.a.b:
+com.arasthel.asyncjob.AsyncJob$1 -> com.c.a.b:
     com.arasthel.asyncjob.AsyncJob$OnMainThreadJob val$onMainThreadJob -> a
     void <init>(com.arasthel.asyncjob.AsyncJob$OnMainThreadJob) -> <init>
     void run() -> run
-com.arasthel.asyncjob.AsyncJob$2 -> com.d.a.c:
+com.arasthel.asyncjob.AsyncJob$2 -> com.c.a.c:
     com.arasthel.asyncjob.AsyncJob$OnBackgroundJob val$onBackgroundJob -> a
     void <init>(com.arasthel.asyncjob.AsyncJob$OnBackgroundJob) -> <init>
     void run() -> run
-com.arasthel.asyncjob.AsyncJob$4 -> com.d.a.d:
+com.arasthel.asyncjob.AsyncJob$4 -> com.c.a.d:
     com.arasthel.asyncjob.AsyncJob this$0 -> a
     void <init>(com.arasthel.asyncjob.AsyncJob) -> <init>
     void run() -> run
-com.arasthel.asyncjob.AsyncJob$5 -> com.d.a.e:
+com.arasthel.asyncjob.AsyncJob$5 -> com.c.a.e:
     com.arasthel.asyncjob.AsyncJob this$0 -> a
     void <init>(com.arasthel.asyncjob.AsyncJob) -> <init>
     void run() -> run
-com.arasthel.asyncjob.AsyncJob$AsyncAction -> com.d.a.f:
+com.arasthel.asyncjob.AsyncJob$AsyncAction -> com.c.a.f:
     java.lang.Object doAsync() -> a
-com.arasthel.asyncjob.AsyncJob$AsyncJobBuilder -> com.d.a.g:
+com.arasthel.asyncjob.AsyncJob$AsyncJobBuilder -> com.c.a.g:
     com.arasthel.asyncjob.AsyncJob$AsyncAction asyncAction -> a
     com.arasthel.asyncjob.AsyncJob$AsyncResultAction asyncResultAction -> b
     java.util.concurrent.ExecutorService executor -> c
@@ -14371,11 +14317,11 @@ com.arasthel.asyncjob.AsyncJob$AsyncJobBuilder -> com.d.a.g:
     com.arasthel.asyncjob.AsyncJob$AsyncJobBuilder doInBackground(com.arasthel.asyncjob.AsyncJob$AsyncAction) -> a
     com.arasthel.asyncjob.AsyncJob$AsyncJobBuilder doWhenFinished(com.arasthel.asyncjob.AsyncJob$AsyncResultAction) -> a
     com.arasthel.asyncjob.AsyncJob create() -> a
-com.arasthel.asyncjob.AsyncJob$AsyncResultAction -> com.d.a.h:
+com.arasthel.asyncjob.AsyncJob$AsyncResultAction -> com.c.a.h:
     void onResult(java.lang.Object) -> a
-com.arasthel.asyncjob.AsyncJob$OnBackgroundJob -> com.d.a.i:
+com.arasthel.asyncjob.AsyncJob$OnBackgroundJob -> com.c.a.i:
     void doOnBackground() -> a
-com.arasthel.asyncjob.AsyncJob$OnMainThreadJob -> com.d.a.j:
+com.arasthel.asyncjob.AsyncJob$OnMainThreadJob -> com.c.a.j:
     void doInUIThread() -> a
 com.balysv.materialmenu.MaterialMenuDrawable -> com.balysv.materialmenu.a:
     float diph -> a
@@ -14566,7 +14512,7 @@ com.balysv.materialmenu.R$styleable -> com.balysv.materialmenu.l:
     int MaterialMenuView_mm_transformDuration -> MaterialMenuView_mm_transformDuration
     int MaterialMenuView_mm_visible -> MaterialMenuView_mm_visible
     void <clinit>() -> <clinit>
-com.daimajia.androidanimations.library.BaseViewAnimator -> com.e.a.a.a:
+com.daimajia.androidanimations.library.BaseViewAnimator -> com.d.a.a.a:
     com.nineoldandroids.animation.AnimatorSet mAnimatorSet -> a
     long mDuration -> b
     void <init>() -> <init>
@@ -14580,7 +14526,7 @@ com.daimajia.androidanimations.library.BaseViewAnimator -> com.e.a.a.a:
     com.daimajia.androidanimations.library.BaseViewAnimator setInterpolator(android.view.animation.Interpolator) -> a
     long getDuration() -> b
     com.nineoldandroids.animation.AnimatorSet getAnimatorAgent() -> c
-com.daimajia.androidanimations.library.Techniques -> com.e.a.a.b:
+com.daimajia.androidanimations.library.Techniques -> com.d.a.a.b:
     com.daimajia.androidanimations.library.Techniques DropOut -> a
     com.daimajia.androidanimations.library.Techniques Landing -> b
     com.daimajia.androidanimations.library.Techniques TakingOff -> c
@@ -14650,7 +14596,7 @@ com.daimajia.androidanimations.library.Techniques -> com.e.a.a.b:
     void <init>(java.lang.String,int,java.lang.Class) -> <init>
     com.daimajia.androidanimations.library.BaseViewAnimator getAnimator() -> a
     void <clinit>() -> <clinit>
-com.daimajia.androidanimations.library.YoYo -> com.e.a.a.c:
+com.daimajia.androidanimations.library.YoYo -> com.d.a.a.c:
     com.daimajia.androidanimations.library.BaseViewAnimator animator -> a
     long duration -> b
     long delay -> c
@@ -14662,8 +14608,8 @@ com.daimajia.androidanimations.library.YoYo -> com.e.a.a.c:
     com.daimajia.androidanimations.library.BaseViewAnimator play() -> a
     void <init>(com.daimajia.androidanimations.library.YoYo$AnimationComposer,com.daimajia.androidanimations.library.YoYo$1) -> <init>
     com.daimajia.androidanimations.library.BaseViewAnimator access$900(com.daimajia.androidanimations.library.YoYo) -> a
-com.daimajia.androidanimations.library.YoYo$1 -> com.e.a.a.d:
-com.daimajia.androidanimations.library.YoYo$AnimationComposer -> com.e.a.a.e:
+com.daimajia.androidanimations.library.YoYo$1 -> com.d.a.a.d:
+com.daimajia.androidanimations.library.YoYo$AnimationComposer -> com.d.a.a.e:
     java.util.List callbacks -> a
     com.daimajia.androidanimations.library.BaseViewAnimator animator -> b
     long duration -> c
@@ -14682,210 +14628,210 @@ com.daimajia.androidanimations.library.YoYo$AnimationComposer -> com.e.a.a.e:
     java.util.List access$400(com.daimajia.androidanimations.library.YoYo$AnimationComposer) -> e
     android.view.View access$500(com.daimajia.androidanimations.library.YoYo$AnimationComposer) -> f
     void <init>(com.daimajia.androidanimations.library.Techniques,com.daimajia.androidanimations.library.YoYo$1) -> <init>
-com.daimajia.androidanimations.library.YoYo$YoYoString -> com.e.a.a.f:
+com.daimajia.androidanimations.library.YoYo$YoYoString -> com.d.a.a.f:
     com.daimajia.androidanimations.library.BaseViewAnimator animator -> a
     android.view.View target -> b
     void <init>(com.daimajia.androidanimations.library.BaseViewAnimator,android.view.View) -> <init>
     void <init>(com.daimajia.androidanimations.library.BaseViewAnimator,android.view.View,com.daimajia.androidanimations.library.YoYo$1) -> <init>
-com.daimajia.androidanimations.library.attention.BounceAnimator -> com.e.a.a.a.a:
+com.daimajia.androidanimations.library.attention.BounceAnimator -> com.d.a.a.a.a:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.attention.FlashAnimator -> com.e.a.a.a.b:
+com.daimajia.androidanimations.library.attention.FlashAnimator -> com.d.a.a.a.b:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.attention.PulseAnimator -> com.e.a.a.a.c:
+com.daimajia.androidanimations.library.attention.PulseAnimator -> com.d.a.a.a.c:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.attention.RubberBandAnimator -> com.e.a.a.a.d:
+com.daimajia.androidanimations.library.attention.RubberBandAnimator -> com.d.a.a.a.d:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.attention.ShakeAnimator -> com.e.a.a.a.e:
+com.daimajia.androidanimations.library.attention.ShakeAnimator -> com.d.a.a.a.e:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.attention.StandUpAnimator -> com.e.a.a.a.f:
+com.daimajia.androidanimations.library.attention.StandUpAnimator -> com.d.a.a.a.f:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.attention.SwingAnimator -> com.e.a.a.a.g:
+com.daimajia.androidanimations.library.attention.SwingAnimator -> com.d.a.a.a.g:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.attention.TadaAnimator -> com.e.a.a.a.h:
+com.daimajia.androidanimations.library.attention.TadaAnimator -> com.d.a.a.a.h:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.attention.WaveAnimator -> com.e.a.a.a.i:
+com.daimajia.androidanimations.library.attention.WaveAnimator -> com.d.a.a.a.i:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.attention.WobbleAnimator -> com.e.a.a.a.j:
+com.daimajia.androidanimations.library.attention.WobbleAnimator -> com.d.a.a.a.j:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.bouncing_entrances.BounceInAnimator -> com.e.a.a.b.a:
+com.daimajia.androidanimations.library.bouncing_entrances.BounceInAnimator -> com.d.a.a.b.a:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.bouncing_entrances.BounceInDownAnimator -> com.e.a.a.b.b:
+com.daimajia.androidanimations.library.bouncing_entrances.BounceInDownAnimator -> com.d.a.a.b.b:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.bouncing_entrances.BounceInLeftAnimator -> com.e.a.a.b.c:
+com.daimajia.androidanimations.library.bouncing_entrances.BounceInLeftAnimator -> com.d.a.a.b.c:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.bouncing_entrances.BounceInRightAnimator -> com.e.a.a.b.d:
+com.daimajia.androidanimations.library.bouncing_entrances.BounceInRightAnimator -> com.d.a.a.b.d:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.bouncing_entrances.BounceInUpAnimator -> com.e.a.a.b.e:
+com.daimajia.androidanimations.library.bouncing_entrances.BounceInUpAnimator -> com.d.a.a.b.e:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.fading_entrances.FadeInAnimator -> com.e.a.a.c.a:
+com.daimajia.androidanimations.library.fading_entrances.FadeInAnimator -> com.d.a.a.c.a:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.fading_entrances.FadeInDownAnimator -> com.e.a.a.c.b:
+com.daimajia.androidanimations.library.fading_entrances.FadeInDownAnimator -> com.d.a.a.c.b:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.fading_entrances.FadeInLeftAnimator -> com.e.a.a.c.c:
+com.daimajia.androidanimations.library.fading_entrances.FadeInLeftAnimator -> com.d.a.a.c.c:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.fading_entrances.FadeInRightAnimator -> com.e.a.a.c.d:
+com.daimajia.androidanimations.library.fading_entrances.FadeInRightAnimator -> com.d.a.a.c.d:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.fading_entrances.FadeInUpAnimator -> com.e.a.a.c.e:
+com.daimajia.androidanimations.library.fading_entrances.FadeInUpAnimator -> com.d.a.a.c.e:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.fading_exits.FadeOutAnimator -> com.e.a.a.d.a:
+com.daimajia.androidanimations.library.fading_exits.FadeOutAnimator -> com.d.a.a.d.a:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.fading_exits.FadeOutDownAnimator -> com.e.a.a.d.b:
+com.daimajia.androidanimations.library.fading_exits.FadeOutDownAnimator -> com.d.a.a.d.b:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.fading_exits.FadeOutLeftAnimator -> com.e.a.a.d.c:
+com.daimajia.androidanimations.library.fading_exits.FadeOutLeftAnimator -> com.d.a.a.d.c:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.fading_exits.FadeOutRightAnimator -> com.e.a.a.d.d:
+com.daimajia.androidanimations.library.fading_exits.FadeOutRightAnimator -> com.d.a.a.d.d:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.fading_exits.FadeOutUpAnimator -> com.e.a.a.d.e:
+com.daimajia.androidanimations.library.fading_exits.FadeOutUpAnimator -> com.d.a.a.d.e:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.flippers.FlipInXAnimator -> com.e.a.a.e.a:
+com.daimajia.androidanimations.library.flippers.FlipInXAnimator -> com.d.a.a.e.a:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.flippers.FlipOutXAnimator -> com.e.a.a.e.b:
+com.daimajia.androidanimations.library.flippers.FlipOutXAnimator -> com.d.a.a.e.b:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.flippers.FlipOutYAnimator -> com.e.a.a.e.c:
+com.daimajia.androidanimations.library.flippers.FlipOutYAnimator -> com.d.a.a.e.c:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.rotating_entrances.RotateInAnimator -> com.e.a.a.f.a:
+com.daimajia.androidanimations.library.rotating_entrances.RotateInAnimator -> com.d.a.a.f.a:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.rotating_entrances.RotateInDownLeftAnimator -> com.e.a.a.f.b:
+com.daimajia.androidanimations.library.rotating_entrances.RotateInDownLeftAnimator -> com.d.a.a.f.b:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.rotating_entrances.RotateInDownRightAnimator -> com.e.a.a.f.c:
+com.daimajia.androidanimations.library.rotating_entrances.RotateInDownRightAnimator -> com.d.a.a.f.c:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.rotating_entrances.RotateInUpLeftAnimator -> com.e.a.a.f.d:
+com.daimajia.androidanimations.library.rotating_entrances.RotateInUpLeftAnimator -> com.d.a.a.f.d:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.rotating_entrances.RotateInUpRightAnimator -> com.e.a.a.f.e:
+com.daimajia.androidanimations.library.rotating_entrances.RotateInUpRightAnimator -> com.d.a.a.f.e:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.rotating_exits.RotateOutAnimator -> com.e.a.a.g.a:
+com.daimajia.androidanimations.library.rotating_exits.RotateOutAnimator -> com.d.a.a.g.a:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.rotating_exits.RotateOutDownLeftAnimator -> com.e.a.a.g.b:
+com.daimajia.androidanimations.library.rotating_exits.RotateOutDownLeftAnimator -> com.d.a.a.g.b:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.rotating_exits.RotateOutDownRightAnimator -> com.e.a.a.g.c:
+com.daimajia.androidanimations.library.rotating_exits.RotateOutDownRightAnimator -> com.d.a.a.g.c:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.rotating_exits.RotateOutUpLeftAnimator -> com.e.a.a.g.d:
+com.daimajia.androidanimations.library.rotating_exits.RotateOutUpLeftAnimator -> com.d.a.a.g.d:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.rotating_exits.RotateOutUpRightAnimator -> com.e.a.a.g.e:
+com.daimajia.androidanimations.library.rotating_exits.RotateOutUpRightAnimator -> com.d.a.a.g.e:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.sliders.SlideInDownAnimator -> com.e.a.a.h.a:
+com.daimajia.androidanimations.library.sliders.SlideInDownAnimator -> com.d.a.a.h.a:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.sliders.SlideInLeftAnimator -> com.e.a.a.h.b:
+com.daimajia.androidanimations.library.sliders.SlideInLeftAnimator -> com.d.a.a.h.b:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.sliders.SlideInRightAnimator -> com.e.a.a.h.c:
+com.daimajia.androidanimations.library.sliders.SlideInRightAnimator -> com.d.a.a.h.c:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.sliders.SlideInUpAnimator -> com.e.a.a.h.d:
+com.daimajia.androidanimations.library.sliders.SlideInUpAnimator -> com.d.a.a.h.d:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.sliders.SlideOutDownAnimator -> com.e.a.a.h.e:
+com.daimajia.androidanimations.library.sliders.SlideOutDownAnimator -> com.d.a.a.h.e:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.sliders.SlideOutLeftAnimator -> com.e.a.a.h.f:
+com.daimajia.androidanimations.library.sliders.SlideOutLeftAnimator -> com.d.a.a.h.f:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.sliders.SlideOutRightAnimator -> com.e.a.a.h.g:
+com.daimajia.androidanimations.library.sliders.SlideOutRightAnimator -> com.d.a.a.h.g:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.sliders.SlideOutUpAnimator -> com.e.a.a.h.h:
+com.daimajia.androidanimations.library.sliders.SlideOutUpAnimator -> com.d.a.a.h.h:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.specials.HingeAnimator -> com.e.a.a.i.a:
+com.daimajia.androidanimations.library.specials.HingeAnimator -> com.d.a.a.i.a:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.specials.RollInAnimator -> com.e.a.a.i.b:
+com.daimajia.androidanimations.library.specials.RollInAnimator -> com.d.a.a.i.b:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.specials.RollOutAnimator -> com.e.a.a.i.c:
+com.daimajia.androidanimations.library.specials.RollOutAnimator -> com.d.a.a.i.c:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.specials.in.DropOutAnimator -> com.e.a.a.i.a.a:
+com.daimajia.androidanimations.library.specials.in.DropOutAnimator -> com.d.a.a.i.a.a:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.specials.in.LandingAnimator -> com.e.a.a.i.a.b:
+com.daimajia.androidanimations.library.specials.in.LandingAnimator -> com.d.a.a.i.a.b:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.specials.out.TakingOffAnimator -> com.e.a.a.i.b.a:
+com.daimajia.androidanimations.library.specials.out.TakingOffAnimator -> com.d.a.a.i.b.a:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.zooming_entrances.ZoomInAnimator -> com.e.a.a.j.a:
+com.daimajia.androidanimations.library.zooming_entrances.ZoomInAnimator -> com.d.a.a.j.a:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.zooming_entrances.ZoomInDownAnimator -> com.e.a.a.j.b:
+com.daimajia.androidanimations.library.zooming_entrances.ZoomInDownAnimator -> com.d.a.a.j.b:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.zooming_entrances.ZoomInLeftAnimator -> com.e.a.a.j.c:
+com.daimajia.androidanimations.library.zooming_entrances.ZoomInLeftAnimator -> com.d.a.a.j.c:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.zooming_entrances.ZoomInRightAnimator -> com.e.a.a.j.d:
+com.daimajia.androidanimations.library.zooming_entrances.ZoomInRightAnimator -> com.d.a.a.j.d:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.zooming_entrances.ZoomInUpAnimator -> com.e.a.a.j.e:
+com.daimajia.androidanimations.library.zooming_entrances.ZoomInUpAnimator -> com.d.a.a.j.e:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.zooming_exits.ZoomOutAnimator -> com.e.a.a.k.a:
+com.daimajia.androidanimations.library.zooming_exits.ZoomOutAnimator -> com.d.a.a.k.a:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.zooming_exits.ZoomOutDownAnimator -> com.e.a.a.k.b:
+com.daimajia.androidanimations.library.zooming_exits.ZoomOutDownAnimator -> com.d.a.a.k.b:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.zooming_exits.ZoomOutLeftAnimator -> com.e.a.a.k.c:
+com.daimajia.androidanimations.library.zooming_exits.ZoomOutLeftAnimator -> com.d.a.a.k.c:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.zooming_exits.ZoomOutRightAnimator -> com.e.a.a.k.d:
+com.daimajia.androidanimations.library.zooming_exits.ZoomOutRightAnimator -> com.d.a.a.k.d:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.androidanimations.library.zooming_exits.ZoomOutUpAnimator -> com.e.a.a.k.e:
+com.daimajia.androidanimations.library.zooming_exits.ZoomOutUpAnimator -> com.d.a.a.k.e:
     void <init>() -> <init>
     void prepare(android.view.View) -> a
-com.daimajia.easing.BaseEasingMethod -> com.e.b.a:
+com.daimajia.easing.BaseEasingMethod -> com.d.b.a:
     float mDuration -> a
     java.util.ArrayList mListeners -> b
     void addEasingListeners(com.daimajia.easing.BaseEasingMethod$EasingListener[]) -> a
     java.lang.Float evaluate(float,java.lang.Number,java.lang.Number) -> a
     java.lang.Float calculate(float,float,float,float) -> a
     java.lang.Object evaluate(float,java.lang.Object,java.lang.Object) -> a
-com.daimajia.easing.BaseEasingMethod$EasingListener -> com.e.b.b:
+com.daimajia.easing.BaseEasingMethod$EasingListener -> com.d.b.b:
     void on(float,float,float,float,float) -> a
-com.daimajia.easing.Glider -> com.e.b.c:
+com.daimajia.easing.Glider -> com.d.b.c:
     com.nineoldandroids.animation.ValueAnimator glide(com.daimajia.easing.Skill,float,com.nineoldandroids.animation.ValueAnimator) -> a
     com.nineoldandroids.animation.ValueAnimator glide(com.daimajia.easing.Skill,float,com.nineoldandroids.animation.ValueAnimator,com.daimajia.easing.BaseEasingMethod$EasingListener[]) -> a
-com.daimajia.easing.Skill -> com.e.b.d:
+com.daimajia.easing.Skill -> com.d.b.d:
     com.daimajia.easing.Skill BackEaseIn -> a
     com.daimajia.easing.Skill BackEaseOut -> b
     com.daimajia.easing.Skill BackEaseInOut -> c
@@ -14920,65 +14866,65 @@ com.daimajia.easing.Skill -> com.e.b.d:
     void <init>(java.lang.String,int,java.lang.Class) -> <init>
     com.daimajia.easing.BaseEasingMethod getMethod(float) -> a
     void <clinit>() -> <clinit>
-com.daimajia.easing.back.BackEaseIn -> com.e.b.a.a:
+com.daimajia.easing.back.BackEaseIn -> com.d.b.a.a:
     float s -> b
     java.lang.Float calculate(float,float,float,float) -> a
-com.daimajia.easing.back.BackEaseInOut -> com.e.b.a.b:
+com.daimajia.easing.back.BackEaseInOut -> com.d.b.a.b:
     float s -> b
     java.lang.Float calculate(float,float,float,float) -> a
-com.daimajia.easing.back.BackEaseOut -> com.e.b.a.c:
+com.daimajia.easing.back.BackEaseOut -> com.d.b.a.c:
     float s -> b
     java.lang.Float calculate(float,float,float,float) -> a
-com.daimajia.easing.bounce.BounceEaseIn -> com.e.b.b.a:
+com.daimajia.easing.bounce.BounceEaseIn -> com.d.b.b.a:
     com.daimajia.easing.bounce.BounceEaseOut mBounceEaseOut -> b
     java.lang.Float calculate(float,float,float,float) -> a
-com.daimajia.easing.bounce.BounceEaseInOut -> com.e.b.b.b:
+com.daimajia.easing.bounce.BounceEaseInOut -> com.d.b.b.b:
     com.daimajia.easing.bounce.BounceEaseOut mBounceEaseOut -> b
     com.daimajia.easing.bounce.BounceEaseIn mBounceEaseIn -> c
     java.lang.Float calculate(float,float,float,float) -> a
-com.daimajia.easing.bounce.BounceEaseOut -> com.e.b.b.c:
+com.daimajia.easing.bounce.BounceEaseOut -> com.d.b.b.c:
     java.lang.Float calculate(float,float,float,float) -> a
-com.daimajia.easing.circ.CircEaseIn -> com.e.b.c.a:
+com.daimajia.easing.circ.CircEaseIn -> com.d.b.c.a:
     java.lang.Float calculate(float,float,float,float) -> a
-com.daimajia.easing.circ.CircEaseInOut -> com.e.b.c.b:
+com.daimajia.easing.circ.CircEaseInOut -> com.d.b.c.b:
     java.lang.Float calculate(float,float,float,float) -> a
-com.daimajia.easing.circ.CircEaseOut -> com.e.b.c.c:
+com.daimajia.easing.circ.CircEaseOut -> com.d.b.c.c:
     java.lang.Float calculate(float,float,float,float) -> a
-com.daimajia.easing.cubic.CubicEaseIn -> com.e.b.d.a:
+com.daimajia.easing.cubic.CubicEaseIn -> com.d.b.d.a:
     java.lang.Float calculate(float,float,float,float) -> a
-com.daimajia.easing.cubic.CubicEaseInOut -> com.e.b.d.b:
+com.daimajia.easing.cubic.CubicEaseInOut -> com.d.b.d.b:
     java.lang.Float calculate(float,float,float,float) -> a
-com.daimajia.easing.cubic.CubicEaseOut -> com.e.b.d.c:
+com.daimajia.easing.cubic.CubicEaseOut -> com.d.b.d.c:
     java.lang.Float calculate(float,float,float,float) -> a
-com.daimajia.easing.elastic.ElasticEaseIn -> com.e.b.e.a:
+com.daimajia.easing.elastic.ElasticEaseIn -> com.d.b.e.a:
     java.lang.Float calculate(float,float,float,float) -> a
-com.daimajia.easing.elastic.ElasticEaseOut -> com.e.b.e.b:
+com.daimajia.easing.elastic.ElasticEaseOut -> com.d.b.e.b:
     java.lang.Float calculate(float,float,float,float) -> a
-com.daimajia.easing.expo.ExpoEaseIn -> com.e.b.f.a:
+com.daimajia.easing.expo.ExpoEaseIn -> com.d.b.f.a:
     java.lang.Float calculate(float,float,float,float) -> a
-com.daimajia.easing.expo.ExpoEaseInOut -> com.e.b.f.b:
+com.daimajia.easing.expo.ExpoEaseInOut -> com.d.b.f.b:
     java.lang.Float calculate(float,float,float,float) -> a
-com.daimajia.easing.expo.ExpoEaseOut -> com.e.b.f.c:
+com.daimajia.easing.expo.ExpoEaseOut -> com.d.b.f.c:
     java.lang.Float calculate(float,float,float,float) -> a
-com.daimajia.easing.linear.Linear -> com.e.b.g.a:
+com.daimajia.easing.linear.Linear -> com.d.b.g.a:
     java.lang.Float calculate(float,float,float,float) -> a
-com.daimajia.easing.quad.QuadEaseIn -> com.e.b.h.a:
+com.daimajia.easing.quad.QuadEaseIn -> com.d.b.h.a:
     java.lang.Float calculate(float,float,float,float) -> a
-com.daimajia.easing.quad.QuadEaseInOut -> com.e.b.h.b:
+com.daimajia.easing.quad.QuadEaseInOut -> com.d.b.h.b:
     java.lang.Float calculate(float,float,float,float) -> a
-com.daimajia.easing.quad.QuadEaseOut -> com.e.b.h.c:
+com.daimajia.easing.quad.QuadEaseOut -> com.d.b.h.c:
     java.lang.Float calculate(float,float,float,float) -> a
-com.daimajia.easing.quint.QuintEaseIn -> com.e.b.i.a:
+com.daimajia.easing.quint.QuintEaseIn -> com.d.b.i.a:
     java.lang.Float calculate(float,float,float,float) -> a
-com.daimajia.easing.quint.QuintEaseInOut -> com.e.b.i.b:
+com.daimajia.easing.quint.QuintEaseInOut -> com.d.b.i.b:
     java.lang.Float calculate(float,float,float,float) -> a
-com.daimajia.easing.quint.QuintEaseOut -> com.e.b.i.c:
+com.daimajia.easing.quint.QuintEaseOut -> com.d.b.i.c:
     java.lang.Float calculate(float,float,float,float) -> a
-com.daimajia.easing.sine.SineEaseIn -> com.e.b.j.a:
+com.daimajia.easing.sine.SineEaseIn -> com.d.b.j.a:
     java.lang.Float calculate(float,float,float,float) -> a
-com.daimajia.easing.sine.SineEaseInOut -> com.e.b.j.b:
+com.daimajia.easing.sine.SineEaseInOut -> com.d.b.j.b:
     java.lang.Float calculate(float,float,float,float) -> a
-com.daimajia.easing.sine.SineEaseOut -> com.e.b.j.c:
+com.daimajia.easing.sine.SineEaseOut -> com.d.b.j.c:
     java.lang.Float calculate(float,float,float,float) -> a
 com.facebook.AccessToken -> com.facebook.AccessToken:
     java.lang.String ACCESS_TOKEN_KEY -> ACCESS_TOKEN_KEY
@@ -45605,7 +45551,7 @@ com.joanzapata.pdfview.util.DragPinchListener$State -> com.joanzapata.pdfview.d.
     void <clinit>() -> <clinit>
 com.joanzapata.pdfview.util.NumberUtils -> com.joanzapata.pdfview.d.j:
     int limit(int,int,int) -> a
-com.nineoldandroids.animation.Animator -> com.f.a.a:
+com.nineoldandroids.animation.Animator -> com.e.a.a:
     java.util.ArrayList mListeners -> a
     void <init>() -> <init>
     void start() -> a
@@ -45620,18 +45566,18 @@ com.nineoldandroids.animation.Animator -> com.f.a.a:
     java.util.ArrayList getListeners() -> f
     com.nineoldandroids.animation.Animator clone() -> g
     java.lang.Object clone() -> clone
-com.nineoldandroids.animation.Animator$AnimatorListener -> com.f.a.b:
+com.nineoldandroids.animation.Animator$AnimatorListener -> com.e.a.b:
     void onAnimationStart(com.nineoldandroids.animation.Animator) -> b
     void onAnimationEnd(com.nineoldandroids.animation.Animator) -> a
     void onAnimationCancel(com.nineoldandroids.animation.Animator) -> c
     void onAnimationRepeat(com.nineoldandroids.animation.Animator) -> d
-com.nineoldandroids.animation.AnimatorListenerAdapter -> com.f.a.c:
+com.nineoldandroids.animation.AnimatorListenerAdapter -> com.e.a.c:
     void <init>() -> <init>
     void onAnimationCancel(com.nineoldandroids.animation.Animator) -> c
     void onAnimationEnd(com.nineoldandroids.animation.Animator) -> a
     void onAnimationRepeat(com.nineoldandroids.animation.Animator) -> d
     void onAnimationStart(com.nineoldandroids.animation.Animator) -> b
-com.nineoldandroids.animation.AnimatorSet -> com.f.a.d:
+com.nineoldandroids.animation.AnimatorSet -> com.e.a.d:
     java.util.ArrayList mPlayingSet -> c
     java.util.HashMap mNodeMap -> d
     java.util.ArrayList mNodes -> e
@@ -45664,14 +45610,14 @@ com.nineoldandroids.animation.AnimatorSet -> com.f.a.d:
     java.util.ArrayList access$200(com.nineoldandroids.animation.AnimatorSet) -> c
     boolean access$302(com.nineoldandroids.animation.AnimatorSet,boolean) -> a
     java.util.ArrayList access$400(com.nineoldandroids.animation.AnimatorSet) -> d
-com.nineoldandroids.animation.AnimatorSet$1 -> com.f.a.e:
+com.nineoldandroids.animation.AnimatorSet$1 -> com.e.a.e:
     boolean canceled -> a
     java.util.ArrayList val$nodesToStart -> b
     com.nineoldandroids.animation.AnimatorSet this$0 -> c
     void <init>(com.nineoldandroids.animation.AnimatorSet,java.util.ArrayList) -> <init>
     void onAnimationCancel(com.nineoldandroids.animation.Animator) -> c
     void onAnimationEnd(com.nineoldandroids.animation.Animator) -> a
-com.nineoldandroids.animation.AnimatorSet$AnimatorSetListener -> com.f.a.f:
+com.nineoldandroids.animation.AnimatorSet$AnimatorSetListener -> com.e.a.f:
     com.nineoldandroids.animation.AnimatorSet mAnimatorSet -> b
     com.nineoldandroids.animation.AnimatorSet this$0 -> a
     void <init>(com.nineoldandroids.animation.AnimatorSet,com.nineoldandroids.animation.AnimatorSet) -> <init>
@@ -45679,16 +45625,16 @@ com.nineoldandroids.animation.AnimatorSet$AnimatorSetListener -> com.f.a.f:
     void onAnimationEnd(com.nineoldandroids.animation.Animator) -> a
     void onAnimationRepeat(com.nineoldandroids.animation.Animator) -> d
     void onAnimationStart(com.nineoldandroids.animation.Animator) -> b
-com.nineoldandroids.animation.AnimatorSet$Builder -> com.f.a.g:
+com.nineoldandroids.animation.AnimatorSet$Builder -> com.e.a.g:
     com.nineoldandroids.animation.AnimatorSet$Node mCurrentNode -> b
     com.nineoldandroids.animation.AnimatorSet this$0 -> a
     void <init>(com.nineoldandroids.animation.AnimatorSet,com.nineoldandroids.animation.Animator) -> <init>
     com.nineoldandroids.animation.AnimatorSet$Builder with(com.nineoldandroids.animation.Animator) -> a
-com.nineoldandroids.animation.AnimatorSet$Dependency -> com.f.a.h:
+com.nineoldandroids.animation.AnimatorSet$Dependency -> com.e.a.h:
     com.nineoldandroids.animation.AnimatorSet$Node node -> a
     int rule -> b
     void <init>(com.nineoldandroids.animation.AnimatorSet$Node,int) -> <init>
-com.nineoldandroids.animation.AnimatorSet$DependencyListener -> com.f.a.i:
+com.nineoldandroids.animation.AnimatorSet$DependencyListener -> com.e.a.i:
     com.nineoldandroids.animation.AnimatorSet mAnimatorSet -> a
     com.nineoldandroids.animation.AnimatorSet$Node mNode -> b
     int mRule -> c
@@ -45698,7 +45644,7 @@ com.nineoldandroids.animation.AnimatorSet$DependencyListener -> com.f.a.i:
     void onAnimationRepeat(com.nineoldandroids.animation.Animator) -> d
     void onAnimationStart(com.nineoldandroids.animation.Animator) -> b
     void startIfReady(com.nineoldandroids.animation.Animator) -> e
-com.nineoldandroids.animation.AnimatorSet$Node -> com.f.a.j:
+com.nineoldandroids.animation.AnimatorSet$Node -> com.e.a.j:
     com.nineoldandroids.animation.Animator animation -> a
     java.util.ArrayList dependencies -> b
     java.util.ArrayList tmpDependencies -> c
@@ -45709,11 +45655,11 @@ com.nineoldandroids.animation.AnimatorSet$Node -> com.f.a.j:
     void addDependency(com.nineoldandroids.animation.AnimatorSet$Dependency) -> a
     com.nineoldandroids.animation.AnimatorSet$Node clone() -> a
     java.lang.Object clone() -> clone
-com.nineoldandroids.animation.FloatEvaluator -> com.f.a.k:
+com.nineoldandroids.animation.FloatEvaluator -> com.e.a.k:
     void <init>() -> <init>
     java.lang.Float evaluate(float,java.lang.Number,java.lang.Number) -> a
     java.lang.Object evaluate(float,java.lang.Object,java.lang.Object) -> a
-com.nineoldandroids.animation.FloatKeyframeSet -> com.f.a.l:
+com.nineoldandroids.animation.FloatKeyframeSet -> com.e.a.l:
     float firstValue -> g
     float lastValue -> h
     float deltaValue -> i
@@ -45724,11 +45670,11 @@ com.nineoldandroids.animation.FloatKeyframeSet -> com.f.a.l:
     float getFloatValue(float) -> b
     com.nineoldandroids.animation.KeyframeSet clone() -> b
     java.lang.Object clone() -> clone
-com.nineoldandroids.animation.IntEvaluator -> com.f.a.m:
+com.nineoldandroids.animation.IntEvaluator -> com.e.a.m:
     void <init>() -> <init>
     java.lang.Integer evaluate(float,java.lang.Integer,java.lang.Integer) -> a
     java.lang.Object evaluate(float,java.lang.Object,java.lang.Object) -> a
-com.nineoldandroids.animation.Keyframe -> com.f.a.n:
+com.nineoldandroids.animation.Keyframe -> com.e.a.n:
     float mFraction -> a
     java.lang.Class mValueType -> b
     android.view.animation.Interpolator mInterpolator -> d
@@ -45744,7 +45690,7 @@ com.nineoldandroids.animation.Keyframe -> com.f.a.n:
     void setInterpolator(android.view.animation.Interpolator) -> a
     com.nineoldandroids.animation.Keyframe clone() -> e
     java.lang.Object clone() -> clone
-com.nineoldandroids.animation.Keyframe$FloatKeyframe -> com.f.a.o:
+com.nineoldandroids.animation.Keyframe$FloatKeyframe -> com.e.a.o:
     float mValue -> d
     void <init>(float,float) -> <init>
     void <init>(float) -> <init>
@@ -45754,7 +45700,7 @@ com.nineoldandroids.animation.Keyframe$FloatKeyframe -> com.f.a.o:
     com.nineoldandroids.animation.Keyframe$FloatKeyframe clone() -> g
     com.nineoldandroids.animation.Keyframe clone() -> e
     java.lang.Object clone() -> clone
-com.nineoldandroids.animation.KeyframeSet -> com.f.a.p:
+com.nineoldandroids.animation.KeyframeSet -> com.e.a.p:
     int mNumKeyframes -> a
     com.nineoldandroids.animation.Keyframe mFirstKeyframe -> b
     com.nineoldandroids.animation.Keyframe mLastKeyframe -> c
@@ -45768,7 +45714,7 @@ com.nineoldandroids.animation.KeyframeSet -> com.f.a.p:
     java.lang.Object getValue(float) -> a
     java.lang.String toString() -> toString
     java.lang.Object clone() -> clone
-com.nineoldandroids.animation.ObjectAnimator -> com.f.a.q:
+com.nineoldandroids.animation.ObjectAnimator -> com.e.a.q:
     java.util.Map PROXY_PROPERTIES -> h
     java.lang.Object mTarget -> i
     java.lang.String mPropertyName -> j
@@ -45793,7 +45739,7 @@ com.nineoldandroids.animation.ObjectAnimator -> com.f.a.q:
     com.nineoldandroids.animation.Animator setDuration(long) -> a
     java.lang.Object clone() -> clone
     void <clinit>() -> <clinit>
-com.nineoldandroids.animation.PreHoneycombCompat -> com.f.a.r:
+com.nineoldandroids.animation.PreHoneycombCompat -> com.e.a.r:
     com.nineoldandroids.util.Property ALPHA -> a
     com.nineoldandroids.util.Property PIVOT_X -> b
     com.nineoldandroids.util.Property PIVOT_Y -> c
@@ -45809,87 +45755,87 @@ com.nineoldandroids.animation.PreHoneycombCompat -> com.f.a.r:
     com.nineoldandroids.util.Property X -> m
     com.nineoldandroids.util.Property Y -> n
     void <clinit>() -> <clinit>
-com.nineoldandroids.animation.PreHoneycombCompat$1 -> com.f.a.s:
+com.nineoldandroids.animation.PreHoneycombCompat$1 -> com.e.a.s:
     void <init>(java.lang.String) -> <init>
     void setValue(android.view.View,float) -> a
     java.lang.Float get(android.view.View) -> a
     void setValue(java.lang.Object,float) -> a
     java.lang.Object get(java.lang.Object) -> a
-com.nineoldandroids.animation.PreHoneycombCompat$10 -> com.f.a.t:
+com.nineoldandroids.animation.PreHoneycombCompat$10 -> com.e.a.t:
     void <init>(java.lang.String) -> <init>
     void setValue(android.view.View,float) -> a
     java.lang.Float get(android.view.View) -> a
     void setValue(java.lang.Object,float) -> a
     java.lang.Object get(java.lang.Object) -> a
-com.nineoldandroids.animation.PreHoneycombCompat$11 -> com.f.a.u:
+com.nineoldandroids.animation.PreHoneycombCompat$11 -> com.e.a.u:
     void <init>(java.lang.String) -> <init>
     java.lang.Integer get(android.view.View) -> a
     java.lang.Object get(java.lang.Object) -> a
-com.nineoldandroids.animation.PreHoneycombCompat$12 -> com.f.a.v:
+com.nineoldandroids.animation.PreHoneycombCompat$12 -> com.e.a.v:
     void <init>(java.lang.String) -> <init>
     java.lang.Integer get(android.view.View) -> a
     java.lang.Object get(java.lang.Object) -> a
-com.nineoldandroids.animation.PreHoneycombCompat$13 -> com.f.a.w:
+com.nineoldandroids.animation.PreHoneycombCompat$13 -> com.e.a.w:
     void <init>(java.lang.String) -> <init>
     void setValue(android.view.View,float) -> a
     java.lang.Float get(android.view.View) -> a
     void setValue(java.lang.Object,float) -> a
     java.lang.Object get(java.lang.Object) -> a
-com.nineoldandroids.animation.PreHoneycombCompat$14 -> com.f.a.x:
+com.nineoldandroids.animation.PreHoneycombCompat$14 -> com.e.a.x:
     void <init>(java.lang.String) -> <init>
     void setValue(android.view.View,float) -> a
     java.lang.Float get(android.view.View) -> a
     void setValue(java.lang.Object,float) -> a
     java.lang.Object get(java.lang.Object) -> a
-com.nineoldandroids.animation.PreHoneycombCompat$2 -> com.f.a.y:
+com.nineoldandroids.animation.PreHoneycombCompat$2 -> com.e.a.y:
     void <init>(java.lang.String) -> <init>
     void setValue(android.view.View,float) -> a
     java.lang.Float get(android.view.View) -> a
     void setValue(java.lang.Object,float) -> a
     java.lang.Object get(java.lang.Object) -> a
-com.nineoldandroids.animation.PreHoneycombCompat$3 -> com.f.a.z:
+com.nineoldandroids.animation.PreHoneycombCompat$3 -> com.e.a.z:
     void <init>(java.lang.String) -> <init>
     void setValue(android.view.View,float) -> a
     java.lang.Float get(android.view.View) -> a
     void setValue(java.lang.Object,float) -> a
     java.lang.Object get(java.lang.Object) -> a
-com.nineoldandroids.animation.PreHoneycombCompat$4 -> com.f.a.aa:
+com.nineoldandroids.animation.PreHoneycombCompat$4 -> com.e.a.aa:
     void <init>(java.lang.String) -> <init>
     void setValue(android.view.View,float) -> a
     java.lang.Float get(android.view.View) -> a
     void setValue(java.lang.Object,float) -> a
     java.lang.Object get(java.lang.Object) -> a
-com.nineoldandroids.animation.PreHoneycombCompat$5 -> com.f.a.ab:
+com.nineoldandroids.animation.PreHoneycombCompat$5 -> com.e.a.ab:
     void <init>(java.lang.String) -> <init>
     void setValue(android.view.View,float) -> a
     java.lang.Float get(android.view.View) -> a
     void setValue(java.lang.Object,float) -> a
     java.lang.Object get(java.lang.Object) -> a
-com.nineoldandroids.animation.PreHoneycombCompat$6 -> com.f.a.ac:
+com.nineoldandroids.animation.PreHoneycombCompat$6 -> com.e.a.ac:
     void <init>(java.lang.String) -> <init>
     void setValue(android.view.View,float) -> a
     java.lang.Float get(android.view.View) -> a
     void setValue(java.lang.Object,float) -> a
     java.lang.Object get(java.lang.Object) -> a
-com.nineoldandroids.animation.PreHoneycombCompat$7 -> com.f.a.ad:
+com.nineoldandroids.animation.PreHoneycombCompat$7 -> com.e.a.ad:
     void <init>(java.lang.String) -> <init>
     void setValue(android.view.View,float) -> a
     java.lang.Float get(android.view.View) -> a
     void setValue(java.lang.Object,float) -> a
     java.lang.Object get(java.lang.Object) -> a
-com.nineoldandroids.animation.PreHoneycombCompat$8 -> com.f.a.ae:
+com.nineoldandroids.animation.PreHoneycombCompat$8 -> com.e.a.ae:
     void <init>(java.lang.String) -> <init>
     void setValue(android.view.View,float) -> a
     java.lang.Float get(android.view.View) -> a
     void setValue(java.lang.Object,float) -> a
     java.lang.Object get(java.lang.Object) -> a
-com.nineoldandroids.animation.PreHoneycombCompat$9 -> com.f.a.af:
+com.nineoldandroids.animation.PreHoneycombCompat$9 -> com.e.a.af:
     void <init>(java.lang.String) -> <init>
     void setValue(android.view.View,float) -> a
     java.lang.Float get(android.view.View) -> a
     void setValue(java.lang.Object,float) -> a
     java.lang.Object get(java.lang.Object) -> a
-com.nineoldandroids.animation.PropertyValuesHolder -> com.f.a.ag:
+com.nineoldandroids.animation.PropertyValuesHolder -> com.e.a.ag:
     java.lang.String mPropertyName -> a
     com.nineoldandroids.util.Property mProperty -> b
     java.lang.reflect.Method mSetter -> c
@@ -45932,8 +45878,8 @@ com.nineoldandroids.animation.PropertyValuesHolder -> com.f.a.ag:
     void <init>(java.lang.String,com.nineoldandroids.animation.PropertyValuesHolder$1) -> <init>
     void <init>(com.nineoldandroids.util.Property,com.nineoldandroids.animation.PropertyValuesHolder$1) -> <init>
     void <clinit>() -> <clinit>
-com.nineoldandroids.animation.PropertyValuesHolder$1 -> com.f.a.ah:
-com.nineoldandroids.animation.PropertyValuesHolder$FloatPropertyValuesHolder -> com.f.a.ai:
+com.nineoldandroids.animation.PropertyValuesHolder$1 -> com.e.a.ah:
+com.nineoldandroids.animation.PropertyValuesHolder$FloatPropertyValuesHolder -> com.e.a.ai:
     com.nineoldandroids.util.FloatProperty mFloatProperty -> j
     com.nineoldandroids.animation.FloatKeyframeSet mFloatKeyframeSet -> h
     float mFloatAnimatedValue -> i
@@ -45947,9 +45893,9 @@ com.nineoldandroids.animation.PropertyValuesHolder$FloatPropertyValuesHolder -> 
     void setupSetter(java.lang.Class) -> a
     com.nineoldandroids.animation.PropertyValuesHolder clone() -> a
     java.lang.Object clone() -> clone
-com.nineoldandroids.animation.TypeEvaluator -> com.f.a.aj:
+com.nineoldandroids.animation.TypeEvaluator -> com.e.a.aj:
     java.lang.Object evaluate(float,java.lang.Object,java.lang.Object) -> a
-com.nineoldandroids.animation.ValueAnimator -> com.f.a.ak:
+com.nineoldandroids.animation.ValueAnimator -> com.e.a.ak:
     long mStartTime -> b
     long mSeekTime -> c
     java.lang.ThreadLocal sAnimationHandler -> h
@@ -46018,49 +45964,49 @@ com.nineoldandroids.animation.ValueAnimator -> com.f.a.ak:
     void access$900(com.nineoldandroids.animation.ValueAnimator) -> c
     long access$1000() -> r
     void <clinit>() -> <clinit>
-com.nineoldandroids.animation.ValueAnimator$1 -> com.f.a.al:
+com.nineoldandroids.animation.ValueAnimator$1 -> com.e.a.al:
     void <init>() -> <init>
     java.util.ArrayList initialValue() -> a
     java.lang.Object initialValue() -> initialValue
-com.nineoldandroids.animation.ValueAnimator$2 -> com.f.a.am:
+com.nineoldandroids.animation.ValueAnimator$2 -> com.e.a.am:
     void <init>() -> <init>
     java.util.ArrayList initialValue() -> a
     java.lang.Object initialValue() -> initialValue
-com.nineoldandroids.animation.ValueAnimator$3 -> com.f.a.an:
+com.nineoldandroids.animation.ValueAnimator$3 -> com.e.a.an:
     void <init>() -> <init>
     java.util.ArrayList initialValue() -> a
     java.lang.Object initialValue() -> initialValue
-com.nineoldandroids.animation.ValueAnimator$4 -> com.f.a.ao:
+com.nineoldandroids.animation.ValueAnimator$4 -> com.e.a.ao:
     void <init>() -> <init>
     java.util.ArrayList initialValue() -> a
     java.lang.Object initialValue() -> initialValue
-com.nineoldandroids.animation.ValueAnimator$5 -> com.f.a.ap:
+com.nineoldandroids.animation.ValueAnimator$5 -> com.e.a.ap:
     void <init>() -> <init>
     java.util.ArrayList initialValue() -> a
     java.lang.Object initialValue() -> initialValue
-com.nineoldandroids.animation.ValueAnimator$AnimationHandler -> com.f.a.aq:
+com.nineoldandroids.animation.ValueAnimator$AnimationHandler -> com.e.a.aq:
     void <init>() -> <init>
     void handleMessage(android.os.Message) -> handleMessage
     void <init>(com.nineoldandroids.animation.ValueAnimator$1) -> <init>
-com.nineoldandroids.animation.ValueAnimator$AnimatorUpdateListener -> com.f.a.ar:
+com.nineoldandroids.animation.ValueAnimator$AnimatorUpdateListener -> com.e.a.ar:
     void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> a
-com.nineoldandroids.util.FloatProperty -> com.f.b.a:
+com.nineoldandroids.util.FloatProperty -> com.e.b.a:
     void <init>(java.lang.String) -> <init>
     void setValue(java.lang.Object,float) -> a
     void set(java.lang.Object,java.lang.Float) -> a
     void set(java.lang.Object,java.lang.Object) -> a
-com.nineoldandroids.util.IntProperty -> com.f.b.b:
+com.nineoldandroids.util.IntProperty -> com.e.b.b:
     void <init>(java.lang.String) -> <init>
     void set(java.lang.Object,java.lang.Integer) -> a
     void set(java.lang.Object,java.lang.Object) -> a
-com.nineoldandroids.util.Property -> com.f.b.c:
+com.nineoldandroids.util.Property -> com.e.b.c:
     java.lang.String mName -> a
     java.lang.Class mType -> b
     void <init>(java.lang.Class,java.lang.String) -> <init>
     void set(java.lang.Object,java.lang.Object) -> a
     java.lang.Object get(java.lang.Object) -> a
     java.lang.String getName() -> a
-com.nineoldandroids.view.ViewHelper -> com.f.c.a:
+com.nineoldandroids.view.ViewHelper -> com.e.c.a:
     void setAlpha(android.view.View,float) -> a
     void setPivotX(android.view.View,float) -> b
     void setPivotY(android.view.View,float) -> c
@@ -46071,7 +46017,7 @@ com.nineoldandroids.view.ViewHelper -> com.f.c.a:
     void setScaleY(android.view.View,float) -> h
     void setTranslationX(android.view.View,float) -> i
     void setTranslationY(android.view.View,float) -> j
-com.nineoldandroids.view.ViewHelper$Honeycomb -> com.f.c.b:
+com.nineoldandroids.view.ViewHelper$Honeycomb -> com.e.c.b:
     void setAlpha(android.view.View,float) -> a
     void setPivotX(android.view.View,float) -> b
     void setPivotY(android.view.View,float) -> c
@@ -46082,7 +46028,7 @@ com.nineoldandroids.view.ViewHelper$Honeycomb -> com.f.c.b:
     void setScaleY(android.view.View,float) -> h
     void setTranslationX(android.view.View,float) -> i
     void setTranslationY(android.view.View,float) -> j
-com.nineoldandroids.view.animation.AnimatorProxy -> com.f.c.a.a:
+com.nineoldandroids.view.animation.AnimatorProxy -> com.e.c.a.a:
     boolean NEEDS_PROXY -> a
     java.util.WeakHashMap PROXIES -> b
     java.lang.ref.WeakReference mView -> c
@@ -46493,9 +46439,9 @@ com.nononsenseapps.filepicker.R$string -> com.nononsenseapps.filepicker.aa:
     int new_folder -> new_folder
     int select_something_first -> select_something_first
     int status_bar_notification_info_overflow -> status_bar_notification_info_overflow
-com.path.android.jobqueue.AsyncAddCallback -> com.g.a.a.a:
+com.path.android.jobqueue.AsyncAddCallback -> com.f.a.a.a:
     void onAdded(long) -> a
-com.path.android.jobqueue.BaseJob -> com.g.a.a.b:
+com.path.android.jobqueue.BaseJob -> com.f.a.a.b:
     boolean requiresNetwork -> a
     java.lang.String groupId -> b
     boolean persistent -> c
@@ -46510,20 +46456,20 @@ com.path.android.jobqueue.BaseJob -> com.g.a.a.b:
     boolean requiresNetwork() -> e
     java.lang.String getRunGroupId() -> f
     int getRetryLimit() -> g
-com.path.android.jobqueue.CopyOnWriteGroupSet -> com.g.a.a.c:
+com.path.android.jobqueue.CopyOnWriteGroupSet -> com.f.a.a.c:
     java.util.ArrayList publicClone -> a
     java.util.TreeSet internalSet -> b
     void <init>() -> <init>
     java.util.Collection getSafe() -> a
     void add(java.lang.String) -> a
     void remove(java.lang.String) -> b
-com.path.android.jobqueue.Job -> com.g.a.a.d:
+com.path.android.jobqueue.Job -> com.f.a.a.d:
     int priority -> a
     long delayInMs -> b
     void <init>(com.path.android.jobqueue.Params) -> <init>
     int getPriority() -> h
     long getDelayInMs() -> i
-com.path.android.jobqueue.JobHolder -> com.g.a.a.e:
+com.path.android.jobqueue.JobHolder -> com.f.a.a.e:
     java.lang.Long id -> a
     int priority -> b
     java.lang.String groupId -> c
@@ -46550,7 +46496,7 @@ com.path.android.jobqueue.JobHolder -> com.g.a.a.e:
     java.lang.String getGroupId() -> i
     int hashCode() -> hashCode
     boolean equals(java.lang.Object) -> equals
-com.path.android.jobqueue.JobManager -> com.g.a.a.f:
+com.path.android.jobqueue.JobManager -> com.f.a.a.f:
     long sessionId -> a
     boolean running -> b
     android.content.Context appContext -> c
@@ -46597,11 +46543,11 @@ com.path.android.jobqueue.JobManager -> com.g.a.a.f:
     java.lang.Object access$700(com.path.android.jobqueue.JobManager) -> e
     boolean access$800(com.path.android.jobqueue.JobManager) -> f
     int access$900(com.path.android.jobqueue.JobManager,boolean) -> a
-com.path.android.jobqueue.JobManager$1 -> com.g.a.a.g:
+com.path.android.jobqueue.JobManager$1 -> com.f.a.a.g:
     com.path.android.jobqueue.JobManager this$0 -> a
     void <init>(com.path.android.jobqueue.JobManager) -> <init>
     void run() -> run
-com.path.android.jobqueue.JobManager$2 -> com.g.a.a.h:
+com.path.android.jobqueue.JobManager$2 -> com.f.a.a.h:
     com.path.android.jobqueue.JobManager this$0 -> a
     void <init>(com.path.android.jobqueue.JobManager) -> <init>
     boolean isRunning() -> a
@@ -46609,7 +46555,7 @@ com.path.android.jobqueue.JobManager$2 -> com.g.a.a.h:
     void removeJob(com.path.android.jobqueue.JobHolder) -> b
     com.path.android.jobqueue.JobHolder getNextJob(int,java.util.concurrent.TimeUnit) -> a
     int countRemainingReadyJobs() -> b
-com.path.android.jobqueue.JobManager$4 -> com.g.a.a.i:
+com.path.android.jobqueue.JobManager$4 -> com.f.a.a.i:
     long val$callTime -> a
     int val$priority -> b
     long val$delay -> c
@@ -46618,12 +46564,12 @@ com.path.android.jobqueue.JobManager$4 -> com.g.a.a.i:
     com.path.android.jobqueue.JobManager this$0 -> f
     void <init>(com.path.android.jobqueue.JobManager,long,int,long,com.path.android.jobqueue.BaseJob,com.path.android.jobqueue.AsyncAddCallback) -> <init>
     void run() -> run
-com.path.android.jobqueue.JobManager$DefaultQueueFactory -> com.g.a.a.j:
+com.path.android.jobqueue.JobManager$DefaultQueueFactory -> com.f.a.a.j:
     com.path.android.jobqueue.persistentQueue.sqlite.SqliteJobQueue$JobSerializer jobSerializer -> a
     void <init>() -> <init>
     com.path.android.jobqueue.JobQueue createPersistentQueue(android.content.Context,java.lang.Long,java.lang.String) -> a
     com.path.android.jobqueue.JobQueue createNonPersistent(android.content.Context,java.lang.Long,java.lang.String) -> b
-com.path.android.jobqueue.JobQueue -> com.g.a.a.k:
+com.path.android.jobqueue.JobQueue -> com.f.a.a.k:
     long insert(com.path.android.jobqueue.JobHolder) -> a
     long insertOrReplace(com.path.android.jobqueue.JobHolder) -> b
     void remove(com.path.android.jobqueue.JobHolder) -> c
@@ -46631,7 +46577,7 @@ com.path.android.jobqueue.JobQueue -> com.g.a.a.k:
     int countReadyJobs(boolean,java.util.Collection) -> a
     com.path.android.jobqueue.JobHolder nextJobAndIncRunCount(boolean,java.util.Collection) -> b
     java.lang.Long getNextJobDelayUntilNs(boolean) -> a
-com.path.android.jobqueue.Params -> com.g.a.a.l:
+com.path.android.jobqueue.Params -> com.f.a.a.l:
     boolean requiresNetwork -> a
     java.lang.String groupId -> b
     boolean persistent -> c
@@ -46645,10 +46591,10 @@ com.path.android.jobqueue.Params -> com.g.a.a.l:
     boolean isPersistent() -> e
     int getPriority() -> f
     long getDelayMs() -> g
-com.path.android.jobqueue.QueueFactory -> com.g.a.a.m:
+com.path.android.jobqueue.QueueFactory -> com.f.a.a.m:
     com.path.android.jobqueue.JobQueue createPersistentQueue(android.content.Context,java.lang.Long,java.lang.String) -> a
     com.path.android.jobqueue.JobQueue createNonPersistent(android.content.Context,java.lang.Long,java.lang.String) -> b
-com.path.android.jobqueue.cachedQueue.CachedJobQueue -> com.g.a.a.a.a:
+com.path.android.jobqueue.cachedQueue.CachedJobQueue -> com.f.a.a.a.a:
     com.path.android.jobqueue.JobQueue delegate -> a
     com.path.android.jobqueue.cachedQueue.CachedJobQueue$Cache cache -> b
     void <init>(com.path.android.jobqueue.JobQueue) -> <init>
@@ -46659,14 +46605,14 @@ com.path.android.jobqueue.cachedQueue.CachedJobQueue -> com.g.a.a.a.a:
     int countReadyJobs(boolean,java.util.Collection) -> a
     com.path.android.jobqueue.JobHolder nextJobAndIncRunCount(boolean,java.util.Collection) -> b
     java.lang.Long getNextJobDelayUntilNs(boolean) -> a
-com.path.android.jobqueue.cachedQueue.CachedJobQueue$1 -> com.g.a.a.a.b:
-com.path.android.jobqueue.cachedQueue.CachedJobQueue$Cache -> com.g.a.a.a.c:
+com.path.android.jobqueue.cachedQueue.CachedJobQueue$1 -> com.f.a.a.a.b:
+com.path.android.jobqueue.cachedQueue.CachedJobQueue$Cache -> com.f.a.a.a.c:
     java.lang.Integer count -> a
     com.path.android.jobqueue.cachedQueue.CachedJobQueue$Cache$DelayUntil delayUntil -> b
     void <init>() -> <init>
     void invalidateAll() -> a
     void <init>(com.path.android.jobqueue.cachedQueue.CachedJobQueue$1) -> <init>
-com.path.android.jobqueue.cachedQueue.CachedJobQueue$Cache$DelayUntil -> com.g.a.a.a.d:
+com.path.android.jobqueue.cachedQueue.CachedJobQueue$Cache$DelayUntil -> com.f.a.a.a.d:
     java.lang.Long value -> a
     boolean hasNetwork -> b
     void <init>(boolean,java.lang.Long) -> <init>
@@ -46674,7 +46620,7 @@ com.path.android.jobqueue.cachedQueue.CachedJobQueue$Cache$DelayUntil -> com.g.a
     void set(boolean,java.lang.Long) -> a
     void <init>(boolean,java.lang.Long,com.path.android.jobqueue.cachedQueue.CachedJobQueue$1) -> <init>
     boolean access$200(com.path.android.jobqueue.cachedQueue.CachedJobQueue$Cache$DelayUntil,boolean) -> a
-com.path.android.jobqueue.config.Configuration -> com.g.a.a.b.a:
+com.path.android.jobqueue.config.Configuration -> com.f.a.a.b.a:
     java.lang.String id -> a
     int maxConsumerCount -> b
     int minConsumerCount -> c
@@ -46700,16 +46646,16 @@ com.path.android.jobqueue.config.Configuration -> com.g.a.a.b.a:
     com.path.android.jobqueue.QueueFactory access$302(com.path.android.jobqueue.config.Configuration,com.path.android.jobqueue.QueueFactory) -> a
     com.path.android.jobqueue.network.NetworkUtil access$402(com.path.android.jobqueue.config.Configuration,com.path.android.jobqueue.network.NetworkUtil) -> a
     com.path.android.jobqueue.network.NetworkUtil access$400(com.path.android.jobqueue.config.Configuration) -> b
-com.path.android.jobqueue.config.Configuration$1 -> com.g.a.a.b.b:
-com.path.android.jobqueue.config.Configuration$Builder -> com.g.a.a.b.c:
+com.path.android.jobqueue.config.Configuration$1 -> com.f.a.a.b.b:
+com.path.android.jobqueue.config.Configuration$Builder -> com.f.a.a.b.c:
     com.path.android.jobqueue.config.Configuration configuration -> a
     android.content.Context appContext -> b
     void <init>(android.content.Context) -> <init>
     com.path.android.jobqueue.config.Configuration$Builder id(java.lang.String) -> a
     com.path.android.jobqueue.config.Configuration build() -> a
-com.path.android.jobqueue.di.DependencyInjector -> com.g.a.a.c.a:
+com.path.android.jobqueue.di.DependencyInjector -> com.f.a.a.c.a:
     void inject(com.path.android.jobqueue.BaseJob) -> a
-com.path.android.jobqueue.executor.JobConsumerExecutor -> com.g.a.a.d.a:
+com.path.android.jobqueue.executor.JobConsumerExecutor -> com.f.a.a.d.a:
     int maxConsumerSize -> a
     int minConsumerSize -> b
     int loadFactor -> c
@@ -46733,24 +46679,24 @@ com.path.android.jobqueue.executor.JobConsumerExecutor -> com.g.a.a.d.a:
     void access$100(com.path.android.jobqueue.executor.JobConsumerExecutor,com.path.android.jobqueue.JobHolder) -> a
     void access$200(com.path.android.jobqueue.executor.JobConsumerExecutor,com.path.android.jobqueue.JobHolder) -> b
     boolean access$300(com.path.android.jobqueue.executor.JobConsumerExecutor) -> b
-com.path.android.jobqueue.executor.JobConsumerExecutor$Contract -> com.g.a.a.d.b:
+com.path.android.jobqueue.executor.JobConsumerExecutor$Contract -> com.f.a.a.d.b:
     boolean isRunning() -> a
     void insertOrReplace(com.path.android.jobqueue.JobHolder) -> a
     void removeJob(com.path.android.jobqueue.JobHolder) -> b
     com.path.android.jobqueue.JobHolder getNextJob(int,java.util.concurrent.TimeUnit) -> a
     int countRemainingReadyJobs() -> b
-com.path.android.jobqueue.executor.JobConsumerExecutor$JobConsumer -> com.g.a.a.d.c:
+com.path.android.jobqueue.executor.JobConsumerExecutor$JobConsumer -> com.f.a.a.d.c:
     com.path.android.jobqueue.executor.JobConsumerExecutor$Contract contract -> a
     com.path.android.jobqueue.executor.JobConsumerExecutor executor -> b
     boolean didRunOnce -> c
     void <init>(com.path.android.jobqueue.executor.JobConsumerExecutor$Contract,com.path.android.jobqueue.executor.JobConsumerExecutor) -> <init>
     void run() -> run
-com.path.android.jobqueue.log.CustomLogger -> com.g.a.a.e.a:
+com.path.android.jobqueue.log.CustomLogger -> com.f.a.a.e.a:
     boolean isDebugEnabled() -> a
     void d(java.lang.String,java.lang.Object[]) -> a
     void e(java.lang.Throwable,java.lang.String,java.lang.Object[]) -> a
     void e(java.lang.String,java.lang.Object[]) -> b
-com.path.android.jobqueue.log.JqLog -> com.g.a.a.e.b:
+com.path.android.jobqueue.log.JqLog -> com.f.a.a.e.b:
     com.path.android.jobqueue.log.CustomLogger customLogger -> a
     void setCustomLogger(com.path.android.jobqueue.log.CustomLogger) -> a
     boolean isDebugEnabled() -> a
@@ -46758,47 +46704,47 @@ com.path.android.jobqueue.log.JqLog -> com.g.a.a.e.b:
     void e(java.lang.Throwable,java.lang.String,java.lang.Object[]) -> a
     void e(java.lang.String,java.lang.Object[]) -> b
     void <clinit>() -> <clinit>
-com.path.android.jobqueue.log.JqLog$1 -> com.g.a.a.e.c:
+com.path.android.jobqueue.log.JqLog$1 -> com.f.a.a.e.c:
     void <init>() -> <init>
     boolean isDebugEnabled() -> a
     void d(java.lang.String,java.lang.Object[]) -> a
     void e(java.lang.Throwable,java.lang.String,java.lang.Object[]) -> a
     void e(java.lang.String,java.lang.Object[]) -> b
-com.path.android.jobqueue.network.NetworkEventProvider -> com.g.a.a.f.a:
+com.path.android.jobqueue.network.NetworkEventProvider -> com.f.a.a.f.a:
     void setListener(com.path.android.jobqueue.network.NetworkEventProvider$Listener) -> a
-com.path.android.jobqueue.network.NetworkEventProvider$Listener -> com.g.a.a.f.b:
+com.path.android.jobqueue.network.NetworkEventProvider$Listener -> com.f.a.a.f.b:
     void onNetworkChange(boolean) -> a
-com.path.android.jobqueue.network.NetworkUtil -> com.g.a.a.f.c:
+com.path.android.jobqueue.network.NetworkUtil -> com.f.a.a.f.c:
     boolean isConnected(android.content.Context) -> a
-com.path.android.jobqueue.network.NetworkUtilImpl -> com.g.a.a.f.d:
+com.path.android.jobqueue.network.NetworkUtilImpl -> com.f.a.a.f.d:
     com.path.android.jobqueue.network.NetworkEventProvider$Listener listener -> a
     void <init>(android.content.Context) -> <init>
     boolean isConnected(android.content.Context) -> a
     void setListener(com.path.android.jobqueue.network.NetworkEventProvider$Listener) -> a
     com.path.android.jobqueue.network.NetworkEventProvider$Listener access$000(com.path.android.jobqueue.network.NetworkUtilImpl) -> a
-com.path.android.jobqueue.network.NetworkUtilImpl$1 -> com.g.a.a.f.e:
+com.path.android.jobqueue.network.NetworkUtilImpl$1 -> com.f.a.a.f.e:
     com.path.android.jobqueue.network.NetworkUtilImpl this$0 -> a
     void <init>(com.path.android.jobqueue.network.NetworkUtilImpl) -> <init>
     void onReceive(android.content.Context,android.content.Intent) -> onReceive
-com.path.android.jobqueue.nonPersistentQueue.ConsistentTimedComparator -> com.g.a.a.g.a:
+com.path.android.jobqueue.nonPersistentQueue.ConsistentTimedComparator -> com.f.a.a.g.a:
     java.util.Comparator baseComparator -> a
     void <init>(java.util.Comparator) -> <init>
     int compare(com.path.android.jobqueue.JobHolder,com.path.android.jobqueue.JobHolder) -> a
     int compare(java.lang.Object,java.lang.Object) -> compare
-com.path.android.jobqueue.nonPersistentQueue.CountWithGroupIdsResult -> com.g.a.a.g.b:
+com.path.android.jobqueue.nonPersistentQueue.CountWithGroupIdsResult -> com.f.a.a.g.b:
     int count -> a
     java.util.Set groupIds -> b
     void <init>(int,java.util.Set) -> <init>
     int getCount() -> a
     com.path.android.jobqueue.nonPersistentQueue.CountWithGroupIdsResult mergeWith(com.path.android.jobqueue.nonPersistentQueue.CountWithGroupIdsResult) -> a
-com.path.android.jobqueue.nonPersistentQueue.JobSet -> com.g.a.a.g.c:
+com.path.android.jobqueue.nonPersistentQueue.JobSet -> com.f.a.a.g.c:
     com.path.android.jobqueue.JobHolder peek(java.util.Collection) -> a
     boolean offer(com.path.android.jobqueue.JobHolder) -> a
     boolean remove(com.path.android.jobqueue.JobHolder) -> b
     int size() -> a
     com.path.android.jobqueue.nonPersistentQueue.CountWithGroupIdsResult countReadyJobs(long,java.util.Collection) -> a
     com.path.android.jobqueue.nonPersistentQueue.CountWithGroupIdsResult countReadyJobs(java.util.Collection) -> b
-com.path.android.jobqueue.nonPersistentQueue.MergedQueue -> com.g.a.a.g.d:
+com.path.android.jobqueue.nonPersistentQueue.MergedQueue -> com.f.a.a.g.d:
     com.path.android.jobqueue.nonPersistentQueue.JobSet queue0 -> a
     com.path.android.jobqueue.nonPersistentQueue.JobSet queue1 -> b
     java.util.Comparator comparator -> c
@@ -46813,7 +46759,7 @@ com.path.android.jobqueue.nonPersistentQueue.MergedQueue -> com.g.a.a.g.d:
     com.path.android.jobqueue.nonPersistentQueue.JobSet createQueue(com.path.android.jobqueue.nonPersistentQueue.MergedQueue$SetId,int,java.util.Comparator) -> a
     com.path.android.jobqueue.nonPersistentQueue.CountWithGroupIdsResult countReadyJobs(com.path.android.jobqueue.nonPersistentQueue.MergedQueue$SetId,long,java.util.Collection) -> a
     com.path.android.jobqueue.nonPersistentQueue.CountWithGroupIdsResult countReadyJobs(com.path.android.jobqueue.nonPersistentQueue.MergedQueue$SetId,java.util.Collection) -> b
-com.path.android.jobqueue.nonPersistentQueue.MergedQueue$SetId -> com.g.a.a.g.e:
+com.path.android.jobqueue.nonPersistentQueue.MergedQueue$SetId -> com.f.a.a.g.e:
     com.path.android.jobqueue.nonPersistentQueue.MergedQueue$SetId S0 -> a
     com.path.android.jobqueue.nonPersistentQueue.MergedQueue$SetId S1 -> b
     com.path.android.jobqueue.nonPersistentQueue.MergedQueue$SetId[] $VALUES -> c
@@ -46821,7 +46767,7 @@ com.path.android.jobqueue.nonPersistentQueue.MergedQueue$SetId -> com.g.a.a.g.e:
     com.path.android.jobqueue.nonPersistentQueue.MergedQueue$SetId valueOf(java.lang.String) -> valueOf
     void <init>(java.lang.String,int) -> <init>
     void <clinit>() -> <clinit>
-com.path.android.jobqueue.nonPersistentQueue.NetworkAwarePriorityQueue -> com.g.a.a.g.f:
+com.path.android.jobqueue.nonPersistentQueue.NetworkAwarePriorityQueue -> com.f.a.a.g.f:
     void <init>(int,java.util.Comparator) -> <init>
     com.path.android.jobqueue.JobHolder peek(boolean,java.util.Collection) -> a
     com.path.android.jobqueue.nonPersistentQueue.MergedQueue$SetId decideQueue(com.path.android.jobqueue.JobHolder) -> c
@@ -46829,7 +46775,7 @@ com.path.android.jobqueue.nonPersistentQueue.NetworkAwarePriorityQueue -> com.g.
     com.path.android.jobqueue.nonPersistentQueue.CountWithGroupIdsResult countReadyJobs(boolean,java.util.Collection) -> b
     com.path.android.jobqueue.nonPersistentQueue.CountWithGroupIdsResult countReadyJobs(long,java.util.Collection) -> a
     com.path.android.jobqueue.nonPersistentQueue.CountWithGroupIdsResult countReadyJobs(java.util.Collection) -> b
-com.path.android.jobqueue.nonPersistentQueue.NonPersistentJobSet -> com.g.a.a.g.g:
+com.path.android.jobqueue.nonPersistentQueue.NonPersistentJobSet -> com.f.a.a.g.g:
     java.util.TreeSet set -> a
     java.util.Map existingGroups -> b
     java.util.Map idCache -> c
@@ -46843,7 +46789,7 @@ com.path.android.jobqueue.nonPersistentQueue.NonPersistentJobSet -> com.g.a.a.g.
     int size() -> a
     com.path.android.jobqueue.nonPersistentQueue.CountWithGroupIdsResult countReadyJobs(long,java.util.Collection) -> a
     com.path.android.jobqueue.nonPersistentQueue.CountWithGroupIdsResult countReadyJobs(java.util.Collection) -> b
-com.path.android.jobqueue.nonPersistentQueue.NonPersistentPriorityQueue -> com.g.a.a.g.h:
+com.path.android.jobqueue.nonPersistentQueue.NonPersistentPriorityQueue -> com.f.a.a.g.h:
     long nonPersistentJobIdGenerator -> b
     com.path.android.jobqueue.nonPersistentQueue.NetworkAwarePriorityQueue jobs -> c
     java.lang.String id -> d
@@ -46861,23 +46807,23 @@ com.path.android.jobqueue.nonPersistentQueue.NonPersistentPriorityQueue -> com.g
     int compareLong(long,long) -> b
     int access$000(int,int) -> a
     int access$100(long,long) -> a
-com.path.android.jobqueue.nonPersistentQueue.NonPersistentPriorityQueue$1 -> com.g.a.a.g.i:
+com.path.android.jobqueue.nonPersistentQueue.NonPersistentPriorityQueue$1 -> com.f.a.a.g.i:
     com.path.android.jobqueue.nonPersistentQueue.NonPersistentPriorityQueue this$0 -> a
     void <init>(com.path.android.jobqueue.nonPersistentQueue.NonPersistentPriorityQueue) -> <init>
     int compare(com.path.android.jobqueue.JobHolder,com.path.android.jobqueue.JobHolder) -> a
     int compare(java.lang.Object,java.lang.Object) -> compare
-com.path.android.jobqueue.nonPersistentQueue.TimeAwareComparator -> com.g.a.a.g.j:
+com.path.android.jobqueue.nonPersistentQueue.TimeAwareComparator -> com.f.a.a.g.j:
     java.util.Comparator baseComparator -> a
     void <init>(java.util.Comparator) -> <init>
     int compare(com.path.android.jobqueue.JobHolder,com.path.android.jobqueue.JobHolder) -> a
     int compare(java.lang.Object,java.lang.Object) -> compare
-com.path.android.jobqueue.nonPersistentQueue.TimeAwarePriorityQueue -> com.g.a.a.g.k:
+com.path.android.jobqueue.nonPersistentQueue.TimeAwarePriorityQueue -> com.f.a.a.g.k:
     void <init>(int,java.util.Comparator) -> <init>
     com.path.android.jobqueue.nonPersistentQueue.MergedQueue$SetId decideQueue(com.path.android.jobqueue.JobHolder) -> c
     com.path.android.jobqueue.nonPersistentQueue.JobSet createQueue(com.path.android.jobqueue.nonPersistentQueue.MergedQueue$SetId,int,java.util.Comparator) -> a
     com.path.android.jobqueue.nonPersistentQueue.CountWithGroupIdsResult countReadyJobs(long,java.util.Collection) -> a
     com.path.android.jobqueue.nonPersistentQueue.CountWithGroupIdsResult countReadyJobs(java.util.Collection) -> b
-com.path.android.jobqueue.persistentQueue.sqlite.DbOpenHelper -> com.g.a.a.h.a.a:
+com.path.android.jobqueue.persistentQueue.sqlite.DbOpenHelper -> com.f.a.a.h.a.a:
     com.path.android.jobqueue.persistentQueue.sqlite.SqlHelper$Property ID_COLUMN -> a
     com.path.android.jobqueue.persistentQueue.sqlite.SqlHelper$Property PRIORITY_COLUMN -> b
     com.path.android.jobqueue.persistentQueue.sqlite.SqlHelper$Property GROUP_ID_COLUMN -> c
@@ -46891,14 +46837,14 @@ com.path.android.jobqueue.persistentQueue.sqlite.DbOpenHelper -> com.g.a.a.h.a.a
     void onCreate(android.database.sqlite.SQLiteDatabase) -> onCreate
     void onUpgrade(android.database.sqlite.SQLiteDatabase,int,int) -> onUpgrade
     void <clinit>() -> <clinit>
-com.path.android.jobqueue.persistentQueue.sqlite.QueryCache -> com.g.a.a.h.a.b:
+com.path.android.jobqueue.persistentQueue.sqlite.QueryCache -> com.f.a.a.h.a.b:
     java.lang.StringBuilder reusedBuilder -> a
     java.util.Map cache -> b
     void <init>() -> <init>
     java.lang.String get(boolean,java.util.Collection) -> a
     void set(java.lang.String,boolean,java.util.Collection) -> a
     java.lang.String cacheKey(boolean,java.util.Collection) -> b
-com.path.android.jobqueue.persistentQueue.sqlite.SqlHelper -> com.g.a.a.h.a.c:
+com.path.android.jobqueue.persistentQueue.sqlite.SqlHelper -> com.f.a.a.h.a.c:
     java.lang.String FIND_BY_ID_QUERY -> a
     android.database.sqlite.SQLiteStatement insertStatement -> g
     android.database.sqlite.SQLiteStatement insertOrReplaceStatement -> h
@@ -46924,11 +46870,11 @@ com.path.android.jobqueue.persistentQueue.sqlite.SqlHelper -> com.g.a.a.h.a.c:
     android.database.sqlite.SQLiteStatement getNextJobDelayedUntilWithoutNetworkStatement() -> g
     java.lang.String createSelect(java.lang.String,java.lang.Integer,com.path.android.jobqueue.persistentQueue.sqlite.SqlHelper$Order[]) -> a
     void resetDelayTimesTo(long) -> a
-com.path.android.jobqueue.persistentQueue.sqlite.SqlHelper$Order -> com.g.a.a.h.a.d:
+com.path.android.jobqueue.persistentQueue.sqlite.SqlHelper$Order -> com.f.a.a.h.a.d:
     com.path.android.jobqueue.persistentQueue.sqlite.SqlHelper$Property property -> a
     com.path.android.jobqueue.persistentQueue.sqlite.SqlHelper$Order$Type type -> b
     void <init>(com.path.android.jobqueue.persistentQueue.sqlite.SqlHelper$Property,com.path.android.jobqueue.persistentQueue.sqlite.SqlHelper$Order$Type) -> <init>
-com.path.android.jobqueue.persistentQueue.sqlite.SqlHelper$Order$Type -> com.g.a.a.h.a.e:
+com.path.android.jobqueue.persistentQueue.sqlite.SqlHelper$Order$Type -> com.f.a.a.h.a.e:
     com.path.android.jobqueue.persistentQueue.sqlite.SqlHelper$Order$Type ASC -> a
     com.path.android.jobqueue.persistentQueue.sqlite.SqlHelper$Order$Type DESC -> b
     com.path.android.jobqueue.persistentQueue.sqlite.SqlHelper$Order$Type[] $VALUES -> c
@@ -46936,12 +46882,12 @@ com.path.android.jobqueue.persistentQueue.sqlite.SqlHelper$Order$Type -> com.g.a
     com.path.android.jobqueue.persistentQueue.sqlite.SqlHelper$Order$Type valueOf(java.lang.String) -> valueOf
     void <init>(java.lang.String,int) -> <init>
     void <clinit>() -> <clinit>
-com.path.android.jobqueue.persistentQueue.sqlite.SqlHelper$Property -> com.g.a.a.h.a.f:
+com.path.android.jobqueue.persistentQueue.sqlite.SqlHelper$Property -> com.f.a.a.h.a.f:
     java.lang.String columnName -> a
     java.lang.String type -> b
     int columnIndex -> c
     void <init>(java.lang.String,java.lang.String,int) -> <init>
-com.path.android.jobqueue.persistentQueue.sqlite.SqliteJobQueue -> com.g.a.a.h.a.g:
+com.path.android.jobqueue.persistentQueue.sqlite.SqliteJobQueue -> com.f.a.a.h.a.g:
     com.path.android.jobqueue.persistentQueue.sqlite.DbOpenHelper dbOpenHelper -> a
     long sessionId -> g
     android.database.sqlite.SQLiteDatabase db -> b
@@ -46966,15 +46912,15 @@ com.path.android.jobqueue.persistentQueue.sqlite.SqliteJobQueue -> com.g.a.a.h.a
     com.path.android.jobqueue.BaseJob safeDeserialize(byte[]) -> a
     byte[] getSerializeBaseJob(com.path.android.jobqueue.JobHolder) -> e
     byte[] safeSerialize(java.lang.Object) -> a
-com.path.android.jobqueue.persistentQueue.sqlite.SqliteJobQueue$1 -> com.g.a.a.h.a.h:
-com.path.android.jobqueue.persistentQueue.sqlite.SqliteJobQueue$InvalidBaseJobException -> com.g.a.a.h.a.i:
+com.path.android.jobqueue.persistentQueue.sqlite.SqliteJobQueue$1 -> com.f.a.a.h.a.h:
+com.path.android.jobqueue.persistentQueue.sqlite.SqliteJobQueue$InvalidBaseJobException -> com.f.a.a.h.a.i:
     void <init>() -> <init>
     void <init>(com.path.android.jobqueue.persistentQueue.sqlite.SqliteJobQueue$1) -> <init>
-com.path.android.jobqueue.persistentQueue.sqlite.SqliteJobQueue$JavaSerializer -> com.g.a.a.h.a.j:
+com.path.android.jobqueue.persistentQueue.sqlite.SqliteJobQueue$JavaSerializer -> com.f.a.a.h.a.j:
     void <init>() -> <init>
     byte[] serialize(java.lang.Object) -> a
     com.path.android.jobqueue.BaseJob deserialize(byte[]) -> a
-com.path.android.jobqueue.persistentQueue.sqlite.SqliteJobQueue$JobSerializer -> com.g.a.a.h.a.k:
+com.path.android.jobqueue.persistentQueue.sqlite.SqliteJobQueue$JobSerializer -> com.f.a.a.h.a.k:
     byte[] serialize(java.lang.Object) -> a
     com.path.android.jobqueue.BaseJob deserialize(byte[]) -> a
 com.quinny898.library.persistentsearch.R -> com.quinny898.library.persistentsearch.a:
@@ -47434,9 +47380,6 @@ com.teched.smartread.ClassAdapter -> com.teched.smartread.e:
     com.teched.smartread.ClassAdapter$ViewHolder onCreateViewHolder(android.view.ViewGroup,int) -> c
     void onBindViewHolder(com.teched.smartread.ClassAdapter$ViewHolder,int) -> a
     int getItemCount() -> a
-    int calculateColorBase(java.lang.String) -> a
-    int calculateColor(java.lang.String) -> b
-    java.lang.String firstChar(java.lang.String) -> c
     void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int) -> a
     android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int) -> a
 com.teched.smartread.ClassAdapter$ViewHolder -> com.teched.smartread.f:
@@ -47578,6 +47521,10 @@ com.teched.smartread.MainActivity -> com.teched.smartread.MainActivity:
     org.json.JSONArray currentClassPending -> V
     android.util.DisplayMetrics displaymetrics -> W
     android.nfc.NfcAdapter mAdapter -> X
+    android.support.v4.widget.SwipeRefreshLayout refreshLayout -> Y
+    android.widget.RelativeLayout classes -> Z
+    android.widget.RelativeLayout overview -> aa
+    android.widget.RelativeLayout store -> ab
     void <init>() -> <init>
     void onCreate(android.os.Bundle) -> onCreate
     void onResume() -> onResume
@@ -47628,6 +47575,7 @@ com.teched.smartread.MainActivity -> com.teched.smartread.MainActivity:
     void stopForegroundDispatch(android.app.Activity,android.nfc.NfcAdapter) -> b
     java.lang.String readNFCText(android.nfc.NdefRecord) -> a
     void TagRead(android.nfc.Tag) -> a
+    void showSnackbar(java.lang.String,int) -> a
     void access$000(com.teched.smartread.MainActivity) -> a
     void access$100(com.teched.smartread.MainActivity) -> b
     java.lang.String access$202(com.teched.smartread.MainActivity,java.lang.String) -> a
@@ -47647,49 +47595,54 @@ com.teched.smartread.MainActivity -> com.teched.smartread.MainActivity:
     java.util.ArrayList access$1600(com.teched.smartread.MainActivity) -> n
     android.support.v7.widget.Toolbar access$1700(com.teched.smartread.MainActivity) -> o
     android.support.v7.widget.RecyclerView$Adapter access$1800(com.teched.smartread.MainActivity) -> p
-    boolean access$1900(com.teched.smartread.MainActivity) -> q
-    java.lang.String access$2000(com.teched.smartread.MainActivity) -> r
-    boolean access$2100(com.teched.smartread.MainActivity) -> s
-    java.lang.String access$2002(com.teched.smartread.MainActivity,java.lang.String) -> b
-    android.support.design.widget.CoordinatorLayout access$2200(com.teched.smartread.MainActivity) -> t
-    android.widget.ViewFlipper access$2300(com.teched.smartread.MainActivity) -> u
-    int access$2400(com.teched.smartread.MainActivity) -> v
-    org.json.JSONArray access$2500(com.teched.smartread.MainActivity) -> w
-    com.teched.smartread.Users access$2602(com.teched.smartread.MainActivity,com.teched.smartread.Users) -> a
-    java.util.ArrayList access$2700(com.teched.smartread.MainActivity) -> x
-    int access$2802(com.teched.smartread.MainActivity,int) -> a
-    android.support.v7.widget.RecyclerView$Adapter access$2900(com.teched.smartread.MainActivity) -> y
-    com.teched.smartread.Users access$2600(com.teched.smartread.MainActivity) -> z
-    java.lang.String access$3000(com.teched.smartread.MainActivity) -> A
-    org.json.JSONArray access$3102(com.teched.smartread.MainActivity,org.json.JSONArray) -> a
-    org.json.JSONArray access$3100(com.teched.smartread.MainActivity) -> B
-    int access$2800(com.teched.smartread.MainActivity) -> C
-    com.teched.smartread.Users access$3202(com.teched.smartread.MainActivity,com.teched.smartread.Users) -> b
-    int access$3302(com.teched.smartread.MainActivity,int) -> b
-    com.teched.smartread.Users access$3200(com.teched.smartread.MainActivity) -> D
-    org.json.JSONArray access$2502(com.teched.smartread.MainActivity,org.json.JSONArray) -> b
-    int access$3300(com.teched.smartread.MainActivity) -> E
-    void access$3400(com.teched.smartread.MainActivity,org.json.JSONArray,org.json.JSONArray) -> a
-    java.lang.String access$3002(com.teched.smartread.MainActivity,java.lang.String) -> c
-    java.util.ArrayList access$3500(com.teched.smartread.MainActivity) -> F
-    java.util.ArrayList access$3600(com.teched.smartread.MainActivity) -> G
-    java.util.ArrayList access$3602(com.teched.smartread.MainActivity,java.util.ArrayList) -> a
-    java.lang.String access$200(com.teched.smartread.MainActivity) -> H
-    org.json.JSONObject access$3702(com.teched.smartread.MainActivity,org.json.JSONObject) -> a
-    org.json.JSONObject access$3700(com.teched.smartread.MainActivity) -> I
-    boolean access$3800(com.teched.smartread.MainActivity) -> J
-    java.lang.String access$3902(com.teched.smartread.MainActivity,java.lang.String) -> d
-    java.io.File access$4002(com.teched.smartread.MainActivity,java.io.File) -> a
-    com.sothree.slidinguppanel.SlidingUpPanelLayout access$4100(com.teched.smartread.MainActivity) -> K
-    boolean access$3802(com.teched.smartread.MainActivity,boolean) -> b
-    boolean access$2102(com.teched.smartread.MainActivity,boolean) -> c
-    int access$4208(com.teched.smartread.MainActivity) -> L
-    int access$4200(com.teched.smartread.MainActivity) -> M
-    int access$4202(com.teched.smartread.MainActivity,int) -> c
-    void access$4300(com.teched.smartread.MainActivity) -> N
-    android.support.v7.widget.RecyclerView$Adapter access$4400(com.teched.smartread.MainActivity) -> O
-    java.util.ArrayList access$4500(com.teched.smartread.MainActivity) -> P
-    java.lang.String access$4600(com.teched.smartread.MainActivity,android.nfc.NdefRecord) -> a
+    android.support.v4.widget.SwipeRefreshLayout access$1900(com.teched.smartread.MainActivity) -> q
+    boolean access$2000(com.teched.smartread.MainActivity) -> r
+    java.lang.String access$2100(com.teched.smartread.MainActivity) -> s
+    boolean access$2200(com.teched.smartread.MainActivity) -> t
+    java.lang.String access$2102(com.teched.smartread.MainActivity,java.lang.String) -> b
+    android.support.design.widget.CoordinatorLayout access$2300(com.teched.smartread.MainActivity) -> u
+    android.widget.RelativeLayout access$2400(com.teched.smartread.MainActivity) -> v
+    android.widget.RelativeLayout access$2500(com.teched.smartread.MainActivity) -> w
+    android.widget.RelativeLayout access$2600(com.teched.smartread.MainActivity) -> x
+    android.widget.ViewFlipper access$2700(com.teched.smartread.MainActivity) -> y
+    int access$2800(com.teched.smartread.MainActivity) -> z
+    org.json.JSONArray access$2900(com.teched.smartread.MainActivity) -> A
+    com.teched.smartread.Users access$3002(com.teched.smartread.MainActivity,com.teched.smartread.Users) -> a
+    java.util.ArrayList access$3100(com.teched.smartread.MainActivity) -> B
+    int access$3202(com.teched.smartread.MainActivity,int) -> a
+    android.support.v7.widget.RecyclerView$Adapter access$3300(com.teched.smartread.MainActivity) -> C
+    com.teched.smartread.Users access$3000(com.teched.smartread.MainActivity) -> D
+    java.lang.String access$3400(com.teched.smartread.MainActivity) -> E
+    org.json.JSONArray access$3502(com.teched.smartread.MainActivity,org.json.JSONArray) -> a
+    org.json.JSONArray access$3500(com.teched.smartread.MainActivity) -> F
+    int access$3200(com.teched.smartread.MainActivity) -> G
+    com.teched.smartread.Users access$3602(com.teched.smartread.MainActivity,com.teched.smartread.Users) -> b
+    int access$3702(com.teched.smartread.MainActivity,int) -> b
+    com.teched.smartread.Users access$3600(com.teched.smartread.MainActivity) -> H
+    org.json.JSONArray access$2902(com.teched.smartread.MainActivity,org.json.JSONArray) -> b
+    int access$3700(com.teched.smartread.MainActivity) -> I
+    void access$3800(com.teched.smartread.MainActivity,org.json.JSONArray,org.json.JSONArray) -> a
+    java.lang.String access$3402(com.teched.smartread.MainActivity,java.lang.String) -> c
+    java.util.ArrayList access$3900(com.teched.smartread.MainActivity) -> J
+    java.util.ArrayList access$4000(com.teched.smartread.MainActivity) -> K
+    java.util.ArrayList access$4002(com.teched.smartread.MainActivity,java.util.ArrayList) -> a
+    java.lang.String access$200(com.teched.smartread.MainActivity) -> L
+    org.json.JSONObject access$4102(com.teched.smartread.MainActivity,org.json.JSONObject) -> a
+    org.json.JSONObject access$4100(com.teched.smartread.MainActivity) -> M
+    boolean access$4200(com.teched.smartread.MainActivity) -> N
+    java.lang.String access$4302(com.teched.smartread.MainActivity,java.lang.String) -> d
+    java.io.File access$4402(com.teched.smartread.MainActivity,java.io.File) -> a
+    com.sothree.slidinguppanel.SlidingUpPanelLayout access$4500(com.teched.smartread.MainActivity) -> O
+    boolean access$4202(com.teched.smartread.MainActivity,boolean) -> b
+    boolean access$2202(com.teched.smartread.MainActivity,boolean) -> c
+    int access$4608(com.teched.smartread.MainActivity) -> P
+    int access$4600(com.teched.smartread.MainActivity) -> Q
+    int access$4602(com.teched.smartread.MainActivity,int) -> c
+    void access$4700(com.teched.smartread.MainActivity) -> R
+    android.support.v7.widget.RecyclerView$Adapter access$4800(com.teched.smartread.MainActivity) -> S
+    java.util.ArrayList access$4900(com.teched.smartread.MainActivity) -> T
+    java.lang.String access$5000(com.teched.smartread.MainActivity,android.nfc.NdefRecord) -> a
+    void access$5100(com.teched.smartread.MainActivity,java.lang.String,int) -> a
 com.teched.smartread.MainActivity$1 -> com.teched.smartread.p:
     com.teched.smartread.MainActivity this$0 -> a
     void <init>(com.teched.smartread.MainActivity) -> <init>
@@ -47733,9 +47686,8 @@ com.teched.smartread.MainActivity$16$1 -> com.teched.smartread.x:
 com.teched.smartread.MainActivity$17 -> com.teched.smartread.y:
     java.lang.String val$Path -> a
     android.content.SharedPreferences val$prefs -> b
-    android.support.v4.widget.SwipeRefreshLayout val$refreshLayout -> c
-    com.teched.smartread.MainActivity this$0 -> d
-    void <init>(com.teched.smartread.MainActivity,java.lang.String,android.content.SharedPreferences,android.support.v4.widget.SwipeRefreshLayout) -> <init>
+    com.teched.smartread.MainActivity this$0 -> c
+    void <init>(com.teched.smartread.MainActivity,java.lang.String,android.content.SharedPreferences) -> <init>
     void onRefresh() -> a
 com.teched.smartread.MainActivity$17$1 -> com.teched.smartread.z:
     com.teched.smartread.MainActivity$17 this$1 -> a
@@ -47753,20 +47705,12 @@ com.teched.smartread.MainActivity$17$1$2 -> com.teched.smartread.ab:
     java.lang.Boolean doAsync() -> b
     java.lang.Object doAsync() -> a
 com.teched.smartread.MainActivity$18 -> com.teched.smartread.ac:
-    android.support.v4.widget.SwipeRefreshLayout val$refreshLayout -> a
-    android.widget.RelativeLayout val$classes -> b
-    android.widget.RelativeLayout val$overview -> c
-    android.widget.RelativeLayout val$store -> d
-    com.teched.smartread.MainActivity this$0 -> e
-    void <init>(com.teched.smartread.MainActivity,android.support.v4.widget.SwipeRefreshLayout,android.widget.RelativeLayout,android.widget.RelativeLayout,android.widget.RelativeLayout) -> <init>
+    com.teched.smartread.MainActivity this$0 -> a
+    void <init>(com.teched.smartread.MainActivity) -> <init>
     void onClick(com.heinrichreimersoftware.materialdrawer.structure.DrawerItem,long,int) -> a
 com.teched.smartread.MainActivity$19 -> com.teched.smartread.ad:
-    android.support.v4.widget.SwipeRefreshLayout val$refreshLayout -> a
-    android.widget.RelativeLayout val$classes -> b
-    android.widget.RelativeLayout val$overview -> c
-    android.widget.RelativeLayout val$store -> d
-    com.teched.smartread.MainActivity this$0 -> e
-    void <init>(com.teched.smartread.MainActivity,android.support.v4.widget.SwipeRefreshLayout,android.widget.RelativeLayout,android.widget.RelativeLayout,android.widget.RelativeLayout) -> <init>
+    com.teched.smartread.MainActivity this$0 -> a
+    void <init>(com.teched.smartread.MainActivity) -> <init>
     void onClick(com.heinrichreimersoftware.materialdrawer.structure.DrawerItem,long,int) -> a
 com.teched.smartread.MainActivity$2 -> com.teched.smartread.ae:
     com.teched.smartread.MainActivity this$0 -> a
@@ -47774,44 +47718,24 @@ com.teched.smartread.MainActivity$2 -> com.teched.smartread.ae:
     void onDrawerClosed(android.view.View) -> b
     void onDrawerOpened(android.view.View) -> a
 com.teched.smartread.MainActivity$20 -> com.teched.smartread.af:
-    android.support.v4.widget.SwipeRefreshLayout val$refreshLayout -> a
-    android.widget.RelativeLayout val$classes -> b
-    android.widget.RelativeLayout val$overview -> c
-    android.widget.RelativeLayout val$store -> d
-    com.teched.smartread.MainActivity this$0 -> e
-    void <init>(com.teched.smartread.MainActivity,android.support.v4.widget.SwipeRefreshLayout,android.widget.RelativeLayout,android.widget.RelativeLayout,android.widget.RelativeLayout) -> <init>
+    com.teched.smartread.MainActivity this$0 -> a
+    void <init>(com.teched.smartread.MainActivity) -> <init>
     void onClick(com.heinrichreimersoftware.materialdrawer.structure.DrawerItem,long,int) -> a
 com.teched.smartread.MainActivity$21 -> com.teched.smartread.ag:
-    android.support.v4.widget.SwipeRefreshLayout val$refreshLayout -> a
-    android.widget.RelativeLayout val$classes -> b
-    android.widget.RelativeLayout val$overview -> c
-    android.widget.RelativeLayout val$store -> d
-    com.teched.smartread.MainActivity this$0 -> e
-    void <init>(com.teched.smartread.MainActivity,android.support.v4.widget.SwipeRefreshLayout,android.widget.RelativeLayout,android.widget.RelativeLayout,android.widget.RelativeLayout) -> <init>
+    com.teched.smartread.MainActivity this$0 -> a
+    void <init>(com.teched.smartread.MainActivity) -> <init>
     void onClick(com.heinrichreimersoftware.materialdrawer.structure.DrawerItem,long,int) -> a
 com.teched.smartread.MainActivity$22 -> com.teched.smartread.ah:
-    android.support.v4.widget.SwipeRefreshLayout val$refreshLayout -> a
-    android.widget.RelativeLayout val$classes -> b
-    android.widget.RelativeLayout val$overview -> c
-    android.widget.RelativeLayout val$store -> d
-    com.teched.smartread.MainActivity this$0 -> e
-    void <init>(com.teched.smartread.MainActivity,android.support.v4.widget.SwipeRefreshLayout,android.widget.RelativeLayout,android.widget.RelativeLayout,android.widget.RelativeLayout) -> <init>
+    com.teched.smartread.MainActivity this$0 -> a
+    void <init>(com.teched.smartread.MainActivity) -> <init>
     void onClick(com.heinrichreimersoftware.materialdrawer.structure.DrawerItem,long,int) -> a
 com.teched.smartread.MainActivity$23 -> com.teched.smartread.ai:
-    android.support.v4.widget.SwipeRefreshLayout val$refreshLayout -> a
-    android.widget.RelativeLayout val$classes -> b
-    android.widget.RelativeLayout val$overview -> c
-    android.widget.RelativeLayout val$store -> d
-    com.teched.smartread.MainActivity this$0 -> e
-    void <init>(com.teched.smartread.MainActivity,android.support.v4.widget.SwipeRefreshLayout,android.widget.RelativeLayout,android.widget.RelativeLayout,android.widget.RelativeLayout) -> <init>
+    com.teched.smartread.MainActivity this$0 -> a
+    void <init>(com.teched.smartread.MainActivity) -> <init>
     void onClick(com.heinrichreimersoftware.materialdrawer.structure.DrawerItem,long,int) -> a
 com.teched.smartread.MainActivity$24 -> com.teched.smartread.aj:
-    android.support.v4.widget.SwipeRefreshLayout val$refreshLayout -> a
-    android.widget.RelativeLayout val$classes -> b
-    android.widget.RelativeLayout val$overview -> c
-    android.widget.RelativeLayout val$store -> d
-    com.teched.smartread.MainActivity this$0 -> e
-    void <init>(com.teched.smartread.MainActivity,android.support.v4.widget.SwipeRefreshLayout,android.widget.RelativeLayout,android.widget.RelativeLayout,android.widget.RelativeLayout) -> <init>
+    com.teched.smartread.MainActivity this$0 -> a
+    void <init>(com.teched.smartread.MainActivity) -> <init>
     void onClick(com.heinrichreimersoftware.materialdrawer.structure.DrawerItem,long,int) -> a
 com.teched.smartread.MainActivity$25 -> com.teched.smartread.ak:
     com.teched.smartread.MainActivity this$0 -> a
@@ -48246,7 +48170,61 @@ com.teched.smartread.SettingsActivity$8 -> com.teched.smartread.df:
     com.teched.smartread.SettingsActivity this$0 -> a
     void <init>(com.teched.smartread.SettingsActivity) -> <init>
     void onClick(android.view.View) -> onClick
-com.teched.smartread.UploadJob -> com.teched.smartread.dg:
+com.teched.smartread.TextDrawable -> com.teched.smartread.dg:
+    android.graphics.Paint textPaint -> a
+    android.graphics.Paint borderPaint -> b
+    java.lang.String text -> c
+    int color -> d
+    android.graphics.drawable.shapes.RectShape shape -> e
+    int height -> f
+    int width -> g
+    int fontSize -> h
+    float radius -> i
+    int borderThickness -> j
+    void <init>(com.teched.smartread.TextDrawable$Builder) -> <init>
+    int getDarkerShade(int) -> a
+    void draw(android.graphics.Canvas) -> draw
+    void drawBorder(android.graphics.Canvas) -> a
+    void setAlpha(int) -> setAlpha
+    void setColorFilter(android.graphics.ColorFilter) -> setColorFilter
+    int getOpacity() -> getOpacity
+    int getIntrinsicWidth() -> getIntrinsicWidth
+    int getIntrinsicHeight() -> getIntrinsicHeight
+    com.teched.smartread.TextDrawable$IShapeBuilder builder() -> a
+    void <init>(com.teched.smartread.TextDrawable$Builder,com.teched.smartread.TextDrawable$1) -> <init>
+com.teched.smartread.TextDrawable$1 -> com.teched.smartread.dh:
+com.teched.smartread.TextDrawable$Builder -> com.teched.smartread.di:
+    java.lang.String text -> c
+    int color -> d
+    int borderThickness -> e
+    int width -> f
+    int height -> g
+    android.graphics.Typeface font -> h
+    android.graphics.drawable.shapes.RectShape shape -> i
+    int textColor -> a
+    int fontSize -> j
+    boolean isBold -> k
+    boolean toUpperCase -> l
+    float radius -> b
+    void <init>() -> <init>
+    com.teched.smartread.TextDrawable$IBuilder round() -> a
+    com.teched.smartread.TextDrawable buildRound(java.lang.String,int) -> a
+    com.teched.smartread.TextDrawable build(java.lang.String,int) -> b
+    android.graphics.drawable.shapes.RectShape access$000(com.teched.smartread.TextDrawable$Builder) -> a
+    int access$100(com.teched.smartread.TextDrawable$Builder) -> b
+    int access$200(com.teched.smartread.TextDrawable$Builder) -> c
+    boolean access$300(com.teched.smartread.TextDrawable$Builder) -> d
+    java.lang.String access$400(com.teched.smartread.TextDrawable$Builder) -> e
+    int access$500(com.teched.smartread.TextDrawable$Builder) -> f
+    int access$600(com.teched.smartread.TextDrawable$Builder) -> g
+    boolean access$700(com.teched.smartread.TextDrawable$Builder) -> h
+    android.graphics.Typeface access$800(com.teched.smartread.TextDrawable$Builder) -> i
+    int access$900(com.teched.smartread.TextDrawable$Builder) -> j
+    void <init>(com.teched.smartread.TextDrawable$1) -> <init>
+com.teched.smartread.TextDrawable$IBuilder -> com.teched.smartread.dj:
+com.teched.smartread.TextDrawable$IShapeBuilder -> com.teched.smartread.dk:
+    com.teched.smartread.TextDrawable buildRound(java.lang.String,int) -> a
+com.teched.smartread.UploadJob -> com.teched.smartread.dl:
     java.lang.String Path -> c
     java.lang.String TeacherPath -> d
     java.lang.String Name -> e
@@ -48259,12 +48237,12 @@ com.teched.smartread.UploadJob -> com.teched.smartread.dg:
     void onRun() -> c
     boolean shouldReRunOnThrowable(java.lang.Throwable) -> a
     void onCancel() -> d
-com.teched.smartread.Users -> com.teched.smartread.dh:
+com.teched.smartread.Users -> com.teched.smartread.dm:
     java.lang.String name -> a
     java.lang.String id -> b
     java.lang.String email -> c
     void <init>() -> <init>
-com.teched.smartread.UsersAdapter -> com.teched.smartread.di:
+com.teched.smartread.UsersAdapter -> com.teched.smartread.dn:
     java.util.List cards -> b
     java.util.List visibleCards -> a
     int rowLayout -> c
@@ -48276,10 +48254,15 @@ com.teched.smartread.UsersAdapter -> com.teched.smartread.di:
     int getItemCount() -> a
     void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int) -> a
     android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int) -> a
-com.teched.smartread.UsersAdapter$ViewHolder -> com.teched.smartread.dj:
+com.teched.smartread.UsersAdapter$ViewHolder -> com.teched.smartread.do:
     android.widget.TextView cardName -> j
+    android.widget.ImageView cardImage -> k
     void <init>(android.view.View) -> <init>
-com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration -> com.h.a.a:
+com.teched.smartread.Utils -> com.teched.smartread.dp:
+    int calculateColorBase(java.lang.String) -> a
+    int calculateColor(java.lang.String) -> b
+    java.lang.String firstChar(java.lang.String) -> c
+com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration -> com.g.a.a:
     int[] ATTRS -> h
     com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$DividerType mDividerType -> a
     com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$VisibilityProvider mVisibilityProvider -> b
@@ -48296,19 +48279,19 @@ com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration -> com.h.a.a:
     android.graphics.Rect getDividerBound(int,android.support.v7.widget.RecyclerView,android.view.View) -> a
     void setItemOffsets(android.graphics.Rect,int,android.support.v7.widget.RecyclerView) -> b
     void <clinit>() -> <clinit>
-com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$1 -> com.h.a.b:
+com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$1 -> com.g.a.b:
     android.graphics.drawable.Drawable val$divider -> a
     com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration this$0 -> b
     void <init>(com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration,android.graphics.drawable.Drawable) -> <init>
     android.graphics.drawable.Drawable drawableProvider(int,android.support.v7.widget.RecyclerView) -> a
-com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$2 -> com.h.a.c:
+com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$2 -> com.g.a.c:
     com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration this$0 -> a
     void <init>(com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration) -> <init>
     int dividerSize(int,android.support.v7.widget.RecyclerView) -> a
-com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$3 -> com.h.a.d:
+com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$3 -> com.g.a.d:
     int[] $SwitchMap$com$yqritc$recyclerviewflexibledivider$FlexibleDividerDecoration$DividerType -> a
     void <clinit>() -> <clinit>
-com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$Builder -> com.h.a.e:
+com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$Builder -> com.g.a.e:
     android.content.Context mContext -> b
     android.content.res.Resources mResources -> a
     com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$PaintProvider mPaintProvider -> c
@@ -48328,13 +48311,13 @@ com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$Builder -> com.
     com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$SizeProvider access$400(com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$Builder) -> e
     com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$VisibilityProvider access$500(com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$Builder) -> f
     boolean access$600(com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$Builder) -> g
-com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$Builder$1 -> com.h.a.f:
+com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$Builder$1 -> com.g.a.f:
     com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$Builder this$0 -> a
     void <init>(com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$Builder) -> <init>
     boolean shouldHideDivider(int,android.support.v7.widget.RecyclerView) -> a
-com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$ColorProvider -> com.h.a.g:
+com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$ColorProvider -> com.g.a.g:
     int dividerColor(int,android.support.v7.widget.RecyclerView) -> a
-com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$DividerType -> com.h.a.h:
+com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$DividerType -> com.g.a.h:
     com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$DividerType DRAWABLE -> a
     com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$DividerType PAINT -> b
     com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$DividerType COLOR -> c
@@ -48343,31 +48326,31 @@ com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$DividerType -> 
     com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$DividerType valueOf(java.lang.String) -> valueOf
     void <init>(java.lang.String,int) -> <init>
     void <clinit>() -> <clinit>
-com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$DrawableProvider -> com.h.a.i:
+com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$DrawableProvider -> com.g.a.i:
     android.graphics.drawable.Drawable drawableProvider(int,android.support.v7.widget.RecyclerView) -> a
-com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$PaintProvider -> com.h.a.j:
+com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$PaintProvider -> com.g.a.j:
     android.graphics.Paint dividerPaint(int,android.support.v7.widget.RecyclerView) -> a
-com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$SizeProvider -> com.h.a.k:
+com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$SizeProvider -> com.g.a.k:
     int dividerSize(int,android.support.v7.widget.RecyclerView) -> a
-com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$VisibilityProvider -> com.h.a.l:
+com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$VisibilityProvider -> com.g.a.l:
     boolean shouldHideDivider(int,android.support.v7.widget.RecyclerView) -> a
-com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration -> com.h.a.m:
+com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration -> com.g.a.m:
     com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration$MarginProvider mMarginProvider -> h
     void <init>(com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration$Builder) -> <init>
     android.graphics.Rect getDividerBound(int,android.support.v7.widget.RecyclerView,android.view.View) -> a
     void setItemOffsets(android.graphics.Rect,int,android.support.v7.widget.RecyclerView) -> b
     int getDividerSize(int,android.support.v7.widget.RecyclerView) -> a
-com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration$Builder -> com.h.a.n:
+com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration$Builder -> com.g.a.n:
     com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration$MarginProvider mMarginProvider -> b
     void <init>(android.content.Context) -> <init>
     com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration build() -> b
     com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration$MarginProvider access$000(com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration$Builder) -> a
-com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration$Builder$1 -> com.h.a.o:
+com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration$Builder$1 -> com.g.a.o:
     com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration$Builder this$0 -> a
     void <init>(com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration$Builder) -> <init>
     int dividerLeftMargin(int,android.support.v7.widget.RecyclerView) -> a
     int dividerRightMargin(int,android.support.v7.widget.RecyclerView) -> b
-com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration$MarginProvider -> com.h.a.p:
+com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration$MarginProvider -> com.g.a.p:
     int dividerLeftMargin(int,android.support.v7.widget.RecyclerView) -> a
     int dividerRightMargin(int,android.support.v7.widget.RecyclerView) -> b
 io.codetail.animation.RevealAnimator -> io.codetail.a.a:
