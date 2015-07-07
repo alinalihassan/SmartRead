@@ -540,14 +540,15 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     public void run() {
                         pdfs.clear();
                         list.clear();
-                        File folder = new File(Path);
-                        final File[] files = folder.listFiles();
+                        final File folder = new File(Path);
+                        File[] files = folder.listFiles();
                         if (isOnline()) {
                             new AsyncJob.AsyncJobBuilder<Boolean>()
                                     .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
                                         @Override
                                         public Boolean doAsync() {
                                             try {
+                                                File[] files = folder.listFiles();
                                                 JSONObject books = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_books.php?email=" + prefs.getString("Email", getString(R.string.profile_description))));
                                                 JSONArray booksArray = books.getJSONArray("books");
                                                 List<String> files2 = new ArrayList<>();
@@ -561,6 +562,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                                         JsonClass.DownloadBook(Path, booksArray.getString(i) + ".json");
                                                     }
                                                 }
+                                                files = folder.listFiles();
                                                 if (files != null) {
                                                     for (File file : files)
                                                         if (file.getName().endsWith(".pdf")) {

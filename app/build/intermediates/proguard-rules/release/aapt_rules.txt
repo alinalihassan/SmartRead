@@ -5,14 +5,14 @@
 -keep class android.support.design.internal.NavigationMenuView { <init>(...); }
 
 # view res/layout/activity_main.xml #generated:116
-# view res/layout/activity_main.xml #generated:161
-# view res/layout/activity_main.xml #generated:523
+# view res/layout/activity_main.xml #generated:167
+# view res/layout/activity_main.xml #generated:529
 # view res/layout/activity_main.xml #generated:96
 -keep class android.support.design.widget.CoordinatorLayout { <init>(...); }
 
 # view res/layout/activity_main.xml #generated:107
-# view res/layout/activity_main.xml #generated:127
-# view res/layout/activity_main.xml #generated:176
+# view res/layout/activity_main.xml #generated:140
+# view res/layout/activity_main.xml #generated:182
 -keep class android.support.design.widget.FloatingActionButton { <init>(...); }
 
 # view res/layout/layout_snackbar.xml #generated:18
@@ -22,7 +22,7 @@
 # view res/layout/abc_alert_dialog_material.xml #generated:130
 -keep class android.support.v4.widget.Space { <init>(...); }
 
-# view res/layout/activity_main.xml #generated:166
+# view res/layout/activity_main.xml #generated:172
 # view res/layout/activity_main.xml #generated:46
 -keep class android.support.v4.widget.SwipeRefreshLayout { <init>(...); }
 
@@ -116,9 +116,6 @@
 # view AndroidManifest.xml #generated:97
 -keep class com.google.android.gms.ads.AdActivity { <init>(...); }
 
-# view res/layout/activity_main.xml #generated:514
--keep class com.google.android.gms.ads.AdView { <init>(...); }
-
 # view AndroidManifest.xml #generated:101
 -keep class com.google.android.gms.ads.purchase.InAppPurchaseActivity { <init>(...); }
 
@@ -137,16 +134,16 @@
 # view res/layout/md_drawer_view.xml #generated:233
 -keep class com.heinrichreimersoftware.materialdrawer.widget.LinearListView { <init>(...); }
 
-# view res/layout/activity_main.xml #generated:196
+# view res/layout/activity_main.xml #generated:202
 -keep class com.joanzapata.pdfview.PDFView { <init>(...); }
 
 # view AndroidManifest.xml #generated:87
 -keep class com.nononsenseapps.filepicker.FilePickerActivity { <init>(...); }
 
-# view res/layout/activity_main.xml #generated:152
+# view res/layout/activity_main.xml #generated:158
 -keep class com.quinny898.library.persistentsearch.SearchBox { <init>(...); }
 
-# view res/layout/activity_main.xml #generated:185
+# view res/layout/activity_main.xml #generated:191
 -keep class com.sothree.slidinguppanel.SlidingUpPanelLayout { <init>(...); }
 
 # view AndroidManifest.xml #generated:37

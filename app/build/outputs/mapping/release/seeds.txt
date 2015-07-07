@@ -12781,10 +12781,6 @@ com.google.android.gms.R$styleable: int WalletFragmentStyle_maskedWalletDetailsT
 com.google.android.gms.ads.AdActivity
 com.google.android.gms.ads.AdActivity: AdActivity()
 com.google.android.gms.ads.AdActivity: void setContentView(android.view.View)
-com.google.android.gms.ads.AdView
-com.google.android.gms.ads.AdView: AdView(android.content.Context)
-com.google.android.gms.ads.AdView: AdView(android.content.Context,android.util.AttributeSet)
-com.google.android.gms.ads.AdView: AdView(android.content.Context,android.util.AttributeSet,int)
 com.google.android.gms.ads.AdView: com.google.android.gms.ads.AdListener getAdListener()
 com.google.android.gms.ads.AdView: com.google.android.gms.ads.AdSize getAdSize()
 com.google.android.gms.ads.AdView: java.lang.String getAdUnitId()
@@ -21230,7 +21226,7 @@ com.teched.smartread.R$drawable: int common_signin_btn_text_normal_light
 com.teched.smartread.R$drawable: int common_signin_btn_text_pressed_dark
 com.teched.smartread.R$drawable: int common_signin_btn_text_pressed_light
 com.teched.smartread.R$drawable: int fab_background
-com.teched.smartread.R$drawable: int ic_account_multiple
+com.teched.smartread.R$drawable: int ic_account
 com.teched.smartread.R$drawable: int ic_account_plus
 com.teched.smartread.R$drawable: int ic_action_mic
 com.teched.smartread.R$drawable: int ic_action_search
@@ -21335,6 +21331,7 @@ com.teched.smartread.R$id: int aboutProgrammer
 com.teched.smartread.R$id: int aboutScreen
 com.teched.smartread.R$id: int aboutText
 com.teched.smartread.R$id: int aboutVersion
+com.teched.smartread.R$id: int access_text
 com.teched.smartread.R$id: int action0
 com.teched.smartread.R$id: int action_bar
 com.teched.smartread.R$id: int action_bar_activity_content
@@ -21354,7 +21351,6 @@ com.teched.smartread.R$id: int action_mode_bar_stub
 com.teched.smartread.R$id: int action_mode_close_button
 com.teched.smartread.R$id: int action_search
 com.teched.smartread.R$id: int activity_chooser_view_content
-com.teched.smartread.R$id: int adView
 com.teched.smartread.R$id: int adjust_height
 com.teched.smartread.R$id: int adjust_width
 com.teched.smartread.R$id: int alertTitle
@@ -21522,7 +21518,6 @@ com.teched.smartread.R$id: int never_display
 com.teched.smartread.R$id: int none
 com.teched.smartread.R$id: int normal
 com.teched.smartread.R$id: int open_graph
-com.teched.smartread.R$id: int overview
 com.teched.smartread.R$id: int page
 com.teched.smartread.R$id: int pageEdit
 com.teched.smartread.R$id: int pageTitle
