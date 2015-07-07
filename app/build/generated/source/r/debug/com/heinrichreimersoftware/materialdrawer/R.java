@@ -390,14 +390,14 @@ public final class R {
 		public static final int abc_textfield_search_activated_mtrl_alpha = 0x7f020038;
 		public static final int abc_textfield_search_default_mtrl_alpha = 0x7f020039;
 		public static final int abc_textfield_search_material = 0x7f02003a;
-		public static final int md_arrow_drop_down = 0x7f0200a2;
-		public static final int md_drawer_shadow = 0x7f0200a3;
-		public static final int md_fixed_list_shadow = 0x7f0200a4;
-		public static final int md_ic_arrow_drop_down = 0x7f0200a5;
-		public static final int md_more_background = 0x7f0200a6;
-		public static final int md_scrim = 0x7f0200a7;
-		public static final int md_selector_dark = 0x7f0200a8;
-		public static final int md_selector_light = 0x7f0200a9;
+		public static final int md_arrow_drop_down = 0x7f0200a3;
+		public static final int md_drawer_shadow = 0x7f0200a4;
+		public static final int md_fixed_list_shadow = 0x7f0200a5;
+		public static final int md_ic_arrow_drop_down = 0x7f0200a6;
+		public static final int md_more_background = 0x7f0200a7;
+		public static final int md_scrim = 0x7f0200a8;
+		public static final int md_selector_dark = 0x7f0200a9;
+		public static final int md_selector_light = 0x7f0200aa;
 	}
 	public static final class id {
 		public static final int action_bar = 0x7f0f00a1;

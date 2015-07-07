@@ -174,14 +174,11 @@ android.support.design.widget.Snackbar:
     private static final int ANIMATION_FADE_DURATION
     private static final int MSG_SHOW
     private static final int MSG_DISMISS
-    203:203:public android.support.design.widget.Snackbar setAction(int,android.view.View$OnClickListener)
-    213:231:public android.support.design.widget.Snackbar setAction(java.lang.CharSequence,android.view.View$OnClickListener)
     239:241:public android.support.design.widget.Snackbar setActionTextColor(android.content.res.ColorStateList)
     249:251:public android.support.design.widget.Snackbar setActionTextColor(int)
     271:271:public android.support.design.widget.Snackbar setText(int)
     293:293:public int getDuration()
     300:300:public android.view.View getView()
-android.support.design.widget.Snackbar$2
 android.support.design.widget.Snackbar$Duration
 android.support.design.widget.SnackbarManager:
     private static final int MSG_TIMEOUT
@@ -292,18 +289,8 @@ android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat$Accessibi
 android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat$AccessibilityServiceInfoVersionImpl
 android.support.v4.accessibilityservice.AccessibilityServiceInfoCompatIcs
 android.support.v4.accessibilityservice.AccessibilityServiceInfoCompatJellyBeanMr2
-android.support.v4.animation.AnimatorCompatHelper
-android.support.v4.animation.AnimatorListenerCompat
-android.support.v4.animation.AnimatorProvider
-android.support.v4.animation.AnimatorUpdateListenerCompat
-android.support.v4.animation.DonutAnimatorCompatProvider
-android.support.v4.animation.DonutAnimatorCompatProvider$DonutFloatValueAnimator
-android.support.v4.animation.DonutAnimatorCompatProvider$DonutFloatValueAnimator$1
-android.support.v4.animation.HoneycombMr1AnimatorCompatProvider
-android.support.v4.animation.HoneycombMr1AnimatorCompatProvider$AnimatorListenerCompatWrapper
-android.support.v4.animation.HoneycombMr1AnimatorCompatProvider$HoneycombValueAnimatorCompat
-android.support.v4.animation.HoneycombMr1AnimatorCompatProvider$HoneycombValueAnimatorCompat$1
-android.support.v4.animation.ValueAnimatorCompat
+android.support.v4.animation.AnimatorCompatHelper:
+    37:39:AnimatorCompatHelper()
 android.support.v4.app.ActionBarDrawerToggle
 android.support.v4.app.ActionBarDrawerToggle$1
 android.support.v4.app.ActionBarDrawerToggle$ActionBarDrawerToggleImpl
@@ -1169,11 +1156,24 @@ android.support.v4.view.ActionProvider:
     private static final java.lang.String TAG
     86:86:public android.content.Context getContext()
     145:148:public void refreshVisibility()
-android.support.v4.view.GestureDetectorCompat
-android.support.v4.view.GestureDetectorCompat$GestureDetectorCompatImpl
-android.support.v4.view.GestureDetectorCompat$GestureDetectorCompatImplBase
-android.support.v4.view.GestureDetectorCompat$GestureDetectorCompatImplBase$GestureHandler
-android.support.v4.view.GestureDetectorCompat$GestureDetectorCompatImplJellybeanMr2
+android.support.v4.view.GestureDetectorCompat:
+    526:526:public boolean isLongpressEnabled()
+    551:552:public void setIsLongpressEnabled(boolean)
+    562:563:public void setOnDoubleTapListener(android.view.GestureDetector$OnDoubleTapListener)
+android.support.v4.view.GestureDetectorCompat$GestureDetectorCompatImpl:
+    public abstract boolean isLongpressEnabled()
+    public abstract void setIsLongpressEnabled(boolean)
+    public abstract void setOnDoubleTapListener(android.view.GestureDetector$OnDoubleTapListener)
+android.support.v4.view.GestureDetectorCompat$GestureDetectorCompatImplBase:
+    private static final int SHOW_PRESS
+    private static final int LONG_PRESS
+    private static final int TAP
+    205:206:public void setIsLongpressEnabled(boolean)
+    212:212:public boolean isLongpressEnabled()
+android.support.v4.view.GestureDetectorCompat$GestureDetectorCompatImplJellybeanMr2:
+    470:470:public boolean isLongpressEnabled()
+    480:481:public void setIsLongpressEnabled(boolean)
+    485:486:public void setOnDoubleTapListener(android.view.GestureDetector$OnDoubleTapListener)
 android.support.v4.view.GravityCompat:
     public static final int RELATIVE_LAYOUT_DIRECTION
     public static final int START
@@ -1382,7 +1382,6 @@ android.support.v4.view.NestedScrollingChild:
     public abstract boolean dispatchNestedFling(float,float,boolean)
     public abstract boolean dispatchNestedPreFling(float,float)
 android.support.v4.view.NestedScrollingChildHelper:
-    46:48:public NestedScrollingChildHelper(android.view.View)
     267:268:public void onDetachedFromWindow()
     280:281:public void onStopNestedScroll(android.view.View)
 android.support.v4.view.NestedScrollingParent:
@@ -1474,7 +1473,6 @@ android.support.v4.view.ViewCompat:
     2501:2501:public static float getScaleY(android.view.View)
     2505:2505:public static float getX(android.view.View)
     2509:2509:public static float getY(android.view.View)
-    2525:2525:public static float getElevation(android.view.View)
     2532:2533:public static void setTranslationZ(android.view.View,float)
     2541:2541:public static float getTranslationZ(android.view.View)
     2552:2553:public static void setTransitionName(android.view.View,java.lang.String)
@@ -1631,7 +1629,6 @@ android.support.v4.view.ViewCompat$ViewCompatImpl:
     public abstract void setPivotY(android.view.View,float)
     public abstract float getPivotX(android.view.View)
     public abstract float getPivotY(android.view.View)
-    public abstract float getElevation(android.view.View)
     public abstract void setTranslationZ(android.view.View,float)
     public abstract float getTranslationZ(android.view.View)
     public abstract void setTransitionName(android.view.View,java.lang.String)
@@ -3099,14 +3096,12 @@ android.support.v7.graphics.Palette:
     private static final float WEIGHT_POPULATION
     private static final float MIN_CONTRAST_TITLE_TEXT
     private static final float MIN_CONTRAST_BODY_TEXT
-    115:115:public static android.support.v7.graphics.Palette generate(android.graphics.Bitmap)
     219:219:public java.util.List getSwatches()
     233:233:public android.support.v7.graphics.Palette$Swatch getLightVibrantSwatch()
     240:240:public android.support.v7.graphics.Palette$Swatch getDarkVibrantSwatch()
     247:247:public android.support.v7.graphics.Palette$Swatch getMutedSwatch()
     254:254:public android.support.v7.graphics.Palette$Swatch getLightMutedSwatch()
     261:261:public android.support.v7.graphics.Palette$Swatch getDarkMutedSwatch()
-    270:270:public int getVibrantColor(int)
     279:279:public int getLightVibrantColor(int)
     288:288:public int getDarkVibrantColor(int)
     297:297:public int getMutedColor(int)
@@ -3743,6 +3738,15 @@ android.support.v7.mediarouter.R$style
 android.support.v7.mediarouter.R$styleable
 android.support.v7.palette.BuildConfig
 android.support.v7.recyclerview.BuildConfig
+android.support.v7.recyclerview.R:
+    9:22:public R()
+android.support.v7.recyclerview.R$attr
+android.support.v7.recyclerview.R$dimen:
+    16:16:public R$dimen()
+android.support.v7.recyclerview.R$id:
+    19:19:public R$id()
+android.support.v7.recyclerview.R$styleable:
+    22:22:public R$styleable()
 android.support.v7.util.SortedList:
     public static final int INVALID_POSITION
     private static final int MIN_CAPACITY
@@ -3750,21 +3754,22 @@ android.support.v7.util.SortedList:
     private static final int INSERTION
     private static final int DELETION
     private static final int LOOKUP
-    66:67:public SortedList(java.lang.Class,android.support.v7.util.SortedList$Callback)
-    206:206:public boolean remove(java.lang.Object)
-    216:218:public java.lang.Object removeItemAt(int)
-    222:227:private boolean remove(java.lang.Object,boolean)
-    231:237:private void removeItemAtIndex(int,boolean)
-    260:283:public void updateItemAt(int,java.lang.Object)
-    314:320:public void recalculatePositionOfItemAt(int)
-    346:346:public int indexOf(java.lang.Object)
+    67:68:public SortedList(java.lang.Class,android.support.v7.util.SortedList$Callback)
+    207:207:public boolean remove(java.lang.Object)
+    217:219:public java.lang.Object removeItemAt(int)
+    223:228:private boolean remove(java.lang.Object,boolean)
+    232:238:private void removeItemAtIndex(int,boolean)
+    261:284:public void updateItemAt(int,java.lang.Object)
+    315:321:public void recalculatePositionOfItemAt(int)
+    347:347:public int indexOf(java.lang.Object)
+    426:433:public void clear()
 android.support.v7.util.SortedList$BatchedCallback:
     static final int TYPE_NONE
     static final int TYPE_ADD
     static final int TYPE_REMOVE
     static final int TYPE_CHANGE
     static final int TYPE_MOVE
-    579:581:public void onMoved(int,int)
+    593:595:public void onMoved(int,int)
 android.support.v7.util.SortedList$Callback:
     public abstract void onMoved(int,int)
 android.support.v7.view.ActionMode:
@@ -3785,7 +3790,6 @@ android.support.v7.widget.AdapterHelper:
     private static final java.lang.String TAG
     81:82:varargs android.support.v7.widget.AdapterHelper addUpdateOp(android.support.v7.widget.AdapterHelper$UpdateOp[])
     517:524:boolean onItemRangeMoved(int,int,int)
-    563:595:public int applyPendingUpdatesToPosition(int)
 android.support.v7.widget.AdapterHelper$UpdateOp:
     static final int ADD
     static final int REMOVE
@@ -3861,22 +3865,21 @@ android.support.v7.widget.LinearLayoutManager:
     public static final int VERTICAL
     public static final int INVALID_OFFSET
     private static final float MAX_SCROLL_FACTOR
-    173:173:public boolean getRecycleChildrenOnDetach()
-    190:191:public void setRecycleChildrenOnDetach(boolean)
-    273:279:public void setStackFromEnd(boolean)
-    282:282:public boolean getStackFromEnd()
-    293:293:public int getOrientation()
-    336:336:public boolean getReverseLayout()
-    402:412:public void smoothScrollToPosition(android.support.v7.widget.RecyclerView,android.support.v7.widget.RecyclerView$State,int)
-    415:423:public android.graphics.PointF computeScrollVectorForPosition(int)
-    926:932:public void scrollToPosition(int)
-    955:961:public void scrollToPositionWithOffset(int,int)
-    1069:1070:public void setSmoothScrollbarEnabled(boolean)
-    1080:1080:public boolean isSmoothScrollbarEnabled()
-    1608:1609:public int findFirstCompletelyVisibleItemPosition()
-    1648:1649:public int findLastCompletelyVisibleItemPosition()
-    1727:1734:private void logChildren()
-    1747:1784:void validateChildOrder()
+    94:172:public LinearLayoutManager(android.content.Context,android.util.AttributeSet,int,int)
+    191:191:public boolean getRecycleChildrenOnDetach()
+    208:209:public void setRecycleChildrenOnDetach(boolean)
+    291:297:public void setStackFromEnd(boolean)
+    300:300:public boolean getStackFromEnd()
+    311:311:public int getOrientation()
+    354:354:public boolean getReverseLayout()
+    424:434:public void smoothScrollToPosition(android.support.v7.widget.RecyclerView,android.support.v7.widget.RecyclerView$State,int)
+    437:445:public android.graphics.PointF computeScrollVectorForPosition(int)
+    1091:1092:public void setSmoothScrollbarEnabled(boolean)
+    1102:1102:public boolean isSmoothScrollbarEnabled()
+    1629:1630:public int findFirstCompletelyVisibleItemPosition()
+    1669:1670:public int findLastCompletelyVisibleItemPosition()
+    1748:1755:private void logChildren()
+    1768:1805:void validateChildOrder()
 android.support.v7.widget.LinearLayoutManager$1
 android.support.v7.widget.LinearLayoutManager$LayoutState:
     static final java.lang.String TAG
@@ -3886,7 +3889,7 @@ android.support.v7.widget.LinearLayoutManager$LayoutState:
     static final int ITEM_DIRECTION_HEAD
     static final int ITEM_DIRECTION_TAIL
     static final int SCOLLING_OFFSET_NaN
-    1958:1960:void log()
+    2013:2015:void log()
 android.support.v7.widget.LinearSmoothScroller
 android.support.v7.widget.ListPopupWindow:
     private static final java.lang.String TAG
@@ -3973,123 +3976,114 @@ android.support.v7.widget.RecyclerView:
     public static final int SCROLL_STATE_IDLE
     public static final int SCROLL_STATE_DRAGGING
     public static final int SCROLL_STATE_SETTLING
-    614:614:public boolean hasFixedSize()
-    670:673:public void swapAdapter(android.support.v7.widget.RecyclerView$Adapter,boolean)
-    997:1011:public void addItemDecoration(android.support.v7.widget.RecyclerView$ItemDecoration,int)
-    1026:1027:public void addItemDecoration(android.support.v7.widget.RecyclerView$ItemDecoration)
-    1039:1049:public void removeItemDecoration(android.support.v7.widget.RecyclerView$ItemDecoration)
-    1074:1078:public void addOnScrollListener(android.support.v7.widget.RecyclerView$OnScrollListener)
-    1086:1089:public void removeOnScrollListener(android.support.v7.widget.RecyclerView$OnScrollListener)
-    1095:1098:public void clearOnScrollListeners()
-    1109:1117:public void scrollToPosition(int)
-    1135:1141:public void smoothScrollToPosition(int)
-    1709:1717:void assertInLayoutOrScroll(java.lang.String)
-    1758:1762:public void removeOnItemTouchListener(android.support.v7.widget.RecyclerView$OnItemTouchListener)
-    3037:3046:public void invalidateItemDecorations()
-    3076:3076:public int getChildPosition(android.view.View)
-    3086:3087:public int getChildAdapterPosition(android.view.View)
-    3112:3116:public long getChildItemId(android.view.View)
-    3125:3125:public android.support.v7.widget.RecyclerView$ViewHolder findViewHolderForPosition(int)
-    3144:3144:public android.support.v7.widget.RecyclerView$ViewHolder findViewHolderForLayoutPosition(int)
-    3162:3172:public android.support.v7.widget.RecyclerView$ViewHolder findViewHolderForAdapterPosition(int)
-    3207:3216:public android.support.v7.widget.RecyclerView$ViewHolder findViewHolderForItemId(long)
-    7870:7875:private int getAdapterPositionFor(android.support.v7.widget.RecyclerView$ViewHolder)
-    131:131:static synthetic boolean access$4300(android.support.v7.widget.RecyclerView)
-    131:131:static synthetic void access$4500(android.support.v7.widget.RecyclerView,int,int)
-    131:131:static synthetic int access$4600(android.support.v7.widget.RecyclerView,android.support.v7.widget.RecyclerView$ViewHolder)
+    709:709:public boolean hasFixedSize()
+    765:768:public void swapAdapter(android.support.v7.widget.RecyclerView$Adapter,boolean)
+    905:908:public void clearOnChildAttachStateChangeListeners()
+    1229:1233:public void addOnScrollListener(android.support.v7.widget.RecyclerView$OnScrollListener)
+    1241:1244:public void removeOnScrollListener(android.support.v7.widget.RecyclerView$OnScrollListener)
+    1250:1253:public void clearOnScrollListeners()
+    1290:1296:public void smoothScrollToPosition(int)
+    1911:1919:void assertInLayoutOrScroll(java.lang.String)
+    3104:3104:public boolean isAnimating()
+    3311:3320:public void invalidateItemDecorations()
+    3350:3350:public int getChildPosition(android.view.View)
+    3386:3390:public long getChildItemId(android.view.View)
+    3399:3399:public android.support.v7.widget.RecyclerView$ViewHolder findViewHolderForPosition(int)
+    3418:3418:public android.support.v7.widget.RecyclerView$ViewHolder findViewHolderForLayoutPosition(int)
+    3436:3446:public android.support.v7.widget.RecyclerView$ViewHolder findViewHolderForAdapterPosition(int)
+    3481:3490:public android.support.v7.widget.RecyclerView$ViewHolder findViewHolderForItemId(long)
+    139:139:static synthetic void access$4500(android.support.v7.widget.RecyclerView,int,int)
 android.support.v7.widget.RecyclerView$Adapter:
-    4834:4839:public void setHasStableIds(boolean)
-    4960:4960:public final boolean hasObservers()
-    5062:5063:public final void notifyItemChanged(int)
-    5096:5097:public final void notifyItemInserted(int)
-    5111:5112:public final void notifyItemMoved(int,int)
-    5147:5148:public final void notifyItemRemoved(int)
+    5113:5118:public void setHasStableIds(boolean)
+    5239:5239:public final boolean hasObservers()
+    5341:5342:public final void notifyItemChanged(int)
+    5390:5391:public final void notifyItemMoved(int,int)
 android.support.v7.widget.RecyclerView$AdapterDataObservable:
-    8379:8379:public boolean hasObservers()
-    8423:8426:public void notifyItemMoved(int,int)
+    8826:8826:public boolean hasObservers()
+    8870:8873:public void notifyItemMoved(int,int)
 android.support.v7.widget.RecyclerView$AdapterDataObserver:
-    8008:8008:public void onItemRangeMoved(int,int,int)
+    8455:8455:public void onItemRangeMoved(int,int,int)
 android.support.v7.widget.RecyclerView$ItemAnimator:
-    8831:8832:public void setMoveDuration(long)
-    8849:8850:public void setAddDuration(long)
-    8867:8868:public void setRemoveDuration(long)
-    8885:8886:public void setChangeDuration(long)
-    8914:8915:public void setSupportsChangeAnimations(boolean)
-    9186:9194:public final boolean isRunning(android.support.v7.widget.RecyclerView$ItemAnimator$ItemAnimatorFinishedListener)
+    9278:9279:public void setMoveDuration(long)
+    9296:9297:public void setAddDuration(long)
+    9314:9315:public void setRemoveDuration(long)
+    9332:9333:public void setChangeDuration(long)
+    9361:9362:public void setSupportsChangeAnimations(boolean)
 android.support.v7.widget.RecyclerView$LayoutManager:
-    5229:5232:public void assertInLayoutOrScroll(java.lang.String)
-    5370:5370:public boolean getClipToPadding()
-    5564:5564:public void scrollToPosition(int)
-    5577:5578:public void smoothScrollToPosition(android.support.v7.widget.RecyclerView,android.support.v7.widget.RecyclerView$State,int)
-    5586:5592:public void startSmoothScroll(android.support.v7.widget.RecyclerView$SmoothScroller)
-    5621:5624:public void endAnimation(android.view.View)
-    5771:5775:public void removeAllViews()
-    5805:5805:public int getItemViewType(android.view.View)
-    5853:5857:public void detachView(android.view.View)
-    5927:5928:public void attachView(android.view.View)
-    5937:5938:public void removeDetachedView(android.view.View)
-    5966:5968:public void detachAndScrapView(android.view.View,android.support.v7.widget.RecyclerView$Recycler)
-    5980:5982:public void detachAndScrapViewAt(int,android.support.v7.widget.RecyclerView$Recycler)
-    6086:6086:public int getPaddingStart()
-    6095:6095:public int getPaddingEnd()
-    6105:6105:public boolean isFocused()
-    6115:6115:public boolean hasFocus()
-    6145:6146:public int getItemCount()
-    6190:6198:public void ignoreView(android.view.View)
-    6210:6214:public void stopIgnoringView(android.view.View)
-    6291:6304:public void measureChild(android.view.View,int,int)
-    6924:6925:public void setMeasuredDimension(int,int)
-    6931:6931:public int getMinimumWidth()
-    6938:6938:public int getMinimumHeight()
+    5531:5534:public void assertInLayoutOrScroll(java.lang.String)
+    5879:5880:public void smoothScrollToPosition(android.support.v7.widget.RecyclerView,android.support.v7.widget.RecyclerView$State,int)
+    5888:5894:public void startSmoothScroll(android.support.v7.widget.RecyclerView$SmoothScroller)
+    5923:5926:public void endAnimation(android.view.View)
+    6073:6077:public void removeAllViews()
+    6107:6107:public int getItemViewType(android.view.View)
+    6155:6159:public void detachView(android.view.View)
+    6229:6230:public void attachView(android.view.View)
+    6239:6240:public void removeDetachedView(android.view.View)
+    6268:6270:public void detachAndScrapView(android.view.View,android.support.v7.widget.RecyclerView$Recycler)
+    6282:6284:public void detachAndScrapViewAt(int,android.support.v7.widget.RecyclerView$Recycler)
+    6388:6388:public int getPaddingStart()
+    6397:6397:public int getPaddingEnd()
+    6407:6407:public boolean isFocused()
+    6417:6417:public boolean hasFocus()
+    6447:6448:public int getItemCount()
+    6492:6500:public void ignoreView(android.view.View)
+    6512:6516:public void stopIgnoringView(android.view.View)
+    6593:6606:public void measureChild(android.view.View,int,int)
+    7226:7227:public void setMeasuredDimension(int,int)
+    7233:7233:public int getMinimumWidth()
+    7240:7240:public int getMinimumHeight()
+    7590:7598:public static android.support.v7.widget.RecyclerView$LayoutManager$Properties getProperties(android.content.Context,android.util.AttributeSet,int,int)
+android.support.v7.widget.RecyclerView$LayoutManager$Properties
 android.support.v7.widget.RecyclerView$LayoutParams:
-    7920:7920:public boolean viewNeedsUpdate()
-    7930:7930:public boolean isViewInvalid()
-    7959:7959:public int getViewPosition()
-    7981:7981:public int getViewAdapterPosition()
+    8367:8367:public boolean viewNeedsUpdate()
+    8377:8377:public boolean isViewInvalid()
+    8406:8406:public int getViewPosition()
+    8428:8428:public int getViewAdapterPosition()
 android.support.v7.widget.RecyclerView$RecycledViewPool:
     private static final int DEFAULT_MAX_SCRAP
-    3724:3731:public void setMaxRecycledViews(int,int)
-    3745:3752:int size()
+    4003:4010:public void setMaxRecycledViews(int,int)
+    4024:4031:int size()
 android.support.v7.widget.RecyclerView$Recycler:
     private static final int DEFAULT_CACHE_SIZE
-    3919:3953:public void bindViewToPosition(android.view.View,int)
-    3974:3981:public int convertPreLayoutPositionToPostLayout(int)
-    4202:4203:void recycleViewInternal(android.view.View)
+    4198:4232:public void bindViewToPosition(android.view.View,int)
+    4253:4260:public int convertPreLayoutPositionToPostLayout(int)
+    4481:4482:void recycleViewInternal(android.view.View)
 android.support.v7.widget.RecyclerView$RecyclerViewDataObserver:
-    3686:3690:public void onItemRangeMoved(int,int,int)
+    3965:3969:public void onItemRangeMoved(int,int,int)
+android.support.v7.widget.RecyclerView$SimpleOnItemTouchListener
 android.support.v7.widget.RecyclerView$SmoothScroller:
-    8019:8035:public RecyclerView$SmoothScroller()
-    8050:8061:void start(android.support.v7.widget.RecyclerView,android.support.v7.widget.RecyclerView$LayoutManager)
-    8071:8071:public android.support.v7.widget.RecyclerView$LayoutManager getLayoutManager()
-    8159:8159:public int getChildCount()
-    8166:8166:public android.view.View findViewByPosition(int)
-    8173:8174:public void instantScrollToPosition(int)
-    8190:8194:protected void normalize(android.graphics.PointF)
+    8466:8482:public RecyclerView$SmoothScroller()
+    8497:8508:void start(android.support.v7.widget.RecyclerView,android.support.v7.widget.RecyclerView$LayoutManager)
+    8518:8518:public android.support.v7.widget.RecyclerView$LayoutManager getLayoutManager()
+    8606:8606:public int getChildCount()
+    8613:8613:public android.view.View findViewByPosition(int)
+    8620:8621:public void instantScrollToPosition(int)
+    8637:8641:protected void normalize(android.graphics.PointF)
     protected abstract void onStart()
 android.support.v7.widget.RecyclerView$SmoothScroller$Action:
     public static final int UNDEFINED_DURATION
-    8258:8259:public RecyclerView$SmoothScroller$Action(int,int)
-    8267:8268:public RecyclerView$SmoothScroller$Action(int,int,int)
-    8247:8282:public RecyclerView$SmoothScroller$Action(int,int,int,android.view.animation.Interpolator)
-    8318:8318:public int getDx()
-    8322:8324:public void setDx(int)
-    8327:8327:public int getDy()
-    8331:8333:public void setDy(int)
-    8336:8336:public int getDuration()
-    8340:8342:public void setDuration(int)
-    8345:8345:public android.view.animation.Interpolator getInterpolator()
-    8355:8357:public void setInterpolator(android.view.animation.Interpolator)
-    8368:8373:public void update(int,int,int,android.view.animation.Interpolator)
+    8705:8706:public RecyclerView$SmoothScroller$Action(int,int)
+    8714:8715:public RecyclerView$SmoothScroller$Action(int,int,int)
+    8694:8729:public RecyclerView$SmoothScroller$Action(int,int,int,android.view.animation.Interpolator)
+    8765:8765:public int getDx()
+    8769:8771:public void setDx(int)
+    8774:8774:public int getDy()
+    8778:8780:public void setDy(int)
+    8783:8783:public int getDuration()
+    8787:8789:public void setDuration(int)
+    8792:8792:public android.view.animation.Interpolator getInterpolator()
+    8802:8804:public void setInterpolator(android.view.animation.Interpolator)
+    8815:8820:public void update(int,int,int,android.view.animation.Interpolator)
 android.support.v7.widget.RecyclerView$State:
-    8521:8527:android.support.v7.widget.RecyclerView$State reset()
-    8553:8553:public boolean willRunSimpleAnimations()
-    8562:8566:public void remove(int)
-    8577:8580:public java.lang.Object get(int)
-    8592:8596:public void put(int,java.lang.Object)
-    8623:8623:public boolean didStructureChange()
-    8667:8668:public void onViewIgnored(android.support.v7.widget.RecyclerView$ViewHolder)
+    8968:8974:android.support.v7.widget.RecyclerView$State reset()
+    9000:9000:public boolean willRunSimpleAnimations()
+    9009:9013:public void remove(int)
+    9024:9027:public java.lang.Object get(int)
+    9039:9043:public void put(int,java.lang.Object)
+    9070:9070:public boolean didStructureChange()
+    9114:9115:public void onViewIgnored(android.support.v7.widget.RecyclerView$ViewHolder)
 android.support.v7.widget.RecyclerView$ViewCacheExtension:
-    4702:4702:public RecyclerView$ViewCacheExtension()
+    4981:4981:public RecyclerView$ViewCacheExtension()
 android.support.v7.widget.RecyclerView$ViewHolder:
     static final int FLAG_BOUND
     static final int FLAG_UPDATE
@@ -4101,11 +4095,9 @@ android.support.v7.widget.RecyclerView$ViewHolder:
     static final int FLAG_IGNORE
     static final int FLAG_TMP_DETACHED
     static final int FLAG_ADAPTER_POSITION_UNKNOWN
-    7621:7621:public final int getPosition()
-    7673:7676:public final int getAdapterPosition()
-    7691:7691:public final int getOldPosition()
-    7732:7733:void stopIgnoring()
-    7760:7760:boolean hasAnyOfTheFlags(int)
+    8019:8019:public final int getPosition()
+    8089:8089:public final int getOldPosition()
+    8130:8131:void stopIgnoring()
 android.support.v7.widget.RoundRectDrawableWithShadow:
     static final float SHADOW_MULTIPLIER
 android.support.v7.widget.ScrollbarHelper:
@@ -4201,22 +4193,22 @@ android.support.v7.widget.StaggeredGridLayoutManager:
     public static final int GAP_HANDLING_LAZY
     public static final int GAP_HANDLING_MOVE_ITEMS_BETWEEN_SPANS
     private static final int INVALID_OFFSET
-    97:214:public StaggeredGridLayoutManager(int,int)
-    372:383:public void setSpanCount(int)
-    392:407:public void setOrientation(int)
-    446:446:public int getGapStrategy()
-    459:470:public void setGapStrategy(int)
-    485:485:public int getSpanCount()
-    495:497:public void invalidateSpanAssignments()
-    535:535:public boolean getReverseLayout()
-    807:816:public int[] findFirstVisibleItemPositions(int[])
-    839:848:public int[] findFirstCompletelyVisibleItemPositions(int[])
-    871:880:public int[] findLastVisibleItemPositions(int[])
-    903:912:public int[] findLastCompletelyVisibleItemPositions(int[])
-    1810:1826:public void smoothScrollToPosition(android.support.v7.widget.RecyclerView,android.support.v7.widget.RecyclerView$State,int)
-    1830:1836:public void scrollToPosition(int)
-    1852:1858:public void scrollToPositionWithOffset(int,int)
-    1966:1966:public int getOrientation()
+    97:214:public StaggeredGridLayoutManager(android.content.Context,android.util.AttributeSet,int,int)
+    97:226:public StaggeredGridLayoutManager(int,int)
+    384:395:public void setSpanCount(int)
+    404:419:public void setOrientation(int)
+    458:458:public int getGapStrategy()
+    471:482:public void setGapStrategy(int)
+    497:497:public int getSpanCount()
+    507:509:public void invalidateSpanAssignments()
+    547:547:public boolean getReverseLayout()
+    819:828:public int[] findFirstVisibleItemPositions(int[])
+    851:860:public int[] findFirstCompletelyVisibleItemPositions(int[])
+    883:892:public int[] findLastVisibleItemPositions(int[])
+    915:924:public int[] findLastCompletelyVisibleItemPositions(int[])
+    1852:1868:public void smoothScrollToPosition(android.support.v7.widget.RecyclerView,android.support.v7.widget.RecyclerView$State,int)
+    1894:1900:public void scrollToPositionWithOffset(int,int)
+    2006:2006:public int getOrientation()
     53:53:static synthetic boolean access$100(android.support.v7.widget.StaggeredGridLayoutManager)
     53:53:static synthetic int access$400(android.support.v7.widget.StaggeredGridLayoutManager,int)
     53:53:static synthetic int access$500(android.support.v7.widget.StaggeredGridLayoutManager)
@@ -4224,31 +4216,29 @@ android.support.v7.widget.StaggeredGridLayoutManager:
 android.support.v7.widget.StaggeredGridLayoutManager$1
 android.support.v7.widget.StaggeredGridLayoutManager$2
 android.support.v7.widget.StaggeredGridLayoutManager$AnchorInfo:
-    2736:2736:private StaggeredGridLayoutManager$AnchorInfo(android.support.v7.widget.StaggeredGridLayoutManager)
-    2736:2736:synthetic StaggeredGridLayoutManager$AnchorInfo(android.support.v7.widget.StaggeredGridLayoutManager,android.support.v7.widget.StaggeredGridLayoutManager$1)
+    2776:2776:private StaggeredGridLayoutManager$AnchorInfo(android.support.v7.widget.StaggeredGridLayoutManager)
+    2776:2776:synthetic StaggeredGridLayoutManager$AnchorInfo(android.support.v7.widget.StaggeredGridLayoutManager,android.support.v7.widget.StaggeredGridLayoutManager$1)
 android.support.v7.widget.StaggeredGridLayoutManager$LayoutParams:
     public static final int INVALID_SPAN_ID
-    2006:2007:public StaggeredGridLayoutManager$LayoutParams(android.support.v7.widget.RecyclerView$LayoutParams)
-    2018:2019:public void setFullSpan(boolean)
-    2028:2028:public boolean isFullSpan()
+    2046:2047:public StaggeredGridLayoutManager$LayoutParams(android.support.v7.widget.RecyclerView$LayoutParams)
+    2058:2059:public void setFullSpan(boolean)
+    2068:2068:public boolean isFullSpan()
 android.support.v7.widget.StaggeredGridLayoutManager$LazySpanLookup:
     private static final int MIN_SIZE
-    2322:2556:StaggeredGridLayoutManager$LazySpanLookup()
+    2362:2596:StaggeredGridLayoutManager$LazySpanLookup()
 android.support.v7.widget.StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem:
-    2585:2586:public void invalidateSpanGaps()
-android.support.v7.widget.StaggeredGridLayoutManager$SavedState:
-    2690:2694:void invalidateAnchorPositionInfo()
+    2625:2626:public void invalidateSpanGaps()
 android.support.v7.widget.StaggeredGridLayoutManager$Span:
     static final int INVALID_LINE
-    2049:2057:private StaggeredGridLayoutManager$Span(android.support.v7.widget.StaggeredGridLayoutManager,int)
-    2235:2249:int getNormalizedOffset(int,int,int)
-    2261:2269:boolean isEmpty(int,int)
-    2273:2273:public int findFirstVisibleItemPosition()
-    2279:2279:public int findFirstCompletelyVisibleItemPosition()
-    2285:2285:public int findLastVisibleItemPosition()
-    2291:2291:public int findLastCompletelyVisibleItemPosition()
-    2297:2314:int findOneVisibleChild(int,int,boolean)
-    2046:2046:synthetic StaggeredGridLayoutManager$Span(android.support.v7.widget.StaggeredGridLayoutManager,int,android.support.v7.widget.StaggeredGridLayoutManager$1)
+    2089:2097:private StaggeredGridLayoutManager$Span(android.support.v7.widget.StaggeredGridLayoutManager,int)
+    2275:2289:int getNormalizedOffset(int,int,int)
+    2301:2309:boolean isEmpty(int,int)
+    2313:2313:public int findFirstVisibleItemPosition()
+    2319:2319:public int findFirstCompletelyVisibleItemPosition()
+    2325:2325:public int findLastVisibleItemPosition()
+    2331:2331:public int findLastCompletelyVisibleItemPosition()
+    2337:2354:int findOneVisibleChild(int,int,boolean)
+    2086:2086:synthetic StaggeredGridLayoutManager$Span(android.support.v7.widget.StaggeredGridLayoutManager,int,android.support.v7.widget.StaggeredGridLayoutManager$1)
 android.support.v7.widget.SuggestionsAdapter:
     private static final boolean DBG
     private static final java.lang.String LOG_TAG
@@ -4276,6 +4266,42 @@ android.support.v7.widget.Toolbar$LayoutParams:
     static final int EXPANDED
     1798:1812:public Toolbar$LayoutParams(int,int,int)
     1815:1816:public Toolbar$LayoutParams(int)
+android.support.v7.widget.helper.ItemTouchHelper:
+    public static final int UP
+    public static final int DOWN
+    public static final int LEFT
+    public static final int RIGHT
+    public static final int START
+    public static final int END
+    public static final int ACTION_STATE_IDLE
+    public static final int ACTION_STATE_SWIPE
+    public static final int ACTION_STATE_DRAG
+    public static final int ANIMATION_TYPE_SWIPE_SUCCESS
+    public static final int ANIMATION_TYPE_SWIPE_CANCEL
+    public static final int ANIMATION_TYPE_DRAG
+    private static final java.lang.String TAG
+    private static final boolean DEBUG
+    private static final int ACTIVE_POINTER_ID_NONE
+    private static final int DIRECTION_FLAG_COUNT
+    private static final int ACTION_MODE_IDLE_MASK
+    private static final int ACTION_MODE_SWIPE_MASK
+    private static final int ACTION_MODE_DRAG_MASK
+    1045:1057:public void startDrag(android.support.v7.widget.RecyclerView$ViewHolder)
+    1092:1104:public void startSwipe(android.support.v7.widget.RecyclerView$ViewHolder)
+android.support.v7.widget.helper.ItemTouchHelper$Callback:
+    public static final int DEFAULT_DRAG_ANIMATION_DURATION
+    public static final int DEFAULT_SWIPE_ANIMATION_DURATION
+    static final int RELATIVE_DIR_FLAGS
+    private static final int ABS_HORIZONTAL_DIR_FLAGS
+    private static final long DRAG_SCROLL_ACCELERATION_LIMIT_TIME_MS
+    1413:1413:public static android.support.v7.widget.helper.ItemTouchUIUtil getDefaultUIUtil()
+    1548:1549:private boolean hasSwipeFlag(android.support.v7.widget.RecyclerView,android.support.v7.widget.RecyclerView$ViewHolder)
+    1327:1327:static synthetic boolean access$2200(android.support.v7.widget.helper.ItemTouchHelper$Callback,android.support.v7.widget.RecyclerView,android.support.v7.widget.RecyclerView$ViewHolder)
+android.support.v7.widget.helper.ItemTouchHelper$SimpleCallback:
+    2135:2136:public void setDefaultSwipeDirs(int)
+    2145:2146:public void setDefaultDragDirs(int)
+android.support.v7.widget.helper.ItemTouchUIUtilImpl:
+    30:101:ItemTouchUIUtilImpl()
 android.support.v7.widget.util.SortedListAdapterCallback:
     52:53:public void onMoved(int,int)
 bolts.AggregateException
@@ -4360,6 +4386,35 @@ bolts.WebViewAppLinkResolver$2
 bolts.WebViewAppLinkResolver$2$1
 bolts.WebViewAppLinkResolver$2$2
 bolts.WebViewAppLinkResolver$3
+com.amulyakhare.textdrawable.BuildConfig
+com.amulyakhare.textdrawable.TextDrawable:
+    private static final float SHADE_FACTOR
+com.amulyakhare.textdrawable.TextDrawable$Builder:
+    180:181:public com.amulyakhare.textdrawable.TextDrawable$IConfigBuilder width(int)
+    185:186:public com.amulyakhare.textdrawable.TextDrawable$IConfigBuilder height(int)
+    190:191:public com.amulyakhare.textdrawable.TextDrawable$IConfigBuilder textColor(int)
+    195:196:public com.amulyakhare.textdrawable.TextDrawable$IConfigBuilder withBorder(int)
+    200:201:public com.amulyakhare.textdrawable.TextDrawable$IConfigBuilder useFont(android.graphics.Typeface)
+    205:206:public com.amulyakhare.textdrawable.TextDrawable$IConfigBuilder fontSize(int)
+    210:211:public com.amulyakhare.textdrawable.TextDrawable$IConfigBuilder bold()
+    215:216:public com.amulyakhare.textdrawable.TextDrawable$IConfigBuilder toUpperCase()
+    221:221:public com.amulyakhare.textdrawable.TextDrawable$IConfigBuilder beginConfig()
+    226:226:public com.amulyakhare.textdrawable.TextDrawable$IShapeBuilder endConfig()
+    231:232:public com.amulyakhare.textdrawable.TextDrawable$IBuilder rect()
+    243:246:public com.amulyakhare.textdrawable.TextDrawable$IBuilder roundRect(int)
+    251:252:public com.amulyakhare.textdrawable.TextDrawable buildRect(java.lang.String,int)
+    257:258:public com.amulyakhare.textdrawable.TextDrawable buildRoundRect(java.lang.String,int,int)
+com.amulyakhare.textdrawable.TextDrawable$IBuilder:
+    public abstract com.amulyakhare.textdrawable.TextDrawable build(java.lang.String,int)
+com.amulyakhare.textdrawable.TextDrawable$IConfigBuilder
+com.amulyakhare.textdrawable.TextDrawable$IShapeBuilder:
+    public abstract com.amulyakhare.textdrawable.TextDrawable$IConfigBuilder beginConfig()
+    public abstract com.amulyakhare.textdrawable.TextDrawable$IBuilder rect()
+    public abstract com.amulyakhare.textdrawable.TextDrawable$IBuilder round()
+    public abstract com.amulyakhare.textdrawable.TextDrawable$IBuilder roundRect(int)
+    public abstract com.amulyakhare.textdrawable.TextDrawable buildRect(java.lang.String,int)
+    public abstract com.amulyakhare.textdrawable.TextDrawable buildRoundRect(java.lang.String,int,int)
+com.amulyakhare.textdrawable.util.ColorGenerator
 com.android.vending.billing.IInAppBillingService$Stub:
     private static final java.lang.String DESCRIPTOR
     static final int TRANSACTION_isBillingSupported
@@ -4420,19 +4475,13 @@ com.anjlab.android.iab.v3.Security:
     40:40:Security()
 com.anjlab.android.iab.v3.SkuDetails
 com.arasthel.asyncjob.AsyncJob:
-    43:49:public static void doOnMainThread(com.arasthel.asyncjob.AsyncJob$OnMainThreadJob)
-    56:62:public static void doInBackground(com.arasthel.asyncjob.AsyncJob$OnBackgroundJob)
     71:78:public static java.util.concurrent.FutureTask doInBackground(com.arasthel.asyncjob.AsyncJob$OnBackgroundJob,java.util.concurrent.ExecutorService)
     109:116:public void cancel()
     139:139:public com.arasthel.asyncjob.AsyncJob$AsyncAction getActionInBackground()
     151:151:public com.arasthel.asyncjob.AsyncJob$AsyncResultAction getActionOnResult()
-com.arasthel.asyncjob.AsyncJob$1
-com.arasthel.asyncjob.AsyncJob$2
 com.arasthel.asyncjob.AsyncJob$3
 com.arasthel.asyncjob.AsyncJob$AsyncJobBuilder:
     218:219:public com.arasthel.asyncjob.AsyncJob$AsyncJobBuilder withExecutor(java.util.concurrent.ExecutorService)
-com.arasthel.asyncjob.AsyncJob$OnBackgroundJob
-com.arasthel.asyncjob.AsyncJob$OnMainThreadJob
 com.arasthel.asyncjob.BuildConfig
 com.arasthel.asyncjob.R
 com.arasthel.asyncjob.R$anim
@@ -9291,6 +9340,7 @@ com.google.android.gms.plus.internal.model.people.PersonEntity:
     public boolean hasCover()
     public java.lang.String getCurrentLocation()
     public boolean hasCurrentLocation()
+    public java.lang.String getDisplayName()
     public boolean hasDisplayName()
     public int getGender()
     public boolean hasGender()
@@ -9301,7 +9351,6 @@ com.google.android.gms.plus.internal.model.people.PersonEntity:
     public boolean hasIsPlusUser()
     public java.lang.String getLanguage()
     public boolean hasLanguage()
-    public com.google.android.gms.plus.model.people.Person$Name getName()
     public boolean hasName()
     public java.lang.String getNickname()
     public boolean hasNickname()
@@ -9355,11 +9404,9 @@ com.google.android.gms.plus.internal.model.people.PersonEntity$ImageEntity:
     public boolean hasUrl()
     public boolean isDataValid()
 com.google.android.gms.plus.internal.model.people.PersonEntity$NameEntity:
-    public java.lang.String getFamilyName()
     public boolean hasFamilyName()
     public java.lang.String getFormatted()
     public boolean hasFormatted()
-    public java.lang.String getGivenName()
     public boolean hasGivenName()
     public java.lang.String getHonorificPrefix()
     public boolean hasHonorificPrefix()
@@ -9566,6 +9613,7 @@ com.google.android.gms.plus.model.people.Person:
     public abstract boolean hasCover()
     public abstract java.lang.String getCurrentLocation()
     public abstract boolean hasCurrentLocation()
+    public abstract java.lang.String getDisplayName()
     public abstract boolean hasDisplayName()
     public abstract int getGender()
     public abstract boolean hasGender()
@@ -9576,7 +9624,6 @@ com.google.android.gms.plus.model.people.Person:
     public abstract boolean hasIsPlusUser()
     public abstract java.lang.String getLanguage()
     public abstract boolean hasLanguage()
-    public abstract com.google.android.gms.plus.model.people.Person$Name getName()
     public abstract boolean hasName()
     public abstract java.lang.String getNickname()
     public abstract boolean hasNickname()
@@ -9625,11 +9672,9 @@ com.google.android.gms.plus.model.people.Person$Gender
 com.google.android.gms.plus.model.people.Person$Image:
     public abstract boolean hasUrl()
 com.google.android.gms.plus.model.people.Person$Name:
-    public abstract java.lang.String getFamilyName()
     public abstract boolean hasFamilyName()
     public abstract java.lang.String getFormatted()
     public abstract boolean hasFormatted()
-    public abstract java.lang.String getGivenName()
     public abstract boolean hasGivenName()
     public abstract java.lang.String getHonorificPrefix()
     public abstract boolean hasHonorificPrefix()
@@ -10954,15 +10999,21 @@ com.sothree.slidinguppanel.library.R$drawable:
 com.sothree.slidinguppanel.library.R$id
 com.sothree.slidinguppanel.library.R$styleable:
     32:32:public R$styleable()
+com.teched.smartread.AddBookJob:
+    public static final int PRIORITY
+com.teched.smartread.AddJob:
+    public static final int PRIORITY
 com.teched.smartread.BuildConfig
+com.teched.smartread.JoinJob:
+    public static final int PRIORITY
 com.teched.smartread.JsonClass:
     19:19:public JsonClass()
 com.teched.smartread.LoginActivity:
     private static final int RC_SIGN_IN
 com.teched.smartread.MainActivity:
     private static final int FILE_CODE
-com.teched.smartread.MainActivity$42:
-    1599:1600:public void onSearchCleared()
+com.teched.smartread.MainActivity$47:
+    1902:1903:public void onSearchCleared()
 com.teched.smartread.R
 com.teched.smartread.R$anim
 com.teched.smartread.R$array
@@ -10981,8 +11032,60 @@ com.teched.smartread.R$string
 com.teched.smartread.R$style
 com.teched.smartread.R$styleable
 com.teched.smartread.R$xml
+com.teched.smartread.TextDrawable
+com.teched.smartread.TextDrawable$1
+com.teched.smartread.TextDrawable$Builder
+com.teched.smartread.TextDrawable$IBuilder
+com.teched.smartread.TextDrawable$IConfigBuilder
+com.teched.smartread.TextDrawable$IShapeBuilder
 com.teched.smartread.UploadJob:
     public static final int PRIORITY
+com.teched.smartread.UsersAdapter:
+    43:43:public java.lang.String getName(int)
+com.yqritc.recyclerviewflexibledivider.BuildConfig
+com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration:
+    private static final int DEFAULT_SIZE
+com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$Builder:
+    234:234:public com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$Builder paint(android.graphics.Paint)
+    248:248:public com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$Builder color(int)
+    257:257:public com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$Builder colorResId(int)
+    261:262:public com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$Builder colorProvider(com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$ColorProvider)
+    266:266:public com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$Builder drawable(int)
+    270:270:public com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$Builder drawable(android.graphics.drawable.Drawable)
+    279:280:public com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$Builder drawableProvider(com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$DrawableProvider)
+    284:284:public com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$Builder size(int)
+    293:293:public com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$Builder sizeResId(int)
+    297:298:public com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$Builder sizeProvider(com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$SizeProvider)
+    307:308:public com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$Builder showLastDivider()
+com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$Builder$2
+com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$Builder$3
+com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$Builder$4
+com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$Builder$5
+com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration$Builder:
+    106:106:public com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration$Builder margin(int,int)
+    120:120:public com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration$Builder margin(int)
+    124:125:public com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration$Builder marginResId(int,int)
+    129:129:public com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration$Builder marginResId(int)
+    133:134:public com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration$Builder marginProvider(com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration$MarginProvider)
+com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration$Builder$2
+com.yqritc.recyclerviewflexibledivider.R
+com.yqritc.recyclerviewflexibledivider.R$anim
+com.yqritc.recyclerviewflexibledivider.R$attr
+com.yqritc.recyclerviewflexibledivider.R$bool
+com.yqritc.recyclerviewflexibledivider.R$color
+com.yqritc.recyclerviewflexibledivider.R$dimen
+com.yqritc.recyclerviewflexibledivider.R$drawable
+com.yqritc.recyclerviewflexibledivider.R$id
+com.yqritc.recyclerviewflexibledivider.R$integer
+com.yqritc.recyclerviewflexibledivider.R$layout
+com.yqritc.recyclerviewflexibledivider.R$string
+com.yqritc.recyclerviewflexibledivider.R$style
+com.yqritc.recyclerviewflexibledivider.R$styleable
+com.yqritc.recyclerviewflexibledivider.VerticalDividerItemDecoration
+com.yqritc.recyclerviewflexibledivider.VerticalDividerItemDecoration$Builder
+com.yqritc.recyclerviewflexibledivider.VerticalDividerItemDecoration$Builder$1
+com.yqritc.recyclerviewflexibledivider.VerticalDividerItemDecoration$Builder$2
+com.yqritc.recyclerviewflexibledivider.VerticalDividerItemDecoration$MarginProvider
 io.codetail.animation.RevealAnimator:
     public abstract void setRevealRadius(float)
     public abstract float getRevealRadius()

@@ -22,6 +22,8 @@
         android:layout_height="50sp"
         android:layout_marginBottom="40dp"
         android:layout_alignParentBottom="true"
+        android:textStyle="bold"
+        android:textAllCaps="true"
         style="?android:attr/borderlessButtonStyle"/>
     <Button
         android:id="@+id/gLogin"
@@ -29,6 +31,8 @@
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:textColor="#d34836"
+        android:textAllCaps="true"
+        android:textStyle="bold"
         android:text="@string/google_signin"
         style="?android:attr/borderlessButtonStyle"
         android:layout_centerHorizontal="true"

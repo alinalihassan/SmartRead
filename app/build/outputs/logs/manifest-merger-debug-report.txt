@@ -197,7 +197,6 @@ MERGED from [com.android.support:support-v4:22.2.0] C:\Users\superalin98\Documen
 MERGED from [com.google.android.gms:play-services-wearable:7.5.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.5.0\AndroidManifest.xml:19:5-20
 MERGED from [com.google.android.gms:play-services-base:7.5.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\AndroidManifest.xml:20:5-24:19
 MERGED from [com.android.support:support-v4:22.2.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
-MERGED from [com.amulyakhare:com.amulyakhare.textdrawable:1.0.1] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.amulyakhare\com.amulyakhare.textdrawable\1.0.1\AndroidManifest.xml:12:5-20
 MERGED from [com.balysv.materialmenu:material-menu:1.5.4] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.balysv.materialmenu\material-menu\1.5.4\AndroidManifest.xml:12:5-20
 	android:label
 		ADDED from C:\Users\superalin98\Documents\SmartRead2\app\src\main\AndroidManifest.xml:23:9-41
@@ -466,7 +465,6 @@ MERGED from [com.google.android.gms:play-services-wearable:7.5.0] C:\Users\super
 MERGED from [com.google.android.gms:play-services-base:7.5.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\AndroidManifest.xml:18:5-42
 MERGED from [com.android.support:support-v4:22.2.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
 MERGED from [com.arasthel:asyncjob-library:1.0.3] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.arasthel\asyncjob-library\1.0.3\AndroidManifest.xml:7:5-9:41
-MERGED from [com.amulyakhare:com.amulyakhare.textdrawable:1.0.1] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.amulyakhare\com.amulyakhare.textdrawable\1.0.1\AndroidManifest.xml:8:5-10:41
 MERGED from [com.yqritc:recyclerview-flexibledivider:1.2.5] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.yqritc\recyclerview-flexibledivider\1.2.5\AndroidManifest.xml:8:5-10:41
 MERGED from [SmartRead2:PersistentSearch:unspecified] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\SmartRead2\PersistentSearch\unspecified\AndroidManifest.xml:7:5-9:41
 MERGED from [com.balysv.materialmenu:material-menu:1.5.4] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.balysv.materialmenu\material-menu\1.5.4\AndroidManifest.xml:8:5-10:41

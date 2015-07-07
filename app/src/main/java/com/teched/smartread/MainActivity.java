@@ -52,7 +52,6 @@ import android.support.v7.widget.Toolbar;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.text.InputFilter;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -173,6 +172,10 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     private JSONArray currentClassPending;
     private DisplayMetrics displaymetrics;
     private NfcAdapter mAdapter;
+    private SwipeRefreshLayout refreshLayout;
+    private RelativeLayout classes;
+    private RelativeLayout overview;
+    private RelativeLayout store;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -245,13 +248,13 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         final EditText answer2 = (EditText) findViewById(R.id.answer2);
         final EditText answer3 = (EditText) findViewById(R.id.answer3);
         final EditText answer4 = (EditText) findViewById(R.id.answer4);
-        final SwipeRefreshLayout refreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout);
+        refreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout);
         final SwipeRefreshLayout refreshTeacher = (SwipeRefreshLayout) findViewById(R.id.refreshTeacher);
         final ListView teacherList = (ListView) findViewById(R.id.teacherList);
         final Button distributeButton = (Button)findViewById(R.id.distributeButton);
-        final RelativeLayout classes = (RelativeLayout) findViewById(R.id.classes);
-        final RelativeLayout overview = (RelativeLayout) findViewById(R.id.overview);
-        final RelativeLayout store = (RelativeLayout) findViewById(R.id.store);
+        classes = (RelativeLayout) findViewById(R.id.classes);
+        overview = (RelativeLayout) findViewById(R.id.overview);
+        store = (RelativeLayout) findViewById(R.id.store);
         teacherFab = (FloatingActionButton) findViewById(R.id.teacherFab);
         classFab = (FloatingActionButton) findViewById(R.id.classFab);
         usersFab = (FloatingActionButton) findViewById(R.id.usersFab);
@@ -940,7 +943,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 public void onResult(Boolean result) {
                                 }
                             }).create().start();
-                    Snackbar.make(findViewById(R.id.snackLayout), "User removed", Snackbar.LENGTH_LONG)
+                    Snackbar.make(findViewById(R.id.classUsersLayout), "User removed", Snackbar.LENGTH_LONG)
                             .setAction(R.string.undo, new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
@@ -988,7 +991,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                     public void onResult(Boolean result) {
                                     }
                                 }).create().start();
-                        Snackbar.make(findViewById(R.id.snackLayout), "Pending user removed", Snackbar.LENGTH_LONG)
+                        Snackbar.make(findViewById(R.id.classUsersLayout), "Pending user removed", Snackbar.LENGTH_LONG)
                                 .setAction(R.string.undo, new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
@@ -2038,8 +2041,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             }
         }
         else {
-            Snackbar.make(findViewById(R.id.snackLayout), !isOnline()?R.string.no_connection:R.string.no_sync_ready, Snackbar.LENGTH_SHORT)
-                    .show();
+            showSnackbar( getResources().getString(!isOnline()?R.string.no_connection:R.string.no_sync_ready), Snackbar.LENGTH_SHORT);
         }
     }
 
@@ -2331,10 +2333,22 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                 AsyncJob.doOnMainThread(new AsyncJob.OnMainThreadJob() {
                     @Override
                     public void doInUIThread() {
-                        Snackbar.make(findViewById(R.id.snackLayout), "Book added", Snackbar.LENGTH_SHORT).show();
+                        showSnackbar("Book added", Snackbar.LENGTH_SHORT);
                     }
                 });
             }
         });
+    }
+    private void showSnackbar(String text, int length) {
+        if(refreshLayout.getVisibility()==View.VISIBLE || store.getVisibility()==View.VISIBLE || overview.getVisibility()==View.VISIBLE)
+            Snackbar.make(findViewById(R.id.snackLayout), text, length).show();
+        else if(teacher.getVisibility()==View.VISIBLE)
+            Snackbar.make(teacher, text, length).show();
+        else if(classes.getVisibility()==View.VISIBLE) {
+            if(viewFlipper.getDisplayedChild()==0)
+                Snackbar.make(findViewById(R.id.classListLayout), text, length).show();
+            else
+                Snackbar.make(findViewById(R.id.classUsersLayout), text, length).show();
+        }
     }
 }

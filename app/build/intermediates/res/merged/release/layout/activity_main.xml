@@ -49,97 +49,13 @@
             android:layout_height="match_parent">
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/list"
+                android:scrollbars="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
         </android.support.v4.widget.SwipeRefreshLayout>
 
     </LinearLayout>
-        <RelativeLayout
-            android:id="@+id/aboutScreen"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="14dp"
-            android:translationZ="3dp"
-            android:elevation="6sp"
-            android:background="@android:color/white"
-            android:visibility="invisible">
-
-            <ImageView
-                android:id="@+id/aboutImage"
-                android:layout_marginTop="15dp"
-                android:contentDescription="@string/app_name"
-                android:layout_width="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_height="90dp"
-                android:src="@mipmap/ic_launcher"/>
-            <TextView
-                android:id="@+id/aboutText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_marginTop="110dp"
-                android:textColor="#000000"
-                android:text="@string/app_name"/>
-            <TextView
-                android:id="@+id/aboutVersion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_marginTop="135dp"
-                android:textColor="#000000"/>
-            <Button
-                android:id="@+id/aboutFacebook"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/facebook_about"
-                style="?android:attr/borderlessButtonStyle"
-                android:textSize="18sp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="120dp"
-                android:textColor="#3B5998"
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp"/>
-            <Button
-                android:id="@+id/aboutGoogle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/google_about"
-                style="?android:attr/borderlessButtonStyle"
-                android:textSize="18sp"
-                android:layout_alignParentBottom="true"
-                android:textColor="#dd4b39"
-                android:layout_marginBottom="80dp"
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp"/>
-            <Button
-                android:id="@+id/aboutProducer"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/developer"
-                android:textSize="18sp"
-                android:layout_alignParentBottom="true"
-                android:textColor="#000000"
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp"
-                android:layout_marginBottom="40dp"/>
-            <Button
-                android:id="@+id/aboutProgrammer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/programmer"
-                style="?android:attr/borderlessButtonStyle"
-                android:textSize="18sp"
-                android:layout_alignParentBottom="true"
-                android:textColor="#000000"
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp"/>
-        </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/distributeScreen"
@@ -152,6 +68,7 @@
             android:visibility="invisible">
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/distributeList"
+                android:scrollbars="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="48dp">
@@ -172,22 +89,49 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="invisible">
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/classList"
-                android:padding="8dp"
+            <ViewFlipper
+                android:id="@+id/viewFlipper"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="?attr/actionBarSize"/>
-            <android.support.design.widget.FloatingActionButton
-                android:id="@+id/classFab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true"
-                sothree:borderWidth="0dp"
-                android:layout_margin="@dimen/fab_margin"
-                android:src="@drawable/ic_add_class" />
+                android:layout_height="match_parent">
+                <android.support.design.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="?attr/actionBarSize">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/classList"
+                        android:padding="8dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/classFab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|end"
+                        sothree:borderWidth="0dp"
+                        android:layout_margin="@dimen/fab_margin"
+                        android:src="@drawable/ic_add_class" />
+                </android.support.design.widget.CoordinatorLayout>
+                <android.support.design.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="?attr/actionBarSize">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/usersList"
+                        android:layout_width="match_parent"
+                        android:scrollbars="vertical"
+                        android:layout_height="wrap_content"/>
 
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/usersFab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|end"
+                        sothree:borderWidth="0dp"
+                        android:layout_margin="@dimen/fab_margin"
+                        android:src="@drawable/ic_account_plus" />
+                </android.support.design.widget.CoordinatorLayout>
+            </ViewFlipper>
         </RelativeLayout>
 
         <RelativeLayout
@@ -202,82 +146,7 @@
             android:layout_height="match_parent"
             android:visibility="invisible"/>
 
-        <RelativeLayout
-            android:id="@+id/QuestionLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:translationZ="3dp"
-            android:layout_margin="14dp"
-            android:background="@android:color/white"
-            android:elevation="8sp"
-            android:visibility="invisible">
 
-            <TextView
-                android:id="@+id/Question"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_margin="14sp"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="25sp"
-                android:visibility="invisible" />
-
-            <Button
-                android:id="@+id/button"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true"
-                android:text="@string/NextButtonText"
-                android:textSize="20sp"
-                android:visibility="invisible" />
-
-            <RadioGroup
-                android:id="@+id/radioGroup"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_above="@id/button"
-                android:layout_alignEnd="@+id/button"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/Question"
-                android:layout_marginTop="15dp">
-
-                <RadioButton
-                    android:id="@+id/Option1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:textSize="16sp"
-                    android:visibility="invisible" />
-
-                <RadioButton
-                    android:id="@+id/Option2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:textSize="16sp"
-                    android:visibility="invisible" />
-
-                <RadioButton
-                    android:id="@+id/Option3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:textSize="16sp"
-                    android:visibility="invisible" />
-
-                <RadioButton
-                    android:id="@+id/Option4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:textSize="16sp"
-                    android:visibility="invisible" />
-
-            </RadioGroup>
-        </RelativeLayout>
         <com.quinny898.library.persistentsearch.SearchBox
             android:layout_width="wrap_content"
             android:id="@+id/searchbox"
@@ -477,6 +346,167 @@
             </RelativeLayout>
         </com.sothree.slidinguppanel.SlidingUpPanelLayout>
         <RelativeLayout
+            android:id="@+id/aboutScreen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="14dp"
+            android:translationZ="3dp"
+            android:elevation="6sp"
+            android:background="@android:color/white"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/aboutImage"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@string/app_name"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="90dp"
+                android:src="@mipmap/ic_launcher"/>
+            <TextView
+                android:id="@+id/aboutText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="110dp"
+                android:textColor="#000000"
+                android:text="@string/app_name"/>
+            <TextView
+                android:id="@+id/aboutVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="135dp"
+                android:textColor="#000000"/>
+            <Button
+                android:id="@+id/aboutFacebook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/facebook_about"
+                style="?android:attr/borderlessButtonStyle"
+                android:textSize="18sp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="120dp"
+                android:textColor="#3B5998"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"/>
+            <Button
+                android:id="@+id/aboutGoogle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/google_about"
+                style="?android:attr/borderlessButtonStyle"
+                android:textSize="18sp"
+                android:layout_alignParentBottom="true"
+                android:textColor="#dd4b39"
+                android:layout_marginBottom="80dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"/>
+            <Button
+                android:id="@+id/aboutProducer"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/developer"
+                android:textSize="18sp"
+                android:layout_alignParentBottom="true"
+                android:textColor="#000000"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:layout_marginBottom="40dp"/>
+            <Button
+                android:id="@+id/aboutProgrammer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/programmer"
+                style="?android:attr/borderlessButtonStyle"
+                android:textSize="18sp"
+                android:layout_alignParentBottom="true"
+                android:textColor="#000000"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/QuestionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:translationZ="3dp"
+            android:layout_margin="14dp"
+            android:background="@android:color/white"
+            android:elevation="8sp"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/Question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="14sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="25sp"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:text="@string/NextButtonText"
+                android:textSize="20sp"
+                android:visibility="invisible" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/button"
+                android:layout_alignEnd="@+id/button"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/Question"
+                android:layout_marginTop="15dp">
+
+                <RadioButton
+                    android:id="@+id/Option1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp"
+                    android:visibility="invisible" />
+
+                <RadioButton
+                    android:id="@+id/Option2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp"
+                    android:visibility="invisible" />
+
+                <RadioButton
+                    android:id="@+id/Option3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp"
+                    android:visibility="invisible" />
+
+                <RadioButton
+                    android:id="@+id/Option4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp"
+                    android:visibility="invisible" />
+
+            </RadioGroup>
+        </RelativeLayout>
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <com.google.android.gms.ads.AdView
@@ -488,6 +518,10 @@
                 sothree:adSize="SMART_BANNER"
                 sothree:adUnitId="@string/banner_ad_unit_id"/>
         </RelativeLayout>
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/snackLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
     </FrameLayout>
 
 </com.heinrichreimersoftware.materialdrawer.DrawerFrameLayout><!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/layout/activity_main.xml -->

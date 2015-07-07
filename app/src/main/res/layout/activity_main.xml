@@ -94,6 +94,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <android.support.design.widget.CoordinatorLayout
+                    android:id="@+id/classListLayout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="?attr/actionBarSize">
@@ -113,6 +114,7 @@
                         android:src="@drawable/ic_add_class" />
                 </android.support.design.widget.CoordinatorLayout>
                 <android.support.design.widget.CoordinatorLayout
+                    android:id="@+id/classUsersLayout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="?attr/actionBarSize">
