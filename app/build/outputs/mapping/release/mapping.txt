@@ -40380,9 +40380,9 @@ com.teched.smartread.MainActivity$16$1$1 -> com.teched.smartread.z:
     void onResult(java.lang.Boolean) -> a
     void onResult(java.lang.Object) -> a
 com.teched.smartread.MainActivity$16$1$2 -> com.teched.smartread.aa:
-    java.io.File[] val$files -> a
+    java.io.File val$folder -> a
     com.teched.smartread.MainActivity$16$1 this$2 -> b
-    void <init>(com.teched.smartread.MainActivity$16$1,java.io.File[]) -> <init>
+    void <init>(com.teched.smartread.MainActivity$16$1,java.io.File) -> <init>
     java.lang.Boolean doAsync() -> b
     java.lang.Object doAsync() -> a
 com.teched.smartread.MainActivity$17 -> com.teched.smartread.ab:

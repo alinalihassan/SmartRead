@@ -11472,7 +11472,7 @@ com.teched.smartread.LoginActivity:
 com.teched.smartread.MainActivity:
     private static final int FILE_CODE
 com.teched.smartread.MainActivity$45:
-    1870:1871:public void onSearchCleared()
+    1872:1873:public void onSearchCleared()
 com.teched.smartread.R
 com.teched.smartread.R$anim
 com.teched.smartread.R$array

@@ -82,6 +82,7 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.heinrichreimersoftware.materialdrawer.DrawerFrameLayout;
 import com.heinrichreimersoftware.materialdrawer.structure.DrawerHeaderItem;
 import com.heinrichreimersoftware.materialdrawer.structure.DrawerItem;
@@ -173,6 +174,8 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     private RelativeLayout classes;
     private RelativeLayout store;
     private TextView accessText;
+    private InterstitialAd mInterstitialAd;
+    private SwipeRefreshLayout refreshClasses;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -183,18 +186,15 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         firstTime();
         bp = new BillingProcessor(this, getResources().getString(R.string.license_key), this);
         jobManager = new JobManager(this);
-        /*final AdView mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder()
-                .build();
-        mAdView.setAdListener(new AdListener() {
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId(getResources().getString(R.string.banner_ad_unit_id));
+        requestNewInterstitial();
+        mInterstitialAd.setAdListener(new AdListener() {
             @Override
-            public void onAdLoaded() {
-                super.onAdLoaded();
-                findViewById(R.id.swipeRefreshLayout).setPadding(0,0,0,AdSize.SMART_BANNER.getHeightInPixels(getApplicationContext()));
-                findViewById(R.id.teacher).setPadding(0, 0, 0, AdSize.SMART_BANNER.getHeightInPixels(getApplicationContext()));
+            public void onAdClosed() {
+                requestNewInterstitial();
             }
         });
-        mAdView.loadAd(adRequest);*/
         final SharedPreferences prefs = this.getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE);
         GregorianCalendar c = new GregorianCalendar();
         c.getTime();
@@ -247,6 +247,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         final EditText answer4 = (EditText) findViewById(R.id.answer4);
         refreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout);
         final SwipeRefreshLayout refreshTeacher = (SwipeRefreshLayout) findViewById(R.id.refreshTeacher);
+        refreshClasses = (SwipeRefreshLayout) findViewById(R.id.refreshClasses);
         final ListView teacherList = (ListView) findViewById(R.id.teacherList);
         final Button distributeButton = (Button)findViewById(R.id.distributeButton);
         classes = (RelativeLayout) findViewById(R.id.classes);
@@ -272,6 +273,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         }
         refreshLayout.setColorSchemeResources(R.color.color_primary);
         refreshTeacher.setColorSchemeResources(R.color.color_primary);
+        refreshClasses.setColorSchemeResources(R.color.color_primary);
         toolbar.setTitleTextColor(Color.WHITE);
         drawer.setStatusBarBackgroundColor(getResources().getColor(R.color.color_primary_dark));
         aboutVersion.setText("Version " + BuildConfig.VERSION_NAME);
@@ -530,6 +532,22 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                         refreshTeacher.setRefreshing(false);
                     }
                 }, 1000);
+            }
+        });
+        refreshClasses.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (isOnline())
+                            refreshClass();
+                        else {
+                            showSnackbar(getResources().getString(R.string.no_connection),Snackbar.LENGTH_SHORT);
+                            refreshClasses.setRefreshing(false);
+                        }
+                    }
+                }, isOnline()?250:500);
             }
         });
         refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -1158,9 +1176,11 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                     .onPageChange(new OnPageChangeListener() {
                                         @Override
                                         public void onPageChanged(int page, int pageCount) {
-                                            JSONArray array;
-                                            boolean canDo = false;
                                             try {
+                                                if (page % 10 == 0 && mInterstitialAd.isLoaded())
+                                                    adDialog();
+                                                JSONArray array;
+                                                boolean canDo = false;
                                                 if (page == pdf.getPageCount())
                                                     mainObject2.put("Finished", true);
                                                 mainObject2.put("LastPage", page);
@@ -1170,7 +1190,8 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                                     QuestionPage(array, 2, mainObject2);
                                                     AnimateQuestion(true);
                                                 }
-                                            } catch (JSONException ignored) { }
+                                            } catch (JSONException ignored) {
+                                            }
                                         }
                                     })
                                     .load();
@@ -2079,6 +2100,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     @Override
                     public void onResult(Boolean result) {
                         adapter4.notifyDataSetChanged();
+                        if(refreshClasses.isRefreshing()) refreshClasses .setRefreshing(false);
                     }
                 }).create().start();
     }
@@ -2318,5 +2340,16 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             else
                 Snackbar.make(findViewById(R.id.classUsersLayout), text, length).show();
         }
+    }
+    private void requestNewInterstitial() {
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice("BE01DBD21BBECA7BF954E996DDA21410")
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                .build();
+
+        mInterstitialAd.loadAd(adRequest);
+    }
+    private void adDialog() {
+        mInterstitialAd.show();
     }
 }

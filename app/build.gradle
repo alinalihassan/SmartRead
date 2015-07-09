@@ -16,8 +16,8 @@ android {
         applicationId "com.teched.smartread"
         minSdkVersion 17
         targetSdkVersion 22
-        versionCode 64
-        versionName "3.3.4"
+        versionCode 66
+        versionName "3.4.1"
     }
     lintOptions {
         checkReleaseBuilds false

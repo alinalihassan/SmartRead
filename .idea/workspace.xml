@@ -50,208 +50,207 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53af16ed-6082-410a-aef7-3350c985e7c9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$16$1$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$3$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$3$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$5.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$6$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$6$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$6.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$7.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$8.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$31$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$41$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$41$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$41$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$46$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$51$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$52$1$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$52$1$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$52$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/release/drawable/ic_account.png" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$17$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$17$1$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$17$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$29$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$29$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$29$3$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$29$3$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$29$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$29$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$29$5.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$29$6$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$29$6$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$29$6.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$29$7.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$29$8.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$33$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$43$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$43$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$43$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$48$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$54$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$54$1$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$54$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$54.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$55$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$55.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\res\merged\release\drawable\ic_account_multiple.png" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$16$1$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$16$1$2.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$14.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$13.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$15.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$14.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$16$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$15$1.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$16.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$15.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$17.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$16.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$1.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$25.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$23.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$26.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$24.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$27.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$25.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$28.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$26.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$29.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$2.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$31.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$29.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$32.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$30.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$33.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$31.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$34.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$32.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$35.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$33.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$36.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$34.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$37.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$35.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$38.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$36.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$39.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$37.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$40.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$38.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$41.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$39.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$42.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$40.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$43.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$41.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$44.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$42.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$45.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$43.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$46.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$44.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$47.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$45.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$48.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$46.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$4.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$51.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$49.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$52.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$50.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$53.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$51.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$5.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$6.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$7.class" />
-      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$8.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$17$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$18$1$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$18$1$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$18$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29$3$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29$3$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29$5.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29$6$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29$6$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29$6.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29$7.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29$8.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$33$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$43$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$43$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$43$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$48$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$54$1$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$54$1$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$54$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$55$1.class" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$15$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$16$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$16$1$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$27$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$27$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$27$3$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$27$3$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$27$3.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$27$4.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$27$5.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$27$6$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$27$6$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$27$6.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$27$7.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$27$8.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$31$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$32$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$41$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$41$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$41$3.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$42$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$42$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$42$3.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$46$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$51$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$52$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$52$1$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$52$1.class" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$2.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$13.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$14.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$14.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$15.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$15.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$16.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$16$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$16$1.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$16.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$18.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$17.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$19.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$18.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$20.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$19.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$21.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$3.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$20.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$22.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$21.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$23.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$23.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$25.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$24.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$26.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$25.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$26.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$28.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$27.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$28.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$30.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$29.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$31.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$4.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$30.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$32.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$31.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$33.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$32.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$34.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$33.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$35.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$34.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$36.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$35.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$37.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$36.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$38.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$37.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$39.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$38.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$40.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$39.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$41.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$40.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$42.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$41.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$43.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$42.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$44.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$43.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$45.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$44.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$46.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$45.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$47.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$46.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$48.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$48.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$50.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$49.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$51.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$6.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$50.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$52.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$51.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$53.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$52.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$54.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$53.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$55.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$7.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$8.class" />
+      <change type="MOVED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/BuildConfig.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/BuildConfig.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/BuildConfig.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/BuildConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/Class.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/Class.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/ClassAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/ClassAdapter$ViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/ClassAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/ClassAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/DistributeAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/DistributeAdapter$ViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$12.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$16$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$16$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$16$1$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$16$1$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/ClassAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/ClassAdapter$ViewHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/DistributeAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/DistributeAdapter$ViewHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$12.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$13.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$16$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$16$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$16$1$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$16$1$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$16$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$16$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$16$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$16$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$16.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$16.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$16.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$16.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$17.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$17.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$17.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$17.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$18.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$18.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$18.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$18.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$19.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$19.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$19.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$19.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$20.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$20.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$20.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$20.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$21.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$21.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$21.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$21.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$22.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$22.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$22.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$22.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$23.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$23.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$23.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$23.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$24.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$24.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$25.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$25.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$26.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$26.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27$3$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27$3$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27$3$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27$3$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27$6$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27$6$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27$6$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27$6$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$28.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$28.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$24.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$24.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$25.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$25.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$26.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$26.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$3$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$3$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$3$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$3$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$6$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$6$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$6$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$6$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$28.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$28.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$30.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$30.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$31$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$31$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$31.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$31.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$32.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$32.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$33.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$33.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$34.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$34.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$35.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$35.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$36.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$36.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$37.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$37.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$38.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$38.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$39.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$39.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$40.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$40.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$41$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$41$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$41$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$41$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$41$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$41$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$41.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$41.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$42.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$42.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$43.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$43.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$44.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$44.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$45.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$45.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$46$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$46$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$46.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$46.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$47.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$47.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$29.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$29.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$30.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$30.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$31$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$31$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$31.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$31.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$32.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$32.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$33.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$33.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$34.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$34.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$35.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$35.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$36.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$36.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$37.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$37.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$38.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$38.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$39.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$39.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$40.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$40.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$41$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$41$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$41$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$41$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$41$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$41$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$41.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$41.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$42.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$42.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$43.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$43.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$44.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$44.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$45.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$45.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$46$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$46$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$46.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$46.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$47.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$47.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$48.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$48.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$48.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$48.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$49.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$49.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$50.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$50.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$51$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$51$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$51.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$51.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$52$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$52$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$52$1$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$52$1$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$52$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$52$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$52.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$52.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$49.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$49.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$50.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$50.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$51$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$51$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$51.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$51.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$52$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$52$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$52$1$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$52$1$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$52$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$52$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$52.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$52.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$53$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$53$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$53$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$53$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$53.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$53.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$53.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$53.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainAdapter$ViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/android/support/design/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/android/support/design/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/android/support/v7/appcompat/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/android/support/v7/mediarouter/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/android/support/v7/mediarouter/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/facebook/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/facebook/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/nononsenseapps/filepicker/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/nononsenseapps/filepicker/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/quinny898/library/persistentsearch/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/quinny898/library/persistentsearch/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/yqritc/recyclerviewflexibledivider/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/yqritc/recyclerviewflexibledivider/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$integer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$menu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$mipmap.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$mipmap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$raw.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$raw.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$xml.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$xml.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainAdapter$ViewHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/mediarouter/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/mediarouter/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/nononsenseapps/filepicker/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/nononsenseapps/filepicker/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/quinny898/library/persistentsearch/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/quinny898/library/persistentsearch/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/yqritc/recyclerviewflexibledivider/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/yqritc/recyclerviewflexibledivider/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$integer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$menu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$menu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$mipmap.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$mipmap.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$raw.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$raw.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$style.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$styleable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$xml.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$xml.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/SettingsActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/SettingsActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/SettingsActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/SettingsActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/UsersAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/UsersAdapter$ViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/UsersAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/UsersAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/UsersAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/UsersAdapter$ViewHolder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-release-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-release-unaligned.apk" />
@@ -272,23 +271,22 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/teched/smartread/BuildConfig.java" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/teched/smartread/BuildConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/release/com/teched/smartread/BuildConfig.java" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/release/com/teched/smartread/BuildConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/android/support/design/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/android/support/design/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/android/support/v7/appcompat/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/android/support/v7/mediarouter/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/android/support/v7/mediarouter/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/facebook/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/facebook/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/nononsenseapps/filepicker/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/nononsenseapps/filepicker/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/quinny898/library/persistentsearch/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/quinny898/library/persistentsearch/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/teched/smartread/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/teched/smartread/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/yqritc/recyclerviewflexibledivider/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/yqritc/recyclerviewflexibledivider/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/release/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/release/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/proguard-rules/release/aapt_rules.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/proguard-rules/release/aapt_rules.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/release/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/release/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/mediarouter/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/mediarouter/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/facebook/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/facebook/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/nononsenseapps/filepicker/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/nononsenseapps/filepicker/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/quinny898/library/persistentsearch/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/quinny898/library/persistentsearch/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/teched/smartread/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/teched/smartread/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/yqritc/recyclerviewflexibledivider/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/yqritc/recyclerviewflexibledivider/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/mapping/release/dump.txt" afterPath="$PROJECT_DIR$/app/build/outputs/mapping/release/dump.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/mapping/release/mapping.txt" afterPath="$PROJECT_DIR$/app/build/outputs/mapping/release/mapping.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResourcesrelease/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResourcesrelease/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/mapping/release/seeds.txt" afterPath="$PROJECT_DIR$/app/build/outputs/mapping/release/seeds.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResourcesdebug/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResourcesdebug/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/mapping/release/usage.txt" afterPath="$PROJECT_DIR$/app/build/outputs/mapping/release/usage.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -324,206 +322,134 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="541" column="37" selection-start-line="541" selection-start-column="37" selection-end-line="541" selection-end-column="37" />
+              <caret line="547" column="25" selection-start-line="547" selection-start-column="25" selection-end-line="547" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#13255#13275#0" expanded="true" />
-                <element signature="e#13293#13314#0" expanded="true" />
-                <element signature="e#13378#13379#0" expanded="true" />
-                <element signature="e#13433#13434#0" expanded="true" />
-                <element signature="e#13492#13493#0" expanded="true" />
-                <element signature="e#13547#13548#0" expanded="true" />
-                <element signature="e#13714#14309#0" expanded="true" />
-                <element signature="e#14308#14309#0" expanded="true" />
-                <element signature="e#14348#14495#0" expanded="true" />
-                <element signature="e#14494#14495#0" expanded="true" />
-                <element signature="e#14534#14677#0" expanded="true" />
-                <element signature="e#14676#14677#0" expanded="true" />
-                <element signature="e#14941#14942#0" expanded="true" />
-                <element signature="e#14987#14988#0" expanded="true" />
-                <element signature="e#15857#16268#0" expanded="true" />
-                <element signature="e#16267#16268#0" expanded="true" />
-                <element signature="e#16311#18540#0" expanded="true" />
-                <element signature="e#18539#18540#0" expanded="true" />
-                <element signature="e#18583#22078#0" expanded="true" />
-                <element signature="e#22077#22078#0" expanded="true" />
-                <element signature="e#22117#22360#0" expanded="true" />
-                <element signature="e#22284#22332#0" expanded="true" />
-                <element signature="e#22359#22360#0" expanded="true" />
-                <element signature="e#22397#22642#0" expanded="true" />
-                <element signature="e#22564#22614#0" expanded="true" />
-                <element signature="e#22641#22642#0" expanded="true" />
-                <element signature="e#22681#22920#0" expanded="true" />
-                <element signature="e#22848#22892#0" expanded="true" />
-                <element signature="e#22919#22920#0" expanded="true" />
-                <element signature="e#22961#23203#0" expanded="true" />
-                <element signature="e#23128#23175#0" expanded="true" />
-                <element signature="e#23202#23203#0" expanded="true" />
-                <element signature="e#23251#23440#0" expanded="true" />
-                <element signature="e#23439#23440#0" expanded="true" />
-                <element signature="e#23486#24004#0" expanded="true" />
-                <element signature="e#24003#24004#0" expanded="true" />
-                <element signature="e#24100#25014#0" expanded="true" />
-                <element signature="e#24247#24982#0" expanded="true" />
-                <element signature="e#24981#24982#0" expanded="true" />
-                <element signature="e#25013#25014#0" expanded="true" />
-                <element signature="e#25060#29818#0" expanded="true" />
-                <element signature="e#25207#29772#0" expanded="true" />
-                <element signature="e#25651#28236#0" expanded="true" />
-                <element signature="e#26122#26161#0" expanded="true" />
-                <element signature="e#28235#28236#0" expanded="true" />
-                <element signature="e#28290#28870#0" expanded="true" />
-                <element signature="e#28869#28870#0" expanded="true" />
-                <element signature="e#29771#29772#0" expanded="true" />
-                <element signature="e#29817#29818#0" expanded="true" />
-                <element signature="e#31517#31549#0" expanded="true" />
-                <element signature="e#31617#31656#0" expanded="true" />
-                <element signature="e#31917#33273#0" expanded="true" />
-                <element signature="e#33272#33273#0" expanded="true" />
-                <element signature="e#33529#34883#0" expanded="true" />
-                <element signature="e#34882#34883#0" expanded="true" />
-                <element signature="e#35145#36501#0" expanded="true" />
-                <element signature="e#36500#36501#0" expanded="true" />
-                <element signature="e#36753#37923#0" expanded="true" />
-                <element signature="e#37922#37923#0" expanded="true" />
-                <element signature="e#38276#39740#0" expanded="true" />
-                <element signature="e#39739#39740#0" expanded="true" />
-                <element signature="e#39995#41166#0" expanded="true" />
-                <element signature="e#41165#41166#0" expanded="true" />
-                <element signature="e#41455#41777#0" expanded="true" />
-                <element signature="e#41776#41777#0" expanded="true" />
-                <element signature="e#42036#42378#0" expanded="true" />
-                <element signature="e#42377#42378#0" expanded="true" />
-                <element signature="e#42561#42950#0" expanded="true" />
-                <element signature="e#42949#42950#0" expanded="true" />
-                <element signature="e#42988#43282#0" expanded="true" />
-                <element signature="e#43281#43282#0" expanded="true" />
-                <element signature="e#46829#47337#0" expanded="true" />
-                <element signature="e#47336#47337#0" expanded="true" />
-                <element signature="e#47771#47784#0" expanded="true" />
-                <element signature="e#47786#49448#0" expanded="true" />
-                <element signature="e#48422#49019#0" expanded="true" />
-                <element signature="e#49018#49019#0" expanded="true" />
-                <element signature="e#49447#49448#0" expanded="true" />
-                <element signature="e#50025#50735#0" expanded="true" />
-                <element signature="e#50734#50735#0" expanded="true" />
-                <element signature="e#51205#51218#0" expanded="true" />
-                <element signature="e#51220#53004#0" expanded="true" />
-                <element signature="e#51909#52547#0" expanded="true" />
-                <element signature="e#52546#52547#0" expanded="true" />
-                <element signature="e#53003#53004#0" expanded="true" />
-                <element signature="e#53651#54478#0" expanded="true" />
-                <element signature="e#54477#54478#0" expanded="true" />
-                <element signature="e#58672#59151#0" expanded="true" />
-                <element signature="e#59150#59151#0" expanded="true" />
-                <element signature="e#62735#63978#0" expanded="true" />
-                <element signature="e#63977#63978#0" expanded="true" />
-                <element signature="e#64698#64699#0" expanded="true" />
-                <element signature="e#64734#64735#0" expanded="true" />
-                <element signature="e#67040#67041#0" expanded="true" />
-                <element signature="e#67078#67079#0" expanded="true" />
-                <element signature="e#85312#88436#0" expanded="true" />
-                <element signature="e#86209#86483#0" expanded="true" />
-                <element signature="e#86482#86483#0" expanded="true" />
-                <element signature="e#86762#87532#0" expanded="true" />
-                <element signature="e#87531#87532#0" expanded="true" />
-                <element signature="e#87905#88169#0" expanded="true" />
-                <element signature="e#88168#88169#0" expanded="true" />
-                <element signature="e#88435#88436#0" expanded="true" />
-                <element signature="e#88945#89184#0" expanded="true" />
-                <element signature="e#89183#89184#0" expanded="true" />
-                <element signature="e#89486#90758#0" expanded="true" />
-                <element signature="e#90757#90758#0" expanded="true" />
-                <element signature="e#93044#93045#0" expanded="true" />
-                <element signature="e#93127#93128#0" expanded="true" />
-                <element signature="e#94808#94809#0" expanded="true" />
-                <element signature="e#94845#94846#0" expanded="true" />
-                <element signature="e#98127#98166#0" expanded="true" />
-                <element signature="e#98962#98984#0" expanded="true" />
-                <element signature="e#98985#99007#0" expanded="true" />
-                <element signature="e#99603#100848#0" expanded="true" />
-                <element signature="e#100016#100822#0" expanded="true" />
-                <element signature="e#100821#100822#0" expanded="true" />
-                <element signature="e#100847#100848#0" expanded="true" />
-                <element signature="e#100993#102521#0" expanded="true" />
-                <element signature="e#101434#101473#0" expanded="true" />
-                <element signature="e#102520#102521#0" expanded="true" />
-                <element signature="e#102555#102784#0" expanded="true" />
-                <element signature="e#102783#102784#0" expanded="true" />
-                <element signature="e#102969#104623#0" expanded="true" />
-                <element signature="e#104622#104623#0" expanded="true" />
-                <element signature="e#104657#104886#0" expanded="true" />
-                <element signature="e#104885#104886#0" expanded="true" />
-                <element signature="e#105547#106675#0" expanded="true" />
-                <element signature="e#105960#106649#0" expanded="true" />
-                <element signature="e#106274#106313#0" expanded="true" />
-                <element signature="e#106648#106649#0" expanded="true" />
-                <element signature="e#106674#106675#0" expanded="true" />
-                <element signature="e#107218#109598#0" expanded="true" />
-                <element signature="e#107631#109572#0" expanded="true" />
-                <element signature="e#108031#108563#0" expanded="true" />
-                <element signature="e#108562#108563#0" expanded="true" />
-                <element signature="e#108625#109077#0" expanded="true" />
-                <element signature="e#109076#109077#0" expanded="true" />
-                <element signature="e#109571#109572#0" expanded="true" />
-                <element signature="e#109597#109598#0" expanded="true" />
-                <element signature="e#110101#110102#0" expanded="true" />
-                <element signature="e#110152#110153#0" expanded="true" />
-                <element signature="e#111775#113398#0" expanded="true" />
-                <element signature="e#112740#112779#0" expanded="true" />
-                <element signature="e#113146#113372#0" expanded="true" />
-                <element signature="e#113371#113372#0" expanded="true" />
-                <element signature="e#113397#113398#0" expanded="true" />
+                <element signature="e#7282#7328#0" expanded="true" />
+                <element signature="e#7468#7520#0" expanded="true" />
+                <element signature="e#7595#7740#0" expanded="true" />
+                <element signature="e#7739#7740#0" expanded="true" />
+                <element signature="e#13289#13309#0" expanded="true" />
+                <element signature="e#13327#13348#0" expanded="true" />
+                <element signature="e#22318#22366#0" expanded="true" />
+                <element signature="e#22598#22648#0" expanded="true" />
+                <element signature="e#22882#22926#0" expanded="true" />
+                <element signature="e#23162#23209#0" expanded="true" />
+                <element signature="e#23520#24038#0" expanded="true" />
+                <element signature="e#24037#24038#0" expanded="true" />
+                <element signature="e#24134#25048#0" expanded="true" />
+                <element signature="e#25047#25048#0" expanded="true" />
+                <element signature="e#25095#25734#0" expanded="true" />
+                <element signature="e#25242#25688#0" expanded="true" />
+                <element signature="e#25485#25533#0" expanded="true" />
+                <element signature="e#25687#25688#0" expanded="true" />
+                <element signature="e#25733#25734#0" expanded="true" />
+                <element signature="e#25780#30538#0" expanded="true" />
+                <element signature="e#26371#28956#0" expanded="true" />
+                <element signature="e#26842#26881#0" expanded="true" />
+                <element signature="e#28955#28956#0" expanded="true" />
+                <element signature="e#29010#29590#0" expanded="true" />
+                <element signature="e#29589#29590#0" expanded="true" />
+                <element signature="e#30537#30538#0" expanded="true" />
+                <element signature="e#32237#32269#0" expanded="true" />
+                <element signature="e#32337#32376#0" expanded="true" />
+                <element signature="e#32637#33993#0" expanded="true" />
+                <element signature="e#33992#33993#0" expanded="true" />
+                <element signature="e#34249#35603#0" expanded="true" />
+                <element signature="e#35602#35603#0" expanded="true" />
+                <element signature="e#35865#37221#0" expanded="true" />
+                <element signature="e#37220#37221#0" expanded="true" />
+                <element signature="e#37473#38643#0" expanded="true" />
+                <element signature="e#38642#38643#0" expanded="true" />
+                <element signature="e#38996#40460#0" expanded="true" />
+                <element signature="e#40459#40460#0" expanded="true" />
+                <element signature="e#40715#41886#0" expanded="true" />
+                <element signature="e#41885#41886#0" expanded="true" />
+                <element signature="e#42175#42497#0" expanded="true" />
+                <element signature="e#42496#42497#0" expanded="true" />
+                <element signature="e#42756#43098#0" expanded="true" />
+                <element signature="e#43097#43098#0" expanded="true" />
+                <element signature="e#43281#43670#0" expanded="true" />
+                <element signature="e#43669#43670#0" expanded="true" />
+                <element signature="e#43708#44002#0" expanded="true" />
+                <element signature="e#44001#44002#0" expanded="true" />
+                <element signature="e#47549#48057#0" expanded="true" />
+                <element signature="e#48056#48057#0" expanded="true" />
+                <element signature="e#48491#48504#0" expanded="true" />
+                <element signature="e#49142#49739#0" expanded="true" />
+                <element signature="e#49738#49739#0" expanded="true" />
+                <element signature="e#50745#51455#0" expanded="true" />
+                <element signature="e#51454#51455#0" expanded="true" />
+                <element signature="e#51925#51938#0" expanded="true" />
+                <element signature="e#52629#53267#0" expanded="true" />
+                <element signature="e#53266#53267#0" expanded="true" />
+                <element signature="e#54371#55198#0" expanded="true" />
+                <element signature="e#55197#55198#0" expanded="true" />
+                <element signature="e#63455#64912#0" expanded="true" />
+                <element signature="e#64911#64912#0" expanded="true" />
+                <element signature="e#99061#99100#0" expanded="true" />
+                <element signature="e#99896#99918#0" expanded="true" />
+                <element signature="e#99919#99941#0" expanded="true" />
+                <element signature="e#101423#101462#0" expanded="true" />
+                <element signature="e#101927#103455#0" expanded="true" />
+                <element signature="e#102368#102407#0" expanded="true" />
+                <element signature="e#103454#103455#0" expanded="true" />
+                <element signature="e#103489#103814#0" expanded="true" />
+                <element signature="e#103813#103814#0" expanded="true" />
+                <element signature="e#103999#105653#0" expanded="true" />
+                <element signature="e#105652#105653#0" expanded="true" />
+                <element signature="e#105687#105916#0" expanded="true" />
+                <element signature="e#105915#105916#0" expanded="true" />
+                <element signature="e#107304#107343#0" expanded="true" />
+                <element signature="e#109061#109593#0" expanded="true" />
+                <element signature="e#109592#109593#0" expanded="true" />
+                <element signature="e#109655#110107#0" expanded="true" />
+                <element signature="e#110106#110107#0" expanded="true" />
+                <element signature="e#112805#114428#0" expanded="true" />
+                <element signature="e#113770#113809#0" expanded="true" />
+                <element signature="e#114176#114402#0" expanded="true" />
+                <element signature="e#114401#114402#0" expanded="true" />
+                <element signature="e#114427#114428#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JsonClass.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/JsonClass.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="60" column="11" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.91234344">
-              <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
-              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.2931035">
+              <caret line="97" column="55" selection-start-line="97" selection-start-column="55" selection-end-line="97" selection-end-column="55" />
+              <folding>
+                <element signature="e#3475#3502#0" expanded="true" />
+                <element signature="e#5403#5422#0" expanded="true" />
+                <element signature="e#7246#7265#0" expanded="true" />
+                <element signature="e#9176#9195#0" expanded="true" />
+                <element signature="e#11522#11544#0" expanded="true" />
+                <element signature="e#12397#12421#0" expanded="true" />
+                <element signature="e#13324#13344#0" expanded="true" />
+                <element signature="e#16945#16969#0" expanded="true" />
+                <element signature="e#17866#17884#0" expanded="true" />
+                <element signature="e#18504#18522#0" expanded="true" />
+                <element signature="e#19118#19142#0" expanded="true" />
+                <element signature="e#19682#19704#0" expanded="true" />
+                <element signature="e#20305#20324#0" expanded="true" />
+                <element signature="e#20807#20827#0" expanded="true" />
+                <element signature="e#22375#22399#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
           <provider editor-type-id="android-designer">
             <state />
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.655172">
-              <caret line="527" column="28" selection-start-line="527" selection-start-column="28" selection-end-line="527" selection-end-column="28" />
-              <folding>
-                <element signature="e#3475#3502#0" expanded="true" />
-                <element signature="e#5116#5135#0" expanded="true" />
-                <element signature="e#6959#6978#0" expanded="true" />
-                <element signature="e#8889#8908#0" expanded="true" />
-                <element signature="e#11235#11257#0" expanded="true" />
-                <element signature="e#12110#12134#0" expanded="true" />
-                <element signature="e#13037#13057#0" expanded="true" />
-                <element signature="e#16658#16682#0" expanded="true" />
-                <element signature="e#17579#17597#0" expanded="true" />
-                <element signature="e#18217#18235#0" expanded="true" />
-                <element signature="e#18831#18855#0" expanded="true" />
-                <element signature="e#19395#19417#0" expanded="true" />
-                <element signature="e#20018#20037#0" expanded="true" />
-                <element signature="e#20520#20540#0" expanded="true" />
-                <element signature="e#22088#22112#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.41541353">
+              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -3117,7 +3043,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="C:\Users\superalin98\Documents\SmartRead2" value="7176035891985" />
+        <entry key="C:\Users\superalin98\Documents\SmartRead2" value="7176099649349" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -3963,7 +3889,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/heart.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/DistributeAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml" />
         <option value="$PROJECT_DIR$/build.gradle" />
@@ -3997,7 +3922,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/MJSONArray.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/DividerItemDecoration.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/xml/nfc.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/NdefReaderTask.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/AddBookJob.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/cardview.xml" />
@@ -4010,8 +3934,10 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/test.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/ClassAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/Class.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/JsonClass.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/xml/prefs.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
       </list>
@@ -4078,6 +4004,26 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmartRead2" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmartRead2" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Problems" />
@@ -4118,39 +4064,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches">
-        <subPane />
-      </pane>
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartRead2" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gradle Scripts" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartRead2" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartRead2" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -4159,31 +4072,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartRead2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartRead2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartRead2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartRead2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
+      </pane>
+      <pane id="Scratches">
+        <subPane />
       </pane>
     </panes>
   </component>
@@ -4592,7 +4484,13 @@
       <option name="project" value="LOCAL" />
       <updated>1436276256905</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Refresh bugs fixed">
+      <created>1436296009862</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1436296009862</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -4699,7 +4597,8 @@
     <MESSAGE value="Added NFC features&#10;Bugfixes&#10;Classes improvements" />
     <MESSAGE value="Smaller size&#10;Bug fixes" />
     <MESSAGE value="Performance changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Performance changes" />
+    <MESSAGE value="Refresh bugs fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refresh bugs fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -4708,17 +4607,21 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="527" column="28" selection-start-line="527" selection-start-column="28" selection-end-line="527" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21288015">
           <caret line="7" column="77" selection-start-line="7" selection-start-column="77" selection-end-line="7" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/prefs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39534885">
-          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -4763,13 +4666,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/settings_toolbar.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.1034484">
           <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/android/widget/EditText.java">
@@ -4794,13 +4697,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.56666666">
           <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/slide_out_to_left.xml">
@@ -4852,13 +4755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.9259257">
-          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15205725">
@@ -4874,23 +4770,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="61" selection-start-line="44" selection-start-column="61" selection-end-line="44" selection-end-column="61" />
-          <folding>
-            <element signature="e#1146#1164#0" expanded="true" />
-            <element signature="e#1310#1349#0" expanded="true" />
-            <element signature="e#1456#1481#0" expanded="true" />
-            <element signature="e#1590#1617#0" expanded="true" />
-            <element signature="e#1706#1724#0" expanded="true" />
-            <element signature="e#2790#2808#0" expanded="true" />
-            <element signature="e#2971#2989#0" expanded="true" />
-            <element signature="e#3159#3177#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.964286">
@@ -4902,7 +4781,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1824687">
           <caret line="6" column="56" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4910,26 +4788,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3041145">
           <caret line="10" column="61" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/cardview.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.862069">
           <caret line="48" column="47" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/AddBookJob.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.57781756">
           <caret line="20" column="113" selection-start-line="20" selection-start-column="113" selection-end-line="20" selection-end-column="113" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4937,7 +4813,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12164579">
           <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4945,7 +4820,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33452594">
           <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4953,7 +4827,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.09123435">
           <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4961,9 +4834,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3041145">
           <caret line="10" column="45" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4971,7 +4841,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48658317">
           <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4979,7 +4848,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.05903399">
           <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4987,9 +4855,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.372093">
           <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-          <folding>
-            <element signature="e#3542#3543#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4997,7 +4862,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08765653">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5005,7 +4869,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15205725">
           <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5013,9 +4876,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.4293381">
           <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -5023,9 +4883,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.24329159">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -5033,9 +4890,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48658317">
           <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -5043,7 +4897,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.5778176">
           <caret line="56" column="81" selection-start-line="56" selection-start-column="81" selection-end-line="56" selection-end-column="81" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5051,26 +4904,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.91234344">
           <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/classview.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3264151">
           <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/Class.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3041145">
           <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5078,206 +4929,166 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="41" column="78" selection-start-line="41" selection-start-column="78" selection-end-line="41" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.655172">
-          <caret line="527" column="28" selection-start-line="527" selection-start-column="28" selection-end-line="527" selection-end-column="28" />
-          <folding>
-            <element signature="e#3475#3502#0" expanded="true" />
-            <element signature="e#5116#5135#0" expanded="true" />
-            <element signature="e#6959#6978#0" expanded="true" />
-            <element signature="e#8889#8908#0" expanded="true" />
-            <element signature="e#11235#11257#0" expanded="true" />
-            <element signature="e#12110#12134#0" expanded="true" />
-            <element signature="e#13037#13057#0" expanded="true" />
-            <element signature="e#16658#16682#0" expanded="true" />
-            <element signature="e#17579#17597#0" expanded="true" />
-            <element signature="e#18217#18235#0" expanded="true" />
-            <element signature="e#18831#18855#0" expanded="true" />
-            <element signature="e#19395#19417#0" expanded="true" />
-            <element signature="e#20018#20037#0" expanded="true" />
-            <element signature="e#20520#20540#0" expanded="true" />
-            <element signature="e#22088#22112#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/JsonClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.060822897">
           <caret line="60" column="11" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.0319147">
+          <caret line="81" column="63" selection-start-line="81" selection-start-column="63" selection-end-line="81" selection-end-column="63" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.851851">
+          <caret line="26" column="75" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/prefs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39177102">
+          <caret line="28" column="48" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.2931035">
+          <caret line="97" column="55" selection-start-line="97" selection-start-column="55" selection-end-line="97" selection-end-column="55" />
+          <folding>
+            <element signature="e#3475#3502#0" expanded="true" />
+            <element signature="e#5403#5422#0" expanded="true" />
+            <element signature="e#7246#7265#0" expanded="true" />
+            <element signature="e#9176#9195#0" expanded="true" />
+            <element signature="e#11522#11544#0" expanded="true" />
+            <element signature="e#12397#12421#0" expanded="true" />
+            <element signature="e#13324#13344#0" expanded="true" />
+            <element signature="e#16945#16969#0" expanded="true" />
+            <element signature="e#17866#17884#0" expanded="true" />
+            <element signature="e#18504#18522#0" expanded="true" />
+            <element signature="e#19118#19142#0" expanded="true" />
+            <element signature="e#19682#19704#0" expanded="true" />
+            <element signature="e#20305#20324#0" expanded="true" />
+            <element signature="e#20807#20827#0" expanded="true" />
+            <element signature="e#22375#22399#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="541" column="37" selection-start-line="541" selection-start-column="37" selection-end-line="541" selection-end-column="37" />
+          <caret line="547" column="25" selection-start-line="547" selection-start-column="25" selection-end-line="547" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#13255#13275#0" expanded="true" />
-            <element signature="e#13293#13314#0" expanded="true" />
-            <element signature="e#13378#13379#0" expanded="true" />
-            <element signature="e#13433#13434#0" expanded="true" />
-            <element signature="e#13492#13493#0" expanded="true" />
-            <element signature="e#13547#13548#0" expanded="true" />
-            <element signature="e#13714#14309#0" expanded="true" />
-            <element signature="e#14308#14309#0" expanded="true" />
-            <element signature="e#14348#14495#0" expanded="true" />
-            <element signature="e#14494#14495#0" expanded="true" />
-            <element signature="e#14534#14677#0" expanded="true" />
-            <element signature="e#14676#14677#0" expanded="true" />
-            <element signature="e#14941#14942#0" expanded="true" />
-            <element signature="e#14987#14988#0" expanded="true" />
-            <element signature="e#15857#16268#0" expanded="true" />
-            <element signature="e#16267#16268#0" expanded="true" />
-            <element signature="e#16311#18540#0" expanded="true" />
-            <element signature="e#18539#18540#0" expanded="true" />
-            <element signature="e#18583#22078#0" expanded="true" />
-            <element signature="e#22077#22078#0" expanded="true" />
-            <element signature="e#22117#22360#0" expanded="true" />
-            <element signature="e#22284#22332#0" expanded="true" />
-            <element signature="e#22359#22360#0" expanded="true" />
-            <element signature="e#22397#22642#0" expanded="true" />
-            <element signature="e#22564#22614#0" expanded="true" />
-            <element signature="e#22641#22642#0" expanded="true" />
-            <element signature="e#22681#22920#0" expanded="true" />
-            <element signature="e#22848#22892#0" expanded="true" />
-            <element signature="e#22919#22920#0" expanded="true" />
-            <element signature="e#22961#23203#0" expanded="true" />
-            <element signature="e#23128#23175#0" expanded="true" />
-            <element signature="e#23202#23203#0" expanded="true" />
-            <element signature="e#23251#23440#0" expanded="true" />
-            <element signature="e#23439#23440#0" expanded="true" />
-            <element signature="e#23486#24004#0" expanded="true" />
-            <element signature="e#24003#24004#0" expanded="true" />
-            <element signature="e#24100#25014#0" expanded="true" />
-            <element signature="e#24247#24982#0" expanded="true" />
-            <element signature="e#24981#24982#0" expanded="true" />
-            <element signature="e#25013#25014#0" expanded="true" />
-            <element signature="e#25060#29818#0" expanded="true" />
-            <element signature="e#25207#29772#0" expanded="true" />
-            <element signature="e#25651#28236#0" expanded="true" />
-            <element signature="e#26122#26161#0" expanded="true" />
-            <element signature="e#28235#28236#0" expanded="true" />
-            <element signature="e#28290#28870#0" expanded="true" />
-            <element signature="e#28869#28870#0" expanded="true" />
-            <element signature="e#29771#29772#0" expanded="true" />
-            <element signature="e#29817#29818#0" expanded="true" />
-            <element signature="e#31517#31549#0" expanded="true" />
-            <element signature="e#31617#31656#0" expanded="true" />
-            <element signature="e#31917#33273#0" expanded="true" />
-            <element signature="e#33272#33273#0" expanded="true" />
-            <element signature="e#33529#34883#0" expanded="true" />
-            <element signature="e#34882#34883#0" expanded="true" />
-            <element signature="e#35145#36501#0" expanded="true" />
-            <element signature="e#36500#36501#0" expanded="true" />
-            <element signature="e#36753#37923#0" expanded="true" />
-            <element signature="e#37922#37923#0" expanded="true" />
-            <element signature="e#38276#39740#0" expanded="true" />
-            <element signature="e#39739#39740#0" expanded="true" />
-            <element signature="e#39995#41166#0" expanded="true" />
-            <element signature="e#41165#41166#0" expanded="true" />
-            <element signature="e#41455#41777#0" expanded="true" />
-            <element signature="e#41776#41777#0" expanded="true" />
-            <element signature="e#42036#42378#0" expanded="true" />
-            <element signature="e#42377#42378#0" expanded="true" />
-            <element signature="e#42561#42950#0" expanded="true" />
-            <element signature="e#42949#42950#0" expanded="true" />
-            <element signature="e#42988#43282#0" expanded="true" />
-            <element signature="e#43281#43282#0" expanded="true" />
-            <element signature="e#46829#47337#0" expanded="true" />
-            <element signature="e#47336#47337#0" expanded="true" />
-            <element signature="e#47771#47784#0" expanded="true" />
-            <element signature="e#47786#49448#0" expanded="true" />
-            <element signature="e#48422#49019#0" expanded="true" />
-            <element signature="e#49018#49019#0" expanded="true" />
-            <element signature="e#49447#49448#0" expanded="true" />
-            <element signature="e#50025#50735#0" expanded="true" />
-            <element signature="e#50734#50735#0" expanded="true" />
-            <element signature="e#51205#51218#0" expanded="true" />
-            <element signature="e#51220#53004#0" expanded="true" />
-            <element signature="e#51909#52547#0" expanded="true" />
-            <element signature="e#52546#52547#0" expanded="true" />
-            <element signature="e#53003#53004#0" expanded="true" />
-            <element signature="e#53651#54478#0" expanded="true" />
-            <element signature="e#54477#54478#0" expanded="true" />
-            <element signature="e#58672#59151#0" expanded="true" />
-            <element signature="e#59150#59151#0" expanded="true" />
-            <element signature="e#62735#63978#0" expanded="true" />
-            <element signature="e#63977#63978#0" expanded="true" />
-            <element signature="e#64698#64699#0" expanded="true" />
-            <element signature="e#64734#64735#0" expanded="true" />
-            <element signature="e#67040#67041#0" expanded="true" />
-            <element signature="e#67078#67079#0" expanded="true" />
-            <element signature="e#85312#88436#0" expanded="true" />
-            <element signature="e#86209#86483#0" expanded="true" />
-            <element signature="e#86482#86483#0" expanded="true" />
-            <element signature="e#86762#87532#0" expanded="true" />
-            <element signature="e#87531#87532#0" expanded="true" />
-            <element signature="e#87905#88169#0" expanded="true" />
-            <element signature="e#88168#88169#0" expanded="true" />
-            <element signature="e#88435#88436#0" expanded="true" />
-            <element signature="e#88945#89184#0" expanded="true" />
-            <element signature="e#89183#89184#0" expanded="true" />
-            <element signature="e#89486#90758#0" expanded="true" />
-            <element signature="e#90757#90758#0" expanded="true" />
-            <element signature="e#93044#93045#0" expanded="true" />
-            <element signature="e#93127#93128#0" expanded="true" />
-            <element signature="e#94808#94809#0" expanded="true" />
-            <element signature="e#94845#94846#0" expanded="true" />
-            <element signature="e#98127#98166#0" expanded="true" />
-            <element signature="e#98962#98984#0" expanded="true" />
-            <element signature="e#98985#99007#0" expanded="true" />
-            <element signature="e#99603#100848#0" expanded="true" />
-            <element signature="e#100016#100822#0" expanded="true" />
-            <element signature="e#100821#100822#0" expanded="true" />
-            <element signature="e#100847#100848#0" expanded="true" />
-            <element signature="e#100993#102521#0" expanded="true" />
-            <element signature="e#101434#101473#0" expanded="true" />
-            <element signature="e#102520#102521#0" expanded="true" />
-            <element signature="e#102555#102784#0" expanded="true" />
-            <element signature="e#102783#102784#0" expanded="true" />
-            <element signature="e#102969#104623#0" expanded="true" />
-            <element signature="e#104622#104623#0" expanded="true" />
-            <element signature="e#104657#104886#0" expanded="true" />
-            <element signature="e#104885#104886#0" expanded="true" />
-            <element signature="e#105547#106675#0" expanded="true" />
-            <element signature="e#105960#106649#0" expanded="true" />
-            <element signature="e#106274#106313#0" expanded="true" />
-            <element signature="e#106648#106649#0" expanded="true" />
-            <element signature="e#106674#106675#0" expanded="true" />
-            <element signature="e#107218#109598#0" expanded="true" />
-            <element signature="e#107631#109572#0" expanded="true" />
-            <element signature="e#108031#108563#0" expanded="true" />
-            <element signature="e#108562#108563#0" expanded="true" />
-            <element signature="e#108625#109077#0" expanded="true" />
-            <element signature="e#109076#109077#0" expanded="true" />
-            <element signature="e#109571#109572#0" expanded="true" />
-            <element signature="e#109597#109598#0" expanded="true" />
-            <element signature="e#110101#110102#0" expanded="true" />
-            <element signature="e#110152#110153#0" expanded="true" />
-            <element signature="e#111775#113398#0" expanded="true" />
-            <element signature="e#112740#112779#0" expanded="true" />
-            <element signature="e#113146#113372#0" expanded="true" />
-            <element signature="e#113371#113372#0" expanded="true" />
-            <element signature="e#113397#113398#0" expanded="true" />
+            <element signature="e#7282#7328#0" expanded="true" />
+            <element signature="e#7468#7520#0" expanded="true" />
+            <element signature="e#7595#7740#0" expanded="true" />
+            <element signature="e#7739#7740#0" expanded="true" />
+            <element signature="e#13289#13309#0" expanded="true" />
+            <element signature="e#13327#13348#0" expanded="true" />
+            <element signature="e#22318#22366#0" expanded="true" />
+            <element signature="e#22598#22648#0" expanded="true" />
+            <element signature="e#22882#22926#0" expanded="true" />
+            <element signature="e#23162#23209#0" expanded="true" />
+            <element signature="e#23520#24038#0" expanded="true" />
+            <element signature="e#24037#24038#0" expanded="true" />
+            <element signature="e#24134#25048#0" expanded="true" />
+            <element signature="e#25047#25048#0" expanded="true" />
+            <element signature="e#25095#25734#0" expanded="true" />
+            <element signature="e#25242#25688#0" expanded="true" />
+            <element signature="e#25485#25533#0" expanded="true" />
+            <element signature="e#25687#25688#0" expanded="true" />
+            <element signature="e#25733#25734#0" expanded="true" />
+            <element signature="e#25780#30538#0" expanded="true" />
+            <element signature="e#26371#28956#0" expanded="true" />
+            <element signature="e#26842#26881#0" expanded="true" />
+            <element signature="e#28955#28956#0" expanded="true" />
+            <element signature="e#29010#29590#0" expanded="true" />
+            <element signature="e#29589#29590#0" expanded="true" />
+            <element signature="e#30537#30538#0" expanded="true" />
+            <element signature="e#32237#32269#0" expanded="true" />
+            <element signature="e#32337#32376#0" expanded="true" />
+            <element signature="e#32637#33993#0" expanded="true" />
+            <element signature="e#33992#33993#0" expanded="true" />
+            <element signature="e#34249#35603#0" expanded="true" />
+            <element signature="e#35602#35603#0" expanded="true" />
+            <element signature="e#35865#37221#0" expanded="true" />
+            <element signature="e#37220#37221#0" expanded="true" />
+            <element signature="e#37473#38643#0" expanded="true" />
+            <element signature="e#38642#38643#0" expanded="true" />
+            <element signature="e#38996#40460#0" expanded="true" />
+            <element signature="e#40459#40460#0" expanded="true" />
+            <element signature="e#40715#41886#0" expanded="true" />
+            <element signature="e#41885#41886#0" expanded="true" />
+            <element signature="e#42175#42497#0" expanded="true" />
+            <element signature="e#42496#42497#0" expanded="true" />
+            <element signature="e#42756#43098#0" expanded="true" />
+            <element signature="e#43097#43098#0" expanded="true" />
+            <element signature="e#43281#43670#0" expanded="true" />
+            <element signature="e#43669#43670#0" expanded="true" />
+            <element signature="e#43708#44002#0" expanded="true" />
+            <element signature="e#44001#44002#0" expanded="true" />
+            <element signature="e#47549#48057#0" expanded="true" />
+            <element signature="e#48056#48057#0" expanded="true" />
+            <element signature="e#48491#48504#0" expanded="true" />
+            <element signature="e#49142#49739#0" expanded="true" />
+            <element signature="e#49738#49739#0" expanded="true" />
+            <element signature="e#50745#51455#0" expanded="true" />
+            <element signature="e#51454#51455#0" expanded="true" />
+            <element signature="e#51925#51938#0" expanded="true" />
+            <element signature="e#52629#53267#0" expanded="true" />
+            <element signature="e#53266#53267#0" expanded="true" />
+            <element signature="e#54371#55198#0" expanded="true" />
+            <element signature="e#55197#55198#0" expanded="true" />
+            <element signature="e#63455#64912#0" expanded="true" />
+            <element signature="e#64911#64912#0" expanded="true" />
+            <element signature="e#99061#99100#0" expanded="true" />
+            <element signature="e#99896#99918#0" expanded="true" />
+            <element signature="e#99919#99941#0" expanded="true" />
+            <element signature="e#101423#101462#0" expanded="true" />
+            <element signature="e#101927#103455#0" expanded="true" />
+            <element signature="e#102368#102407#0" expanded="true" />
+            <element signature="e#103454#103455#0" expanded="true" />
+            <element signature="e#103489#103814#0" expanded="true" />
+            <element signature="e#103813#103814#0" expanded="true" />
+            <element signature="e#103999#105653#0" expanded="true" />
+            <element signature="e#105652#105653#0" expanded="true" />
+            <element signature="e#105687#105916#0" expanded="true" />
+            <element signature="e#105915#105916#0" expanded="true" />
+            <element signature="e#107304#107343#0" expanded="true" />
+            <element signature="e#109061#109593#0" expanded="true" />
+            <element signature="e#109592#109593#0" expanded="true" />
+            <element signature="e#109655#110107#0" expanded="true" />
+            <element signature="e#110106#110107#0" expanded="true" />
+            <element signature="e#112805#114428#0" expanded="true" />
+            <element signature="e#113770#113809#0" expanded="true" />
+            <element signature="e#114176#114402#0" expanded="true" />
+            <element signature="e#114401#114402#0" expanded="true" />
+            <element signature="e#114427#114428#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91234344">
-          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.41541353">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
           <folding />
         </state>
       </provider>
