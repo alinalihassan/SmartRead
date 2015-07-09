@@ -78,7 +78,7 @@ public class JsonClass {
         } catch (Exception e) { e.printStackTrace();
         }
     }
-    public static int uploadFile(String sourceFileUri, String sourceFileUri2) {
+    public static int uploadFile(String sourceFileUri, String sourceFileUri2, String Email) {
         HttpURLConnection conn;
         DataOutputStream dos;
         String lineEnd = "\r\n";
@@ -93,7 +93,7 @@ public class JsonClass {
 
             FileInputStream fileInputStream = new FileInputStream(sourceFile);
             FileInputStream fileInputStream2 = new FileInputStream(sourceFile2);
-            URL url = new URL("http://php-smartread.rhcloud.com/create_book.php");
+            URL url = new URL("http://php-smartread.rhcloud.com/create_book.php?email=" + Email);
 
             conn = (HttpURLConnection) url.openConnection();
             conn.setDoInput(true);

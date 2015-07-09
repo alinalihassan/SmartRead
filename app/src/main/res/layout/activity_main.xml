@@ -199,7 +199,7 @@
             android:gravity="bottom"
             android:visibility="invisible"
             android:elevation="8dp"
-            sothree:umanoPanelHeight="64dp"
+            sothree:umanoPanelHeight="72dp"
             sothree:umanoInitialState="hidden"
             sothree:umanoParalaxOffset="100dp"
             sothree:umanoShadowHeight="4dp">
@@ -221,75 +221,60 @@
                     android:layout_width="32dp"
                     android:layout_height="32dp"
                     android:layout_margin="16dp" />
-                <EditText
-                    android:id="@+id/pdfTitle"
+                <com.teched.smartread.CustomTextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/pdfTitleLayout"
                     android:layout_marginEnd="64dp"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
-                    android:singleLine="true"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="20dp"
-                    android:textSize="24sp"
-                    android:textColor="#000000"/>
-                <TextView
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/name_title"
+                        android:id="@+id/pdfTitle"
+                        android:singleLine="true"
+                        android:textSize="24sp"
+                        android:textColor="#000000"/>
+                </com.teched.smartread.CustomTextInputLayout>
+                <com.teched.smartread.CustomTextInputLayout
+                    android:layout_width="match_parent"
                     android:id="@+id/authorTitle"
-                    android:layout_width="128sp"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/author_title"
-                    android:singleLine="true"
-                    android:textSize="22sp"
-                    android:paddingTop="11dp"
-                    android:textColor="#000000"
-                    android:layout_below="@id/pdfTitle"/>
-                <EditText
-                    android:id="@+id/authorEdit"
+                    android:layout_below="@id/pdfTitleLayout"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/authorEdit"
+                        android:hint="@string/author_title"
+                        android:layout_below="@id/pdfTitleLayout"
+                        android:layout_marginStart="8dp"/>
+                </com.teched.smartread.CustomTextInputLayout>
+                <com.teched.smartread.CustomTextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/pdfTitle"
-                    android:layout_marginStart="128dp"/>
-                <TextView
                     android:id="@+id/questionTitle"
-                    android:layout_width="128sp"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/question_title"
-                    android:singleLine="true"
-                    android:textSize="22sp"
-                    android:paddingTop="28dp"
-                    android:textColor="#000000"
-                    android:layout_below="@id/authorTitle"/>
-                <EditText
-                    android:id="@+id/questionEdit"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:layout_below="@id/authorTitle"
-                    android:paddingTop="28dp"
-                    android:layout_marginStart="128dp"/>
-                <TextView
-                    android:id="@+id/pageTitle"
-                    android:layout_width="128sp"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/page_title"
-                    android:singleLine="true"
-                    android:textSize="22sp"
-                    android:paddingTop="28dp"
-                    android:textColor="#000000"
-                    android:layout_below="@id/questionTitle"/>
-                <EditText
-                    android:id="@+id/pageEdit"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/questionEdit"
+                        android:hint="@string/question_title"
+                        android:layout_marginStart="8dp"/>
+                </com.teched.smartread.CustomTextInputLayout>
+                <com.teched.smartread.CustomTextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/pageTitle"
                     android:layout_below="@id/questionTitle"
-                    android:paddingTop="28dp"
-                    android:layout_marginStart="128dp"
-                    android:inputType="number"/>
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/pageEdit"
+                        android:hint="@string/page_title"
+                        android:layout_marginStart="8dp"
+                        android:inputType="number"/>
+                </com.teched.smartread.CustomTextInputLayout>
                 <RadioGroup
                     android:id="@+id/questionGroup"
                     android:layout_width="wrap_content"

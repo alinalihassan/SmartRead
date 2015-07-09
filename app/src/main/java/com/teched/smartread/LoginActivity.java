@@ -227,9 +227,11 @@ public class LoginActivity extends AppCompatActivity implements
     {
         PackageManager m = getPackageManager();
         String s = getPackageName();
+        String s2 = null;
         try {
             PackageInfo p = m.getPackageInfo(s, 0);
             s = p.applicationInfo.dataDir+"/app_book";
+            s2 = p.applicationInfo.dataDir+"/teacher_book";
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
@@ -250,6 +252,13 @@ public class LoginActivity extends AppCompatActivity implements
             for (int i = 0; i<booksArray.length();i++) {
                 JsonClass.DownloadBook(s, booksArray.getString(i) + ".pdf");
                 JsonClass.DownloadBook(s,booksArray.getString(i)+".json");
+            }
+            booksArray= books.getJSONArray("teacher_books");
+            for (int i = 0; i<booksArray.length();i++) {
+                JsonClass.DownloadBook(s, booksArray.getString(i) + ".pdf");
+                JsonClass.DownloadBook(s,booksArray.getString(i)+".json");
+                JsonClass.DownloadBook(s2, booksArray.getString(i) + ".pdf");
+                JsonClass.DownloadBook(s2,booksArray.getString(i)+".json");
             }
         } catch (Exception e) { e.printStackTrace(); }
         SharedPreferences prefs = this.getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE);

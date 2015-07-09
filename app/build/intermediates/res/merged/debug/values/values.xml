@@ -642,6 +642,11 @@
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.nononsenseapps/filepicker/2.1/res/values/values.xml -->
     <eat-comment/>
     <string name="name">Name</string>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="name_title">Title</string>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.nononsenseapps/filepicker/2.1/res/values/values.xml -->
+    <eat-comment/>
     <string name="new_folder">New folder</string>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/values/strings.xml -->
     <eat-comment/>

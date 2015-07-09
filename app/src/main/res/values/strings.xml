@@ -18,6 +18,7 @@
     <string name="question_title">Question</string>
     <string name="author_title">Author</string>
     <string name="page_title">Page</string>
+    <string name="name_title">Title</string>
     <string name="email">office@smartreadapp.com</string>
     <string name="no_connection">No internet connection available</string>
     <string name="string_distribute">Distribute</string>

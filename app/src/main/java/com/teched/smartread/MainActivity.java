@@ -398,7 +398,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                     myList.add(file2.getName().replace(".pdf", ""));
                                 }
                         }
-                        jobManager.addJobInBackground(new UploadJob(Path ,TeacherPath, ((EditText) findViewById(R.id.pdfTitle)).getText().toString(),teacherFile.getPath(), file.getPath()));
+                        jobManager.addJobInBackground(new UploadJob(Path ,TeacherPath, ((EditText) findViewById(R.id.pdfTitle)).getText().toString(),teacherFile.getPath(), file.getPath(),  prefs.getString("Email", getString(R.string.profile_description))));
                         adapter2.notifyDataSetChanged();
                         hideKeyboard();
                         AnimateTeacher(false);

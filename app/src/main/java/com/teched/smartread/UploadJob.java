@@ -13,23 +13,25 @@ public class UploadJob extends Job {
     private String Name;
     private String s1;
     private String s2;
+    private String Email;
     File file;
     File file2;
 
-    public UploadJob(String Path, String TeacherPath, String Name, String s1, String s2) {
+    public UploadJob(String Path, String TeacherPath, String Name, String s1, String s2, String Email) {
         super(new Params(PRIORITY).requireNetwork().persist());
         this.Path = Path;
         this.TeacherPath = TeacherPath;
         this.Name = Name;
         this.s1 = s1;
         this.s2 = s2;
+        this.Email = Email;
     }
     @Override
     public void onAdded() {
     }
     @Override
     public void onRun() throws Throwable {
-        int id = JsonClass.uploadFile(s1, s2);
+        int id = JsonClass.uploadFile(s1, s2, Email);
         file = new File(Path + "/" + Name + ".pdf");
         file2 = new File(Path + "/" + String.valueOf(id) + ".pdf");
         file.renameTo(file2);
