@@ -71,7 +71,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     }
 
     public void setFilter(String queryText) {
-        visibleCards = new ArrayList<>();
+        visibleCards = new ArrayList<Card>();
         for (Card item: cards) {
             if ((queryText.equals("") || item.name.toLowerCase().contains(queryText.toLowerCase()) || item.author.toLowerCase().contains(queryText.toLowerCase())) && hasType(item))
                 visibleCards.add(item);

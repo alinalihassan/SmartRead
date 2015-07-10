@@ -1472,6 +1472,8 @@ android.support.design.widget.TabLayout: android.content.res.ColorStateList getT
 android.support.design.widget.TabLayout: void setupWithViewPager(android.support.v4.view.ViewPager)
 android.support.design.widget.TabLayout: void setTabsFromPagerAdapter(android.support.v4.view.PagerAdapter)
 android.support.design.widget.TabLayout: void setSelectedTabView(int)
+android.support.design.widget.TextInputLayout: TextInputLayout(android.content.Context)
+android.support.design.widget.TextInputLayout: TextInputLayout(android.content.Context,android.util.AttributeSet)
 android.support.design.widget.TextInputLayout: android.widget.EditText getEditText()
 android.support.design.widget.TextInputLayout: void setHint(java.lang.CharSequence)
 android.support.design.widget.TextInputLayout: void setErrorEnabled(boolean)
@@ -20470,6 +20472,9 @@ com.sothree.slidinguppanel.library.R$styleable: int SlidingUpPanelLayout_umanoPa
 com.sothree.slidinguppanel.library.R$styleable: int SlidingUpPanelLayout_umanoShadowHeight
 com.teched.smartread.BackupAgent
 com.teched.smartread.BackupAgent: BackupAgent()
+com.teched.smartread.CustomTextInputLayout
+com.teched.smartread.CustomTextInputLayout: CustomTextInputLayout(android.content.Context)
+com.teched.smartread.CustomTextInputLayout: CustomTextInputLayout(android.content.Context,android.util.AttributeSet)
 com.teched.smartread.LoginActivity
 com.teched.smartread.LoginActivity: LoginActivity()
 com.teched.smartread.MainActivity
@@ -21525,6 +21530,7 @@ com.teched.smartread.R$id: int parallax
 com.teched.smartread.R$id: int parentPanel
 com.teched.smartread.R$id: int pb
 com.teched.smartread.R$id: int pdfTitle
+com.teched.smartread.R$id: int pdfTitleLayout
 com.teched.smartread.R$id: int pdfcontent
 com.teched.smartread.R$id: int picker_toolbar
 com.teched.smartread.R$id: int pin
@@ -21542,6 +21548,7 @@ com.teched.smartread.R$id: int questionNext
 com.teched.smartread.R$id: int questionTitle
 com.teched.smartread.R$id: int radio
 com.teched.smartread.R$id: int radioGroup
+com.teched.smartread.R$id: int refreshClasses
 com.teched.smartread.R$id: int refreshTeacher
 com.teched.smartread.R$id: int results
 com.teched.smartread.R$id: int right
@@ -21824,6 +21831,7 @@ com.teched.smartread.R$string: int mr_media_route_controller_stop
 com.teched.smartread.R$string: int mr_system_route_name
 com.teched.smartread.R$string: int mr_user_route_category_name
 com.teched.smartread.R$string: int name
+com.teched.smartread.R$string: int name_title
 com.teched.smartread.R$string: int new_folder
 com.teched.smartread.R$string: int no_connection
 com.teched.smartread.R$string: int no_sync_ready

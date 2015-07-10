@@ -50,130 +50,619 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53af16ed-6082-410a-aef7-3350c985e7c9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/CustomTextInputLayout$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/CustomTextInputLayout.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/CustomTextInputLayout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/com/teched/smartread/test/BuildConfig.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/com/teched/smartread/test/BuildConfig.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/CustomTextInputLayout$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/CustomTextInputLayout.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$15$1$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$15$1$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$15$1$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$15$1$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$15$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$17$1$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$17$1$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$17$1$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$17$1$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$17$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$28$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$28$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$28$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$28$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$28$3$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$28$3$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$28$3$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$28$3$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$28$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$28$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$28$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$28$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$28$5.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$28$5.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$28$6$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$28$6$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$28$6$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$28$6$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$28$6.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$28$6.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$28$7.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$28$7.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$28$8.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$28$8.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$32$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$32$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$42$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$42$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$42$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$42$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$42$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$42$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$47$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$47$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$52$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$53$1$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$53$1$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$53$1$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$53$1$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$54$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$54.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facebook/build/intermediates/manifest/tmp/manifestMerger7409662313161246292.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PersistentSearch/build/intermediates/manifest/tmp/manifestMerger8763284125434726466.xml" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\PersistentSearch\build\intermediates\manifest\tmp\manifestMerger6380361678648793506.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\androidTest\debug\com\teched\smartread\ApplicationTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\androidTest\debug\com\teched\smartread\test\BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$18$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$18$1$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$18$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$29$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$29$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$29$3$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$29$3$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$29$3.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$29$4.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$29$5.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$29$6$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$29$6$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$29$6.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$29$7.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$29$8.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$33$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$34$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$43$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$43$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$43$3.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$48$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$54$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$54$1$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$55$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\debug\com\teched\smartread\MainActivity$55.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$16$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$16$1$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$27$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$27$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$27$3$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$27$3$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$27$3.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$27$4.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$27$5.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$27$6$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$27$6$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$27$6.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$27$7.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$27$8.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$31$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$41$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$41$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$41$3.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$46$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$51$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$52$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\classes\release\com\teched\smartread\MainActivity$52$1$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.amulyakhare\com.amulyakhare.textdrawable\1.0.1\AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.amulyakhare\com.amulyakhare.textdrawable\1.0.1\jars\classes.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.1.1\AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.1.1\aapt\AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.1.1\jars\classes.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.github.andkulikov\transitions-everywhere\1.4.0\AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.github.andkulikov\transitions-everywhere\1.4.0\R.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.github.andkulikov\transitions-everywhere\1.4.0\aapt\AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.github.andkulikov\transitions-everywhere\1.4.0\jars\classes.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.github.andkulikov\transitions-everywhere\1.4.0\res\values\values.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\1.3.0\AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\1.3.0\R.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\1.3.0\aapt\AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\1.3.0\annotations.zip" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\1.3.0\jars\classes.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\1.3.0\res\values\values.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\android-priority-jobqueue-1.1.2-c55ca8d5d3d2ce0f4d77ef55410fef88944da034.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\bolts-android-1.2.0-ae51930b50e33b8d7e4eb08b052257d461dae119.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-08249b79cbe98c2e0825626d81e58f62f7dbe649.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-0bf73d3acc2604bc18c4ab5b5eb0889236c77d60.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-0de5675ccbc3cd89f8e7ffe600517039b8528667.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-10518e074b5d8db518f6a4850b589b4310523204.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-196e3ce925e222029eb78ba90bdf162984693b81.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-1f867318afc7cf58daf084e6b69efc5fe2028ef1.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-3ba8ce0a06ce4af2920127099b8c66d1f1c66100.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-3bb4e7012d7f8f05ae619cd3f1480c75854a2a34.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-3d194e6e69127f6f0330fd452815c5e5b704d22e.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-40361fa4aa5d26d491e6e9d3d6b0b1c259079aa3.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-41091b97399fac90e7daed2cd7fdf8111ad978d7.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-438c9fafd9e1eb4cc8fcfd999264df075104c5e6.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-4a3d98043fc9eb5dc2d58f10163cde1b2dcd530c.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-4c9d3861ff0a1882cceef6c3532315c50c273678.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-4d15dc75da82bf5efdb775a966ee5ed10bf3f2c0.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-6be77faff9a502c74fbba258ea98074dc7f2815e.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-75485e46e5ee9ac81c84876ce256e30b47529475.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-75f2471404c25d5f4a7c351a832d143af131ac67.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-8423b02388ab9038ef92abdd783b12e1d74b822b.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-875c3604af40ea29520af4c0fb3d777caaea6f07.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-8b8b0583e8df3534be61fe258a6a74704c6b392d.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-927483348eb3f21f9e451b81c2a82ab8c2f6eeba.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-966cd6b51c02145a47c4873a55ff39a7bf948a94.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-9c1924020965bc5171c9a81a0e84cb8610e6564e.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-9f6d46b789c71dce56ed24dacca37836d3bd2e64.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-ad5b7dedda30ac7be7833069932a62ff611b7372.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-afebf2ed6f8294808fd3bca3c204544f92421d84.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-bd8d8e86602fd9470f7ae1b190d464b808e8f5e4.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-c4421ab699a5e632f2f3fc6c1bf1e0f1a215e17a.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-c596b34d59f7c83fef5b4fec29956500d1faed83.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-c73246468949ed8be2a9c301b836fda753462e3e.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-cc4e0da53160a1ddc65a261acbb60a97686d6d94.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-cd0e0abb74b0715a7b6a4e009de07bf213cc624c.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-cf33d83347bdc19eaeee4b72185f57dc8b792b66.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-e12941cb62b30912e07f6ff76513b66230282820.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-e475dd593cea486febf7d96da4c309658fce4be5.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-e5597f70133c79548313b6b5e18d3244c2f8c76d.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\classes-f58db45c55ad273605b76bb25679c45ca7830605.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\internal_impl-22.0.0-80e8121330a9c595b3c114fe30f30f83547fe8ca.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\internal_impl-22.2.0-0ac1f9af58a9311686b201593464f29873f53343.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\library-1.0.26-38bc629d0f09e138ffbc334282b7efffd047aaec.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\library-2.4.0-c4743f843a3cf2c2041f6b96d05d872c1cb8dfb8.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\pre-dexed\release\support-annotations-22.2.0-38d6e969d6906f453b8933096051d44125a1d173.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\generated\source\buildConfig\release\com\facebook\BuildConfig.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\generated\source\r\release\com\facebook\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\bundles\release\AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\bundles\release\R.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\bundles\release\aapt\AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\classes\androidTest\debug\com\facebook\R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\classes\androidTest\debug\com\facebook\R$color.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\classes\androidTest\debug\com\facebook\R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\classes\androidTest\debug\com\facebook\R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\classes\androidTest\debug\com\facebook\R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\classes\androidTest\debug\com\facebook\R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\classes\androidTest\debug\com\facebook\R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\classes\androidTest\debug\com\facebook\R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\classes\androidTest\debug\com\facebook\R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\classes\androidTest\debug\com\facebook\R.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\classes\androidTest\debug\com\facebook\test\BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\classes\androidTest\debug\com\facebook\test\R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\classes\androidTest\debug\com\facebook\test\R$color.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\classes\androidTest\debug\com\facebook\test\R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\classes\androidTest\debug\com\facebook\test\R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\classes\androidTest\debug\com\facebook\test\R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\classes\androidTest\debug\com\facebook\test\R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\classes\androidTest\debug\com\facebook\test\R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\classes\androidTest\debug\com\facebook\test\R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\classes\androidTest\debug\com\facebook\test\R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\classes\androidTest\debug\com\facebook\test\R.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\incremental\aidl\release\dependency.store" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\incremental\mergeAssets\release\merger.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\incremental\mergeResourcesrelease\merger.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\manifest\tmp\manifestMerger5627497950186841738.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-hdpi\com_facebook_button_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-hdpi\com_facebook_button_like_icon_selected.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-hdpi\com_facebook_button_send_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-hdpi\com_facebook_close.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-hdpi\com_facebook_tooltip_black_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-hdpi\com_facebook_tooltip_black_bottomnub.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-hdpi\com_facebook_tooltip_black_topnub.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-hdpi\com_facebook_tooltip_black_xout.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-hdpi\com_facebook_tooltip_blue_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-hdpi\com_facebook_tooltip_blue_bottomnub.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-hdpi\com_facebook_tooltip_blue_topnub.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-hdpi\com_facebook_tooltip_blue_xout.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-hdpi\messenger_bubble_large_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-hdpi\messenger_bubble_large_white.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-hdpi\messenger_bubble_small_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-hdpi\messenger_bubble_small_white.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-hdpi\messenger_button_send_round_shadow.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-mdpi\com_facebook_button_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-mdpi\com_facebook_button_like_icon_selected.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-mdpi\com_facebook_button_send_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-mdpi\com_facebook_close.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-mdpi\com_facebook_profile_picture_blank_portrait.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-mdpi\com_facebook_profile_picture_blank_square.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-mdpi\com_facebook_tooltip_black_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-mdpi\com_facebook_tooltip_black_bottomnub.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-mdpi\com_facebook_tooltip_black_topnub.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-mdpi\com_facebook_tooltip_black_xout.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-mdpi\com_facebook_tooltip_blue_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-mdpi\com_facebook_tooltip_blue_bottomnub.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-mdpi\com_facebook_tooltip_blue_topnub.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-mdpi\com_facebook_tooltip_blue_xout.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-mdpi\messenger_bubble_large_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-mdpi\messenger_bubble_large_white.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-mdpi\messenger_bubble_small_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-mdpi\messenger_bubble_small_white.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-mdpi\messenger_button_send_round_shadow.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-xhdpi\com_facebook_button_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-xhdpi\com_facebook_button_like_icon_selected.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-xhdpi\com_facebook_button_send_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-xhdpi\com_facebook_close.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-xhdpi\com_facebook_tooltip_black_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-xhdpi\com_facebook_tooltip_black_bottomnub.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-xhdpi\com_facebook_tooltip_black_topnub.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-xhdpi\com_facebook_tooltip_black_xout.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-xhdpi\com_facebook_tooltip_blue_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-xhdpi\com_facebook_tooltip_blue_bottomnub.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-xhdpi\com_facebook_tooltip_blue_topnub.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-xhdpi\com_facebook_tooltip_blue_xout.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-xhdpi\messenger_bubble_large_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-xhdpi\messenger_bubble_large_white.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-xhdpi\messenger_bubble_small_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-xhdpi\messenger_bubble_small_white.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-xhdpi\messenger_button_send_round_shadow.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-xxhdpi\com_facebook_button_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-xxhdpi\com_facebook_button_like_icon_selected.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-xxhdpi\com_facebook_button_send_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-xxhdpi\messenger_bubble_large_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-xxhdpi\messenger_bubble_large_white.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-xxhdpi\messenger_bubble_small_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-xxhdpi\messenger_bubble_small_white.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable-xxhdpi\messenger_button_send_round_shadow.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable\com_facebook_button_background.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable\com_facebook_button_like_background.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable\com_facebook_button_login_silver_background.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable\com_facebook_button_send_background.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable\messenger_button_blue_bg_round.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable\messenger_button_blue_bg_selector.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable\messenger_button_white_bg_round.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\drawable\messenger_button_white_bg_selector.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\layout\com_facebook_activity_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\layout\com_facebook_login_fragment.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\layout\com_facebook_tooltip_bubble.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\layout\messenger_button_send_blue_large.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\layout\messenger_button_send_blue_round.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\layout\messenger_button_send_blue_small.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\layout\messenger_button_send_white_large.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\layout\messenger_button_send_white_round.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\layout\messenger_button_send_white_small.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-af\values-af.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-ar\values-ar.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-bn\values-bn.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-cs\values-cs.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-da\values-da.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-de\values-de.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-el\values-el.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-es-rES\values-es-rES.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-es\values-es.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-fi\values-fi.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-fr\values-fr.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-gu\values-gu.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-hi\values-hi.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-hr\values-hr.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-hu\values-hu.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-id\values-id.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-in\values-in.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-it\values-it.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-ja\values-ja.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-kn\values-kn.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-ko\values-ko.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-ml\values-ml.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-mr\values-mr.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-ms\values-ms.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-nb\values-nb.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-nl\values-nl.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-pa\values-pa.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-pl\values-pl.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-pt-rPT\values-pt-rPT.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-pt\values-pt.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-ru\values-ru.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-sk\values-sk.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-sv\values-sv.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-ta\values-ta.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-te\values-te.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-th\values-th.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-tl\values-tl.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-tr\values-tr.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-vi\values-vi.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-zh-rCN\values-zh-rCN.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-zh-rHK\values-zh-rHK.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values-zh-rTW\values-zh-rTW.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\superalin98\Documents\SmartRead2\facebook\build\intermediates\res\merged\release\values\values.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/BuildConfig.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/BuildConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/ClassAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/ClassAdapter$ViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/DistributeAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/DistributeAdapter$ViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/JsonClass.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/JsonClass.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/LoginActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/LoginActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/LoginActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/LoginActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/LoginActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/LoginActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/BuildConfig.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/BuildConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/ClassAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/ClassAdapter$ViewHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/DistributeAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/DistributeAdapter$ViewHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/JsonClass.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/JsonClass.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/LoginActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/LoginActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/LoginActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/LoginActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/LoginActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/LoginActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$12.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$12.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$13.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$13.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$14.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$14.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$15$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$15$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$15.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$15.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$15.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$15.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$16$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$16$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$16$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$16$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$16.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$16.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$16.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$16.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$17$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$17$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$18$1$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$18$1$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$17.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$17.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$17.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$17.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$18.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$18.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$18.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$18.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$19.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$19.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$19.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$19.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$20.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$20.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$20.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$20.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$21.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$21.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$21.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$21.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$22.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$22.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$22.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$22.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$23.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$23.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$23.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$23.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$24.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$24.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$24.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$24.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$25.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$25.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$25.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$25.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$26.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$26.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$26.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$26.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$27.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$27.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$28.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$28.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$28.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$28.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$29.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$29.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$29.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$30.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$30.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$30.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$30.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$31.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$31.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$31.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$31.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$32.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$32.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$32.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$32.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$33.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$33.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$33.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$33.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$34.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$34.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$34.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$34.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$35.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$35.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$35.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$35.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$36.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$36.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$36.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$36.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$37.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$37.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$37.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$37.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$38.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$38.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$38.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$38.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$39.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$39.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$39.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$39.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$40.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$40.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$48$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$48$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$40.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$40.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$41.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$41.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$41.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$41.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$42.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$42.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$42.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$42.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$43.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$43.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$43.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$43.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$44.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$44.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$44.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$44.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$45.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$45.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$45.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$45.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$46.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$46.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$46.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$46.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$47.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$47.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$47.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$47.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$48.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$48.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$48.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$48.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$49.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$49.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$49.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$49.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$5.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$50.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$50.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$50.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$50.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$51.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$51.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$51.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$51.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$52$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$52$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$52.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$52.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$52.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$52.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$53$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$53$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$55.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$55.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$53$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$53$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$53.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$53.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$53.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$53.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$54$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$54$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$54.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$54.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$7.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity$9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/MainAdapter$ViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/mediarouter/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/mediarouter/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/nononsenseapps/filepicker/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/nononsenseapps/filepicker/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/quinny898/library/persistentsearch/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/quinny898/library/persistentsearch/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/yqritc/recyclerviewflexibledivider/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/yqritc/recyclerviewflexibledivider/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$integer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$menu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$mipmap.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$mipmap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$raw.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$raw.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/ads/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/ads/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/analytics/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/analytics/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/appindexing/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/appindexing/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/appinvite/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/appinvite/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/appstate/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/appstate/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/cast/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/cast/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/drive/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/drive/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/fitness/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/fitness/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/games/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/games/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/gcm/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/gcm/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/identity/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/identity/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/location/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/location/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/maps/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/maps/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/nearby/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/nearby/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/panorama/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/panorama/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/plus/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/plus/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/safetynet/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/safetynet/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/wallet/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/wallet/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/wearable/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/wearable/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/nononsenseapps/filepicker/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/nononsenseapps/filepicker/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/quinny898/library/persistentsearch/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/quinny898/library/persistentsearch/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/yqritc/recyclerviewflexibledivider/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/yqritc/recyclerviewflexibledivider/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$xml.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R$xml.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/MainAdapter$ViewHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistentSearch/build/outputs/aar/PersistentSearch-debug.aar" afterPath="$PROJECT_DIR$/PersistentSearch/build/outputs/aar/PersistentSearch-debug.aar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistentSearch/build/outputs/aar/PersistentSearch-release.aar" afterPath="$PROJECT_DIR$/PersistentSearch/build/outputs/aar/PersistentSearch-release.aar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/android/support/design/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/android/support/design/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/android/support/v7/appcompat/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/android/support/v7/mediarouter/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/android/support/v7/mediarouter/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/facebook/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/facebook/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/nononsenseapps/filepicker/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/nononsenseapps/filepicker/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/quinny898/library/persistentsearch/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/quinny898/library/persistentsearch/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/yqritc/recyclerviewflexibledivider/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/yqritc/recyclerviewflexibledivider/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$integer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$menu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$menu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$mipmap.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$mipmap.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$raw.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$raw.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/android/support/design/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/android/support/design/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/android/support/v7/appcompat/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/android/support/v7/appcompat/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/ads/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/ads/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/analytics/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/analytics/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/appindexing/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/appindexing/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/appinvite/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/appinvite/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/appstate/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/appstate/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/cast/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/cast/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/drive/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/drive/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/fitness/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/fitness/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/games/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/games/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/gcm/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/gcm/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/identity/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/identity/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/location/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/location/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/maps/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/maps/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/nearby/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/nearby/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/panorama/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/panorama/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/plus/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/plus/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/safetynet/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/safetynet/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/wallet/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/wallet/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/wearable/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/google/android/gms/wearable/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/nononsenseapps/filepicker/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/nononsenseapps/filepicker/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/quinny898/library/persistentsearch/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/quinny898/library/persistentsearch/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/yqritc/recyclerviewflexibledivider/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/yqritc/recyclerviewflexibledivider/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$style.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$styleable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$xml.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R$xml.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/R.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/SettingsActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/SettingsActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/UploadJob.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/UploadJob.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/UsersAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/teched/smartread/UsersAdapter$ViewHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/SettingsActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/SettingsActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/UploadJob.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/UploadJob.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/UsersAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/teched/smartread/UsersAdapter$ViewHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/android-priority-jobqueue-1.1.2-c55ca8d5d3d2ce0f4d77ef55410fef88944da034.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/android-priority-jobqueue-1.1.2-c55ca8d5d3d2ce0f4d77ef55410fef88944da034.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-release-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-release-unaligned.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app-release.apk" afterPath="$PROJECT_DIR$/app/app-release.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/bolts-android-1.2.0-ae51930b50e33b8d7e4eb08b052257d461dae119.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/bolts-android-1.2.0-ae51930b50e33b8d7e4eb08b052257d461dae119.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-08249b79cbe98c2e0825626d81e58f62f7dbe649.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-08249b79cbe98c2e0825626d81e58f62f7dbe649.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-0b0ba97369fdabdfecf52b0c9c84d2272ee52598.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-0b0ba97369fdabdfecf52b0c9c84d2272ee52598.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-0bf73d3acc2604bc18c4ab5b5eb0889236c77d60.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-0bf73d3acc2604bc18c4ab5b5eb0889236c77d60.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-0de5675ccbc3cd89f8e7ffe600517039b8528667.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-0de5675ccbc3cd89f8e7ffe600517039b8528667.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-10518e074b5d8db518f6a4850b589b4310523204.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-10518e074b5d8db518f6a4850b589b4310523204.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-196e3ce925e222029eb78ba90bdf162984693b81.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-196e3ce925e222029eb78ba90bdf162984693b81.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-1f867318afc7cf58daf084e6b69efc5fe2028ef1.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-1f867318afc7cf58daf084e6b69efc5fe2028ef1.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-3ba8ce0a06ce4af2920127099b8c66d1f1c66100.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-3ba8ce0a06ce4af2920127099b8c66d1f1c66100.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-3bb4e7012d7f8f05ae619cd3f1480c75854a2a34.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-3bb4e7012d7f8f05ae619cd3f1480c75854a2a34.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-3d194e6e69127f6f0330fd452815c5e5b704d22e.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-3d194e6e69127f6f0330fd452815c5e5b704d22e.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-40361fa4aa5d26d491e6e9d3d6b0b1c259079aa3.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-40361fa4aa5d26d491e6e9d3d6b0b1c259079aa3.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-41091b97399fac90e7daed2cd7fdf8111ad978d7.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-41091b97399fac90e7daed2cd7fdf8111ad978d7.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-438c9fafd9e1eb4cc8fcfd999264df075104c5e6.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-438c9fafd9e1eb4cc8fcfd999264df075104c5e6.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-4a3d98043fc9eb5dc2d58f10163cde1b2dcd530c.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-4a3d98043fc9eb5dc2d58f10163cde1b2dcd530c.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-4c9d3861ff0a1882cceef6c3532315c50c273678.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-4c9d3861ff0a1882cceef6c3532315c50c273678.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-4d15dc75da82bf5efdb775a966ee5ed10bf3f2c0.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-4d15dc75da82bf5efdb775a966ee5ed10bf3f2c0.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-6be77faff9a502c74fbba258ea98074dc7f2815e.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-6be77faff9a502c74fbba258ea98074dc7f2815e.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-75485e46e5ee9ac81c84876ce256e30b47529475.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-75485e46e5ee9ac81c84876ce256e30b47529475.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-75f2471404c25d5f4a7c351a832d143af131ac67.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-75f2471404c25d5f4a7c351a832d143af131ac67.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-8423b02388ab9038ef92abdd783b12e1d74b822b.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-8423b02388ab9038ef92abdd783b12e1d74b822b.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-875c3604af40ea29520af4c0fb3d777caaea6f07.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-875c3604af40ea29520af4c0fb3d777caaea6f07.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-8b8b0583e8df3534be61fe258a6a74704c6b392d.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-8b8b0583e8df3534be61fe258a6a74704c6b392d.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-927483348eb3f21f9e451b81c2a82ab8c2f6eeba.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-927483348eb3f21f9e451b81c2a82ab8c2f6eeba.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-966cd6b51c02145a47c4873a55ff39a7bf948a94.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-966cd6b51c02145a47c4873a55ff39a7bf948a94.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-9c1924020965bc5171c9a81a0e84cb8610e6564e.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-9c1924020965bc5171c9a81a0e84cb8610e6564e.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-9f6d46b789c71dce56ed24dacca37836d3bd2e64.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-9f6d46b789c71dce56ed24dacca37836d3bd2e64.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-ad5b7dedda30ac7be7833069932a62ff611b7372.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-ad5b7dedda30ac7be7833069932a62ff611b7372.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-afebf2ed6f8294808fd3bca3c204544f92421d84.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-afebf2ed6f8294808fd3bca3c204544f92421d84.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-b360af371a41c99b6947f3f788806d37311e2482.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-b360af371a41c99b6947f3f788806d37311e2482.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-bd8d8e86602fd9470f7ae1b190d464b808e8f5e4.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-bd8d8e86602fd9470f7ae1b190d464b808e8f5e4.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-c4421ab699a5e632f2f3fc6c1bf1e0f1a215e17a.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-c4421ab699a5e632f2f3fc6c1bf1e0f1a215e17a.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-c596b34d59f7c83fef5b4fec29956500d1faed83.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-c596b34d59f7c83fef5b4fec29956500d1faed83.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-c73246468949ed8be2a9c301b836fda753462e3e.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-c73246468949ed8be2a9c301b836fda753462e3e.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-cc4e0da53160a1ddc65a261acbb60a97686d6d94.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-cc4e0da53160a1ddc65a261acbb60a97686d6d94.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-cd0e0abb74b0715a7b6a4e009de07bf213cc624c.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-cd0e0abb74b0715a7b6a4e009de07bf213cc624c.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-cf33d83347bdc19eaeee4b72185f57dc8b792b66.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-cf33d83347bdc19eaeee4b72185f57dc8b792b66.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-e12941cb62b30912e07f6ff76513b66230282820.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-e12941cb62b30912e07f6ff76513b66230282820.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-e5597f70133c79548313b6b5e18d3244c2f8c76d.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-e5597f70133c79548313b6b5e18d3244c2f8c76d.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-f58db45c55ad273605b76bb25679c45ca7830605.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-f58db45c55ad273605b76bb25679c45ca7830605.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/release/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/release/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistentSearch/build/intermediates/bundles/debug/classes.jar" afterPath="$PROJECT_DIR$/PersistentSearch/build/intermediates/bundles/debug/classes.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistentSearch/build/intermediates/bundles/release/classes.jar" afterPath="$PROJECT_DIR$/PersistentSearch/build/intermediates/bundles/release/classes.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes-proguard/release/classes.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/classes-proguard/release/classes.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/SmartRead2/PersistentSearch/unspecified/jars/classes.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/SmartRead2/PersistentSearch/unspecified/jars/classes.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/build/intermediates/bundles/debug/classes.jar" afterPath="$PROJECT_DIR$/facebook/build/intermediates/bundles/debug/classes.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/build/outputs/aar/facebook-debug.aar" afterPath="$PROJECT_DIR$/facebook/build/outputs/aar/facebook-debug.aar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/gradle_project_sync_data.bin" afterPath="$PROJECT_DIR$/build/intermediates/gradle_project_sync_data.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-80e8121330a9c595b3c114fe30f30f83547fe8ca.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-80e8121330a9c595b3c114fe30f30f83547fe8ca.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-0ac1f9af58a9311686b201593464f29873f53343.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-0ac1f9af58a9311686b201593464f29873f53343.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/library-1.0.26-38bc629d0f09e138ffbc334282b7efffd047aaec.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/library-1.0.26-38bc629d0f09e138ffbc334282b7efffd047aaec.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/library-2.4.0-c4743f843a3cf2c2041f6b96d05d872c1cb8dfb8.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/library-2.4.0-c4743f843a3cf2c2041f6b96d05d872c1cb8dfb8.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistentSearch/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/PersistentSearch/build/intermediates/res/resources-debug-androidTest.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/facebook/build/intermediates/res/resources-debug-androidTest.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-release.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-release.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-38d6e969d6906f453b8933096051d44125a1d173.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-38d6e969d6906f453b8933096051d44125a1d173.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/release/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/release/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/androidTest/debug/com/teched/smartread/test/BuildConfig.java" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/androidTest/debug/com/teched/smartread/test/BuildConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/teched/smartread/BuildConfig.java" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/teched/smartread/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/JsonClass.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/JsonClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/LoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/LoginActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/release/com/teched/smartread/BuildConfig.java" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/release/com/teched/smartread/BuildConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/mediarouter/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/mediarouter/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/facebook/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/facebook/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/ads/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/ads/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/analytics/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/analytics/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/appindexing/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/appindexing/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/appinvite/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/appinvite/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/appstate/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/appstate/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/cast/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/cast/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/drive/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/drive/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/fitness/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/fitness/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/games/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/games/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/gcm/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/gcm/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/identity/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/identity/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/location/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/location/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/maps/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/maps/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/nearby/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/nearby/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/panorama/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/panorama/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/plus/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/plus/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/safetynet/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/safetynet/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/wallet/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/wallet/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/wearable/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/wearable/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/nononsenseapps/filepicker/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/nononsenseapps/filepicker/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/quinny898/library/persistentsearch/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/quinny898/library/persistentsearch/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/teched/smartread/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/teched/smartread/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/yqritc/recyclerviewflexibledivider/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/yqritc/recyclerviewflexibledivider/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/UploadJob.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/UploadJob.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/MainAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/MainAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/android/support/design/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/android/support/design/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/android/support/v7/appcompat/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/android/support/v7/mediarouter/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/android/support/v7/mediarouter/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/facebook/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/facebook/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/ads/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/ads/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/analytics/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/analytics/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/appindexing/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/appindexing/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/appinvite/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/appinvite/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/appstate/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/appstate/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/cast/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/cast/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/drive/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/drive/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/fitness/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/fitness/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/games/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/games/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/gcm/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/gcm/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/identity/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/identity/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/location/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/location/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/maps/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/maps/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/nearby/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/nearby/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/panorama/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/panorama/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/plus/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/plus/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/safetynet/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/safetynet/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/wallet/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/wallet/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/wearable/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/google/android/gms/wearable/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/nononsenseapps/filepicker/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/nononsenseapps/filepicker/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/quinny898/library/persistentsearch/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/quinny898/library/persistentsearch/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/teched/smartread/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/teched/smartread/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/yqritc/recyclerviewflexibledivider/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/yqritc/recyclerviewflexibledivider/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/release/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/release/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/proguard-rules/release/aapt_rules.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/proguard-rules/release/aapt_rules.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/release/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/release/layout/activity_main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/mapping/release/dump.txt" afterPath="$PROJECT_DIR$/app/build/outputs/mapping/release/dump.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/mapping/release/mapping.txt" afterPath="$PROJECT_DIR$/app/build/outputs/mapping/release/mapping.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeAssets/debug/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeAssets/debug/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeAssets/release/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeAssets/release/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResourcesdebug/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResourcesdebug/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResourcesrelease/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResourcesrelease/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/mapping/release/seeds.txt" afterPath="$PROJECT_DIR$/app/build/outputs/mapping/release/seeds.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/mapping/release/usage.txt" afterPath="$PROJECT_DIR$/app/build/outputs/mapping/release/usage.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/release/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/release/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SmartRead2.iws" />
@@ -207,18 +696,32 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.4827585">
-              <caret line="220" column="54" selection-start-line="220" selection-start-column="54" selection-end-line="221" selection-end-column="59" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2383" column="94" selection-start-line="2383" selection-start-column="94" selection-end-line="2383" selection-end-column="94" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#70800#70801#0" expanded="true" />
+                <element signature="e#70836#70837#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="31" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/LoginActivity.java">
+      <file leaf-file-name="JsonClass.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/JsonClass.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="259" column="77" selection-start-line="259" selection-start-column="77" selection-end-line="259" selection-end-column="77" />
+              <caret line="68" column="66" selection-start-line="68" selection-start-column="66" selection-end-line="68" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -227,8 +730,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48658317">
-              <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.27370304">
+              <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -2823,7 +3326,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="C:\Users\superalin98\Documents\SmartRead2" value="7176211461678" />
+        <entry key="C:\Users\superalin98\Documents\SmartRead2" value="7176279494915" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -3669,8 +4172,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/dimen.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-sw600dp/dimen.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/Activity/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/BackupAgent.java" />
@@ -3713,12 +4214,14 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/CustomTextLayoutInput.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/CustomTextInputLayout.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/test.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/UploadJob.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/JsonClass.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/MainAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/JsonClass.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/teched/smartread/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
       </list>
     </option>
@@ -3784,17 +4287,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartRead2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches">
         <subPane />
       </pane>
@@ -3824,6 +4316,16 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmartRead2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -3867,6 +4369,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3876,7 +4379,7 @@
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="FullScreen" value="false" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="04d74d5143aaca6b" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="LGD320bc5be0a9" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_18" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/java" />
     <property name="last_opened_file_path" value="$USER_HOME$" />
@@ -4286,7 +4789,13 @@
       <option name="project" value="LOCAL" />
       <updated>1436439463302</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="User created books now have &quot;Owner&quot; attribute for ownership&#10;At initialization the user-created books are now synced from device to device&#10;Reworked at qCreate, improvements at UI using a modified TextInputLayout">
+      <created>1436468377117</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1436468377117</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -4300,15 +4809,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2677761" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39872408" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38118023" sideWeight="0.5151286" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37989777" sideWeight="0.5151286" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.03407155" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -4320,12 +4828,13 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2344932" sideWeight="0.4848485" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2344932" sideWeight="0.4848485" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3253833" sideWeight="0.4939302" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="584" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2677761" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -4395,15 +4904,24 @@
     <MESSAGE value="Performance changes" />
     <MESSAGE value="Refresh bugs fixed" />
     <MESSAGE value="Added refresh to class&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added refresh to class&#10;" />
+    <MESSAGE value="User created books now have &quot;Owner&quot; attribute for ownership&#10;At initialization the user-created books are now synced from device to device&#10;Reworked at qCreate, improvements at UI using a modified TextInputLayout" />
+    <option name="LAST_COMMIT_MESSAGE" value="User created books now have &quot;Owner&quot; attribute for ownership&#10;At initialization the user-created books are now synced from device to device&#10;Reworked at qCreate, improvements at UI using a modified TextInputLayout" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
@@ -4458,13 +4976,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33222038">
           <caret line="51" column="11" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7657658">
-          <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -4538,7 +5049,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15205725">
           <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4567,7 +5077,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.862069">
           <caret line="48" column="47" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -4578,7 +5087,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.57781756">
           <caret line="20" column="113" selection-start-line="20" selection-start-column="113" selection-end-line="20" selection-end-column="113" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4586,7 +5094,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12164579">
           <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4601,7 +5108,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.09123435">
           <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4609,9 +5115,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3041145">
           <caret line="10" column="45" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4619,17 +5122,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48658317">
           <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/MainAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.372093">
-          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-          <folding>
-            <element signature="e#3542#3543#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4644,7 +5136,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15205725">
           <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4666,7 +5157,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.5778176">
           <caret line="56" column="81" selection-start-line="56" selection-start-column="81" selection-end-line="56" selection-end-column="81" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4674,7 +5164,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.91234344">
           <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4682,7 +5171,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3264151">
           <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -4693,7 +5181,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3041145">
           <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4701,7 +5188,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="41" column="78" selection-start-line="41" selection-start-column="78" selection-end-line="41" selection-end-column="78" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4731,9 +5217,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4741,7 +5224,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.56954885">
           <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4749,27 +5231,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.76981133">
           <caret line="232" column="60" selection-start-line="232" selection-start-column="60" selection-end-line="232" selection-end-column="60" />
-          <folding>
-            <element signature="e#11209#11229#0" expanded="true" />
-          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/MainAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.4827585">
-          <caret line="220" column="54" selection-start-line="220" selection-start-column="54" selection-end-line="221" selection-end-column="59" />
-          <folding />
+        <state vertical-scroll-proportion="-1.8179348">
+          <caret line="73" column="45" selection-start-line="73" selection-start-column="45" selection-end-line="73" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/JsonClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="95" column="97" selection-start-line="95" selection-start-column="97" selection-end-line="95" selection-end-column="97" />
+          <caret line="68" column="66" selection-start-line="68" selection-start-column="66" selection-end-line="68" selection-end-column="66" />
           <folding />
         </state>
       </provider>
@@ -4777,15 +5255,42 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="259" column="77" selection-start-line="259" selection-start-column="77" selection-end-line="259" selection-end-column="77" />
+          <caret line="64" column="53" selection-start-line="64" selection-start-column="53" selection-end-line="64" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teched/smartread/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2383" column="94" selection-start-line="2383" selection-start-column="94" selection-end-line="2383" selection-end-column="94" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#70800#70801#0" expanded="true" />
+            <element signature="e#70836#70837#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6690519">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="31" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48658317">
-          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.27370304">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
           <folding />
         </state>
       </provider>

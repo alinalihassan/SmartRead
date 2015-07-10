@@ -90,7 +90,6 @@ android.support.design.internal.ScrimInsetsFrameLayout:
 android.support.design.internal.ScrimInsetsFrameLayout$1
 android.support.design.widget.AnimationUtils:
     25:42:AnimationUtils()
-    35:35:static float lerp(float,float,float)
 android.support.design.widget.AppBarLayout:
     private static final int INVALID_SCROLL_RANGE
     129:130:public AppBarLayout(android.content.Context)
@@ -119,7 +118,13 @@ android.support.design.widget.AppBarLayout$LayoutParams$ScrollFlags
 android.support.design.widget.AppBarLayout$ScrollingViewBehavior
 android.support.design.widget.CircularBorderDrawable:
     private static final float DRAW_STROKE_WIDTH_MULTIPLE
-android.support.design.widget.CollapsingTextHelper
+android.support.design.widget.CollapsingTextHelper:
+    private static final boolean DEBUG_DRAW
+    115:119:void setCollapsedTextSize(float)
+    146:152:void setExpandedTextVerticalGravity(int)
+    178:189:void setExpandedTextAppearance(int)
+    212:212:float getCollapsedTextSize()
+    464:464:int getExpandedTextColor()
 android.support.design.widget.CollapsingToolbarLayout
 android.support.design.widget.CollapsingToolbarLayout$1
 android.support.design.widget.CollapsingToolbarLayout$2
@@ -142,7 +147,6 @@ android.support.design.widget.FloatingActionButton$Behavior:
     296:296:public FloatingActionButton$Behavior()
 android.support.design.widget.MathUtils:
     19:19:MathUtils()
-    26:26:static float constrain(float,float,float)
 android.support.design.widget.NavigationView:
     private static final int PRESENTER_NAVIGATION_VIEW_ID
     84:85:public NavigationView(android.content.Context)
@@ -216,47 +220,27 @@ android.support.design.widget.TabLayout$TabGravity
 android.support.design.widget.TabLayout$TabLayoutOnPageChangeListener
 android.support.design.widget.TabLayout$TabView
 android.support.design.widget.TabLayout$ViewPagerOnTabSelectedListener
-android.support.design.widget.TextInputLayout
-android.support.design.widget.TextInputLayout$1
-android.support.design.widget.TextInputLayout$2
-android.support.design.widget.TextInputLayout$3
-android.support.design.widget.TextInputLayout$4
-android.support.design.widget.TextInputLayout$5
-android.support.design.widget.TextInputLayout$TextInputAccessibilityDelegate
+android.support.design.widget.TextInputLayout:
+    private static final int ANIMATION_DURATION
+    private static final int MSG_UPDATE_LABEL
 android.support.design.widget.ValueAnimatorCompat:
-    120:120:public boolean isRunning()
     141:161:public void setListener(android.support.design.widget.ValueAnimatorCompat$AnimatorListener)
-    172:173:public void setFloatValues(float,float)
-    176:176:public float getAnimatedFloatValue()
-    180:181:public void setDuration(int)
     188:188:public float getAnimatedFraction()
     192:193:public void end()
 android.support.design.widget.ValueAnimatorCompat$2
 android.support.design.widget.ValueAnimatorCompat$AnimatorListener
 android.support.design.widget.ValueAnimatorCompat$AnimatorListenerAdapter
 android.support.design.widget.ValueAnimatorCompat$Impl:
-    abstract boolean isRunning()
     abstract void setListener(android.support.design.widget.ValueAnimatorCompat$Impl$AnimatorListenerProxy)
-    abstract void setFloatValues(float,float)
-    abstract float getAnimatedFloatValue()
-    abstract void setDuration(int)
     abstract float getAnimatedFraction()
     abstract void end()
 android.support.design.widget.ValueAnimatorCompatImplEclairMr1:
     private static final int HANDLER_DELAY
     private static final int DEFAULT_DURATION
-    71:71:public boolean isRunning()
     81:82:public void setListener(android.support.design.widget.ValueAnimatorCompat$Impl$AnimatorListenerProxy)
-    102:104:public void setFloatValues(float,float)
-    108:108:public float getAnimatedFloatValue()
-    113:114:public void setDuration(int)
     133:148:public void end()
 android.support.design.widget.ValueAnimatorCompatImplHoneycombMr1:
-    39:39:public boolean isRunning()
     59:75:public void setListener(android.support.design.widget.ValueAnimatorCompat$Impl$AnimatorListenerProxy)
-    89:90:public void setFloatValues(float,float)
-    94:94:public float getAnimatedFloatValue()
-    99:100:public void setDuration(int)
     109:109:public float getAnimatedFraction()
     114:115:public void end()
 android.support.design.widget.ValueAnimatorCompatImplHoneycombMr1$2
@@ -2078,7 +2062,6 @@ android.support.v4.view.accessibility.AccessibilityNodeInfoCompat:
     2088:2089:public void setCheckable(boolean)
     2112:2113:public void setChecked(boolean)
     2330:2331:public void setPassword(boolean)
-    2426:2427:public void setText(java.lang.CharSequence)
     2476:2477:public void setViewIdResourceName(java.lang.String)
     2514:2514:public int getLiveRegion()
     2530:2531:public void setLiveRegion(int)
@@ -2086,11 +2069,8 @@ android.support.v4.view.accessibility.AccessibilityNodeInfoCompat:
     2560:2562:public android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$CollectionItemInfoCompat getCollectionItemInfo()
     2571:2573:public android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$RangeInfoCompat getRangeInfo()
     2582:2592:public java.util.List getActionList()
-    2608:2609:public void setContentInvalid(boolean)
     2618:2618:public boolean isContentInvalid()
-    2634:2635:public void setError(java.lang.CharSequence)
     2643:2643:public java.lang.CharSequence getError()
-    2653:2654:public void setLabelFor(android.view.View)
     2671:2672:public void setLabelFor(android.view.View,int)
 android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$1
 android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat
@@ -2102,8 +2082,6 @@ android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityN
     1217:1217:public java.lang.CharSequence getAccessibilityActionLabel(java.lang.Object)
     1229:1229:public boolean isCollectionItemSelected(java.lang.Object)
     1234:1234:public java.lang.CharSequence getError(java.lang.Object)
-    1239:1240:public void setError(java.lang.Object,java.lang.CharSequence)
-    1244:1245:public void setLabelFor(java.lang.Object,android.view.View)
     1249:1250:public void setLabelFor(java.lang.Object,android.view.View,int)
 android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityNodeInfoApi22Impl:
     1256:1261:public android.support.v4.view.accessibility.AccessibilityNodeInfoCompat getTraversalBefore(java.lang.Object)
@@ -2124,7 +2102,6 @@ android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityN
     922:923:public void setCheckable(java.lang.Object,boolean)
     927:928:public void setChecked(java.lang.Object,boolean)
     977:978:public void setPassword(java.lang.Object,boolean)
-    997:998:public void setText(java.lang.Object,java.lang.CharSequence)
 android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityNodeInfoImpl:
     public abstract java.lang.Object newAccessibilityAction(int,java.lang.CharSequence)
     public abstract java.lang.Object obtain()
@@ -2150,7 +2127,6 @@ android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityN
     public abstract void setCheckable(java.lang.Object,boolean)
     public abstract void setChecked(java.lang.Object,boolean)
     public abstract void setPassword(java.lang.Object,boolean)
-    public abstract void setText(java.lang.Object,java.lang.CharSequence)
     public abstract void setViewIdResourceName(java.lang.Object,java.lang.String)
     public abstract int getLiveRegion(java.lang.Object)
     public abstract void setLiveRegion(java.lang.Object,int)
@@ -2173,11 +2149,8 @@ android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityN
     public abstract android.support.v4.view.accessibility.AccessibilityNodeInfoCompat getTraversalAfter(java.lang.Object)
     public abstract void setTraversalAfter(java.lang.Object,android.view.View)
     public abstract void setTraversalAfter(java.lang.Object,android.view.View,int)
-    public abstract void setContentInvalid(java.lang.Object,boolean)
     public abstract boolean isContentInvalid(java.lang.Object)
-    public abstract void setError(java.lang.Object,java.lang.CharSequence)
     public abstract java.lang.CharSequence getError(java.lang.Object)
-    public abstract void setLabelFor(java.lang.Object,android.view.View)
     public abstract void setLabelFor(java.lang.Object,android.view.View,int)
 android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityNodeInfoJellybeanImpl:
     1009:1009:public java.lang.Object obtain(android.view.View,int)
@@ -2205,7 +2178,6 @@ android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityN
     1158:1158:public int getCollectionItemRowIndex(java.lang.Object)
     1163:1163:public int getCollectionItemRowSpan(java.lang.Object)
     1168:1168:public boolean isCollectionItemHeading(java.lang.Object)
-    1178:1179:public void setContentInvalid(java.lang.Object,boolean)
     1183:1183:public boolean isContentInvalid(java.lang.Object)
 android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityNodeInfoStubImpl:
     293:293:public java.lang.Object newAccessibilityAction(int,java.lang.CharSequence)
@@ -2231,7 +2203,6 @@ android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityN
     584:584:public void setSource(java.lang.Object,android.view.View,int)
     588:588:public java.lang.Object findFocus(java.lang.Object,int)
     593:593:public java.lang.Object focusSearch(java.lang.Object,int)
-    599:599:public void setText(java.lang.Object,java.lang.CharSequence)
     609:609:public void setParent(java.lang.Object,android.view.View,int)
     619:619:public void setViewIdResourceName(java.lang.Object,java.lang.String)
     623:623:public int getLiveRegion(java.lang.Object)
@@ -2255,11 +2226,8 @@ android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityN
     731:731:public android.support.v4.view.accessibility.AccessibilityNodeInfoCompat getTraversalAfter(java.lang.Object)
     736:736:public void setTraversalAfter(java.lang.Object,android.view.View)
     740:740:public void setTraversalAfter(java.lang.Object,android.view.View,int)
-    744:744:public void setContentInvalid(java.lang.Object,boolean)
     748:748:public boolean isContentInvalid(java.lang.Object)
-    753:753:public void setError(java.lang.Object,java.lang.CharSequence)
     757:757:public java.lang.CharSequence getError(java.lang.Object)
-    762:762:public void setLabelFor(java.lang.Object,android.view.View)
     766:766:public void setLabelFor(java.lang.Object,android.view.View,int)
 android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$CollectionInfoCompat:
     public static final int SELECTION_MODE_NONE
@@ -2283,8 +2251,6 @@ android.support.v4.view.accessibility.AccessibilityNodeInfoCompatApi21:
     30:31:static java.util.List getActionList(java.lang.Object)
     35:36:static void addAction(java.lang.Object,java.lang.Object)
     51:51:public static java.lang.CharSequence getError(java.lang.Object)
-    55:56:public static void setError(java.lang.Object,java.lang.CharSequence)
-    59:60:public static void setLabelFor(java.lang.Object,android.view.View)
     63:64:public static void setLabelFor(java.lang.Object,android.view.View,int)
     73:73:static java.lang.Object newAccessibilityAction(int,java.lang.CharSequence)
     77:77:static int getAccessibilityActionId(java.lang.Object)
@@ -2304,7 +2270,6 @@ android.support.v4.view.accessibility.AccessibilityNodeInfoCompatIcs:
     153:154:public static void setCheckable(java.lang.Object,boolean)
     157:158:public static void setChecked(java.lang.Object,boolean)
     197:198:public static void setPassword(java.lang.Object,boolean)
-    213:214:public static void setText(java.lang.Object,java.lang.CharSequence)
 android.support.v4.view.accessibility.AccessibilityNodeInfoCompatJellyBean:
     26:26:AccessibilityNodeInfoCompatJellyBean()
     29:30:public static void addChild(java.lang.Object,android.view.View,int)
@@ -2326,7 +2291,6 @@ android.support.v4.view.accessibility.AccessibilityNodeInfoCompatKitKat:
     34:34:static java.lang.Object getCollectionInfo(java.lang.Object)
     38:38:static java.lang.Object getCollectionItemInfo(java.lang.Object)
     52:52:static java.lang.Object getRangeInfo(java.lang.Object)
-    67:68:public static void setContentInvalid(java.lang.Object,boolean)
     71:71:public static boolean isContentInvalid(java.lang.Object)
 android.support.v4.view.accessibility.AccessibilityNodeInfoCompatKitKat$CollectionInfo
 android.support.v4.view.accessibility.AccessibilityNodeInfoCompatKitKat$CollectionItemInfo
@@ -2766,7 +2730,6 @@ android.support.v4.widget.SwipeRefreshLayout:
     private static final int DEFAULT_CIRCLE_TARGET
     207:213:public void setProgressViewOffset(boolean,int,int)
     228:231:public void setProgressViewEndTarget(boolean,int)
-    518:518:public boolean isRefreshing()
 android.support.v4.widget.TextViewCompat:
     32:33:private TextViewCompat()
     177:178:public static void setCompoundDrawablesRelativeWithIntrinsicBounds(android.widget.TextView,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)
@@ -11471,8 +11434,8 @@ com.teched.smartread.LoginActivity:
     private static final int RC_SIGN_IN
 com.teched.smartread.MainActivity:
     private static final int FILE_CODE
-com.teched.smartread.MainActivity$45:
-    1872:1873:public void onSearchCleared()
+com.teched.smartread.MainActivity$46:
+    1936:1937:public void onSearchCleared()
 com.teched.smartread.R
 com.teched.smartread.R$anim
 com.teched.smartread.R$array

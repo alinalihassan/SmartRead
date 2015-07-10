@@ -1756,16 +1756,22 @@
     </style><style name="LoginTheme" parent="Theme.AppCompat.NoActionBar">
 
         <item name="android:background">#ffffff</item>
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorAccent">@color/color_accent</item>
         <item name="android:windowAnimationStyle">@null</item>
     </style><style name="SettingsTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="alertDialogTheme">@style/FilePickerAlertDialogTheme</item>
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorAccent">@color/color_accent</item>
     </style><style name="ToolbarColoredBackArrow" parent="AppTheme">
         <item name="android:textColorSecondary">#ffffff</item>
     </style><style name="ToolbarColoredSettings" parent="AppTheme">
         <item name="android:textColorSecondary">#ffffff</item>
         <item name="android:textColorPrimary">#ffffff</item>
     </style><style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
     </style></file><file path="C:\Users\superalin98\Documents\SmartRead2\app\src\main\res\values-sw600dp\dimen.xml" qualifiers="sw600dp"><dimen name="fab_margin">24dp</dimen></file><file path="C:\Users\superalin98\Documents\SmartRead2\app\src\main\res\values-v21\styles.xml" qualifiers="v21"><style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/color_primary</item>
         <item name="colorPrimaryDark">@color/color_primary_dark</item>

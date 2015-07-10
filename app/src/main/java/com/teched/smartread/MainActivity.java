@@ -78,11 +78,6 @@ import com.arasthel.asyncjob.AsyncJob;
 import com.balysv.materialmenu.MaterialMenuDrawable;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
 import com.heinrichreimersoftware.materialdrawer.DrawerFrameLayout;
 import com.heinrichreimersoftware.materialdrawer.structure.DrawerHeaderItem;
 import com.heinrichreimersoftware.materialdrawer.structure.DrawerItem;
@@ -174,7 +169,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     private RelativeLayout classes;
     private RelativeLayout store;
     private TextView accessText;
-    private InterstitialAd mInterstitialAd;
     private SwipeRefreshLayout refreshClasses;
 
     @Override
@@ -186,15 +180,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         firstTime();
         bp = new BillingProcessor(this, getResources().getString(R.string.license_key), this);
         jobManager = new JobManager(this);
-        mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId(getResources().getString(R.string.banner_ad_unit_id));
-        requestNewInterstitial();
-        mInterstitialAd.setAdListener(new AdListener() {
-            @Override
-            public void onAdClosed() {
-                requestNewInterstitial();
-            }
-        });
         final SharedPreferences prefs = this.getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE);
         GregorianCalendar c = new GregorianCalendar();
         c.getTime();
@@ -359,7 +344,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     myList.add(file.getName().replace(".pdf",""));
                 }
         }
-        final ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1, myList);
+        final ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, myList);
         teacherList.setAdapter(adapter2);
         teacherList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -519,19 +504,82 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        myList.clear();
-                        File teacherFolder = new File(TeacherPath);
-                        final File TList[] = teacherFolder.listFiles();
-                        if (TList != null) {
-                            for (File file : TList)
-                                if (file.getName().endsWith(".pdf")) {
-                                    myList.add(file.getName().replace(".pdf",""));
-                                }
+                        if(isOnline()) {
+                            final File folder = new File(Path);
+                            new AsyncJob.AsyncJobBuilder<Boolean>()
+                                    .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
+                                        @Override
+                                        public Boolean doAsync() {
+                                            try {
+                                                File[] files = folder.listFiles();
+                                                File teacherFolder = new File(TeacherPath);
+                                                File TList[] = teacherFolder.listFiles();
+                                                JSONObject books = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_books.php?email=" + prefs.getString("Email", getString(R.string.profile_description))));
+                                                JSONArray booksArray = books.getJSONArray("teacher_books");
+                                                List<String> files2 = new ArrayList<>();
+                                                if (TList != null) {
+                                                    for (File file : TList)
+                                                        files2.add(file.getName());
+                                                }
+                                                for (int i = 0; i < booksArray.length(); i++) {
+                                                    if (!files2.contains(booksArray.getString(i) + ".pdf")) {
+                                                        JsonClass.DownloadBook(Path, booksArray.getString(i) + ".pdf");
+                                                        JsonClass.DownloadBook(Path, booksArray.getString(i) + ".json");
+                                                        JsonClass.DownloadBook(TeacherPath, booksArray.getString(i) + ".pdf");
+                                                        JsonClass.DownloadBook(TeacherPath, booksArray.getString(i) + ".json");
+                                                    }
+                                                }
+                                                myList.clear();
+                                                TList = teacherFolder.listFiles();
+                                                if (TList != null) {
+                                                    for (File file : TList)
+                                                        if (file.getName().endsWith(".pdf")) {
+                                                            myList.add(file.getName().replace(".pdf", ""));
+                                                        }
+                                                }
+                                                pdfs.clear();
+                                                list.clear();
+                                                files = folder.listFiles();
+                                                if (files != null) {
+                                                    for (File file : files)
+                                                        if (file.getName().endsWith(".pdf")) {
+                                                            pdfs.add(file);
+                                                            list.add(new Card());
+                                                            list.get(list.size() - 1).name = pdfs.get(pdfs.size() - 1).getName().replace(".pdf", "");
+                                                        }
+                                                }
+                                            } catch (Exception e) {
+                                                e.printStackTrace();
+                                            }
+                                            return true;
+                                        }
+                                    })
+                                    .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
+                                        @Override
+                                        public void onResult(Boolean result) {
+                                            toolbar.setTitle("SmartRead");
+                                            ((MainAdapter) listView.getAdapter()).flushFilter();
+                                            adapter.notifyDataSetChanged();
+                                            adapter2.notifyDataSetChanged();
+                                            refreshTeacher.setRefreshing(false);
+                                        }
+                                    }).create().start();
                         }
-                        adapter2.notifyDataSetChanged();
-                        refreshTeacher.setRefreshing(false);
+                        else {
+                            myList.clear();
+                            File teacherFolder = new File(TeacherPath);
+                            final File TList[] = teacherFolder.listFiles();
+                            if (TList != null) {
+                                for (File file : TList)
+                                    if (file.getName().endsWith(".pdf")) {
+                                        myList.add(file.getName().replace(".pdf", ""));
+                                    }
+                            }
+                            adapter2.notifyDataSetChanged();
+                            refreshTeacher.setRefreshing(false);
+                        }
                     }
-                }, 1000);
+                }, isOnline()?250:500);
             }
         });
         refreshClasses.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -869,36 +917,44 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         mRecyclerView3.addItemDecoration(decoration);
 
         ((UsersAdapter) mRecyclerView3.getAdapter()).flushFilter();
-        ItemTouchHelper swipeToDismissTouchHelper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(
+        final ItemTouchHelper swipeToDismissTouchHelper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(
                 ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
 
             @Override
             public void onChildDraw(Canvas c, RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
-                super.onChildDraw(c,recyclerView,viewHolder,dX,dY,actionState,isCurrentlyActive);
-                TextView currentView = ((TextView) viewHolder.itemView.findViewById(R.id.className));
-                if (actionState == ItemTouchHelper.ACTION_STATE_SWIPE) {
-                    if (viewHolder.getAdapterPosition() >= getPendingLength()) {
-                        float ratio = Math.abs(dX) >= 300 ? 1 : Math.abs(dX) / 300;
-                        int red = (int) Math.abs((ratio * 244));
-                        int green = (int) Math.abs((ratio * 67));
-                        int blue = (int) Math.abs((ratio * 54));
-                        currentView.setTextColor(Color.rgb(red, green, blue));
-                    } else {
-                        if (dX < 0) {
+                    super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
+                    TextView currentView = ((TextView) viewHolder.itemView.findViewById(R.id.className));
+                    if (actionState == ItemTouchHelper.ACTION_STATE_SWIPE) {
+                        if (viewHolder.getAdapterPosition() >= getPendingLength()) {
                             float ratio = Math.abs(dX) >= 300 ? 1 : Math.abs(dX) / 300;
                             int red = (int) Math.abs((ratio * 244));
                             int green = (int) Math.abs((ratio * 67));
                             int blue = (int) Math.abs((ratio * 54));
                             currentView.setTextColor(Color.rgb(red, green, blue));
                         } else {
-                            float ratio = Math.abs(dX) >= 300 ? 1 : Math.abs(dX) / 300;
-                            int red = (int) Math.abs((ratio * 76));
-                            int green = (int) Math.abs((ratio * 175));
-                            int blue = (int) Math.abs((ratio * 80));
-                            currentView.setTextColor(Color.rgb(red, green, blue));
+                            if (dX < 0) {
+                                float ratio = Math.abs(dX) >= 300 ? 1 : Math.abs(dX) / 300;
+                                int red = (int) Math.abs((ratio * 244));
+                                int green = (int) Math.abs((ratio * 67));
+                                int blue = (int) Math.abs((ratio * 54));
+                                currentView.setTextColor(Color.rgb(red, green, blue));
+                            } else {
+                                float ratio = Math.abs(dX) >= 300 ? 1 : Math.abs(dX) / 300;
+                                int red = (int) Math.abs((ratio * 76));
+                                int green = (int) Math.abs((ratio * 175));
+                                int blue = (int) Math.abs((ratio * 80));
+                                currentView.setTextColor(Color.rgb(red, green, blue));
+                            }
                         }
                     }
+            }
+            @Override
+            public int getSwipeDirs(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
+                if (!isOnline()) {
+                    showSnackbar(getResources().getString(R.string.no_connection),Snackbar.LENGTH_SHORT);
+                    return 0;
                 }
+                return super.getSwipeDirs(recyclerView, viewHolder);
             }
             @Override
             public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
@@ -908,65 +964,17 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             @Override
             public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
                 final RecyclerView.ViewHolder viewHolderf = viewHolder;
-                if (viewHolder.getAdapterPosition() >= currentClassPending.length()) {
-                    lastUser = usersList.get(viewHolder.getAdapterPosition());
-                    lastUserPosition = viewHolder.getAdapterPosition();
-                    usersList.remove(viewHolder.getAdapterPosition());
-                    adapter5.notifyItemRemoved(viewHolder.getAdapterPosition());
-                    new AsyncJob.AsyncJobBuilder<Boolean>()
-                            .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
-                                @Override
-                                public Boolean doAsync() {
-                                    JsonClass.getJSON("http://php-smartread.rhcloud.com/remove_class_user.php?id=" + lastUser.id + "&classid=" + currentClassId);
-                                    currentClass = RemoveJSONArray(currentClass, lastUser.id);
-                                    return true;
-                                }
-                            })
-                            .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
-                                @Override
-                                public void onResult(Boolean result) {
-                                }
-                            }).create().start();
-                    Snackbar.make(findViewById(R.id.classUsersLayout), "User removed", Snackbar.LENGTH_LONG)
-                            .setAction(R.string.undo, new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    usersList.add(lastUserPosition, lastUser);
-                                    TextView currentView = ((TextView) viewHolderf.itemView.findViewById(R.id.className));
-                                    currentView.setTextColor(Color.rgb(0, 0, 0));
-                                    adapter5.notifyItemInserted(lastUserPosition);
-                                    new AsyncJob.AsyncJobBuilder<Boolean>()
-                                            .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
-                                                @Override
-                                                public Boolean doAsync() {
-                                                    JsonClass.getJSON("http://php-smartread.rhcloud.com/add_class_user_instant.php?id=" + lastUser.id + "&classid=" + currentClassId);
-                                                    currentClass.put(lastUser.id);
-                                                    return true;
-                                                }
-                                            })
-                                            .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
-                                                @Override
-                                                public void onResult(Boolean result) {
-                                                }
-                                            }).create().start();
-                                }
-                            })
-                            .show();
-                }
-                else {
-                    lastUserPending = usersList.get(viewHolder.getAdapterPosition());
-                    lastUserPositionPending = viewHolder.getAdapterPosition();
-                    if(direction == ItemTouchHelper.LEFT) {
+                    if (viewHolder.getAdapterPosition() >= currentClassPending.length()) {
+                        lastUser = usersList.get(viewHolder.getAdapterPosition());
+                        lastUserPosition = viewHolder.getAdapterPosition();
                         usersList.remove(viewHolder.getAdapterPosition());
                         adapter5.notifyItemRemoved(viewHolder.getAdapterPosition());
                         new AsyncJob.AsyncJobBuilder<Boolean>()
                                 .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
                                     @Override
                                     public Boolean doAsync() {
-                                        try {
-                                            JsonClass.getJSON("http://php-smartread.rhcloud.com/remove_class_pending_user.php?id=" + lastUserPending.id + "&classid=" + currentClassId);
-                                            currentClassPending = RemoveJSONArray(currentClassPending,lastUserPending.id);
-                                        } catch (Exception e) {e.printStackTrace();}
+                                        JsonClass.getJSON("http://php-smartread.rhcloud.com/remove_class_user.php?id=" + lastUser.id + "&classid=" + currentClassId);
+                                        currentClass = RemoveJSONArray(currentClass, lastUser.id);
                                         return true;
                                     }
                                 })
@@ -975,20 +983,20 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                     public void onResult(Boolean result) {
                                     }
                                 }).create().start();
-                        Snackbar.make(findViewById(R.id.classUsersLayout), "Pending user removed", Snackbar.LENGTH_LONG)
+                        Snackbar.make(findViewById(R.id.classUsersLayout), "User removed", Snackbar.LENGTH_LONG)
                                 .setAction(R.string.undo, new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
-                                        usersList.add(lastUserPositionPending, lastUserPending);
+                                        usersList.add(lastUserPosition, lastUser);
                                         TextView currentView = ((TextView) viewHolderf.itemView.findViewById(R.id.className));
                                         currentView.setTextColor(Color.rgb(0, 0, 0));
-                                        adapter5.notifyItemInserted(lastUserPositionPending);
+                                        adapter5.notifyItemInserted(lastUserPosition);
                                         new AsyncJob.AsyncJobBuilder<Boolean>()
                                                 .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
                                                     @Override
                                                     public Boolean doAsync() {
-                                                        JsonClass.getJSON("http://php-smartread.rhcloud.com/add_class_user.php?id=" + lastUserPending.id + "&classid=" + currentClassId);
-                                                        currentClassPending.put(lastUserPending.id);
+                                                        JsonClass.getJSON("http://php-smartread.rhcloud.com/add_class_user_instant.php?id=" + lastUser.id + "&classid=" + currentClassId);
+                                                        currentClass.put(lastUser.id);
                                                         return true;
                                                     }
                                                 })
@@ -1000,33 +1008,81 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                     }
                                 })
                                 .show();
-                    }
-                    else {
-                        usersList.remove(viewHolder.getAdapterPosition());
-                        adapter5.notifyItemRemoved(viewHolder.getAdapterPosition());
-                        int pos = usersList.size();
-                        usersList.add(pos,lastUserPending);
-                        adapter5.notifyItemInserted(pos);
-                        ((TextView) viewHolder.itemView.findViewById(R.id.className)).setTextColor(Color.BLACK);
-                        new AsyncJob.AsyncJobBuilder<Boolean>()
-                                .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
-                                    @Override
-                                    public Boolean doAsync() {
-                                        JsonClass.getJSON("http://php-smartread.rhcloud.com/remove_class_pending_user.php?id=" + lastUserPending.id + "&classid=" + currentClassId);
-                                        JsonClass.getJSON("http://php-smartread.rhcloud.com/add_class_user_instant.php?id=" + lastUserPending.id + "&classid=" + currentClassId);
-                                        currentClassPending = RemoveJSONArray(currentClassPending,lastUserPending.id);
-                                        currentClass.put(lastUserPending.id);
-                                        return true;
-                                    }
-                                })
-                                .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
-                                    @Override
-                                    public void onResult(Boolean result) {
-                                    }
-                                }).create().start();
+                    } else {
+                        lastUserPending = usersList.get(viewHolder.getAdapterPosition());
+                        lastUserPositionPending = viewHolder.getAdapterPosition();
+                        if (direction == ItemTouchHelper.LEFT) {
+                            usersList.remove(viewHolder.getAdapterPosition());
+                            adapter5.notifyItemRemoved(viewHolder.getAdapterPosition());
+                            new AsyncJob.AsyncJobBuilder<Boolean>()
+                                    .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
+                                        @Override
+                                        public Boolean doAsync() {
+                                            try {
+                                                JsonClass.getJSON("http://php-smartread.rhcloud.com/remove_class_pending_user.php?id=" + lastUserPending.id + "&classid=" + currentClassId);
+                                                currentClassPending = RemoveJSONArray(currentClassPending, lastUserPending.id);
+                                            } catch (Exception e) {
+                                                e.printStackTrace();
+                                            }
+                                            return true;
+                                        }
+                                    })
+                                    .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
+                                        @Override
+                                        public void onResult(Boolean result) {
+                                        }
+                                    }).create().start();
+                            Snackbar.make(findViewById(R.id.classUsersLayout), "Pending user removed", Snackbar.LENGTH_LONG)
+                                    .setAction(R.string.undo, new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            usersList.add(lastUserPositionPending, lastUserPending);
+                                            TextView currentView = ((TextView) viewHolderf.itemView.findViewById(R.id.className));
+                                            currentView.setTextColor(Color.rgb(0, 0, 0));
+                                            adapter5.notifyItemInserted(lastUserPositionPending);
+                                            new AsyncJob.AsyncJobBuilder<Boolean>()
+                                                    .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
+                                                        @Override
+                                                        public Boolean doAsync() {
+                                                            JsonClass.getJSON("http://php-smartread.rhcloud.com/add_class_user.php?id=" + lastUserPending.id + "&classid=" + currentClassId);
+                                                            currentClassPending.put(lastUserPending.id);
+                                                            return true;
+                                                        }
+                                                    })
+                                                    .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
+                                                        @Override
+                                                        public void onResult(Boolean result) {
+                                                        }
+                                                    }).create().start();
+                                        }
+                                    })
+                                    .show();
+                        } else {
+                            usersList.remove(viewHolder.getAdapterPosition());
+                            adapter5.notifyItemRemoved(viewHolder.getAdapterPosition());
+                            int pos = usersList.size();
+                            usersList.add(pos, lastUserPending);
+                            adapter5.notifyItemInserted(pos);
+                            ((TextView) viewHolder.itemView.findViewById(R.id.className)).setTextColor(Color.BLACK);
+                            new AsyncJob.AsyncJobBuilder<Boolean>()
+                                    .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
+                                        @Override
+                                        public Boolean doAsync() {
+                                            JsonClass.getJSON("http://php-smartread.rhcloud.com/remove_class_pending_user.php?id=" + lastUserPending.id + "&classid=" + currentClassId);
+                                            JsonClass.getJSON("http://php-smartread.rhcloud.com/add_class_user_instant.php?id=" + lastUserPending.id + "&classid=" + currentClassId);
+                                            currentClassPending = RemoveJSONArray(currentClassPending, lastUserPending.id);
+                                            currentClass.put(lastUserPending.id);
+                                            return true;
+                                        }
+                                    })
+                                    .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
+                                        @Override
+                                        public void onResult(Boolean result) {
+                                        }
+                                    }).create().start();
+                        }
                     }
                 }
-            }
         });
         swipeToDismissTouchHelper.attachToRecyclerView(mRecyclerView3);
 
@@ -1177,8 +1233,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                         @Override
                                         public void onPageChanged(int page, int pageCount) {
                                             try {
-                                                if (page % 10 == 0 && mInterstitialAd.isLoaded())
-                                                    adDialog();
                                                 JSONArray array;
                                                 boolean canDo = false;
                                                 if (page == pdf.getPageCount())
@@ -1266,15 +1320,12 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);
-        switch (menuString) {
-            case "Library":
-                menu.getItem(0).setVisible(true);
-                menu.getItem(1).setVisible(true);
-                break;
-            default:
-                menu.getItem(0).setVisible(false);
-                menu.getItem(1).setVisible(false);
-                break;
+        if (menuString.equals("Library")) {
+            menu.getItem(0).setVisible(true);
+            menu.getItem(1).setVisible(true);
+        } else {
+            menu.getItem(0).setVisible(false);
+            menu.getItem(1).setVisible(false);
         }
         return true;
     }
@@ -2340,16 +2391,5 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             else
                 Snackbar.make(findViewById(R.id.classUsersLayout), text, length).show();
         }
-    }
-    private void requestNewInterstitial() {
-        AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice("BE01DBD21BBECA7BF954E996DDA21410")
-                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                .build();
-
-        mInterstitialAd.loadAd(adRequest);
-    }
-    private void adDialog() {
-        mInterstitialAd.show();
     }
 }
