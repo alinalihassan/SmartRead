@@ -11435,7 +11435,7 @@ com.teched.smartread.LoginActivity:
 com.teched.smartread.MainActivity:
     private static final int FILE_CODE
 com.teched.smartread.MainActivity$46:
-    1936:1937:public void onSearchCleared()
+    1961:1962:public void onSearchCleared()
 com.teched.smartread.R
 com.teched.smartread.R$anim
 com.teched.smartread.R$array
@@ -11484,7 +11484,7 @@ com.teched.smartread.TextDrawable$IShapeBuilder:
 com.teched.smartread.UploadJob:
     public static final int PRIORITY
 com.teched.smartread.Utils:
-    10:10:public Utils()
+    18:18:public Utils()
 com.yqritc.recyclerviewflexibledivider.BuildConfig
 com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration:
     private static final int DEFAULT_SIZE

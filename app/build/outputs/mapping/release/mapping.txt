@@ -40409,7 +40409,7 @@ com.teched.smartread.MainActivity -> com.teched.smartread.MainActivity:
     void onActivityResult(int,int,android.content.Intent) -> onActivityResult
     void mic(android.view.View) -> mic
     void closeSearch() -> j
-    java.lang.String saveToInternalStorage(android.graphics.Bitmap,boolean) -> a
+    java.lang.String saveToInternalStorage(android.content.Context,android.graphics.Bitmap,java.lang.String) -> a
     int getStatusBarHeight() -> k
     void hideKeyboard() -> o
     void copyFile(java.lang.String,java.lang.String) -> a
@@ -40428,6 +40428,7 @@ com.teched.smartread.MainActivity -> com.teched.smartread.MainActivity:
     java.lang.String readNFCText(android.nfc.NdefRecord) -> a
     void TagRead(android.nfc.Tag) -> a
     void showSnackbar(java.lang.String,int) -> a
+    void setupFloatingLabelError(android.support.design.widget.TextInputLayout,java.lang.String) -> a
     void access$000(com.teched.smartread.MainActivity) -> a
     void access$100(com.teched.smartread.MainActivity) -> b
     java.lang.String access$202(com.teched.smartread.MainActivity,java.lang.String) -> a
@@ -40623,6 +40624,7 @@ com.teched.smartread.MainActivity$28 -> com.teched.smartread.ar:
     com.teched.smartread.MainActivity this$0 -> a
     void <init>(com.teched.smartread.MainActivity,int,int) -> <init>
     void onChildDraw(android.graphics.Canvas,android.support.v7.widget.RecyclerView,android.support.v7.widget.RecyclerView$ViewHolder,float,float,int,boolean) -> a
+    int getSwipeDirs(android.support.v7.widget.RecyclerView,android.support.v7.widget.RecyclerView$ViewHolder) -> d
     boolean onMove(android.support.v7.widget.RecyclerView,android.support.v7.widget.RecyclerView$ViewHolder,android.support.v7.widget.RecyclerView$ViewHolder) -> b
     void onSwiped(android.support.v7.widget.RecyclerView$ViewHolder,int) -> a
 com.teched.smartread.MainActivity$28$1 -> com.teched.smartread.as:
@@ -40914,12 +40916,20 @@ com.teched.smartread.MainActivity$54$1 -> com.teched.smartread.cq:
     com.teched.smartread.MainActivity$54 this$1 -> a
     void <init>(com.teched.smartread.MainActivity$54) -> <init>
     void doInUIThread() -> a
-com.teched.smartread.MainActivity$6 -> com.teched.smartread.cr:
+com.teched.smartread.MainActivity$55 -> com.teched.smartread.cr:
+    android.support.design.widget.TextInputLayout val$floatingUsernameLabel -> a
+    java.lang.String val$Error -> b
+    com.teched.smartread.MainActivity this$0 -> c
+    void <init>(com.teched.smartread.MainActivity,android.support.design.widget.TextInputLayout,java.lang.String) -> <init>
+    void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    void afterTextChanged(android.text.Editable) -> afterTextChanged
+com.teched.smartread.MainActivity$6 -> com.teched.smartread.cs:
     android.widget.ListView val$teacherList -> a
     com.teched.smartread.MainActivity this$0 -> b
     void <init>(com.teched.smartread.MainActivity,android.widget.ListView) -> <init>
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.teched.smartread.MainActivity$7 -> com.teched.smartread.cs:
+com.teched.smartread.MainActivity$7 -> com.teched.smartread.ct:
     java.lang.String val$TeacherPath -> a
     java.lang.String val$Path -> b
     java.util.ArrayList val$myList -> c
@@ -40928,20 +40938,22 @@ com.teched.smartread.MainActivity$7 -> com.teched.smartread.cs:
     com.teched.smartread.MainActivity this$0 -> f
     void <init>(com.teched.smartread.MainActivity,java.lang.String,java.lang.String,java.util.ArrayList,android.content.SharedPreferences,android.widget.ArrayAdapter) -> <init>
     void onClick(android.view.View) -> onClick
-com.teched.smartread.MainActivity$8 -> com.teched.smartread.ct:
+com.teched.smartread.MainActivity$8 -> com.teched.smartread.cu:
     android.widget.EditText val$answer1 -> a
     android.widget.EditText val$answer2 -> b
     android.widget.EditText val$answer3 -> c
     android.widget.EditText val$answer4 -> d
     android.widget.EditText val$pageEdit -> e
-    com.teched.smartread.MainActivity this$0 -> f
-    void <init>(com.teched.smartread.MainActivity,android.widget.EditText,android.widget.EditText,android.widget.EditText,android.widget.EditText,android.widget.EditText) -> <init>
+    android.support.design.widget.TextInputLayout val$pageInput -> f
+    android.support.design.widget.TextInputLayout val$questionInput -> g
+    com.teched.smartread.MainActivity this$0 -> h
+    void <init>(com.teched.smartread.MainActivity,android.widget.EditText,android.widget.EditText,android.widget.EditText,android.widget.EditText,android.widget.EditText,android.support.design.widget.TextInputLayout,android.support.design.widget.TextInputLayout) -> <init>
     void onClick(android.view.View) -> onClick
-com.teched.smartread.MainActivity$9 -> com.teched.smartread.cu:
+com.teched.smartread.MainActivity$9 -> com.teched.smartread.cv:
     com.teched.smartread.MainActivity this$0 -> a
     void <init>(com.teched.smartread.MainActivity) -> <init>
     void onClick(android.view.View) -> onClick
-com.teched.smartread.MainAdapter -> com.teched.smartread.cv:
+com.teched.smartread.MainAdapter -> com.teched.smartread.cw:
     java.lang.String Type -> b
     android.content.SharedPreferences prefs -> c
     java.util.List cards -> d
@@ -40962,17 +40974,17 @@ com.teched.smartread.MainAdapter -> com.teched.smartread.cv:
     android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int) -> a
     android.content.SharedPreferences access$000(com.teched.smartread.MainAdapter) -> a
     java.lang.String access$100(com.teched.smartread.MainAdapter) -> b
-com.teched.smartread.MainAdapter$1 -> com.teched.smartread.cw:
+com.teched.smartread.MainAdapter$1 -> com.teched.smartread.cx:
     com.teched.smartread.MainAdapter this$0 -> a
     void <init>(com.teched.smartread.MainAdapter) -> <init>
     int compare(com.teched.smartread.Card,com.teched.smartread.Card) -> a
     int compare(java.lang.Object,java.lang.Object) -> compare
-com.teched.smartread.MainAdapter$ViewHolder -> com.teched.smartread.cx:
+com.teched.smartread.MainAdapter$ViewHolder -> com.teched.smartread.cy:
     android.widget.TextView cardName -> j
     android.widget.TextView cardAuthor -> k
     android.widget.ImageView cardHeart -> l
     void <init>(android.view.View) -> <init>
-com.teched.smartread.RecyclerItemClickListener -> com.teched.smartread.cy:
+com.teched.smartread.RecyclerItemClickListener -> com.teched.smartread.cz:
     com.teched.smartread.RecyclerItemClickListener$OnItemClickListener mListener -> a
     android.view.GestureDetector mGestureDetector -> b
     void <init>(android.content.Context,android.support.v7.widget.RecyclerView,com.teched.smartread.RecyclerItemClickListener$OnItemClickListener) -> <init>
@@ -40980,13 +40992,13 @@ com.teched.smartread.RecyclerItemClickListener -> com.teched.smartread.cy:
     void onRequestDisallowInterceptTouchEvent(boolean) -> a
     void onTouchEvent(android.support.v7.widget.RecyclerView,android.view.MotionEvent) -> b
     com.teched.smartread.RecyclerItemClickListener$OnItemClickListener access$000(com.teched.smartread.RecyclerItemClickListener) -> a
-com.teched.smartread.RecyclerItemClickListener$1 -> com.teched.smartread.cz:
+com.teched.smartread.RecyclerItemClickListener$1 -> com.teched.smartread.da:
     android.support.v7.widget.RecyclerView val$recyclerView -> a
     com.teched.smartread.RecyclerItemClickListener this$0 -> b
     void <init>(com.teched.smartread.RecyclerItemClickListener,android.support.v7.widget.RecyclerView) -> <init>
     boolean onSingleTapConfirmed(android.view.MotionEvent) -> onSingleTapConfirmed
     boolean onDoubleTap(android.view.MotionEvent) -> onDoubleTap
-com.teched.smartread.RecyclerItemClickListener$OnItemClickListener -> com.teched.smartread.da:
+com.teched.smartread.RecyclerItemClickListener$OnItemClickListener -> com.teched.smartread.db:
     void onItemClick(android.view.View,int) -> a
     void onItemLongClick(android.view.View,int) -> b
 com.teched.smartread.SettingsActivity -> com.teched.smartread.SettingsActivity:
@@ -41005,39 +41017,39 @@ com.teched.smartread.SettingsActivity -> com.teched.smartread.SettingsActivity:
     void initializeToolbar() -> c
     android.content.SharedPreferences access$000(com.teched.smartread.SettingsActivity) -> a
     java.lang.String access$100(com.teched.smartread.SettingsActivity) -> b
-com.teched.smartread.SettingsActivity$1 -> com.teched.smartread.db:
+com.teched.smartread.SettingsActivity$1 -> com.teched.smartread.dc:
     com.teched.smartread.SettingsActivity this$0 -> a
     void <init>(com.teched.smartread.SettingsActivity) -> <init>
     void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String) -> onSharedPreferenceChanged
-com.teched.smartread.SettingsActivity$2 -> com.teched.smartread.dc:
+com.teched.smartread.SettingsActivity$2 -> com.teched.smartread.dd:
     com.teched.smartread.SettingsActivity this$0 -> a
     void <init>(com.teched.smartread.SettingsActivity) -> <init>
     boolean onPreferenceClick(android.preference.Preference) -> onPreferenceClick
-com.teched.smartread.SettingsActivity$3 -> com.teched.smartread.dd:
+com.teched.smartread.SettingsActivity$3 -> com.teched.smartread.de:
     com.teched.smartread.SettingsActivity this$0 -> a
     void <init>(com.teched.smartread.SettingsActivity) -> <init>
     boolean onPreferenceClick(android.preference.Preference) -> onPreferenceClick
-com.teched.smartread.SettingsActivity$4 -> com.teched.smartread.de:
+com.teched.smartread.SettingsActivity$4 -> com.teched.smartread.df:
     com.teched.smartread.SettingsActivity this$0 -> a
     void <init>(com.teched.smartread.SettingsActivity) -> <init>
     boolean onPreferenceClick(android.preference.Preference) -> onPreferenceClick
-com.teched.smartread.SettingsActivity$5 -> com.teched.smartread.df:
+com.teched.smartread.SettingsActivity$5 -> com.teched.smartread.dg:
     com.teched.smartread.SettingsActivity this$0 -> a
     void <init>(com.teched.smartread.SettingsActivity) -> <init>
     void onClick(android.content.DialogInterface,int) -> onClick
-com.teched.smartread.SettingsActivity$6 -> com.teched.smartread.dg:
+com.teched.smartread.SettingsActivity$6 -> com.teched.smartread.dh:
     com.teched.smartread.SettingsActivity this$0 -> a
     void <init>(com.teched.smartread.SettingsActivity) -> <init>
     void onClick(android.content.DialogInterface,int) -> onClick
-com.teched.smartread.SettingsActivity$7 -> com.teched.smartread.dh:
+com.teched.smartread.SettingsActivity$7 -> com.teched.smartread.di:
     com.teched.smartread.SettingsActivity this$0 -> a
     void <init>(com.teched.smartread.SettingsActivity) -> <init>
     void onClick(android.view.View) -> onClick
-com.teched.smartread.SettingsActivity$8 -> com.teched.smartread.di:
+com.teched.smartread.SettingsActivity$8 -> com.teched.smartread.dj:
     com.teched.smartread.SettingsActivity this$0 -> a
     void <init>(com.teched.smartread.SettingsActivity) -> <init>
     void onClick(android.view.View) -> onClick
-com.teched.smartread.TextDrawable -> com.teched.smartread.dj:
+com.teched.smartread.TextDrawable -> com.teched.smartread.dk:
     android.graphics.Paint textPaint -> a
     android.graphics.Paint borderPaint -> b
     java.lang.String text -> c
@@ -41059,8 +41071,8 @@ com.teched.smartread.TextDrawable -> com.teched.smartread.dj:
     int getIntrinsicHeight() -> getIntrinsicHeight
     com.teched.smartread.TextDrawable$IShapeBuilder builder() -> a
     void <init>(com.teched.smartread.TextDrawable$Builder,com.teched.smartread.TextDrawable$1) -> <init>
-com.teched.smartread.TextDrawable$1 -> com.teched.smartread.dk:
-com.teched.smartread.TextDrawable$Builder -> com.teched.smartread.dl:
+com.teched.smartread.TextDrawable$1 -> com.teched.smartread.dl:
+com.teched.smartread.TextDrawable$Builder -> com.teched.smartread.dm:
     java.lang.String text -> c
     int color -> d
     int borderThickness -> e
@@ -41088,10 +41100,10 @@ com.teched.smartread.TextDrawable$Builder -> com.teched.smartread.dl:
     android.graphics.Typeface access$800(com.teched.smartread.TextDrawable$Builder) -> i
     int access$900(com.teched.smartread.TextDrawable$Builder) -> j
     void <init>(com.teched.smartread.TextDrawable$1) -> <init>
-com.teched.smartread.TextDrawable$IBuilder -> com.teched.smartread.dm:
-com.teched.smartread.TextDrawable$IShapeBuilder -> com.teched.smartread.dn:
+com.teched.smartread.TextDrawable$IBuilder -> com.teched.smartread.dn:
+com.teched.smartread.TextDrawable$IShapeBuilder -> com.teched.smartread.do:
     com.teched.smartread.TextDrawable buildRound(java.lang.String,int) -> a
-com.teched.smartread.UploadJob -> com.teched.smartread.do:
+com.teched.smartread.UploadJob -> com.teched.smartread.dp:
     java.lang.String Path -> c
     java.lang.String TeacherPath -> d
     java.lang.String Name -> e
@@ -41105,12 +41117,13 @@ com.teched.smartread.UploadJob -> com.teched.smartread.do:
     void onRun() -> c
     boolean shouldReRunOnThrowable(java.lang.Throwable) -> a
     void onCancel() -> d
-com.teched.smartread.Users -> com.teched.smartread.dp:
+com.teched.smartread.Users -> com.teched.smartread.dq:
     java.lang.String name -> a
     java.lang.String id -> b
     java.lang.String email -> c
+    java.lang.String profileUrl -> d
     void <init>() -> <init>
-com.teched.smartread.UsersAdapter -> com.teched.smartread.dq:
+com.teched.smartread.UsersAdapter -> com.teched.smartread.dr:
     java.util.List cards -> b
     java.util.List visibleCards -> a
     int rowLayout -> c
@@ -41122,14 +41135,27 @@ com.teched.smartread.UsersAdapter -> com.teched.smartread.dq:
     int getItemCount() -> a
     void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int) -> a
     android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int) -> a
-com.teched.smartread.UsersAdapter$ViewHolder -> com.teched.smartread.dr:
+    android.content.Context access$000(com.teched.smartread.UsersAdapter) -> a
+com.teched.smartread.UsersAdapter$1 -> com.teched.smartread.ds:
+    com.teched.smartread.Users val$card -> a
+    com.teched.smartread.UsersAdapter$ViewHolder val$viewHolder -> b
+    com.teched.smartread.UsersAdapter this$0 -> c
+    void <init>(com.teched.smartread.UsersAdapter,com.teched.smartread.Users,com.teched.smartread.UsersAdapter$ViewHolder) -> <init>
+    void doOnBackground() -> a
+com.teched.smartread.UsersAdapter$1$1 -> com.teched.smartread.dt:
+    android.graphics.Bitmap val$finalProfile -> a
+    com.teched.smartread.UsersAdapter$1 this$1 -> b
+    void <init>(com.teched.smartread.UsersAdapter$1,android.graphics.Bitmap) -> <init>
+    void doInUIThread() -> a
+com.teched.smartread.UsersAdapter$ViewHolder -> com.teched.smartread.du:
     android.widget.TextView cardName -> j
     android.widget.ImageView cardImage -> k
     void <init>(android.view.View) -> <init>
-com.teched.smartread.Utils -> com.teched.smartread.ds:
+com.teched.smartread.Utils -> com.teched.smartread.dv:
     int calculateColorBase(java.lang.String) -> a
     int calculateColor(java.lang.String) -> b
     java.lang.String firstChar(java.lang.String) -> c
+    android.graphics.Bitmap getRoundedCornerBitmap(android.graphics.Bitmap) -> a
 com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration -> com.g.a.a:
     int[] ATTRS -> h
     com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration$DividerType mDividerType -> a

@@ -690,7 +690,9 @@
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
     </style>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
@@ -1654,6 +1656,8 @@
     <style name="LoginTheme" parent="Theme.AppCompat.NoActionBar">
 
         <item name="android:background">#ffffff</item>
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorAccent">@color/color_accent</item>
         <item name="android:windowAnimationStyle">@null</item>
     </style>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.3.0/res/values/values.xml -->
@@ -1863,6 +1867,8 @@
     <eat-comment/>
     <style name="SettingsTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="alertDialogTheme">@style/FilePickerAlertDialogTheme</item>
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorAccent">@color/color_accent</item>
     </style>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>

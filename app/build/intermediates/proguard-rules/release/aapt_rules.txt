@@ -6,7 +6,7 @@
 
 # view res/layout/activity_main.xml #generated:120
 # view res/layout/activity_main.xml #generated:171
-# view res/layout/activity_main.xml #generated:506
+# view res/layout/activity_main.xml #generated:513
 # view res/layout/activity_main.xml #generated:96
 -keep class android.support.design.widget.CoordinatorLayout { <init>(...); }
 
@@ -151,9 +151,9 @@
 -keep class com.teched.smartread.BackupAgent { <init>(...); }
 
 # view res/layout/activity_main.xml #generated:224
-# view res/layout/activity_main.xml #generated:240
-# view res/layout/activity_main.xml #generated:253
-# view res/layout/activity_main.xml #generated:265
+# view res/layout/activity_main.xml #generated:241
+# view res/layout/activity_main.xml #generated:255
+# view res/layout/activity_main.xml #generated:268
 -keep class com.teched.smartread.CustomTextInputLayout { <init>(...); }
 
 # view AndroidManifest.xml #generated:83

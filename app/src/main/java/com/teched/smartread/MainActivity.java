@@ -40,6 +40,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputLayout;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -50,7 +51,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.support.v7.widget.helper.ItemTouchHelper;
+import android.text.Editable;
 import android.text.InputFilter;
+import android.text.TextWatcher;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -188,8 +191,8 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                 try {
                     URL profileURL = new URL(prefs.getString("ProfilePicture", ""));
                     URL coverURL = new URL(prefs.getString("ProfileCover", ""));
-                    saveToInternalStorage(BitmapFactory.decodeStream(profileURL.openConnection().getInputStream()), true);
-                    saveToInternalStorage(drawableToBitmap(new BitmapDrawable(getResources(), BitmapFactory.decodeStream(coverURL.openConnection().getInputStream()))), false);
+                    saveToInternalStorage(this, BitmapFactory.decodeStream(profileURL.openConnection().getInputStream()), "profile");
+                    saveToInternalStorage(this, drawableToBitmap(new BitmapDrawable(getResources(), BitmapFactory.decodeStream(coverURL.openConnection().getInputStream()))), "cover");
                     prefs.edit().putInt("Day",c.get(Calendar.DAY_OF_YEAR)+prefs.getInt("perf_frequency",2)).putInt("Year",c.get(Calendar.YEAR)).apply();
                 } catch (Exception e) { e.printStackTrace();}
         }
@@ -246,6 +249,12 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         TextView google = (TextView) findViewById(R.id.aboutGoogle);
         TextView facebook = (TextView) findViewById(R.id.aboutFacebook);
         TextView aboutVersion = (TextView) findViewById(R.id.aboutVersion);
+        final TextInputLayout titleInput = (TextInputLayout) findViewById(R.id.pdfTitleLayout);
+        final TextInputLayout authorInput = (TextInputLayout) findViewById(R.id.authorTitle);
+        final TextInputLayout questionInput = (TextInputLayout) findViewById(R.id.questionTitle);
+        final TextInputLayout pageInput = (TextInputLayout) findViewById(R.id.pageTitle);
+        setupFloatingLabelError(titleInput,"You must enter a Title!");
+        setupFloatingLabelError(authorInput,"You must enter an Author!");
         DisplayMetrics displaymetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
         if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP) {
@@ -396,7 +405,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         nextQuestion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (QuestionRadio.getCheckedRadioButtonId() != -1 && !QuestionEdit.getText().toString().isEmpty() && !answer1.getText().toString().isEmpty() && !answer2.getText().toString().isEmpty() && !answer3.getText().toString().isEmpty() && !answer4.getText().toString().isEmpty()) {
+                if (QuestionRadio.getCheckedRadioButtonId() != -1 && !QuestionEdit.getText().toString().isEmpty() && (!answer1.getText().toString().isEmpty() || !answer2.getText().toString().isEmpty() || !answer3.getText().toString().isEmpty() || !answer4.getText().toString().isEmpty())) {
                     int page = pageEdit.getText().toString().isEmpty() ? pdf.getCurrentPage() : Integer.parseInt(pageEdit.getText().toString());
                     try {
                         if (newObject.isNull(String.valueOf(page))) {
@@ -442,12 +451,21 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                         e.printStackTrace();
                     }
                     QuestionRadio.clearCheck();
+                    pageInput.setErrorEnabled(false);
+                    questionInput.setErrorEnabled(false);
                     QuestionEdit.setText("");
                     pageEdit.setText("");
                     answer1.setText("");
                     answer2.setText("");
                     answer3.setText("");
                     answer4.setText("");
+                }
+                else if(QuestionRadio.getCheckedRadioButtonId() == -1) {
+                    Snackbar.make(findViewById(R.id.snackLayout), "You must check a correct answer!", Snackbar.LENGTH_SHORT).show();
+                }
+                else if(QuestionEdit.getText().toString().isEmpty()) {
+                    questionInput.setError("You must provide a question!");
+                    questionInput.setErrorEnabled(true);
                 }
             }
         });
@@ -511,7 +529,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                         @Override
                                         public Boolean doAsync() {
                                             try {
-                                                File[] files = folder.listFiles();
                                                 File teacherFolder = new File(TeacherPath);
                                                 File TList[] = teacherFolder.listFiles();
                                                 JSONObject books = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_books.php?email=" + prefs.getString("Email", getString(R.string.profile_description))));
@@ -539,7 +556,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                                 }
                                                 pdfs.clear();
                                                 list.clear();
-                                                files = folder.listFiles();
+                                                File[] files  = folder.listFiles();
                                                 if (files != null) {
                                                     for (File file : files)
                                                         if (file.getName().endsWith(".pdf")) {
@@ -688,8 +705,8 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                 URL coverURL = new URL(coverUrl);
                 profile[0] = BitmapFactory.decodeStream(profileURL.openConnection().getInputStream());
                 cover = new BitmapDrawable(getResources(), BitmapFactory.decodeStream(coverURL.openConnection().getInputStream()));
-                saveToInternalStorage(profile[0], true);
-                saveToInternalStorage(drawableToBitmap(cover), false);
+                saveToInternalStorage(this, profile[0], "profile");
+                saveToInternalStorage(this, drawableToBitmap(cover), "cover");
             }
             catch (Exception q) {q.printStackTrace();}
         }
@@ -1991,10 +2008,10 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         if(search.getSearchText().isEmpty())toolbar.setTitle("SmartRead");
     }
 
-    private String saveToInternalStorage(Bitmap bitmapImage, boolean profile){
-        ContextWrapper cw = new ContextWrapper(getApplicationContext());
+    public static String saveToInternalStorage(Context context, Bitmap bitmapImage, String name){
+        ContextWrapper cw = new ContextWrapper(context);
         File directory = cw.getDir("imageDir", Context.MODE_PRIVATE);
-        File mypath=new File(directory,profile?"profile.jpg":"cover.jpg");
+        File mypath=new File(directory,name + ".jpg");
         FileOutputStream fos;
         try {
             fos = new FileOutputStream(mypath);
@@ -2170,6 +2187,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                             currentClass.name = Class.getString("name");
                             currentClass.id = Classes.getString(i);
                             currentClass.email = Class.getString("email");
+                            currentClass.profileUrl = Class.getString("profileUrl");
                         }
                         for (int i = 0; i < Classes2.length(); i++) {
                             usersList.add(new Users());
@@ -2178,6 +2196,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                             currentClass.name = Class.getString("name");
                             currentClass.id = Classes2.getString(i);
                             currentClass.email = Class.getString("email");
+                            currentClass.profileUrl = Class.getString("profileUrl");
                         }
                     } catch (Exception e) {
                         e.printStackTrace();
@@ -2391,5 +2410,25 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             else
                 Snackbar.make(findViewById(R.id.classUsersLayout), text, length).show();
         }
+    }
+    private void setupFloatingLabelError(final TextInputLayout floatingUsernameLabel, final String Error) {
+        floatingUsernameLabel.getEditText().addTextChangedListener(new TextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence text, int start, int count, int after) {
+                if (text.length() <1) {
+                    floatingUsernameLabel.setError(Error);
+                    floatingUsernameLabel.setErrorEnabled(true);
+                } else {
+                    floatingUsernameLabel.setErrorEnabled(false);
+                }
+            }
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
     }
 }
