@@ -21370,6 +21370,8 @@ com.teched.smartread.R$id: int authorEdit
 com.teched.smartread.R$id: int authorTitle
 com.teched.smartread.R$id: int automatic
 com.teched.smartread.R$id: int beginning
+com.teched.smartread.R$id: int bookAuthor
+com.teched.smartread.R$id: int bookName
 com.teched.smartread.R$id: int book_now
 com.teched.smartread.R$id: int border
 com.teched.smartread.R$id: int bottom
@@ -21549,6 +21551,7 @@ com.teched.smartread.R$id: int questionTitle
 com.teched.smartread.R$id: int radio
 com.teched.smartread.R$id: int radioGroup
 com.teched.smartread.R$id: int refreshClasses
+com.teched.smartread.R$id: int refreshStore
 com.teched.smartread.R$id: int refreshTeacher
 com.teched.smartread.R$id: int results
 com.teched.smartread.R$id: int right
@@ -21597,6 +21600,7 @@ com.teched.smartread.R$id: int start
 com.teched.smartread.R$id: int status_bar_latest_event_content
 com.teched.smartread.R$id: int stop
 com.teched.smartread.R$id: int store
+com.teched.smartread.R$id: int storeList
 com.teched.smartread.R$id: int strict_sandbox
 com.teched.smartread.R$id: int submit_area
 com.teched.smartread.R$id: int subtitle
@@ -21666,6 +21670,7 @@ com.teched.smartread.R$layout: int abc_simple_dropdown_hint
 com.teched.smartread.R$layout: int activity_filepicker
 com.teched.smartread.R$layout: int activity_login
 com.teched.smartread.R$layout: int activity_main
+com.teched.smartread.R$layout: int bookview
 com.teched.smartread.R$layout: int cardview
 com.teched.smartread.R$layout: int classview
 com.teched.smartread.R$layout: int com_facebook_activity_layout

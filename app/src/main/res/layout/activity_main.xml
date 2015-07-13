@@ -157,7 +157,19 @@
             android:id="@+id/store"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="invisible"/>
+            android:visibility="invisible">
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/refreshStore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?attr/actionBarSize">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/storeList"
+                    android:scrollbars="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </RelativeLayout>
 
         <com.quinny898.library.persistentsearch.SearchBox
             android:layout_width="wrap_content"

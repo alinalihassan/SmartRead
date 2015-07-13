@@ -4364,10 +4364,6 @@ com.anjlab.android.iab.v3.BillingCache:
     private static final java.lang.String ENTRY_DELIMITER
     private static final java.lang.String LINE_DELIMITER
     private static final java.lang.String VERSION_KEY
-    77:78:public boolean includesProduct(java.lang.String)
-    82:83:public com.anjlab.android.iab.v3.PurchaseInfo getDetails(java.lang.String)
-    95:100:public void remove(java.lang.String)
-    120:120:public java.util.List getContents()
 com.anjlab.android.iab.v3.BillingProcessor:
     private static final int PURCHASE_FLOW_REQUEST_CODE
     private static final java.lang.String LOG_TAG
@@ -4376,25 +4372,12 @@ com.anjlab.android.iab.v3.BillingProcessor:
     private static final java.lang.String MANAGED_PRODUCTS_CACHE_KEY
     private static final java.lang.String SUBSCRIPTIONS_CACHE_KEY
     private static final java.lang.String PURCHASE_PAYLOAD_CACHE_KEY
-    127:127:public boolean isPurchased(java.lang.String)
-    131:131:public boolean isSubscribed(java.lang.String)
-    135:135:public java.util.List listOwnedProducts()
     139:139:public java.util.List listOwnedSubscriptions()
-    174:174:public boolean purchase(android.app.Activity,java.lang.String)
     178:178:public boolean subscribe(android.app.Activity,java.lang.String)
-    182:212:private boolean purchase(android.app.Activity,java.lang.String,java.lang.String)
-    216:224:private com.anjlab.android.iab.v3.TransactionDetails getPurchaseTransactionDetails(java.lang.String,com.anjlab.android.iab.v3.BillingCache)
-    228:247:public boolean consumePurchase(java.lang.String)
-    251:256:private com.anjlab.android.iab.v3.SkuDetails getSkuDetails(java.lang.String,java.lang.String)
-    260:286:private java.util.List getSkuDetails(java.util.ArrayList,java.lang.String)
-    290:290:public com.anjlab.android.iab.v3.SkuDetails getPurchaseListingDetails(java.lang.String)
     294:294:public com.anjlab.android.iab.v3.SkuDetails getSubscriptionListingDetails(java.lang.String)
     298:298:public java.util.List getPurchaseListingDetails(java.util.ArrayList)
     302:302:public java.util.List getSubscriptionListingDetails(java.util.ArrayList)
-    306:306:public com.anjlab.android.iab.v3.TransactionDetails getPurchaseTransactionDetails(java.lang.String)
-    310:310:public com.anjlab.android.iab.v3.TransactionDetails getSubscriptionTransactionDetails(java.lang.String)
     378:378:public boolean isValid(com.anjlab.android.iab.v3.TransactionDetails)
-    391:392:private void savePurchasePayload(java.lang.String)
 com.anjlab.android.iab.v3.BuildConfig
 com.anjlab.android.iab.v3.Constants
 com.anjlab.android.iab.v3.PurchaseInfo:
@@ -4407,7 +4390,6 @@ com.anjlab.android.iab.v3.Security:
     private static final java.lang.String KEY_FACTORY_ALGORITHM
     private static final java.lang.String SIGNATURE_ALGORITHM
     40:40:Security()
-com.anjlab.android.iab.v3.SkuDetails
 com.arasthel.asyncjob.AsyncJob:
     71:78:public static java.util.concurrent.FutureTask doInBackground(com.arasthel.asyncjob.AsyncJob$OnBackgroundJob,java.util.concurrent.ExecutorService)
     109:116:public void cancel()
@@ -11434,8 +11416,8 @@ com.teched.smartread.LoginActivity:
     private static final int RC_SIGN_IN
 com.teched.smartread.MainActivity:
     private static final int FILE_CODE
-com.teched.smartread.MainActivity$46:
-    1961:1962:public void onSearchCleared()
+com.teched.smartread.MainActivity$50:
+    2052:2053:public void onSearchCleared()
 com.teched.smartread.R
 com.teched.smartread.R$anim
 com.teched.smartread.R$array
