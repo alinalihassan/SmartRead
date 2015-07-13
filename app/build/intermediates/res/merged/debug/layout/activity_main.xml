@@ -170,6 +170,23 @@
                     android:layout_height="wrap_content"/>
             </android.support.v4.widget.SwipeRefreshLayout>
         </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/overview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/refreshOverview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?attr/actionBarSize">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/overviewList"
+                    android:scrollbars="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </RelativeLayout>
 
         <com.quinny898.library.persistentsearch.SearchBox
             android:layout_width="wrap_content"
@@ -190,10 +207,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="?attr/actionBarSize">
-                <ListView
+                <android.support.v7.widget.RecyclerView
                     android:id="@+id/teacherList"
+                    android:scrollbars="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="wrap_content"/>
             </android.support.v4.widget.SwipeRefreshLayout>
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/teacherFab"

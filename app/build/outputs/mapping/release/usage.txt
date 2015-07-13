@@ -11416,8 +11416,8 @@ com.teched.smartread.LoginActivity:
     private static final int RC_SIGN_IN
 com.teched.smartread.MainActivity:
     private static final int FILE_CODE
-com.teched.smartread.MainActivity$50:
-    2052:2053:public void onSearchCleared()
+com.teched.smartread.MainActivity$52:
+    2164:2165:public void onSearchCleared()
 com.teched.smartread.R
 com.teched.smartread.R$anim
 com.teched.smartread.R$array
@@ -11463,8 +11463,7 @@ com.teched.smartread.TextDrawable$IShapeBuilder:
     public abstract com.teched.smartread.TextDrawable$IBuilder roundRect(int)
     public abstract com.teched.smartread.TextDrawable buildRect(java.lang.String,int)
     public abstract com.teched.smartread.TextDrawable buildRoundRect(java.lang.String,int,int)
-com.teched.smartread.UploadJob:
-    public static final int PRIORITY
+com.teched.smartread.UploadJob
 com.teched.smartread.Utils:
     18:18:public Utils()
 com.yqritc.recyclerviewflexibledivider.BuildConfig

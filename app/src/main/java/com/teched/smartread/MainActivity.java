@@ -56,6 +56,7 @@ import android.text.Editable;
 import android.text.InputFilter;
 import android.text.TextWatcher;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -64,12 +65,9 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.AccelerateInterpolator;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
@@ -177,7 +175,21 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     private SwipeRefreshLayout refreshBooks;
     private ArrayList<Book> booksList;
     private RecyclerView.Adapter adapter6;
+    private RecyclerView.Adapter adapter7;
     private String Path2;
+    private RelativeLayout overview;
+    private SwipeRefreshLayout refreshOverview;
+    private ArrayList<TeacherBook> overviewList;
+    private RecyclerView.Adapter adapter2;
+    private SwipeRefreshLayout refreshTeacher;
+    private ArrayList<TeacherBook> teacherArray;
+    private JSONObject bookObject;
+    private TextInputLayout titleInput;
+    private TextInputLayout authorInput;
+    private TextInputLayout questionInput;
+    private TextInputLayout pageInput;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -240,14 +252,18 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         final EditText answer2 = (EditText) findViewById(R.id.answer2);
         final EditText answer3 = (EditText) findViewById(R.id.answer3);
         final EditText answer4 = (EditText) findViewById(R.id.answer4);
+        File teacherFolder = new File(TeacherPath);
+        final File TList[] = teacherFolder.listFiles();
         refreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout);
-        final SwipeRefreshLayout refreshTeacher = (SwipeRefreshLayout) findViewById(R.id.refreshTeacher);
+        refreshTeacher = (SwipeRefreshLayout) findViewById(R.id.refreshTeacher);
         refreshClasses = (SwipeRefreshLayout) findViewById(R.id.refreshClasses);
         refreshBooks = (SwipeRefreshLayout) findViewById(R.id.refreshStore);
-        final ListView teacherList = (ListView) findViewById(R.id.teacherList);
+        refreshOverview = (SwipeRefreshLayout) findViewById(R.id.refreshOverview);
+        final RecyclerView teacherList = (RecyclerView) findViewById(R.id.teacherList);
         final Button distributeButton = (Button)findViewById(R.id.distributeButton);
         classes = (RelativeLayout) findViewById(R.id.classes);
         store = (RelativeLayout) findViewById(R.id.store);
+        overview = (RelativeLayout) findViewById(R.id.overview);
         FloatingActionButton teacherFab = (FloatingActionButton) findViewById(R.id.teacherFab);
         classFab = (FloatingActionButton) findViewById(R.id.classFab);
         FloatingActionButton usersFab = (FloatingActionButton) findViewById(R.id.usersFab);
@@ -257,10 +273,10 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         TextView google = (TextView) findViewById(R.id.aboutGoogle);
         TextView facebook = (TextView) findViewById(R.id.aboutFacebook);
         TextView aboutVersion = (TextView) findViewById(R.id.aboutVersion);
-        final TextInputLayout titleInput = (TextInputLayout) findViewById(R.id.pdfTitleLayout);
-        final TextInputLayout authorInput = (TextInputLayout) findViewById(R.id.authorTitle);
-        final TextInputLayout questionInput = (TextInputLayout) findViewById(R.id.questionTitle);
-        final TextInputLayout pageInput = (TextInputLayout) findViewById(R.id.pageTitle);
+        titleInput = (TextInputLayout) findViewById(R.id.pdfTitleLayout);
+        authorInput = (TextInputLayout) findViewById(R.id.authorTitle);
+        questionInput = (TextInputLayout) findViewById(R.id.questionTitle);
+        pageInput = (TextInputLayout) findViewById(R.id.pageTitle);
         setupFloatingLabelError(titleInput,"You must enter a Title!");
         setupFloatingLabelError(authorInput,"You must enter an Author!");
         DisplayMetrics displaymetrics = new DisplayMetrics();
@@ -275,6 +291,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         }
         refreshLayout.setColorSchemeResources(R.color.color_primary);
         refreshTeacher.setColorSchemeResources(R.color.color_primary);
+        refreshOverview.setColorSchemeResources(R.color.color_primary);
         refreshClasses.setColorSchemeResources(R.color.color_primary);
         refreshBooks.setColorSchemeResources(R.color.color_primary);
         toolbar.setTitleTextColor(Color.WHITE);
@@ -353,61 +370,47 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             }
         });
 
-        final ArrayList<String> myList = new ArrayList<>();
-        File teacherFolder = new File(TeacherPath);
-        final File TList[] = teacherFolder.listFiles();
-        if (TList != null) {
-            for (File file : TList)
-                if (file.getName().endsWith(".pdf")) {
-                    myList.add(file.getName().replace(".pdf",""));
-                }
-        }
-        final ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, myList);
-        teacherList.setAdapter(adapter2);
-        teacherList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                try {
-                    currentBook = teacherList.getItemAtPosition(i).toString();
-                    distribute();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-
         checkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (!AuthorEdit.getText().toString().equals("") && !((((EditText) findViewById(R.id.pdfTitle)).getText().toString().equals("")))) {
-                    try {
-                        newObject.put("Author", AuthorEdit.getText().toString());
-                        newObject.put("Title", ((EditText) findViewById(R.id.pdfTitle)).getText());
-                        copyFile(teacherFile.getPath(), TeacherPath + "/" + ((EditText) findViewById(R.id.pdfTitle)).getText() + ".pdf");
-                        File file = new File(TeacherPath + "/" + ((EditText) findViewById(R.id.pdfTitle)).getText() + ".json");
-                        if (!file.exists())
-                            file.createNewFile();
-                        OutputStream fo = new FileOutputStream(file, false);
-                        fo.write(newObject.toString().getBytes());
-                        fo.close();
-                        copyFile(teacherFile.getPath(), Path + "/" + ((EditText) findViewById(R.id.pdfTitle)).getText() + ".pdf");
-                        copyFile(file.getPath(), Path + "/" + ((EditText) findViewById(R.id.pdfTitle)).getText() + ".json");
-                        myList.clear();
-                        File teacherFolder = new File(TeacherPath);
-                        final File TList[] = teacherFolder.listFiles();
-                        if (TList != null) {
-                            for (File file2 : TList)
-                                if (file2.getName().endsWith(".pdf")) {
-                                    myList.add(file2.getName().replace(".pdf", ""));
+                    AsyncJob.doInBackground(new AsyncJob.OnBackgroundJob() {
+                        @Override
+                        public void doOnBackground() {
+                            try {
+                                newObject.put("Author", AuthorEdit.getText().toString());
+                                newObject.put("Title", ((EditText) findViewById(R.id.pdfTitle)).getText());
+                                File file = new File(TeacherPath + "/" + ((EditText) findViewById(R.id.pdfTitle)).getText() + ".json");
+                                if (!file.exists())
+                                    file.createNewFile();
+                                OutputStream fo = new FileOutputStream(file, false);
+                                fo.write(newObject.toString().getBytes());
+                                fo.close();
+                                int id = JsonClass.uploadFile(teacherFile.getPath(), file.getPath(), prefs.getString("Email", getString(R.string.profile_description)));
+                                JsonClass.getJSON("http://php-smartread.rhcloud.com/add_book_user.php?email=" + prefs.getString("Email", getString(R.string.profile_description)) + "&book=" + String.valueOf(id));
+                                copyFile(teacherFile.getPath(), TeacherPath + "/" + String.valueOf(id) + ".pdf");
+                                File file2 = new File(TeacherPath + "/" + String.valueOf(id) + ".json");
+                                if (!file2.exists())
+                                    file2.createNewFile();
+                                fo = new FileOutputStream(file2, false);
+                                fo.write(newObject.toString().getBytes());
+                                fo.close();
+                                copyFile(teacherFile.getPath(), Path + "/" + String.valueOf(id) + ".pdf");
+                                copyFile(file.getPath(), Path + "/" + String.valueOf(id) + ".json");
+                                file.delete();
+                                hideKeyboard();
+                                AnimateTeacher(false);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                            AsyncJob.doOnMainThread(new AsyncJob.OnMainThreadJob() {
+                                @Override
+                                public void doInUIThread() {
+                                    showSnackbar("Your book is ready for distribution", Snackbar.LENGTH_SHORT);
                                 }
+                            });
                         }
-                        jobManager.addJobInBackground(new UploadJob(Path, TeacherPath, ((EditText) findViewById(R.id.pdfTitle)).getText().toString(), teacherFile.getPath(), file.getPath(), prefs.getString("Email", getString(R.string.profile_description))));
-                        adapter2.notifyDataSetChanged();
-                        hideKeyboard();
-                        AnimateTeacher(false);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
+                    });
                 }
             }
         });
@@ -554,12 +557,16 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                                         JsonClass.DownloadBook(TeacherPath, booksArray.getString(i) + ".json");
                                                     }
                                                 }
-                                                myList.clear();
+                                                teacherArray.clear();
                                                 TList = teacherFolder.listFiles();
                                                 if (TList != null) {
                                                     for (File file : TList)
                                                         if (file.getName().endsWith(".pdf")) {
-                                                            myList.add(file.getName().replace(".pdf", ""));
+                                                            teacherArray.add(new TeacherBook());
+                                                            TeacherBook currentClass = teacherArray.get(teacherArray.size() - 1);
+                                                            bookObject = new JSONObject(readFromFile(file.getPath().subSequence(0,file.getPath().length()-4).toString() + ".json"));
+                                                            currentClass.name = bookObject.getString("Title");
+                                                            currentClass.id = file.getName().replace(".pdf", "");
                                                         }
                                                 }
                                                 pdfs.clear();
@@ -589,13 +596,19 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                         }
                                     }).create().start();
                         } else {
-                            myList.clear();
+                            teacherArray.clear();
                             File teacherFolder = new File(TeacherPath);
                             final File TList[] = teacherFolder.listFiles();
                             if (TList != null) {
                                 for (File file : TList)
                                     if (file.getName().endsWith(".pdf")) {
-                                        myList.add(file.getName().replace(".pdf", ""));
+                                        try {
+                                            teacherArray.add(new TeacherBook());
+                                            TeacherBook currentClass = teacherArray.get(teacherArray.size() - 1);
+                                            bookObject = new JSONObject(readFromFile(file.getPath().subSequence(0, file.getPath().length() - 4).toString() + ".json"));
+                                            currentClass.name = bookObject.getString("Title");
+                                            currentClass.id = file.getName().replace(".pdf", "");
+                                        } catch (Exception e) {e.printStackTrace(); }
                                     }
                             }
                             adapter2.notifyDataSetChanged();
@@ -616,6 +629,22 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                         else {
                             showSnackbar(getResources().getString(R.string.no_connection), Snackbar.LENGTH_SHORT);
                             refreshClasses.setRefreshing(false);
+                        }
+                    }
+                }, isOnline()?250:500);
+            }
+        });
+        refreshOverview.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (isOnline())
+                            refreshOverview();
+                        else {
+                            showSnackbar(getResources().getString(R.string.no_connection), Snackbar.LENGTH_SHORT);
+                            refreshOverview.setRefreshing(false);
                         }
                     }
                 }, isOnline()?250:500);
@@ -752,7 +781,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                     AnimatePDF(false);
                                 else if (openPdf && menuString.equals("Teacher"))
                                     AnimateTeacher(false);
-                                else if(openDistribute)
+                                else if (openDistribute)
                                     AnimateDistribute(false);
                                 drawer.closeDrawer();
                                 drawer.selectItem(i);
@@ -762,6 +791,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 teacher.setVisibility(View.INVISIBLE);
                                 classes.setVisibility(View.INVISIBLE);
                                 store.setVisibility(View.INVISIBLE);
+                                overview.setVisibility(View.INVISIBLE);
                                 toolbar.setTitle("SmartRead");
                             }
                         })
@@ -789,6 +819,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 teacher.setVisibility(View.INVISIBLE);
                                 classes.setVisibility(View.INVISIBLE);
                                 store.setVisibility(View.INVISIBLE);
+                                overview.setVisibility(View.INVISIBLE);
                                 toolbar.setTitle("SmartRead");
                             }
                         })
@@ -816,6 +847,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 teacher.setVisibility(View.INVISIBLE);
                                 classes.setVisibility(View.INVISIBLE);
                                 store.setVisibility(View.INVISIBLE);
+                                overview.setVisibility(View.INVISIBLE);
                                 toolbar.setTitle("SmartRead");
                             }
                         })
@@ -841,6 +873,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 teacher.setVisibility(View.INVISIBLE);
                                 classes.setVisibility(View.INVISIBLE);
                                 store.setVisibility(View.VISIBLE);
+                                overview.setVisibility(View.INVISIBLE);
                                 toolbar.setTitle("Store");
                             }
                         })
@@ -869,6 +902,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 teacher.setVisibility(View.INVISIBLE);
                                 classes.setVisibility(View.VISIBLE);
                                 store.setVisibility(View.INVISIBLE);
+                                overview.setVisibility(View.INVISIBLE);
                                 toolbar.setTitle("My Classes");
                                 viewFlipper.setInAnimation(getApplicationContext(), R.anim.slide_in_instant);
                                 viewFlipper.setOutAnimation(getApplicationContext(), R.anim.slide_out_instant);
@@ -897,7 +931,34 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 teacher.setVisibility(View.VISIBLE);
                                 classes.setVisibility(View.INVISIBLE);
                                 store.setVisibility(View.INVISIBLE);
+                                overview.setVisibility(View.INVISIBLE);
                                 toolbar.setTitle("My Books");
+                            }
+                        })
+        );
+        drawer.addItem(
+                new DrawerItem()
+                        .setImage(getResources().getDrawable(R.drawable.ic_account_multiple), 1)
+                        .setTextPrimary("Overview")
+                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
+                            @Override
+                            public void onClick(DrawerItem drawerItem, long l, int i) {
+                                if (openPdf && menuString.equals("Library"))
+                                    AnimatePDF(false);
+                                else if (openPdf && menuString.equals("Teacher"))
+                                    AnimateTeacher(false);
+                                else if (openDistribute)
+                                    AnimateDistribute(false);
+                                drawer.closeDrawer();
+                                drawer.selectItem(i);
+                                menuString = "";
+                                invalidateOptionsMenu();
+                                refreshLayout.setVisibility(View.INVISIBLE);
+                                teacher.setVisibility(View.INVISIBLE);
+                                classes.setVisibility(View.INVISIBLE);
+                                store.setVisibility(View.INVISIBLE);
+                                overview.setVisibility(View.VISIBLE);
+                                toolbar.setTitle("Overview");
                             }
                         })
         );
@@ -945,6 +1006,53 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     }
                 })
                 .build();
+
+
+        teacherArray = new ArrayList<>();
+        if (TList != null) {
+            for (File file : TList)
+                if (file.getName().endsWith(".pdf")) {
+                    teacherArray.add(new TeacherBook());
+                    TeacherBook currentClass = teacherArray.get(teacherArray.size() - 1);
+                    try {
+                        bookObject = new JSONObject(readFromFile(file.getPath().subSequence(0, file.getPath().length() - 4).toString() + ".json"));
+                        currentClass.name = bookObject.getString("Title");
+                        currentClass.id = file.getName().replace(".pdf", "");
+                    } catch (Exception e) { e.printStackTrace(); }
+                }
+        }
+        RecyclerView.LayoutManager mLayoutManager6 = new LinearLayoutManager(this);
+        teacherList.setLayoutManager(mLayoutManager6);
+        teacherList.setItemAnimator(new DefaultItemAnimator());
+        adapter2 = new TeacherAdapter(teacherArray, R.layout.teacherbookview, this);
+        teacherList.setAdapter(adapter2);
+        ((TeacherAdapter) teacherList.getAdapter()).flushFilter();
+        teacherList.addOnItemTouchListener(new RecyclerItemClickListener(getApplicationContext(), teacherList, new RecyclerItemClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                if(((TeacherAdapter) teacherList.getAdapter()).getID(position)!=null) {
+                    currentBook = ((TeacherAdapter) teacherList.getAdapter()).getID(position);
+                    distribute();
+                }
+                else
+                    showSnackbar("Book not ready for distribution", Snackbar.LENGTH_SHORT);
+            }
+
+            @Override
+            public void onItemLongClick(View view, int position) {
+            }
+        }));
+
+
+        overviewList = new ArrayList<>();
+        final RecyclerView mRecyclerView5 = (RecyclerView) findViewById(R.id.overviewList);
+        RecyclerView.LayoutManager mLayoutManager5 = new LinearLayoutManager(this);
+        mRecyclerView5.setLayoutManager(mLayoutManager5);
+        mRecyclerView5.setItemAnimator(new DefaultItemAnimator());
+        adapter7 = new TeacherAdapter(overviewList, R.layout.teacherbookview, this);
+        mRecyclerView5.setAdapter(adapter7);
+        ((TeacherAdapter) mRecyclerView5.getAdapter()).flushFilter();
+        refreshOverview();
 
         booksList = new ArrayList<>();
         final RecyclerView mRecyclerView4 = (RecyclerView) findViewById(R.id.storeList);
@@ -1760,6 +1868,10 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                             answer2.setText("");
                             answer3.setText("");
                             answer4.setText("");
+                            titleInput.setErrorEnabled(false);
+                            authorInput.setErrorEnabled(false);
+                            questionInput.setErrorEnabled(false);
+                            pageInput.setErrorEnabled(false);
                             inTransition = false;
                         }
 
@@ -2131,7 +2243,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         }
     }
 
-    private void copyFile(String Path, String outputPath) {
+    public static void copyFile(String Path, String outputPath) {
         if (!Path.equals(outputPath)) {
             InputStream in;
             OutputStream out;
@@ -2260,6 +2372,36 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     public void onResult(Boolean result) {
                         adapter4.notifyDataSetChanged();
                         if(refreshClasses.isRefreshing()) refreshClasses .setRefreshing(false);
+                    }
+                }).create().start();
+    }
+    private void refreshOverview() {
+        new AsyncJob.AsyncJobBuilder<Boolean>()
+                .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
+                    @Override
+                    public Boolean doAsync() {
+                        try {
+                            overviewList.clear();
+                            JSONArray Classes = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_books.php?email=" + getApplication().getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE).getString("Email", getString(R.string.profile_description)))).getJSONArray("teacher_books");
+                            for(int i = 0; i<Classes.length();i++) {
+                                overviewList.add(new TeacherBook());
+                                JSONObject Book = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_book_details.php?id=" + Classes.getString(i)));
+                                TeacherBook currentClass = overviewList.get(overviewList.size() - 1);
+                                currentClass.name = Book.getString("title");
+                                currentClass.author = Book.getString("author");
+                                currentClass.id = Classes.getString(i);
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        return true;
+                    }
+                })
+                .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
+                    @Override
+                    public void onResult(Boolean result) {
+                        adapter7.notifyDataSetChanged();
+                        if(refreshOverview.isRefreshing()) refreshOverview.setRefreshing(false);
                     }
                 }).create().start();
     }

@@ -5,14 +5,14 @@
 -keep class android.support.design.internal.NavigationMenuView { <init>(...); }
 
 # view res/layout/activity_main.xml #generated:120
-# view res/layout/activity_main.xml #generated:183
-# view res/layout/activity_main.xml #generated:525
+# view res/layout/activity_main.xml #generated:200
+# view res/layout/activity_main.xml #generated:543
 # view res/layout/activity_main.xml #generated:96
 -keep class android.support.design.widget.CoordinatorLayout { <init>(...); }
 
 # view res/layout/activity_main.xml #generated:111
 # view res/layout/activity_main.xml #generated:144
-# view res/layout/activity_main.xml #generated:198
+# view res/layout/activity_main.xml #generated:216
 -keep class android.support.design.widget.FloatingActionButton { <init>(...); }
 
 # view res/layout/layout_snackbar.xml #generated:18
@@ -24,7 +24,8 @@
 
 # view res/layout/activity_main.xml #generated:101
 # view res/layout/activity_main.xml #generated:161
-# view res/layout/activity_main.xml #generated:188
+# view res/layout/activity_main.xml #generated:178
+# view res/layout/activity_main.xml #generated:205
 # view res/layout/activity_main.xml #generated:46
 -keep class android.support.v4.widget.SwipeRefreshLayout { <init>(...); }
 
@@ -91,6 +92,8 @@
 # view res/layout/activity_main.xml #generated:105
 # view res/layout/activity_main.xml #generated:125
 # view res/layout/activity_main.xml #generated:166
+# view res/layout/activity_main.xml #generated:183
+# view res/layout/activity_main.xml #generated:210
 # view res/layout/activity_main.xml #generated:50
 # view res/layout/activity_main.xml #generated:69
 # view res/layout/fragment_filepicker.xml #generated:45
@@ -138,25 +141,25 @@
 # view res/layout/md_drawer_view.xml #generated:233
 -keep class com.heinrichreimersoftware.materialdrawer.widget.LinearListView { <init>(...); }
 
-# view res/layout/activity_main.xml #generated:218
+# view res/layout/activity_main.xml #generated:236
 -keep class com.joanzapata.pdfview.PDFView { <init>(...); }
 
 # view AndroidManifest.xml #generated:87
 -keep class com.nononsenseapps.filepicker.FilePickerActivity { <init>(...); }
 
-# view res/layout/activity_main.xml #generated:174
+# view res/layout/activity_main.xml #generated:191
 -keep class com.quinny898.library.persistentsearch.SearchBox { <init>(...); }
 
-# view res/layout/activity_main.xml #generated:207
+# view res/layout/activity_main.xml #generated:225
 -keep class com.sothree.slidinguppanel.SlidingUpPanelLayout { <init>(...); }
 
 # view AndroidManifest.xml #generated:37
 -keep class com.teched.smartread.BackupAgent { <init>(...); }
 
-# view res/layout/activity_main.xml #generated:236
-# view res/layout/activity_main.xml #generated:253
-# view res/layout/activity_main.xml #generated:267
-# view res/layout/activity_main.xml #generated:280
+# view res/layout/activity_main.xml #generated:254
+# view res/layout/activity_main.xml #generated:271
+# view res/layout/activity_main.xml #generated:285
+# view res/layout/activity_main.xml #generated:298
 -keep class com.teched.smartread.CustomTextInputLayout { <init>(...); }
 
 # view AndroidManifest.xml #generated:83

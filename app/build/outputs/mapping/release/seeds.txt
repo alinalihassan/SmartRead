@@ -21232,6 +21232,7 @@ com.teched.smartread.R$drawable: int common_signin_btn_text_pressed_dark
 com.teched.smartread.R$drawable: int common_signin_btn_text_pressed_light
 com.teched.smartread.R$drawable: int fab_background
 com.teched.smartread.R$drawable: int ic_account
+com.teched.smartread.R$drawable: int ic_account_multiple
 com.teched.smartread.R$drawable: int ic_account_plus
 com.teched.smartread.R$drawable: int ic_action_mic
 com.teched.smartread.R$drawable: int ic_action_search
@@ -21525,6 +21526,8 @@ com.teched.smartread.R$id: int never_display
 com.teched.smartread.R$id: int none
 com.teched.smartread.R$id: int normal
 com.teched.smartread.R$id: int open_graph
+com.teched.smartread.R$id: int overview
+com.teched.smartread.R$id: int overviewList
 com.teched.smartread.R$id: int page
 com.teched.smartread.R$id: int pageEdit
 com.teched.smartread.R$id: int pageTitle
@@ -21551,6 +21554,7 @@ com.teched.smartread.R$id: int questionTitle
 com.teched.smartread.R$id: int radio
 com.teched.smartread.R$id: int radioGroup
 com.teched.smartread.R$id: int refreshClasses
+com.teched.smartread.R$id: int refreshOverview
 com.teched.smartread.R$id: int refreshStore
 com.teched.smartread.R$id: int refreshTeacher
 com.teched.smartread.R$id: int results
@@ -21718,6 +21722,7 @@ com.teched.smartread.R$layout: int select_dialog_singlechoice_material
 com.teched.smartread.R$layout: int settings_toolbar
 com.teched.smartread.R$layout: int settings_toolbar_l
 com.teched.smartread.R$layout: int support_simple_spinner_dropdown_item
+com.teched.smartread.R$layout: int teacherbookview
 com.teched.smartread.R$menu: int menu
 com.teched.smartread.R$menu: int picker_actions
 com.teched.smartread.R$mipmap: int ic_launcher
