@@ -56,7 +56,6 @@ import android.text.Editable;
 import android.text.InputFilter;
 import android.text.TextWatcher;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -119,6 +118,11 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements Serializable,BillingProcessor.IBillingHandler {
 
+    public static RecyclerView listView;
+    public static String billingBookTitle;
+    public static String billingBookAuthor;
+    public static String billingBookID;
+    public static BillingProcessor bp;
     private static final int FILE_CODE = 1;
     private ActionBarDrawerToggle drawerToggle;
     private String menuString = "Library";
@@ -138,7 +142,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     private File teacherFile;
     private android.support.v7.widget.Toolbar toolbar;
     private ArrayList<Card> list = new ArrayList<>();
-    public static RecyclerView listView;
     private final ArrayList<File> pdfs = new ArrayList<>();
     private PDFView pdf;
     private JSONObject mainObject = null;
@@ -146,8 +149,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     private File cposition;
     private boolean inTransition = false;
     private int correctAnswers = 0;
-    private BillingProcessor bp;
-    private boolean readyToPurchase = false;
+    public static boolean readyToPurchase = false;
     private transient JobManager jobManager;
     private ArrayList<Class> distributeList;
     private RecyclerView.Adapter adapter3;
@@ -188,8 +190,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     private TextInputLayout authorInput;
     private TextInputLayout questionInput;
     private TextInputLayout pageInput;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -398,15 +398,15 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 copyFile(teacherFile.getPath(), Path + "/" + String.valueOf(id) + ".pdf");
                                 copyFile(file.getPath(), Path + "/" + String.valueOf(id) + ".json");
                                 file.delete();
-                                hideKeyboard();
-                                AnimateTeacher(false);
-                            } catch (Exception e) {
+                                } catch (Exception e) {
                                 e.printStackTrace();
                             }
                             AsyncJob.doOnMainThread(new AsyncJob.OnMainThreadJob() {
                                 @Override
                                 public void doInUIThread() {
-                                    showSnackbar("Your book is ready for distribution", Snackbar.LENGTH_SHORT);
+                                    hideKeyboard();
+                                    AnimateTeacher(false);
+                                    showSnackbar("Your book will be ready for distribution soon", Snackbar.LENGTH_SHORT);
                                 }
                             });
                         }
@@ -1071,20 +1071,17 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             @Override
             public void onItemClick(View view, int position) {
                 try {
-                    String pos = ((BookAdapter) mRecyclerView4.getAdapter()).getID(position);
-                    JSONArray booksArray = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_books.php?email=" + prefs.getString("Email", getString(R.string.profile_description)))).getJSONArray("books");
-                    boolean gotBook = false;
-                    for(int i = 0;i<booksArray.length();i++) {
-                        if(booksArray.getString(i).equals(pos)) {
-                            gotBook = true;
-                            break;
-                        }
+                    if(!isOnline())
+                        showSnackbar(getResources().getString(R.string.no_connection), Snackbar.LENGTH_SHORT);
+                    else if(!readyToPurchase)
+                        showSnackbar("Something went wrong, please try again later", Snackbar.LENGTH_SHORT);
+                    else {
+                        String pos = ((BookAdapter) mRecyclerView4.getAdapter()).getID(position);
+                        billingBookID = pos;
+                        Intent intent = new Intent(getApplicationContext(), StoreActivity.class);
+                        startActivity(intent);
                     }
-                    if(gotBook)
-                        showSnackbar("You already got this book",Snackbar.LENGTH_SHORT);
-                    else if(readyToPurchase) {
-                        purchase(pos);
-                    }
+
                 } catch (Exception e) { e.printStackTrace();}
             }
         }));
@@ -2100,20 +2097,18 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         }
     }
 
-    public void openSettings()
-    {
+    public void openSettings() {
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
 
-    public void firstTime()
-    {
+    public void firstTime() {
         SharedPreferences prefs = this.getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE);
         if(prefs.getBoolean("firstTime",true))
         {
             Intent startScreen = new Intent(getApplicationContext(),LoginActivity.class);
             startScreen.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            getBaseContext().startActivity(startScreen);
+            this.startActivity(startScreen);
             finish();
         }
     }
@@ -2383,7 +2378,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                         try {
                             overviewList.clear();
                             JSONArray Classes = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_books.php?email=" + getApplication().getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE).getString("Email", getString(R.string.profile_description)))).getJSONArray("teacher_books");
-                            for(int i = 0; i<Classes.length();i++) {
+                            for (int i = 0; i < Classes.length(); i++) {
                                 overviewList.add(new TeacherBook());
                                 JSONObject Book = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_book_details.php?id=" + Classes.getString(i)));
                                 TeacherBook currentClass = overviewList.get(overviewList.size() - 1);
@@ -2702,7 +2697,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 currentBook.name = Book.getString("title");
                                 currentBook.author = Book.getString("author");
                                 currentBook.id = Books.getString(i);
-                                currentBook.cost = Book.getString("cost");
                             }
                         } catch (Exception e) {
                             e.printStackTrace();
@@ -2717,8 +2711,5 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                         if(refreshBooks.isRefreshing()) refreshBooks.setRefreshing(false);
                     }
                 }).create().start();
-    }
-    public void purchase(String str) {
-        bp.purchase(this,str);
     }
 }

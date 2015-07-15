@@ -9,8 +9,12 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.nfc.NdefMessage;
+import android.nfc.NdefRecord;
+import android.nfc.tech.Ndef;
 import android.os.Bundle;
 
+import com.arasthel.asyncjob.AsyncJob;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -24,6 +28,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.plus.Plus;
 import com.google.android.gms.plus.model.people.Person;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import android.support.design.widget.Snackbar;
@@ -32,6 +37,7 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -46,6 +52,7 @@ public class LoginActivity extends AppCompatActivity implements
     private Button gLogin;
     private TextView Logo;
     private ImageView LogoImage;
+    private ProgressBar progressBar;
     private static final int RC_SIGN_IN = 0;
     private GoogleApiClient mGoogleApiClient;
     private boolean mIntentInProgress = false;
@@ -62,6 +69,7 @@ public class LoginActivity extends AppCompatActivity implements
         gLogin = (Button) findViewById(R.id.gLogin);
         Logo = (TextView) findViewById(R.id.LogoText);
         LogoImage = (ImageView) findViewById(R.id.aboutImage);
+        progressBar = (ProgressBar) findViewById(R.id.loginProgress);
         List<String> permissions = new ArrayList<>();
         permissions.add("email");
         permissions.add("public_profile");
@@ -74,7 +82,7 @@ public class LoginActivity extends AppCompatActivity implements
                 loginButton.setVisibility(View.GONE);
                 gLogin.setVisibility(View.GONE);
                 DisplayMetrics displayMetrics = getApplicationContext().getResources().getDisplayMetrics();
-                Logo.animate().alpha(1.0f).setDuration(750);
+                Logo.animate().alpha(1.0f).setDuration(750).start();
                 LogoImage.animate().y(displayMetrics.heightPixels / 2 - Math.round(100 * displayMetrics.density)).scaleXBy(0.60f).scaleYBy(0.60f).setDuration(750)
                         .setListener(new Animator.AnimatorListener() {
                             @Override
@@ -83,6 +91,7 @@ public class LoginActivity extends AppCompatActivity implements
 
                             @Override
                             public void onAnimationEnd(Animator animation) {
+                                progressBar.animate().alpha(1.0f).setDuration(300).start();
                                 GraphRequest request = GraphRequest.newMeRequest(
                                         loginResult2.getAccessToken(),
                                         new GraphRequest.GraphJSONObjectCallback() {
@@ -176,7 +185,7 @@ public class LoginActivity extends AppCompatActivity implements
         loginButton.setVisibility(View.GONE);
         gLogin.setVisibility(View.GONE);
         DisplayMetrics displayMetrics = getApplicationContext().getResources().getDisplayMetrics();
-        Logo.animate().alpha(1.0f).setDuration(750);
+        Logo.animate().alpha(1.0f).setDuration(750).start();
         LogoImage.animate().y(displayMetrics.heightPixels / 2 - Math.round(100 * displayMetrics.density)).scaleXBy(0.60f).scaleYBy(0.60f).setDuration(750)
                 .setListener(new Animator.AnimatorListener() {
                     @Override
@@ -185,6 +194,7 @@ public class LoginActivity extends AppCompatActivity implements
 
                     @Override
                     public void onAnimationEnd(Animator animation) {
+                        progressBar.animate().alpha(1.0f).setDuration(300).start();
                         Person currentPerson = Plus.PeopleApi.getCurrentPerson(mGoogleApiClient);
                         Transfer(currentPerson.getName().getGivenName() + " " + currentPerson.getName().getFamilyName(), Plus.AccountApi.getAccountName(mGoogleApiClient), currentPerson.getImage().getUrl().subSequence(0, currentPerson.getImage().getUrl().length() - 2).toString() + "400", currentPerson.getCover().getCoverPhoto().getUrl());
                     }
@@ -223,53 +233,64 @@ public class LoginActivity extends AppCompatActivity implements
             prefs.edit().putBoolean("firstTime", false).apply();
         }
     }
-    public void Transfer(String user, String email, String ProfilePic, String ProfileCover)
+    public void Transfer(final String user, final String email, final String ProfilePic, final String ProfileCover)
     {
         PackageManager m = getPackageManager();
-        String s = getPackageName();
-        String s2 = null;
+        String ss = getPackageName();
+        String ss2 = null;
         try {
-            PackageInfo p = m.getPackageInfo(s, 0);
-            s = p.applicationInfo.dataDir+"/app_book";
-            s2 = p.applicationInfo.dataDir+"/teacher_book";
+            PackageInfo p = m.getPackageInfo(ss, 0);
+            ss = p.applicationInfo.dataDir+"/app_book";
+            ss2 = p.applicationInfo.dataDir+"/teacher_book";
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
+        final String s = ss;
+        final String s2 = ss2;
         WritePreferences();
-        try {
-            JSONObject jsonObject = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_user.php?email=" + email));
-            if (jsonObject.getInt("success")==1) {
+        AsyncJob.doInBackground(new AsyncJob.OnBackgroundJob() {
+            @Override
+            public void doOnBackground() {
+                try {
+                    JSONObject jsonObject = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_user.php?email=" + email));
+                    if (jsonObject.getInt("success")==1) {
 
+                    }
+                    else {
+                        JSONObject jsonObject1 = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/create_user.php?name=" + user + "&email=" + email + "&profileUrl=" + ProfilePic));
+                        jsonObject1 = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/add_book_user.php?email=" + email + "&book=" + "1"));
+                    }
+                    JSONObject books = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_books.php?email=" + email));
+                    JSONArray booksArray= books.getJSONArray("books");
+                    for (int i = 0; i<booksArray.length();i++) {
+                        JsonClass.DownloadBook(s, booksArray.getString(i) + ".pdf");
+                        JsonClass.DownloadBook(s,booksArray.getString(i)+".json");
+                    }
+                    booksArray= books.getJSONArray("teacher_books");
+                    for (int i = 0; i<booksArray.length();i++) {
+                        JsonClass.DownloadBook(s, booksArray.getString(i) + ".pdf");
+                        JsonClass.DownloadBook(s,booksArray.getString(i)+".json");
+                        JsonClass.DownloadBook(s2, booksArray.getString(i) + ".pdf");
+                        JsonClass.DownloadBook(s2,booksArray.getString(i)+".json");
+                    }
+                } catch (Exception e) { e.printStackTrace(); }
+                AsyncJob.doOnMainThread(new AsyncJob.OnMainThreadJob() {
+                    @Override
+                    public void doInUIThread() {
+
+                        SharedPreferences prefs = getApplicationContext().getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE);
+                        prefs.edit().putString("ProfileName",user).apply();
+                        prefs.edit().putString("Email",email).apply();
+                        prefs.edit().putString("ProfilePicture", ProfilePic).apply();
+                        prefs.edit().putString("ProfileCover", ProfileCover).apply();
+                        Intent startScreen = new Intent(getApplicationContext(),MainActivity.class);
+                        startScreen.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        getBaseContext().startActivity(startScreen);
+                        finish();
+                    }
+                });
             }
-            else {
-                JSONObject jsonObject1 = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/create_user.php?name=" + user + "&email=" + email + "&profileUrl=" + ProfilePic));
-                jsonObject1 = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/add_book_user.php?email=" + email + "&book=" + "1"));
-            }
-        } catch (Exception e) { e.printStackTrace(); }
-        try {
-            JSONObject books = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_books.php?email=" + email));
-            JSONArray booksArray= books.getJSONArray("books");
-            for (int i = 0; i<booksArray.length();i++) {
-                JsonClass.DownloadBook(s, booksArray.getString(i) + ".pdf");
-                JsonClass.DownloadBook(s,booksArray.getString(i)+".json");
-            }
-            booksArray= books.getJSONArray("teacher_books");
-            for (int i = 0; i<booksArray.length();i++) {
-                JsonClass.DownloadBook(s, booksArray.getString(i) + ".pdf");
-                JsonClass.DownloadBook(s,booksArray.getString(i)+".json");
-                JsonClass.DownloadBook(s2, booksArray.getString(i) + ".pdf");
-                JsonClass.DownloadBook(s2,booksArray.getString(i)+".json");
-            }
-        } catch (Exception e) { e.printStackTrace(); }
-        SharedPreferences prefs = this.getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE);
-        prefs.edit().putString("ProfileName",user).apply();
-        prefs.edit().putString("Email",email).apply();
-        prefs.edit().putString("ProfilePicture", ProfilePic).apply();
-        prefs.edit().putString("ProfileCover", ProfileCover).apply();
-        Intent startScreen = new Intent(getApplicationContext(),MainActivity.class);
-        startScreen.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        getBaseContext().startActivity(startScreen);
-        finish();
+        });
     }
     public boolean isOnline() {
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);

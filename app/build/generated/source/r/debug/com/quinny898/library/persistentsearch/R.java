@@ -24,29 +24,29 @@ public final class R {
 		public static final int ic_action_mic = 0x7f020072;
 		public static final int ic_clear = 0x7f02007f;
 		public static final int ic_up = 0x7f0200a0;
-		public static final int search_bg = 0x7f0200c3;
-		public static final int search_bg_shadow = 0x7f0200c4;
-		public static final int search_bg_transparent = 0x7f0200c5;
-		public static final int search_frame = 0x7f0200c6;
+		public static final int search_bg = 0x7f0200c4;
+		public static final int search_bg_shadow = 0x7f0200c5;
+		public static final int search_bg_transparent = 0x7f0200c6;
+		public static final int search_frame = 0x7f0200c7;
 	}
 	public static final class id {
-		public static final int border = 0x7f0f012d;
-		public static final int card_view = 0x7f0f0131;
+		public static final int border = 0x7f0f0134;
+		public static final int card_view = 0x7f0f0138;
 		public static final int icon = 0x7f0f008c;
-		public static final int logo = 0x7f0f0132;
-		public static final int material_menu_button = 0x7f0f0133;
-		public static final int mic = 0x7f0f0134;
-		public static final int pb = 0x7f0f0136;
-		public static final int results = 0x7f0f0130;
-		public static final int search = 0x7f0f0135;
-		public static final int search_root = 0x7f0f012f;
-		public static final int searchbox_rfl = 0x7f0f012e;
+		public static final int logo = 0x7f0f0139;
+		public static final int material_menu_button = 0x7f0f013a;
+		public static final int mic = 0x7f0f013b;
+		public static final int pb = 0x7f0f013d;
+		public static final int results = 0x7f0f0137;
+		public static final int search = 0x7f0f013c;
+		public static final int search_root = 0x7f0f0136;
+		public static final int searchbox_rfl = 0x7f0f0135;
 		public static final int title = 0x7f0f008d;
 		public static final int up = 0x7f0f002c;
 	}
 	public static final class layout {
-		public static final int search_option = 0x7f040044;
-		public static final int searchbox = 0x7f040045;
+		public static final int search_option = 0x7f040045;
+		public static final int searchbox = 0x7f040046;
 	}
 	public static final class string {
 		public static final int speak_now = 0x7f08007d;
