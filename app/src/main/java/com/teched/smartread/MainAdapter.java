@@ -80,7 +80,11 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
             @Override
             public int compare(Card o1, Card o2) {
                 if (prefs.getInt("pref_sort", 1) == 1)
-                    return o1.name.compareTo(o2.name);
+                    try {
+                        JSONObject mainObject = new JSONObject(MainActivity.readFromFile(mPath + "/" + o1.name + ".json"));
+                        JSONObject mainObject2 = new JSONObject(MainActivity.readFromFile(mPath + "/" + o2.name + ".json"));
+                        return mainObject.getString("Title").compareTo(mainObject2.getString("Title"));
+                    } catch (Exception ignored) {}
                 else if(prefs.getInt("pref_sort", 1) == 2) {
                     try {
                         JSONObject mainObject = new JSONObject(MainActivity.readFromFile(mPath + "/" + o1.name + ".json"));
