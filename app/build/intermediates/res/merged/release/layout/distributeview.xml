@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="8dp">
+        <CheckedTextView
+            android:id="@+id/className"
+            android:singleLine="true"
+            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+            android:padding="2dp"
+            android:layout_margin="6dp"
+            android:gravity="start"
+            android:background="?android:selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:textColor="@android:color/black" />
+    </RelativeLayout><!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/layout/distributeview.xml -->

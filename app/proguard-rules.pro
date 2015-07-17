@@ -21,7 +21,7 @@
 
 -keepattributes Signature
 -keep class com.facebook.** {
-   *;
+    *;
 }
 
 -optimizations !code/simplification/arithmetic,!code/simplification/cast,!field/*,!class/merging/*

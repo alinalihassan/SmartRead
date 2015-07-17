@@ -119,8 +119,6 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements Serializable,BillingProcessor.IBillingHandler {
 
     public static RecyclerView listView;
-    public static String billingBookTitle;
-    public static String billingBookAuthor;
     public static String billingBookID;
     public static BillingProcessor bp;
     private static final int FILE_CODE = 1;
@@ -190,6 +188,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     private TextInputLayout authorInput;
     private TextInputLayout questionInput;
     private TextInputLayout pageInput;
+    private RecyclerView mStoreRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -346,7 +345,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         panelLayout.setPanelSlideListener(new SlidingUpPanelLayout.PanelSlideListener() {
             @Override
             public void onPanelSlide(View view, float v) {
-
             }
 
             @Override
@@ -356,7 +354,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
 
             @Override
             public void onPanelExpanded(View view) {
-
             }
 
             @Override
@@ -867,7 +864,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                     AnimateDistribute(false);
                                 drawer.closeDrawer();
                                 drawer.selectItem(i);
-                                menuString = "";
+                                menuString = "Store";
                                 invalidateOptionsMenu();
                                 refreshLayout.setVisibility(View.INVISIBLE);
                                 teacher.setVisibility(View.INVISIBLE);
@@ -1055,14 +1052,14 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         refreshOverview();
 
         booksList = new ArrayList<>();
-        final RecyclerView mRecyclerView4 = (RecyclerView) findViewById(R.id.storeList);
+        mStoreRecyclerView = (RecyclerView) findViewById(R.id.storeList);
         RecyclerView.LayoutManager mLayoutManager4 = new LinearLayoutManager(this);
-        mRecyclerView4.setLayoutManager(mLayoutManager4);
-        mRecyclerView4.setItemAnimator(new DefaultItemAnimator());
+        mStoreRecyclerView.setLayoutManager(mLayoutManager4);
+        mStoreRecyclerView.setItemAnimator(new DefaultItemAnimator());
         adapter6 = new BookAdapter(booksList, R.layout.bookview, this);
-        mRecyclerView4.setAdapter(adapter6);
-        ((BookAdapter) mRecyclerView4.getAdapter()).flushFilter();
-        mRecyclerView4.addOnItemTouchListener(new RecyclerItemClickListener(getApplicationContext(), mRecyclerView4, new RecyclerItemClickListener.OnItemClickListener() {
+        mStoreRecyclerView.setAdapter(adapter6);
+        ((BookAdapter) mStoreRecyclerView.getAdapter()).flushFilter();
+        mStoreRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getApplicationContext(), mStoreRecyclerView, new RecyclerItemClickListener.OnItemClickListener() {
 
             @Override
             public void onItemLongClick(View view, int position) {
@@ -1076,8 +1073,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     else if(!readyToPurchase)
                         showSnackbar("Something went wrong, please try again later", Snackbar.LENGTH_SHORT);
                     else {
-                        String pos = ((BookAdapter) mRecyclerView4.getAdapter()).getID(position);
-                        billingBookID = pos;
+                        billingBookID = ((BookAdapter) mStoreRecyclerView.getAdapter()).getID(position);
                         Intent intent = new Intent(getApplicationContext(), StoreActivity.class);
                         startActivity(intent);
                     }
@@ -1390,6 +1386,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
 
             @Override
             public void onItemClick(View view, int position) {
+
                 if (!openAbout && !inTransition) {
                     pdf.invalidate();
                     PDFMode = "PDF";
@@ -1501,12 +1498,19 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);
-        if (menuString.equals("Library")) {
-            menu.getItem(0).setVisible(true);
-            menu.getItem(1).setVisible(true);
-        } else {
-            menu.getItem(0).setVisible(false);
-            menu.getItem(1).setVisible(false);
+        switch (menuString) {
+            case "Library":
+                menu.getItem(0).setVisible(true);
+                menu.getItem(1).setVisible(true);
+                break;
+            case "Store":
+                menu.getItem(1).setVisible(true);
+                menu.getItem(0).setVisible(false);
+                break;
+            default:
+                menu.getItem(0).setVisible(false);
+                menu.getItem(1).setVisible(false);
+                break;
         }
         return true;
     }
@@ -1523,10 +1527,37 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     }
     @Override
     public void onProductPurchased(String productId, TransactionDetails details) {
-        showSnackbar("You just purchased " + bp.getPurchaseListingDetails(productId).title,Snackbar.LENGTH_SHORT);
-        jobManager.addJobInBackground(new AddBookJob(getApplicationContext().getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE).getString("Email", getString(R.string.profile_description)), productId));
-        bp.consumePurchase(productId);
-    }
+        final String productIdf = productId;
+        showSnackbar("You just purchased " + bp.getPurchaseListingDetails(productId).title, Snackbar.LENGTH_SHORT);
+        new AsyncJob.AsyncJobBuilder<Boolean>()
+                .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
+                    @Override
+                    public Boolean doAsync() {
+                        JsonClass.getJSON("http://php-smartread.rhcloud.com/add_book_user.php?email=" + getApplicationContext().getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE).getString("Email", getString(R.string.profile_description)) + "&book=" + productIdf);
+                        return true;
+                    }
+                })
+                .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
+                    @Override
+                    public void onResult(Boolean result) {
+                        bp.consumePurchase(productIdf);
+                        pdfs.clear();
+                        list.clear();
+                        final File folder = new File(Path2);
+                        File[] files = folder.listFiles();
+                        if (files != null) {
+                            for (File file : files)
+                                if (file.getName().endsWith(".pdf")) {
+                                    pdfs.add(file);
+                                    list.add(new Card());
+                                    list.get(list.size() - 1).name = pdfs.get(pdfs.size() - 1).getName().replace(".pdf", "");
+                                }
+                        }
+                        adapter.notifyDataSetChanged();
+                    }
+                }).create().start();
+        }
+
     @Override
     public void onBillingError(int errorCode, Throwable error) {
 
@@ -2146,17 +2177,29 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             @Override
             public void onSearch(String searchTerm) {
                 if (searchTerm.equals("")) {
-                    toolbar.setTitle("SmartRead");
-                    ((MainAdapter) listView.getAdapter()).flushFilter();
+                    if(menuString.equals("Store")) {
+                        toolbar.setTitle("Store");
+                        ((BookAdapter) mStoreRecyclerView.getAdapter()).flushFilter();
+                    }
+                    else {
+                        toolbar.setTitle("SmartRead");
+                        ((MainAdapter) listView.getAdapter()).flushFilter();
+                    }
                 } else {
                     toolbar.setTitle(searchTerm);
-                    ((MainAdapter) listView.getAdapter()).setFilter(searchTerm);
+                    if(menuString.equals("Store"))
+                        ((BookAdapter) mStoreRecyclerView.getAdapter()).setFilter(searchTerm);
+                    else
+                        ((MainAdapter) listView.getAdapter()).setFilter(searchTerm);
                 }
             }
 
             @Override
             public void onSearchCleared() {
-                ((MainAdapter) listView.getAdapter()).flushFilter();
+                if(menuString.equals("Store"))
+                    ((BookAdapter) mStoreRecyclerView.getAdapter()).flushFilter();
+                else
+                    ((MainAdapter) listView.getAdapter()).flushFilter();
             }
 
         });
@@ -2696,6 +2739,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 Book currentBook = booksList.get(booksList.size() - 1);
                                 currentBook.name = Book.getString("title");
                                 currentBook.author = Book.getString("author");
+                                currentBook.downloads = Book.getString("downloads");
                                 currentBook.id = Books.getString(i);
                             }
                         } catch (Exception e) {
@@ -2707,7 +2751,8 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                 .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
                     @Override
                     public void onResult(Boolean result) {
-                        adapter6.notifyDataSetChanged();
+                        toolbar.setTitle("Store");
+                        ((BookAdapter) mStoreRecyclerView.getAdapter()).flushFilter();
                         if(refreshBooks.isRefreshing()) refreshBooks.setRefreshing(false);
                     }
                 }).create().start();

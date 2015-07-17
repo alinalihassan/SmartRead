@@ -299,6 +299,11 @@
         <item name="colorAccent">@color/color_accent</item>
         <item name="alertDialogTheme">@style/FilePickerAlertDialogTheme</item>
     </style>
+    <style name="StoreTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor">@android:color/darker_gray</item>
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorAccent">@color/color_accent</item>
+    </style>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.heinrichreimersoftware.materialdrawer/library/2.1.2/res/values-v21/values.xml -->
     <eat-comment/>
     <style name="Theme.MaterialDrawer.Dark" parent="Theme.AppCompat.NoActionBar">

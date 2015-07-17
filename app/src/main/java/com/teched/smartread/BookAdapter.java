@@ -1,21 +1,12 @@
 package com.teched.smartread;
 
 import android.content.Context;
-import android.content.ContextWrapper;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.arasthel.asyncjob.AsyncJob;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 
 public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> {
@@ -33,6 +24,15 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> {
 
     public void flushFilter(){
         visibleCards = cards;
+        setFilter("");
+    }
+    public void setFilter(String queryText) {
+        visibleCards = new ArrayList<>();
+        for (Book item: cards) {
+            if (queryText.equals("") || item.name.toLowerCase().contains(queryText.toLowerCase()) || item.author.toLowerCase().contains(queryText.toLowerCase()))
+                visibleCards.add(item);
+        }
+        notifyDataSetChanged();
     }
 
     public String getID(int position) {
@@ -49,6 +49,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> {
         final Book card = visibleCards.get(i);
         viewHolder.cardName.setText(card.name);
         viewHolder.cardAuthor.setText(card.author);
+        viewHolder.cardPrice.setText(MainActivity.bp.getPurchaseListingDetails(card.id).priceText);
     }
 
     @Override
@@ -59,11 +60,13 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> {
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView cardName;
         public TextView cardAuthor;
+        public TextView cardPrice;
 
         public ViewHolder(View itemView) {
             super(itemView);
             cardName = (TextView) itemView.findViewById(R.id.bookName);
             cardAuthor = (TextView) itemView.findViewById(R.id.bookAuthor);
+            cardPrice = (TextView) itemView.findViewById(R.id.bookPrice);
         }
     }
 }

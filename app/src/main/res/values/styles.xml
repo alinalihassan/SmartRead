@@ -21,6 +21,13 @@
         <item name="android:windowAnimationStyle">@null</item>
     </style>
 
+    <style name="StoreTheme" parent="Theme.AppCompat.NoActionBar">
+
+        <item name="android:background">#ffffff</item>
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorAccent">@color/color_accent</item>
+    </style>
+
     <style name="ToolbarColoredSettings" parent="AppTheme">
         <item name="android:textColorSecondary">#ffffff</item>
         <item name="android:textColorPrimary">#ffffff</item>

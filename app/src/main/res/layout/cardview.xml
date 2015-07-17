@@ -43,7 +43,7 @@
             android:singleLine="true"
             android:paddingTop="16sp"
             android:paddingStart="8sp"
-            android:paddingEnd="32sp"
+            android:paddingEnd="40sp"
             android:gravity="center_vertical"
             android:background="?android:selectableItemBackground"
             android:focusable="true"
