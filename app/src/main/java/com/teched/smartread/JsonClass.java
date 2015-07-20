@@ -58,10 +58,10 @@ public class JsonClass {
             return "";
         }
     }
-    public static void DownloadBook(String s, String bookName) {
+    public static void DownloadJSON(String s, String bookName, String Email) {
         try {
-
-            URL url = new URL("http://php-smartread.rhcloud.com/books/" + bookName.replace(" ", "%20"));
+            String id = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_user.php?email=" + Email)).getString("id");
+            URL url = new URL("http://php-smartread.rhcloud.com/books/" + id + "_" + bookName.replace(" ", "%20"));
             File file = new File(s,bookName);
 
             URLConnection ucon = url.openConnection();
@@ -78,6 +78,87 @@ public class JsonClass {
         } catch (Exception e) { e.printStackTrace();
         }
     }
+    public static void DownloadBook(String s, String bookName) {
+        try {
+
+            URL url = new URL("http://php-smartread.rhcloud.com/books/" + bookName.replace(" ", "%20"));
+
+            bookName = bookName.split("_")[bookName.split("_").length-1];
+            File file = new File(s,bookName);
+
+            URLConnection ucon = url.openConnection();
+            InputStream is = ucon.getInputStream();
+            BufferedInputStream bis = new BufferedInputStream(is);
+            ByteArrayBuffer baf = new ByteArrayBuffer(50);
+            int current;
+            while ((current = bis.read()) != -1) {
+                baf.append((byte) current);
+            }
+            FileOutputStream fos = new FileOutputStream(file);
+            fos.write(baf.toByteArray());
+            fos.close();
+        } catch (Exception e) { e.printStackTrace();
+        }
+    }
+    public static void uploadJSON(String sourceFileUri, String Email) {
+        HttpURLConnection conn;
+        DataOutputStream dos;
+        String lineEnd = "\r\n";
+        String twoHyphens = "--";
+        String boundary = "*****";
+        int bytesRead, bytesAvailable, bufferSize;
+        byte[] buffer;
+        int maxBufferSize = 1024 * 1024;
+        File sourceFile = new File(sourceFileUri);
+        try {
+
+            FileInputStream fileInputStream = new FileInputStream(sourceFile);
+            URL url = new URL("http://php-smartread.rhcloud.com/update_user_json.php?email=" + Email + "&book=" + sourceFile.getName().replace(".json",""));
+            conn = (HttpURLConnection) url.openConnection();
+            conn.setDoInput(true);
+            conn.setDoOutput(true);
+            conn.setUseCaches(false);
+            conn.setRequestMethod("POST");
+            conn.setRequestProperty("Connection", "Keep-Alive");
+            conn.setRequestProperty("ENCTYPE", "multipart/form-data");
+            conn.setRequestProperty("Content-Type", "multipart/form-data;boundary=" + boundary);
+            conn.setRequestProperty("uploaded_file", sourceFileUri);
+
+            dos = new DataOutputStream(conn.getOutputStream());
+
+            dos.writeBytes(twoHyphens + boundary + lineEnd);
+            dos.writeBytes("Content-Disposition: form-data; name=uploaded_file;filename=tmp.json" + lineEnd);
+
+            dos.writeBytes(lineEnd);
+
+            bytesAvailable = fileInputStream.available();
+
+            bufferSize = Math.min(bytesAvailable, maxBufferSize);
+            buffer = new byte[bufferSize];
+
+            bytesRead = fileInputStream.read(buffer, 0, bufferSize);
+
+            while (bytesRead > 0) {
+
+                dos.write(buffer, 0, bufferSize);
+                bytesAvailable = fileInputStream.available();
+                bufferSize = Math.min(bytesAvailable, maxBufferSize);
+                bytesRead = fileInputStream.read(buffer, 0, bufferSize);
+
+            }
+
+            dos.writeBytes(lineEnd);
+            dos.writeBytes(twoHyphens + boundary + twoHyphens + lineEnd);
+
+            fileInputStream.close();
+            dos.flush();
+            dos.close();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public static int uploadFile(String sourceFileUri, String sourceFileUri2, String Email) {
         HttpURLConnection conn;
         DataOutputStream dos;

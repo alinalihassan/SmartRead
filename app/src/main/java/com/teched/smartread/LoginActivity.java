@@ -9,9 +9,6 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.nfc.NdefMessage;
-import android.nfc.NdefRecord;
-import android.nfc.tech.Ndef;
 import android.os.Bundle;
 
 import com.arasthel.asyncjob.AsyncJob;
@@ -27,8 +24,10 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.plus.Plus;
 import com.google.android.gms.plus.model.people.Person;
+
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import android.support.design.widget.Snackbar;
@@ -252,24 +251,36 @@ public class LoginActivity extends AppCompatActivity implements
             @Override
             public void doOnBackground() {
                 try {
+                    int id;
                     JSONObject jsonObject = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_user.php?email=" + email));
                     if (jsonObject.getInt("success")==1) {
-
+                        id = jsonObject.getInt("id");
                     }
                     else {
                         JSONObject jsonObject1 = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/create_user.php?name=" + user + "&email=" + email + "&profileUrl=" + ProfilePic));
-                        jsonObject1 = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/add_book_user.php?email=" + email + "&book=" + "1"));
+                        id = jsonObject1.getInt("id");
+                        JSONArray books = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_startup_books.php")).getJSONArray("books");
+                        for(int i = 0;i<books.length();i++)
+                            new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/add_book_user.php?email=" + email + "&book=" + books.getString(i)));
                     }
                     JSONObject books = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_books.php?email=" + email));
                     JSONArray booksArray= books.getJSONArray("books");
                     for (int i = 0; i<booksArray.length();i++) {
+                        URL url = new URL("http://php-smartread.rhcloud.com/books/" + (String.valueOf(id) + "_" + booksArray.getString(i)+".json").replace(" ", "%20"));
                         JsonClass.DownloadBook(s, booksArray.getString(i) + ".pdf");
-                        JsonClass.DownloadBook(s,booksArray.getString(i)+".json");
+                        if(exists(url))
+                            JsonClass.DownloadBook(s,String.valueOf(id) + "_" + booksArray.getString(i)+".json");
+                        else
+                            JsonClass.DownloadBook(s,booksArray.getString(i)+".json");
                     }
                     booksArray= books.getJSONArray("teacher_books");
                     for (int i = 0; i<booksArray.length();i++) {
+                        URL url = new URL("http://php-smartread.rhcloud.com/books/" + (String.valueOf(id) + "_" + booksArray.getString(i)+".json").replace(" ", "%20"));
                         JsonClass.DownloadBook(s, booksArray.getString(i) + ".pdf");
-                        JsonClass.DownloadBook(s,booksArray.getString(i)+".json");
+                        if(exists(url))
+                            JsonClass.DownloadBook(s,String.valueOf(id) + "_" + booksArray.getString(i)+".json");
+                        else
+                            JsonClass.DownloadBook(s,booksArray.getString(i)+".json");
                         JsonClass.DownloadBook(s2, booksArray.getString(i) + ".pdf");
                         JsonClass.DownloadBook(s2,booksArray.getString(i)+".json");
                     }
@@ -296,5 +307,14 @@ public class LoginActivity extends AppCompatActivity implements
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo netInfo = cm.getActiveNetworkInfo();
         return netInfo != null && netInfo.isConnected();
+    }
+    public boolean exists(URL url) {
+        try {
+            HttpURLConnection huc = (HttpURLConnection) url.openConnection();
+            int responseCode = huc.getResponseCode();
+
+            return responseCode == 200;
+        } catch (Exception e) {e.printStackTrace(); }
+        return false;
     }
 }

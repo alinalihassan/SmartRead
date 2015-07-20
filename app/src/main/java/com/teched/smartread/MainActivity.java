@@ -177,6 +177,8 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     private RecyclerView.Adapter adapter6;
     private RecyclerView.Adapter adapter7;
     private String Path2;
+    private String Path3;
+    private String Path4;
     private RelativeLayout overview;
     private SwipeRefreshLayout refreshOverview;
     private ArrayList<TeacherBook> overviewList;
@@ -221,19 +223,25 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         mAdapter = NfcAdapter.getDefaultAdapter(this);
         String s = getPackageName();
         String s2 = "";
+        String s3 = "";
         try {
             PackageInfo p = m.getPackageInfo(s, 0);
             s = p.applicationInfo.dataDir+"/app_book";
             s2 = p.applicationInfo.dataDir+"/teacher_book";
+            s3 = p.applicationInfo.dataDir+"/tmp";
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
         final String Path = s;
         Path2 = Path;
+        Path3 = s2;
+        Path4 = s3;
         final String TeacherPath = s2;
+        final String TmpPath = s3;
         File folder = new File(Path);
         folder.mkdirs();
         new File(TeacherPath).mkdirs();
+        new File(TmpPath).mkdirs();
         final MaterialMenuDrawable materialMenu = new MaterialMenuDrawable(this, Color.WHITE, MaterialMenuDrawable.Stroke.THIN);
         drawer = (DrawerFrameLayout) findViewById(R.id.drawer);
         search = (SearchBox) findViewById(R.id.searchbox);
@@ -702,6 +710,21 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                                             list.get(list.size() - 1).name = pdfs.get(pdfs.size() - 1).getName().replace(".pdf", "");
                                                         }
                                                 }
+                                                if (files != null && isOnline()) {
+                                                    for (File file : files) {
+                                                        if(file.getName().endsWith(".json")) {
+                                                            JsonClass.DownloadJSON(Path4,file.getName(),getApplicationContext().getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE).getString("Email", getString(R.string.profile_description)));
+                                                            JSONObject object = new JSONObject(readFromFile(file.getPath()));
+                                                            JSONObject object2 = new JSONObject(readFromFile(Path4 + file.getName()));
+                                                            if(object2.getInt("MaxPage")>object.getInt("MaxPage")) {
+                                                                String name = file.getName();
+                                                                file.delete();
+                                                                copyFile(Path4 + name, Path2 + name);
+                                                                new File(Path4 + name).delete();
+                                                            }
+                                                        }
+                                                    }
+                                                }
                                             } catch (Exception e) {
                                                 e.printStackTrace();
                                             }
@@ -985,6 +1008,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                             }
                         })
         );
+        refreshJSON();
         drawer.selectItem(0);
         final HorizontalDividerItemDecoration decoration = new HorizontalDividerItemDecoration.Builder(this)
                 .paintProvider(new FlexibleDividerDecoration.PaintProvider() {
@@ -1386,7 +1410,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
 
             @Override
             public void onItemClick(View view, int position) {
-
                 if (!openAbout && !inTransition) {
                     pdf.invalidate();
                     PDFMode = "PDF";
@@ -1416,6 +1439,8 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                                 if (page == pdf.getPageCount())
                                                     mainObject2.put("Finished", true);
                                                 mainObject2.put("LastPage", page);
+                                                if(mainObject2.getInt("MaxPage")<page)
+                                                    mainObject2.put("MaxPage", page);
                                                 array = mainObject2.getJSONArray(String.valueOf(page));
                                                 if (array != null) canDo = true;
                                                 if (canDo && !array.getBoolean(0)) {
@@ -1619,8 +1644,17 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                 View myView3 = findViewById(R.id.distributeScreen);
                 if(panelLayout.getPanelState()== SlidingUpPanelLayout.PanelState.EXPANDED)
                     panelLayout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
-                else if (myView.getVisibility() == View.VISIBLE && PDFMode.equals("PDF"))
+                else if (myView.getVisibility() == View.VISIBLE && PDFMode.equals("PDF")) {
                     AnimatePDF(false);
+                    new AsyncJob.AsyncJobBuilder<Boolean>()
+                            .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
+                                @Override
+                                public Boolean doAsync() {
+                                    JsonClass.uploadJSON(cposition.getPath().replace(".pdf",".json"), getApplicationContext().getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE).getString("Email", getString(R.string.profile_description)));
+                                    return true;
+                                }
+                            }).create().start();
+                }
                 else if(myView.getVisibility() == View.VISIBLE && PDFMode.equals("Teacher"))
                     AnimateTeacher(false);
                 else if(myView3.getVisibility() == View.VISIBLE)
@@ -1630,7 +1664,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     viewFlipper.setOutAnimation(getApplicationContext(), R.anim.slide_out_to_right);
                     viewFlipper.showPrevious();
                     toolbar.setTitle("My Classes");
-                    classFab.animate().scaleY(1f).scaleX(1f).setDuration(300);
                 }
                 else
                     super.onBackPressed();
@@ -2203,7 +2236,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             }
 
         });
-
     }
 
     @Override
@@ -2227,6 +2259,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     newObject.put("Finished", false);
                     newObject.put("Favorite", false);
                     newObject.put("LastPage", 0);
+                    newObject.put("MaxPage", 0);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -2751,9 +2784,39 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                 .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
                     @Override
                     public void onResult(Boolean result) {
-                        toolbar.setTitle("Store");
+
                         ((BookAdapter) mStoreRecyclerView.getAdapter()).flushFilter();
-                        if(refreshBooks.isRefreshing()) refreshBooks.setRefreshing(false);
+                        if(refreshBooks.isRefreshing()) {
+                            toolbar.setTitle("Store");
+                            refreshBooks.setRefreshing(false);
+                        }
+                    }
+                }).create().start();
+    }
+    private void refreshJSON() {
+        final File folder = new File(Path2);
+        new AsyncJob.AsyncJobBuilder<Boolean>()
+                .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
+                    @Override
+                    public Boolean doAsync() {
+                        File[] files = folder.listFiles();
+                        if (files != null) {
+                            for (File file : files)
+                                if (file.getName().endsWith(".json")) {
+                                    try {
+                                        JsonClass.DownloadJSON(Path4, file.getName(), getApplicationContext().getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE).getString("Email", getString(R.string.profile_description)));
+                                        JSONObject object = new JSONObject(readFromFile(file.getPath()));
+                                        JSONObject object2 = new JSONObject(readFromFile(Path4 + file.getName()));
+                                        if (object2.getInt("MaxPage") > object.getInt("MaxPage")) {
+                                            String name = file.getName();
+                                            file.delete();
+                                            copyFile(Path4 + name, Path2 + name);
+                                            new File(Path4 + name).delete();
+                                        }
+                                    } catch (Exception ignored) {}
+                                }
+                        }
+                        return true;
                     }
                 }).create().start();
     }

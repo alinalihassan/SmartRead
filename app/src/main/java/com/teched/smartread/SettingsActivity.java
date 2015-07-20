@@ -173,12 +173,13 @@ public class SettingsActivity extends PreferenceActivity {
                                 try {
                                     JSONObject jsonObject = new JSONObject(readFromFile(file.getPath()));
                                     jsonObject.put("Finished", false);
-                                    for (int i = 0; i < jsonObject.getInt("LastPage"); i++) {
+                                    for (int i = 0; i < jsonObject.getInt("MaxPage"); i++) {
                                         if (!jsonObject.isNull(String.valueOf(i))) {
                                             jsonObject.getJSONArray(String.valueOf(i)).put(0, false);
                                         }
                                     }
                                     jsonObject.put("LastPage", 0);
+                                    jsonObject.put("MaxPage", 0);
                                     Write(file.getPath(), jsonObject);
                                 } catch (Exception e) {
                                     e.printStackTrace();
