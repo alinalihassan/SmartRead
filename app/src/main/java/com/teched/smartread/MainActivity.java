@@ -57,7 +57,6 @@ import android.text.Editable;
 import android.text.InputFilter;
 import android.text.TextWatcher;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -442,20 +441,15 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 copyFile(teacherFile.getPath(), Path + "/" + String.valueOf(id) + ".pdf");
                                 copyFile(file.getPath(), Path + "/" + String.valueOf(id) + ".json");
                                 file.delete();
-                                } catch (Exception e) {
+                            } catch (Exception e) {
                                 e.printStackTrace();
                             }
-                            AsyncJob.doOnMainThread(new AsyncJob.OnMainThreadJob() {
-                                @Override
-                                public void doInUIThread() {
-                                    hideKeyboard();
-                                    AnimateTeacher(false);
-                                    checkPressed = false;
-                                    showSnackbar("Your book will be ready for distribution soon", Snackbar.LENGTH_SHORT);
-                                }
-                            });
+                            checkPressed = false;
                         }
                     });
+                    hideKeyboard();
+                    AnimateTeacher(false);
+                    showSnackbar("Your book will be ready for distribution soon", Snackbar.LENGTH_SHORT);
                 }
             }
         });
@@ -3079,7 +3073,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                         currentQuestion.entries = questionTable[j][l].entries;
                                         currentQuestion.sum = questionTable[j][l].sum;
                                         questionsList.add(currentQuestion);
-                                        Log.d("TAG",String.valueOf(j) + "___" + String.valueOf(l));
                                     }
                                     catch (Exception e) {e.printStackTrace();}
                                 }
