@@ -42,6 +42,7 @@ import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -56,6 +57,7 @@ import android.text.Editable;
 import android.text.InputFilter;
 import android.text.TextWatcher;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -79,6 +81,7 @@ import com.arasthel.asyncjob.AsyncJob;
 import com.balysv.materialmenu.MaterialMenuDrawable;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
+import com.github.lzyzsd.circleprogress.ArcProgress;
 import com.heinrichreimersoftware.materialdrawer.DrawerFrameLayout;
 import com.heinrichreimersoftware.materialdrawer.structure.DrawerHeaderItem;
 import com.heinrichreimersoftware.materialdrawer.structure.DrawerItem;
@@ -91,6 +94,8 @@ import com.quinny898.library.persistentsearch.SearchBox;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 import com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
+
+import net.yanzm.mth.MaterialTabHost;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -108,10 +113,13 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
 import java.net.URL;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -150,14 +158,16 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     public static boolean readyToPurchase = false;
     private transient JobManager jobManager;
     private ArrayList<Class> distributeList;
-    private RecyclerView.Adapter adapter3;
+    private RecyclerView.Adapter<DistributeAdapter.ViewHolder> adapter3;
     private ArrayList<Integer> distribution;
+    private ArrayList<String> distributionClasses;
     private String currentBook;
     private ArrayList<Class> classList;
-    private RecyclerView.Adapter adapter4;
+    private RecyclerView.Adapter<ClassAdapter.ViewHolder> adapter4;
     private ArrayList<Users> usersList;
-    private RecyclerView.Adapter adapter5;
+    private RecyclerView.Adapter<UsersAdapter.ViewHolder> adapter5;
     private ViewFlipper viewFlipper;
+    private ViewFlipper overviewFlipper;
     private FloatingActionButton classFab;
     private Users lastUser;
     private int lastUserPosition;
@@ -174,15 +184,16 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     private SwipeRefreshLayout refreshClasses;
     private SwipeRefreshLayout refreshBooks;
     private ArrayList<Book> booksList;
-    private RecyclerView.Adapter adapter6;
-    private RecyclerView.Adapter adapter7;
+    private RecyclerView.Adapter<BookAdapter.ViewHolder> adapter6;
+    private RecyclerView.Adapter<TeacherAdapter.ViewHolder> adapter7;
+    private RecyclerView.Adapter<ClassAdapter.ViewHolder> adapter8;
     private String Path2;
     private String Path3;
     private String Path4;
     private RelativeLayout overview;
     private SwipeRefreshLayout refreshOverview;
     private ArrayList<TeacherBook> overviewList;
-    private RecyclerView.Adapter adapter2;
+    private RecyclerView.Adapter<TeacherAdapter.ViewHolder> adapter2;
     private SwipeRefreshLayout refreshTeacher;
     private ArrayList<TeacherBook> teacherArray;
     private JSONObject bookObject;
@@ -191,6 +202,17 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     private TextInputLayout questionInput;
     private TextInputLayout pageInput;
     private RecyclerView mStoreRecyclerView;
+    private boolean checkPressed = false;
+    private ArrayList<Class> overviewClassesList;
+    private StatisticsAdapter adapter9;
+    private ArrayList<Users> topList;
+    private QuestionAdapter adapter10;
+    private ArrayList<Question> questionsList;
+    private String currentOverviewBook;
+    private String currentOverviewClass;
+    private Question[][] questionTable;
+    private int maxPage;
+    private int maxQuestions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -229,7 +251,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             s = p.applicationInfo.dataDir+"/app_book";
             s2 = p.applicationInfo.dataDir+"/teacher_book";
             s3 = p.applicationInfo.dataDir+"/tmp";
-        } catch (PackageManager.NameNotFoundException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         final String Path = s;
@@ -254,6 +276,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         QuestionEdit = (EditText) findViewById(R.id.questionEdit);
         QuestionRadio = (RadioGroup) findViewById(R.id.questionGroup);
         viewFlipper = (ViewFlipper) findViewById(R.id.viewFlipper);
+        overviewFlipper = (ViewFlipper) findViewById(R.id.overviewFlipper);
         final EditText pageEdit = (EditText) findViewById(R.id.pageEdit);
         final EditText answer1 = (EditText) findViewById(R.id.answer1);
         final EditText answer2 = (EditText) findViewById(R.id.answer2);
@@ -288,6 +311,21 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         setupFloatingLabelError(authorInput,"You must enter an Author!");
         DisplayMetrics displaymetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+        MaterialTabHost tabHost = (MaterialTabHost) findViewById(R.id.tabhost);
+        tabHost.setType(MaterialTabHost.Type.FullScreenWidth);
+        OverviewPagerAdapter pagerAdapter = new OverviewPagerAdapter();
+        tabHost.addTab("Top Performers");
+        tabHost.addTab("Problematic Questions");
+        final ViewPager viewPager2 = (ViewPager) findViewById(R.id.overviewpager);
+        viewPager2.setAdapter(pagerAdapter);
+        viewPager2.setOnPageChangeListener(tabHost);
+
+        tabHost.setOnTabChangeListener(new MaterialTabHost.OnTabChangeListener() {
+            @Override
+            public void onTabSelected(int position) {
+                viewPager2.setCurrentItem(position);
+            }
+        });
         if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP) {
             toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
             findViewById(R.id.toolbarCard).setVisibility(View.VISIBLE);
@@ -378,7 +416,8 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         checkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!AuthorEdit.getText().toString().equals("") && !((((EditText) findViewById(R.id.pdfTitle)).getText().toString().equals("")))) {
+                if (!checkPressed && !AuthorEdit.getText().toString().equals("") && !((((EditText) findViewById(R.id.pdfTitle)).getText().toString().equals("")))) {
+                    checkPressed = true;
                     AsyncJob.doInBackground(new AsyncJob.OnBackgroundJob() {
                         @Override
                         public void doOnBackground() {
@@ -411,6 +450,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 public void doInUIThread() {
                                     hideKeyboard();
                                     AnimateTeacher(false);
+                                    checkPressed = false;
                                     showSnackbar("Your book will be ready for distribution soon", Snackbar.LENGTH_SHORT);
                                 }
                             });
@@ -423,7 +463,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             @Override
             public void onClick(View view) {
                 if (QuestionRadio.getCheckedRadioButtonId() != -1 && !QuestionEdit.getText().toString().isEmpty() && (!answer1.getText().toString().isEmpty() || !answer2.getText().toString().isEmpty() || !answer3.getText().toString().isEmpty() || !answer4.getText().toString().isEmpty())) {
-                    int page = pageEdit.getText().toString().isEmpty() ? pdf.getCurrentPage() : Integer.parseInt(pageEdit.getText().toString());
+                    int page = pageEdit.getText().toString().isEmpty() ? pdf.getCurrentPage()+1 : Integer.parseInt(pageEdit.getText().toString());
                     try {
                         if (newObject.isNull(String.valueOf(page))) {
                             JSONArray arr = new JSONArray();
@@ -432,6 +472,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                             arr.put(0, false);
                             arr.put(1, 0);
                             object.put("Question", QuestionEdit.getText().toString());
+                            object.put("Trials", 0);
                             ans.put(answer1.getText().toString());
                             ans.put(answer2.getText().toString());
                             ans.put(answer3.getText().toString());
@@ -449,6 +490,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                         } else {
                             JSONObject object = new JSONObject();
                             JSONArray ans = new JSONArray();
+                            object.put("Trials", 0);
                             object.put("Question", QuestionEdit.getText().toString());
                             ans.put(answer1.getText().toString());
                             ans.put(answer2.getText().toString());
@@ -813,6 +855,10 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 store.setVisibility(View.INVISIBLE);
                                 overview.setVisibility(View.INVISIBLE);
                                 toolbar.setTitle("SmartRead");
+                                if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP) {
+                                    findViewById(R.id.toolbarCard).setElevation(4);
+                                    findViewById(R.id.toolbar2).setElevation(4);
+                                }
                             }
                         })
         );
@@ -841,6 +887,10 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 store.setVisibility(View.INVISIBLE);
                                 overview.setVisibility(View.INVISIBLE);
                                 toolbar.setTitle("SmartRead");
+                                if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP) {
+                                    findViewById(R.id.toolbarCard).setElevation(4);
+                                    findViewById(R.id.toolbar2).setElevation(4);
+                                }
                             }
                         })
         );
@@ -869,6 +919,10 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 store.setVisibility(View.INVISIBLE);
                                 overview.setVisibility(View.INVISIBLE);
                                 toolbar.setTitle("SmartRead");
+                                if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP) {
+                                    findViewById(R.id.toolbarCard).setElevation(4);
+                                    findViewById(R.id.toolbar2).setElevation(4);
+                                }
                             }
                         })
         );
@@ -895,6 +949,10 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 store.setVisibility(View.VISIBLE);
                                 overview.setVisibility(View.INVISIBLE);
                                 toolbar.setTitle("Store");
+                                if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP) {
+                                    findViewById(R.id.toolbarCard).setElevation(4);
+                                    findViewById(R.id.toolbar2).setElevation(4);
+                                }
                             }
                         })
         );
@@ -927,6 +985,10 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 viewFlipper.setInAnimation(getApplicationContext(), R.anim.slide_in_instant);
                                 viewFlipper.setOutAnimation(getApplicationContext(), R.anim.slide_out_instant);
                                 viewFlipper.setDisplayedChild(0);
+                                if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP) {
+                                    findViewById(R.id.toolbarCard).setElevation(4);
+                                    findViewById(R.id.toolbar2).setElevation(4);
+                                }
                             }
                         })
         );
@@ -953,6 +1015,10 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 store.setVisibility(View.INVISIBLE);
                                 overview.setVisibility(View.INVISIBLE);
                                 toolbar.setTitle("My Books");
+                                if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP) {
+                                    findViewById(R.id.toolbarCard).setElevation(4);
+                                    findViewById(R.id.toolbar2).setElevation(4);
+                                }
                             }
                         })
         );
@@ -973,12 +1039,19 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                 drawer.selectItem(i);
                                 menuString = "";
                                 invalidateOptionsMenu();
+                                overviewFlipper.setInAnimation(getApplicationContext(), R.anim.slide_in_instant);
+                                overviewFlipper.setOutAnimation(getApplicationContext(), R.anim.slide_out_instant);
+                                overviewFlipper.setDisplayedChild(0);
                                 refreshLayout.setVisibility(View.INVISIBLE);
                                 teacher.setVisibility(View.INVISIBLE);
                                 classes.setVisibility(View.INVISIBLE);
                                 store.setVisibility(View.INVISIBLE);
                                 overview.setVisibility(View.VISIBLE);
                                 toolbar.setTitle("Overview");
+                                if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP) {
+                                    findViewById(R.id.toolbarCard).setElevation(4);
+                                    findViewById(R.id.toolbar2).setElevation(4);
+                                }
                             }
                         })
         );
@@ -1064,6 +1137,51 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             }
         }));
 
+        topList = new ArrayList<>();
+        final RecyclerView mRecyclerView7 = (RecyclerView) findViewById(R.id.topList);
+        RecyclerView.LayoutManager mLayoutManager8 = new LinearLayoutManager(this);
+        mRecyclerView7.setLayoutManager(mLayoutManager8);
+        mRecyclerView7.setItemAnimator(new DefaultItemAnimator());
+        adapter9 = new StatisticsAdapter(topList, R.layout.statisticsview, this);
+        mRecyclerView7.setAdapter(adapter9);
+        ((StatisticsAdapter) mRecyclerView7.getAdapter()).flushFilter();
+
+        questionsList = new ArrayList<>();
+        final RecyclerView mRecyclerView8 = (RecyclerView) findViewById(R.id.questionsList);
+        RecyclerView.LayoutManager mLayoutManager9 = new LinearLayoutManager(this);
+        mRecyclerView8.setLayoutManager(mLayoutManager9);
+        mRecyclerView8.setItemAnimator(new DefaultItemAnimator());
+        adapter10 = new QuestionAdapter(questionsList, R.layout.questionview, this);
+        mRecyclerView8.setAdapter(adapter10);
+        ((QuestionAdapter) mRecyclerView8.getAdapter()).flushFilter();
+
+
+        overviewClassesList = new ArrayList<>();
+        final RecyclerView mRecyclerView6 = (RecyclerView) findViewById(R.id.overviewClassesList);
+        RecyclerView.LayoutManager mLayoutManager7 = new LinearLayoutManager(this);
+        mRecyclerView6.setLayoutManager(mLayoutManager7);
+        mRecyclerView6.setItemAnimator(new DefaultItemAnimator());
+        adapter8 = new ClassAdapter(overviewClassesList, R.layout.classview, this);
+        mRecyclerView6.setAdapter(adapter8);
+        ((ClassAdapter) mRecyclerView6.getAdapter()).flushFilter();
+        mRecyclerView6.addOnItemTouchListener(new RecyclerItemClickListener(getApplicationContext(), mRecyclerView6, new RecyclerItemClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                overviewFlipper.setVisibility(View.INVISIBLE);
+                findViewById(R.id.tabLayout).setVisibility(View.VISIBLE);
+                if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP) {
+                    findViewById(R.id.toolbarCard).setElevation(0);
+                    findViewById(R.id.toolbar2).setElevation(0);
+                }
+                currentOverviewClass = ((ClassAdapter)mRecyclerView6.getAdapter()).getId(position);
+                refreshStatistics();
+            }
+
+            @Override
+            public void onItemLongClick(View view, int position) {
+            }
+        }));
+
 
         overviewList = new ArrayList<>();
         final RecyclerView mRecyclerView5 = (RecyclerView) findViewById(R.id.overviewList);
@@ -1074,6 +1192,22 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         mRecyclerView5.setAdapter(adapter7);
         ((TeacherAdapter) mRecyclerView5.getAdapter()).flushFilter();
         refreshOverview();
+        mRecyclerView5.addOnItemTouchListener(new RecyclerItemClickListener(getApplicationContext(), mRecyclerView5, new RecyclerItemClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                overviewFlipper.setInAnimation(getApplicationContext(), R.anim.slide_in_from_right);
+                overviewFlipper.setOutAnimation(getApplicationContext(), R.anim.slide_out_to_left);
+                overviewFlipper.showNext();
+                currentOverviewBook = ((TeacherAdapter)mRecyclerView5.getAdapter()).getID(position);
+                refreshOverviewClasses(currentOverviewBook);
+            }
+
+            @Override
+            public void onItemLongClick(View view, int position) {
+            }
+        }));
+
+
 
         booksList = new ArrayList<>();
         mStoreRecyclerView = (RecyclerView) findViewById(R.id.storeList);
@@ -1322,6 +1456,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         distributeList = new ArrayList<>();
+        distributionClasses = new ArrayList<>();
         adapter3 = new DistributeAdapter(distributeList, R.layout.distributeview, this);
         mRecyclerView.setAdapter(adapter3);
         ((DistributeAdapter) mRecyclerView.getAdapter()).flushFilter();
@@ -1337,12 +1472,15 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                             Integer r = currentClass.users.getInt(i);
                             distribution.remove(r);
                         }
-                    } else {
+                        distributionClasses.remove(currentClass.id);
+                    }
+                    else {
                         viewHolder.cardName.setChecked(true);
                         for (int i = 0; i < currentClass.users.length(); i++) {
                             Integer r = currentClass.users.getInt(i);
                             distribution.add(r);
                         }
+                        distributionClasses.add(currentClass.id);
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -1359,9 +1497,10 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             @Override
             public void onClick(View v) {
                 distribution = new ArrayList<>(new LinkedHashSet<>(distribution));
-                for(int i = 0;i<distribution.size();i++) {
+                for(int i = 0;i<distribution.size();i++)
                     JsonClass.getJSON("http://php-smartread.rhcloud.com/add_book_user.php?id=" + String.valueOf(distribution.get(i))  + "&book=" + currentBook);
-                }
+                for(int i = 0;i<distributionClasses.size();i++)
+                    JsonClass.getJSON("http://php-smartread.rhcloud.com/add_book_class.php?classid=" + distributionClasses.get(i) + "&book=" + currentBook);
                 AnimateDistribute(false);
             }
         });
@@ -1436,6 +1575,12 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                             try {
                                                 JSONArray array;
                                                 boolean canDo = false;
+                                                if(mainObject2.getString("Date").equals("")) {
+                                                    SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd");
+                                                    Date date = new Date();
+                                                    String datetime = dateformat.format(date);
+                                                    mainObject2.put("Date",datetime);
+                                                }
                                                 if (page == pdf.getPageCount())
                                                     mainObject2.put("Finished", true);
                                                 mainObject2.put("LastPage", page);
@@ -1659,11 +1804,20 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     AnimateTeacher(false);
                 else if(myView3.getVisibility() == View.VISIBLE)
                     AnimateDistribute(false);
-                else if(viewFlipper.getDisplayedChild()==1) {
+                else if(findViewById(R.id.tabLayout).getVisibility()==View.VISIBLE) {
+                    findViewById(R.id.overviewFlipper).setVisibility(View.VISIBLE);
+                    findViewById(R.id.tabLayout).setVisibility(View.INVISIBLE);
+                }
+                else if(viewFlipper.getDisplayedChild()==1 && classes.getVisibility()==View.VISIBLE ) {
                     viewFlipper.setInAnimation(getApplicationContext(), R.anim.slide_in_from_left);
                     viewFlipper.setOutAnimation(getApplicationContext(), R.anim.slide_out_to_right);
                     viewFlipper.showPrevious();
                     toolbar.setTitle("My Classes");
+                }
+                else if(overviewFlipper.getDisplayedChild()==1 && overview.getVisibility()==View.VISIBLE) {
+                    overviewFlipper.setInAnimation(getApplicationContext(), R.anim.slide_in_from_left);
+                    overviewFlipper.setOutAnimation(getApplicationContext(), R.anim.slide_out_to_right);
+                    overviewFlipper.showPrevious();
                 }
                 else
                     super.onBackPressed();
@@ -2042,6 +2196,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                         try {
                             RadioButton rdio = (RadioButton) findViewById(getResources().getIdentifier("Option" + String.valueOf(obj.getInt("Answer")), "id", getBaseContext().getPackageName()));
                             if (rdio.isChecked()) correctAnswers++;
+                            else obj.put("Trials", obj.getInt("Trials") + 1);
                             if (array.isNull(i + 1)) {
                                 if(correctAnswers>=array.getInt(1)) {
                                     array.put(0, true);
@@ -2260,6 +2415,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     newObject.put("Favorite", false);
                     newObject.put("LastPage", 0);
                     newObject.put("MaxPage", 0);
+                    newObject.put("Date","");
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -2363,6 +2519,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     Class currentClass = distributeList.get(distributeList.size() - 1);
                     currentClass.name = Class.getString("name");
                     currentClass.users = Class.getJSONArray("users");
+                    currentClass.id =  Classes.getString(i);
                 }
                 adapter3.notifyDataSetChanged();
                 AnimateDistribute(true);
@@ -2422,7 +2579,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                         try {
                             classList.clear();
                             JSONArray Classes = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_user_classes.php?email=" + getApplication().getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE).getString("Email", getString(R.string.profile_description)))).getJSONArray("classes");
-                            for(int i = 0; i<Classes.length();i++) {
+                            for (int i = 0; i < Classes.length(); i++) {
                                 classList.add(new Class());
                                 JSONObject Class = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_class.php?id=" + Classes.getString(i)));
                                 Class currentClass = classList.get(classList.size() - 1);
@@ -2515,6 +2672,40 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     }
                 }).create().start();
     }
+
+    private void refreshOverviewClasses(final String ID) {
+        new AsyncJob.AsyncJobBuilder<Boolean>()
+                .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
+                    @Override
+                    public Boolean doAsync() {
+                        try {
+                            overviewClassesList.clear();
+                            String[] Book = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_book_details.php?id=" + ID)).getString("classes").split(",");
+                            for (String aBook : Book) {
+                                JSONObject Class = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_class.php?id=" + aBook));
+                                overviewClassesList.add(new Class());
+                                Class currentClass = overviewClassesList.get(overviewClassesList.size() - 1);
+                                currentClass.id = aBook;
+                                currentClass.name = Class.getString("name");
+                                currentClass.users = Class.getJSONArray("users");
+                                currentClass.pending = Class.getJSONArray("pending");
+                                currentClass.access_code = Class.getString("access_code");
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        return true;
+                    }
+                })
+                .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
+                    @Override
+                    public void onResult(Boolean result) {
+                        adapter8.notifyDataSetChanged();
+                        //if(refreshOverview.isRefreshing()) refreshOverview.setRefreshing(false);
+                    }
+                }).create().start();
+    }
+
     private void joinClass() {
         final SharedPreferences prefs = this.getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE);
         final EditText input = new EditText(this);
@@ -2786,7 +2977,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     public void onResult(Boolean result) {
 
                         ((BookAdapter) mStoreRecyclerView.getAdapter()).flushFilter();
-                        if(refreshBooks.isRefreshing()) {
+                        if (refreshBooks.isRefreshing()) {
                             toolbar.setTitle("Store");
                             refreshBooks.setRefreshing(false);
                         }
@@ -2813,11 +3004,115 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                             copyFile(Path4 + name, Path2 + name);
                                             new File(Path4 + name).delete();
                                         }
-                                    } catch (Exception ignored) {}
+                                    } catch (Exception ignored) {
+                                    }
                                 }
                         }
                         return true;
                     }
                 }).create().start();
+    }
+    private int bookAnswerRate(JSONObject mainObject2) {
+        try {
+            int entries = 0;
+            float sum = 0;
+            for (int i = 0; i <= mainObject2.getInt("MaxPage") + 1; i++) {
+                if (!mainObject2.isNull(String.valueOf(i))) {
+                    JSONArray jsonArray = mainObject2.getJSONArray(String.valueOf(i));
+                    if(!jsonArray.getBoolean(0)) break;
+                    for(int j = 2;!jsonArray.isNull(j);j++) {
+                            sum += 1f / ((float)jsonArray.getJSONObject(j).getInt("Trials")+1) * 100;
+                            entries++;
+                    }
+                }
+            }
+            return ((int)sum/entries);
+        } catch (Exception e) {e.printStackTrace(); }
+        return 0;
+    }
+    private void refreshStatistics() {
+        new AsyncJob.AsyncJobBuilder<Boolean>()
+                .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
+                    @Override
+                    public Boolean doAsync() {
+                        try {
+                            topList.clear();
+                            questionsList.clear();
+                            questionTable = new Question[100][100];
+                            maxPage = 0;
+                            maxQuestions = 0;
+                            JSONArray Classes = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_class.php?id=" + currentOverviewClass)).getJSONArray("users");
+                            for(int i = 0; i<Classes.length();i++) {
+                                if(exists(new URL("http://php-smartread.rhcloud.com/books/" + Classes.getString(i) + "_" + currentOverviewBook + ".json"))) {
+                                    topList.add(new Users());
+                                    Users currentUser = topList.get(topList.size() - 1);
+                                    JSONObject currentJSON = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/books/" + Classes.getString(i) + "_" + currentOverviewBook + ".json"));
+                                    JSONObject Class = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_user.php?id=" + Classes.getString(i))).getJSONArray("users").getJSONObject(0);
+                                    currentUser.name = Class.getString("name");
+                                    currentUser.id = Classes.getString(i);
+                                    currentUser.email = Class.getString("email");
+                                    currentUser.profileUrl = Class.getString("profileUrl");
+                                    currentUser.answerRate = bookAnswerRate(currentJSON);
+                                    currentUser.maxPage = currentJSON.getString("MaxPage");
+                                    currentUser.finished = currentJSON.getBoolean("Finished");
+                                    for (int j = 0; j <= currentJSON.getInt("MaxPage") + 1; j++) {
+                                        if (!currentJSON.isNull(String.valueOf(j))) {
+                                            JSONArray jsonArray = currentJSON.getJSONArray(String.valueOf(j));
+                                            if(!jsonArray.getBoolean(0)) break;
+                                            if(maxPage<j) maxPage=j;
+                                            for(int l = 2;!jsonArray.isNull(l);l++) {
+                                                questionTable[j][l] = new Question();
+                                                questionTable[j][l].sum += 1f / ((float)jsonArray.getJSONObject(l).getInt("Trials")+1) * 100;
+                                                questionTable[j][l].entries++;
+                                                questionTable[j][l].QuestionString = jsonArray.getJSONObject(l).getString("Question");
+                                                if(l>maxQuestions) maxQuestions = l;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            for(int j = 0;j<=maxPage;j++) {
+                                for(int l = 2; l<=maxQuestions;l++) {
+                                    try {
+                                        Question currentQuestion = new Question();
+                                        currentQuestion.QuestionString = questionTable[j][l].QuestionString;
+                                        currentQuestion.entries = questionTable[j][l].entries;
+                                        currentQuestion.sum = questionTable[j][l].sum;
+                                        questionsList.add(currentQuestion);
+                                        Log.d("TAG",String.valueOf(j) + "___" + String.valueOf(l));
+                                    }
+                                    catch (Exception e) {e.printStackTrace();}
+                                }
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        return true;
+                    }
+                })
+                .doWhenFinished(new AsyncJob.AsyncResultAction<Boolean>() {
+                    @Override
+                    public void onResult(Boolean result) {
+                        int sum = 0;
+                        int sum2 = 0;
+                        for(Users aUser: topList)
+                            sum+=aUser.answerRate;
+                        for(Question aUser: questionsList)
+                            sum2+=aUser.sum/ aUser.entries;
+                        ((ArcProgress)findViewById(R.id.arc_progress)).setProgress(topList.size()!=0?sum/topList.size():0);
+                        ((ArcProgress)findViewById(R.id.arc_progress2)).setProgress(questionsList.size()!=0?sum2/questionsList.size():0);
+                        adapter9.notifyDataSetChanged();
+                        adapter10.notifyDataSetChanged();
+                    }
+                }).create().start();
+    }
+    public boolean exists(URL url) {
+        try {
+            HttpURLConnection huc = (HttpURLConnection) url.openConnection();
+            int responseCode = huc.getResponseCode();
+
+            return responseCode == 200;
+        } catch (Exception e) {e.printStackTrace(); }
+        return false;
     }
 }

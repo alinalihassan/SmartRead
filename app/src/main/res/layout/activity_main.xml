@@ -58,33 +58,6 @@
     </LinearLayout>
 
         <RelativeLayout
-            android:id="@+id/distributeScreen"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="14dp"
-            android:translationZ="3dp"
-            android:elevation="6sp"
-            android:background="@android:color/white"
-            android:visibility="invisible">
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/distributeList"
-                android:scrollbars="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="48dp">
-            </android.support.v7.widget.RecyclerView>
-            <Button
-                android:id="@+id/distributeButton"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:textSize="18sp"
-                android:text="@string/string_distribute"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"/>
-        </RelativeLayout>
-
-        <RelativeLayout
             android:id="@+id/classes"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -175,17 +148,99 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="invisible">
-            <android.support.v4.widget.SwipeRefreshLayout
-                android:id="@+id/refreshOverview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="?attr/actionBarSize">
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/overviewList"
-                    android:scrollbars="vertical"
+                <ViewFlipper
+                    android:id="@+id/overviewFlipper"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-            </android.support.v4.widget.SwipeRefreshLayout>
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="?attr/actionBarSize">
+
+                    <android.support.v4.widget.SwipeRefreshLayout
+                        android:id="@+id/refreshOverview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/overviewList"
+                            android:scrollbars="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </android.support.v4.widget.SwipeRefreshLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/overviewClassesList"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </ViewFlipper>
+            <LinearLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="invisible"
+                android:layout_marginTop="?attr/actionBarSize">
+
+
+                <net.yanzm.mth.MaterialTabHost
+                    android:id="@+id/tabhost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    sothree:colorTabIndicator="#ffffff"/>
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/overviewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    <LinearLayout
+                        android:id="@+id/topPerformers"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+                        <com.github.lzyzsd.circleprogress.ArcProgress
+                            android:id="@+id/arc_progress"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="16dp"
+                            android:layout_gravity="center"
+                            sothree:arc_stroke_width="12dp"
+                            sothree:arc_angle="360"
+                            sothree:arc_progress="0"
+                            sothree:arc_suffix_text_padding="12dp"
+                            sothree:arc_text_color="#000000"
+                            sothree:arc_text_size="48sp"
+                            sothree:arc_unfinished_color="?android:colorBackground"
+                            sothree:arc_finished_color="@color/color_accent"/>
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/topList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/problematicQuestions"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+                        <com.github.lzyzsd.circleprogress.ArcProgress
+                            android:id="@+id/arc_progress2"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="16dp"
+                            android:layout_gravity="center"
+                            sothree:arc_stroke_width="12dp"
+                            sothree:arc_angle="360"
+                            sothree:arc_progress="0"
+                            sothree:arc_suffix_text_padding="12dp"
+                            sothree:arc_text_color="#000000"
+                            sothree:arc_text_size="48sp"
+                            sothree:arc_unfinished_color="?android:colorBackground"
+                            sothree:arc_finished_color="@color/color_accent"/>
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/questionsList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </android.support.v4.view.ViewPager>
+            </LinearLayout>
         </RelativeLayout>
 
         <com.quinny898.library.persistentsearch.SearchBox
@@ -222,6 +277,32 @@
                 android:layout_margin="@dimen/fab_margin"
                 android:src="@drawable/ic_create" />
         </android.support.design.widget.CoordinatorLayout>
+        <RelativeLayout
+            android:id="@+id/distributeScreen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="14dp"
+            android:background="#ffffff"
+            android:translationZ="3dp"
+            android:elevation="6sp"
+            android:visibility="invisible">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/distributeList"
+                android:scrollbars="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="48dp">
+            </android.support.v7.widget.RecyclerView>
+            <Button
+                android:id="@+id/distributeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:textSize="18sp"
+                android:text="@string/string_distribute"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
         <com.sothree.slidinguppanel.SlidingUpPanelLayout
             android:id="@+id/sliding_layout"
             android:layout_width="match_parent"
@@ -241,8 +322,8 @@
                 android:id="@+id/slide_panel"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:clickable="true"
-                android:background="#ffffff">
+                android:background="#ffffff"
+                android:clickable="true">
                 <ImageView
                     android:id="@+id/check_button"
                     android:clickable="true"
@@ -469,8 +550,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:translationZ="3dp"
+            android:background="#ffffff"
             android:layout_margin="14dp"
-            android:background="@android:color/white"
             android:elevation="8sp"
             android:visibility="invisible">
 

@@ -176,6 +176,7 @@ public class SettingsActivity extends PreferenceActivity {
                                     for (int i = 0; i < jsonObject.getInt("MaxPage"); i++) {
                                         if (!jsonObject.isNull(String.valueOf(i))) {
                                             jsonObject.getJSONArray(String.valueOf(i)).put(0, false);
+                                            jsonObject.getJSONArray(String.valueOf(i)).put(2, 0);
                                         }
                                     }
                                     jsonObject.put("LastPage", 0);
@@ -192,7 +193,6 @@ public class SettingsActivity extends PreferenceActivity {
             .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
-
                 }
             })
             .show();

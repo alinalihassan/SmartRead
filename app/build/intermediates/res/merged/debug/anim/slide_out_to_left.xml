@@ -6,6 +6,6 @@
     android:toXDelta="-100%"
     android:fromYDelta="0%"
     android:toYDelta="0%"
-    android:duration="600" />
+    android:duration="300" />
 </set>
 <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/anim/slide_out_to_left.xml -->

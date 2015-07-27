@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:background="?android:selectableItemBackground"
+        android:clickable="true"/>
+    <TextView
+        android:id="@+id/bookName"
+        android:padding="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="22sp"
+        android:textColor="@android:color/black" />
+    <com.github.lzyzsd.circleprogress.ArcProgress
+        android:id="@+id/classProgress"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="8dp"
+        android:layout_gravity="center"
+        sothree:arc_suffix_text="                         "
+        sothree:arc_stroke_width="4dp"
+        sothree:arc_progress="0"
+        sothree:arc_angle="360"
+        android:layout_alignParentEnd="true"
+        sothree:arc_suffix_text_padding="12dp"
+        sothree:arc_text_size="22dp"
+        sothree:arc_text_color="#000000"
+        sothree:arc_unfinished_color="?android:colorBackground"
+        sothree:arc_finished_color="@color/color_accent"/>
+    </RelativeLayout>

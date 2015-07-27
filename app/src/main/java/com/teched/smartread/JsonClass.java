@@ -1,5 +1,7 @@
 package com.teched.smartread;
 
+import android.util.Log;
+
 import org.apache.http.util.ByteArrayBuffer;
 import org.json.JSONObject;
 
@@ -108,7 +110,7 @@ public class JsonClass {
         String boundary = "*****";
         int bytesRead, bytesAvailable, bufferSize;
         byte[] buffer;
-        int maxBufferSize = 1024 * 1024;
+        int maxBufferSize = 1024 * 1024 * 1024;
         File sourceFile = new File(sourceFileUri);
         try {
 
@@ -149,7 +151,9 @@ public class JsonClass {
 
             dos.writeBytes(lineEnd);
             dos.writeBytes(twoHyphens + boundary + twoHyphens + lineEnd);
-
+            InputStream is = conn.getInputStream();
+            String parsedJson = convertinputStreamToString(is);
+            Log.d("TAG",parsedJson);
             fileInputStream.close();
             dos.flush();
             dos.close();
