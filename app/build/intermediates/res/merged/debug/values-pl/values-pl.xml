@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.pspdfkit/pspdfkit/1.2.3/res/values-pl/values-pl.xml -->
+    <eat-comment/>
+    <plurals name="pspdf__search_results_found">
+        <item quantity="one">Znaleziono %d dopasowanie</item>
+        <item quantity="few">Znaleziono %d dopasowania</item>
+        <item quantity="many">Znaleziono %d dopasowań</item>
+    </plurals>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-pl/values-pl.xml -->
     <eat-comment/>
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Przejdź do strony głównej"</string>
@@ -82,4 +89,23 @@
     <string msgid="5398645111664294430" name="mr_media_route_controller_stop">"Zakończ przesyłanie"</string>
     <string msgid="5441529851481176817" name="mr_system_route_name">"System"</string>
     <string msgid="7498112907524977311" name="mr_user_route_category_name">"Urządzenia"</string>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.pspdfkit/pspdfkit/1.2.3/res/values-pl/values-pl.xml -->
+    <eat-comment/>
+    <string name="pspdf__action_menu_copy">Kopiuj</string>
+    <string name="pspdf__action_menu_speak">Mowa</string>
+    <string name="pspdf__activity_menu_no_outline">Brak konturu</string>
+    <string name="pspdf__activity_menu_outline">Kontur</string>
+    <string name="pspdf__activity_menu_pagegrid">Siatka</string>
+    <string name="pspdf__activity_menu_search">Szukaj</string>
+    <string name="pspdf__fragment_password_hint">Wprowadź hasło.</string>
+    <string name="pspdf__gallery_item_img_desc">Obrazek</string>
+    <string name="pspdf__search_btn_next">Dalej</string>
+    <string name="pspdf__search_btn_previous">Wstecz</string>
+    <string name="pspdf__search_complete">Wyszukiwanie ukończone</string>
+    <string name="pspdf__search_hint">Szukaj</string>
+    <string name="pspdf__search_no_matches">Nie znaleziono żadnego dopasowania</string>
+    <string name="pspdf__search_result_of">%1$d z %2$d</string>
+    <string name="pspdf__search_results_page">Strona %d</string>
+    <string name="pspdf_page_loading">Ładowanie…</string>
+    <string name="pspdf_page_overlay">%1$d z %2$d</string>
 </resources>

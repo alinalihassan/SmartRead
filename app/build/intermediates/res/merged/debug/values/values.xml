@@ -2,6 +2,14 @@
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/values/arrays.xml -->
     <eat-comment/>
+    <string-array name="scrollentries">
+        <item>Horizontal</item>
+        <item>Vertical</item>
+    </string-array>
+    <string-array name="scrollvalues">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
     <string-array name="sortentries">
         <item>Title</item>
         <item>Author</item>
@@ -40,6 +48,47 @@
     <attr format="reference" name="mediaRoutePauseDrawable"/>
     <attr format="reference" name="mediaRoutePlayDrawable"/>
     <attr format="reference" name="mediaRouteSettingsDrawable"/>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.pspdfkit/pspdfkit/1.2.3/res/values/values.xml -->
+    <eat-comment/>
+    <attr format="color" name="pspdf__backgroundColor"/>
+    <attr format="color" name="pspdf__borderColor"/>
+    <attr format="dimension" name="pspdf__borderWidth"/>
+    <attr format="color" name="pspdf__defaultTextColor"/>
+    <attr format="reference" name="pspdf__gridIcon"/>
+    <attr format="reference" name="pspdf__gridIconActivated"/>
+    <attr format="color" name="pspdf__highlightBackgroundColor"/>
+    <attr format="color" name="pspdf__highlightBorderColor"/>
+    <attr format="color" name="pspdf__highlightTextColor"/>
+    <attr format="color" name="pspdf__hintTextColor"/>
+    <attr format="color" name="pspdf__iconsColor"/>
+    <attr format="color" name="pspdf__iconsColorActivated"/>
+    <attr format="color" name="pspdf__inputFieldBackgroundColor"/>
+    <attr format="color" name="pspdf__inputFieldHintColor"/>
+    <attr format="color" name="pspdf__inputFieldTextColor"/>
+    <attr format="color" name="pspdf__linkAnnotationBackgroundColor"/>
+    <attr format="color" name="pspdf__linkAnnotationBorderColor"/>
+    <attr format="color" name="pspdf__linkAnnotationHighlightBackgroundColor"/>
+    <attr format="color" name="pspdf__linkAnnotationHighlightBorderColor"/>
+    <attr format="color" name="pspdf__listItemBackgroundColor"/>
+    <attr format="reference" name="pspdf__listItemSelector"/>
+    <attr format="color" name="pspdf__listItemSubtitleColor"/>
+    <attr format="color" name="pspdf__listItemTitleColor"/>
+    <attr format="color" name="pspdf__navigationTextColor"/>
+    <attr format="color" name="pspdf__nextIconColorFilter"/>
+    <attr format="reference" name="pspdf__nextIconDrawable"/>
+    <attr format="reference" name="pspdf__outlineIcon"/>
+    <attr format="reference" name="pspdf__outlineIconActivated"/>
+    <attr format="color" name="pspdf__prevIconColorFilter"/>
+    <attr format="reference" name="pspdf__prevIconDrawable"/>
+    <attr format="reference" name="pspdf__searchIcon"/>
+    <attr format="reference" name="pspdf__searchIconActivated"/>
+    <attr format="color" name="pspdf__separatorColor"/>
+    <attr format="integer" name="pspdf__snippetLength"/>
+    <attr format="integer" name="pspdf__startSearchChars"/>
+    <attr format="color" name="pspdf__textColor"/>
+    <attr format="color" name="pspdf__thumbnailBorderColor"/>
+    <attr format="dimension" name="pspdf__thumbnailHeight"/>
+    <attr format="dimension" name="pspdf__thumbnailWidth"/>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <attr format="string" name="title"/>
@@ -50,6 +99,12 @@
     <bool name="abc_config_allowActionMenuItemTextWithIcon">false</bool>
     <bool name="abc_config_closeDialogWhenTouchOutside">true</bool>
     <bool name="abc_config_showMenuShortcutsWhenKeyboardPresent">false</bool>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.pspdfkit/pspdfkit/1.2.3/res/values/values.xml -->
+    <eat-comment/>
+    <bool name="pspdf__is_phone">true</bool>
+    <bool name="pspdf__is_tablet">false</bool>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
+    <eat-comment/>
     <color name="abc_input_method_navigation_guard">@android:color/black</color>
     <color name="abc_search_url_text_normal">#7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
@@ -155,6 +210,23 @@
     <color name="primary_text_default_material_light">#de000000</color>
     <color name="primary_text_disabled_material_dark">#4Dffffff</color>
     <color name="primary_text_disabled_material_light">#39000000</color>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.pspdfkit/pspdfkit/1.2.3/res/values/values.xml -->
+    <eat-comment/>
+    <color name="pspdf__color">#3C97C9</color>
+    <color name="pspdf__color_black">#000000</color>
+    <color name="pspdf__color_dark">#306F8B</color>
+    <color name="pspdf__color_gray">#A8A8A8</color>
+    <color name="pspdf__color_gray_dark">#7E7E7E</color>
+    <color name="pspdf__color_gray_light">#ECF0F1</color>
+    <color name="pspdf__color_highlight">#FFFF00</color>
+    <color name="pspdf__color_light">#4799E8</color>
+    <color name="pspdf__color_link_annotation_background">@android:color/transparent</color>
+    <color name="pspdf__color_link_annotation_border">@android:color/transparent</color>
+    <color name="pspdf__color_link_annotation_highlight_background">#5ABEBEBE</color>
+    <color name="pspdf__color_link_annotation_highlight_border">@android:color/transparent</color>
+    <color name="pspdf__color_white">#FFFFFF</color>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
+    <eat-comment/>
     <color name="ripple_material_dark">#4dffffff</color>
     <color name="ripple_material_light">#1f000000</color>
     <color name="secondary_text_default_material_dark">#b3ffffff</color>
@@ -247,6 +319,15 @@
     <declare-styleable name="com_facebook_like_view"><attr format="color" name="com_facebook_foreground_color"/><attr format="string" name="com_facebook_object_id"/><attr name="com_facebook_object_type"><enum name="unknown" value="0"/><enum name="open_graph" value="1"/><enum name="page" value="2"/></attr><attr name="com_facebook_style"><enum name="standard" value="0"/><enum name="button" value="1"/><enum name="box_count" value="2"/></attr><attr name="com_facebook_auxiliary_view_position"><enum name="bottom" value="0"/><enum name="inline" value="1"/><enum name="top" value="2"/></attr><attr name="com_facebook_horizontal_alignment"><enum name="center" value="0"/><enum name="left" value="1"/><enum name="right" value="2"/></attr></declare-styleable>
     <declare-styleable name="com_facebook_login_view"><attr format="boolean" name="com_facebook_confirm_logout"/><attr format="string" name="com_facebook_login_text"/><attr format="string" name="com_facebook_logout_text"/><attr name="com_facebook_tooltip_mode"><enum name="automatic" value="0"/><enum name="display_always" value="1"/><enum name="never_display" value="2"/></attr></declare-styleable>
     <declare-styleable name="com_facebook_profile_picture_view"><attr name="com_facebook_preset_size"><enum name="small" value="-2"/><enum name="normal" value="-3"/><enum name="large" value="-4"/></attr><attr format="boolean" name="com_facebook_is_cropped"/></declare-styleable>
+    <declare-styleable name="pspdf__ActionBarIcons"><attr name="pspdf__iconsColor"/><attr name="pspdf__outlineIcon"/><attr name="pspdf__searchIcon"/><attr name="pspdf__gridIcon"/><attr name="pspdf__iconsColorActivated"/><attr name="pspdf__outlineIconActivated"/><attr name="pspdf__searchIconActivated"/><attr name="pspdf__gridIconActivated"/></declare-styleable>
+    <declare-styleable name="pspdf__Annotation"><attr name="pspdf__linkAnnotationBackgroundColor"/><attr name="pspdf__linkAnnotationBorderColor"/><attr name="pspdf__linkAnnotationHighlightBackgroundColor"/><attr name="pspdf__linkAnnotationHighlightBorderColor"/></declare-styleable>
+    <declare-styleable name="pspdf__Document"><attr name="pspdf__backgroundColor"/></declare-styleable>
+    <declare-styleable name="pspdf__OutlineView"><attr name="pspdf__backgroundColor"/><attr name="pspdf__listItemSelector"/><attr name="pspdf__defaultTextColor"/></declare-styleable>
+    <declare-styleable name="pspdf__SearchViewInline"><attr name="pspdf__backgroundColor"/><attr name="pspdf__borderColor"/><attr name="pspdf__borderWidth"/><attr name="pspdf__textColor"/><attr name="pspdf__hintTextColor"/><attr name="pspdf__navigationTextColor"/><attr name="pspdf__highlightBackgroundColor"/><attr name="pspdf__highlightBorderColor"/><attr name="pspdf__prevIconDrawable"/><attr name="pspdf__nextIconDrawable"/><attr name="pspdf__prevIconColorFilter"/><attr name="pspdf__nextIconColorFilter"/><attr name="pspdf__startSearchChars"/><attr name="pspdf__snippetLength"/></declare-styleable>
+    <declare-styleable name="pspdf__SearchViewModular"><attr name="pspdf__backgroundColor"/><attr name="pspdf__inputFieldTextColor"/><attr name="pspdf__inputFieldHintColor"/><attr name="pspdf__inputFieldBackgroundColor"/><attr name="pspdf__separatorColor"/><attr name="pspdf__listItemBackgroundColor"/><attr name="pspdf__listItemTitleColor"/><attr name="pspdf__listItemSubtitleColor"/><attr name="pspdf__listItemSelector"/><attr name="pspdf__highlightBackgroundColor"/><attr name="pspdf__highlightTextColor"/><attr name="pspdf__highlightBorderColor"/><attr name="pspdf__startSearchChars"/><attr name="pspdf__snippetLength"/></declare-styleable>
+    <declare-styleable name="pspdf__Theme"><attr format="reference" name="pspdf__actionBarIconsStyle"/><attr format="reference" name="pspdf__inlineSearchStyle"/><attr format="reference" name="pspdf__modularSearchStyle"/><attr format="reference" name="pspdf__thumbnailBarStyle"/><attr format="reference" name="pspdf__outlineViewStyle"/><attr format="reference" name="pspdf__thumbnailGridStyle"/><attr format="reference" name="pspdf__documentStyle"/><attr format="reference" name="pspdf__annotationStyle"/></declare-styleable>
+    <declare-styleable name="pspdf__ThumbnailBar"><attr name="pspdf__backgroundColor"/><attr name="pspdf__thumbnailWidth"/><attr name="pspdf__thumbnailHeight"/><attr name="pspdf__thumbnailBorderColor"/></declare-styleable>
+    <declare-styleable name="pspdf__ThumbnailGrid"><attr name="pspdf__backgroundColor"/></declare-styleable>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
@@ -407,6 +488,12 @@
     <dimen name="notification_large_icon_height">64dp</dimen>
     <dimen name="notification_large_icon_width">64dp</dimen>
     <dimen name="notification_subtext_size">12dp</dimen>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.pspdfkit/pspdfkit/1.2.3/res/values/values.xml -->
+    <eat-comment/>
+    <dimen name="pspdf__inline_search_border_width">1dp</dimen>
+    <dimen name="pspdf__search_result_highlight_border_width">1dp</dimen>
+    <dimen name="pspdf__thumbnail_height">38dp</dimen>
+    <dimen name="pspdf__thumbnail_width">27dp</dimen>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.android.support/design/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <dimen name="snackbar_action_inline_max_width">128dp</dimen>
@@ -477,6 +564,15 @@
     <eat-comment/>
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.pspdfkit/pspdfkit/1.2.3/res/values/values.xml -->
+    <eat-comment/>
+    <item name="pspdf__menu_option_outline" type="id"/>
+    <item name="pspdf__menu_option_search" type="id"/>
+    <item name="pspdf__menu_option_thumbnail_grid" type="id"/>
+    <item name="pspdf__search_view_inline" type="id"/>
+    <item name="pspdf__search_view_modular" type="id"/>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
+    <eat-comment/>
     <item name="split_action_bar" type="id"/>
     <item name="up" type="id"/>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.android.support/design/22.2.1/res/values/values.xml -->
@@ -501,6 +597,12 @@
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <integer name="status_bar_notification_info_maxnum">999</integer>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.pspdfkit/pspdfkit/1.2.3/res/values/values.xml -->
+    <eat-comment/>
+    <plurals name="pspdf__search_results_found">
+        <item quantity="one">%d match found.</item>
+        <item quantity="other">%d matches found.</item>
+    </plurals>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="NextButtonText">Next</string>
@@ -669,6 +771,27 @@
     <string name="profile_description">user@gmail.com</string>
     <string name="profile_name">User</string>
     <string name="programmer">Developer: Hassan Alin Ali</string>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.pspdfkit/pspdfkit/1.2.3/res/values/values.xml -->
+    <eat-comment/>
+    <string name="pspdf__action_menu_copy">Copy</string>
+    <string name="pspdf__action_menu_speak">Speak</string>
+    <string name="pspdf__activity_menu_no_outline">No Outline</string>
+    <string name="pspdf__activity_menu_outline">Outline</string>
+    <string name="pspdf__activity_menu_pagegrid">Grid</string>
+    <string name="pspdf__activity_menu_search">Search</string>
+    <string name="pspdf__fragment_password_hint">Please enter the password</string>
+    <string name="pspdf__gallery_item_img_desc">Image</string>
+    <string name="pspdf__search_btn_next">Next</string>
+    <string name="pspdf__search_btn_previous">Previous</string>
+    <string name="pspdf__search_complete">Search completed</string>
+    <string name="pspdf__search_hint">Search</string>
+    <string name="pspdf__search_no_matches">No matches found</string>
+    <string name="pspdf__search_result_of">%1$d of %2$d</string>
+    <string name="pspdf__search_results_page">Page %d</string>
+    <string name="pspdf_page_loading">Loading…</string>
+    <string name="pspdf_page_overlay">%1$d of %2$d</string>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
     <string name="question_title">Question</string>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.nononsenseapps/filepicker/2.1/res/values/values.xml -->
     <eat-comment/>
@@ -2296,6 +2419,76 @@
         <item name="android:drawableLeft">@null</item>
         <item name="android:textColor">#4b5164</item>
     </style>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.pspdfkit/pspdfkit/1.2.3/res/values/values.xml -->
+    <eat-comment/>
+    <style name="pspdf__ActionBarIcons">
+        <!-- Icons normal. -->
+        <item name="pspdf__iconsColor">@color/pspdf__color_white</item>
+        <item name="pspdf__outlineIcon">@drawable/pspdf__ic_outline</item>
+        <item name="pspdf__searchIcon">@drawable/pspdf__ic_search</item>
+        <item name="pspdf__gridIcon">@drawable/pspdf__ic_thumbnails</item>
+        <!-- Icons activated. -->
+        <item name="pspdf__iconsColorActivated">@color/pspdf__color_white</item>
+        <item name="pspdf__outlineIconActivated">@drawable/pspdf__ic_outline</item>
+        <item name="pspdf__searchIconActivated">@drawable/pspdf__ic_search</item>
+        <item name="pspdf__gridIconActivated">@drawable/pspdf__ic_thumbnails_active</item>
+    </style>
+    <style name="pspdf__Annotation">
+        <item name="pspdf__linkAnnotationBackgroundColor">@color/pspdf__color_link_annotation_background</item>
+        <item name="pspdf__linkAnnotationBorderColor">@color/pspdf__color_link_annotation_border</item>
+        <item name="pspdf__linkAnnotationHighlightBackgroundColor">@color/pspdf__color_link_annotation_highlight_background</item>
+        <item name="pspdf__linkAnnotationHighlightBorderColor">@color/pspdf__color_link_annotation_highlight_border</item>
+    </style>
+    <style name="pspdf__Document">
+        <item name="pspdf__backgroundColor">@color/pspdf__color_gray_light</item>
+    </style>
+    <style name="pspdf__OutlineView">
+        <item name="pspdf__backgroundColor">@color/pspdf__color_white</item>
+        <item name="pspdf__listItemSelector">@null</item>
+        <item name="pspdf__defaultTextColor">@color/pspdf__color_black</item>
+    </style>
+    <style name="pspdf__SearchViewInline">
+        <item name="pspdf__backgroundColor">@android:color/transparent</item>
+        <item name="pspdf__borderColor">@color/pspdf__color_white</item>
+        <item name="pspdf__borderWidth">1dp</item>
+        <item name="pspdf__textColor">@color/pspdf__color_white</item>
+        <item name="pspdf__hintTextColor">@color/pspdf__color_white</item>
+        <item name="pspdf__navigationTextColor">@color/pspdf__color_white</item>
+        <item name="pspdf__highlightBackgroundColor">@color/pspdf__color_highlight</item>
+        <item name="pspdf__highlightBorderColor">@color/pspdf__color_black</item>
+        <item name="pspdf__prevIconDrawable">@drawable/pspdf__ic_chevron_left_white</item>
+        <item name="pspdf__nextIconDrawable">@drawable/pspdf__ic_chevron_right_white</item>
+        <item name="pspdf__prevIconColorFilter">@color/pspdf__color_white</item>
+        <item name="pspdf__nextIconColorFilter">@color/pspdf__color_white</item>
+        <item name="pspdf__startSearchChars">2</item>
+        <item name="pspdf__snippetLength">80</item>
+    </style>
+    <style name="pspdf__SearchViewModular">
+        <item name="pspdf__backgroundColor">@color/pspdf__color_white</item>
+        <item name="pspdf__inputFieldTextColor">@color/pspdf__color_gray_dark</item>
+        <item name="pspdf__inputFieldHintColor">@color/pspdf__color_gray</item>
+        <item name="pspdf__inputFieldBackgroundColor">@android:color/transparent</item>
+        <item name="pspdf__separatorColor">@color/pspdf__color_gray_light</item>
+        <item name="pspdf__listItemBackgroundColor">@android:color/transparent</item>
+        <item name="pspdf__listItemTitleColor">@color/pspdf__color_gray</item>
+        <item name="pspdf__listItemSubtitleColor">@color/pspdf__color_gray_dark</item>
+        <item name="pspdf__listItemSelector">@null</item>
+        <item name="pspdf__highlightBackgroundColor">@color/pspdf__color_highlight</item>
+        <item name="pspdf__highlightTextColor">@color/pspdf__color_black</item>
+        <item name="pspdf__startSearchChars">2</item>
+        <item name="pspdf__snippetLength">80</item>
+    </style>
+    <style name="pspdf__ThumbnailBar">
+        <item name="pspdf__backgroundColor">@color/pspdf__color</item>
+        <item name="pspdf__thumbnailWidth">@dimen/pspdf__thumbnail_width</item>
+        <item name="pspdf__thumbnailHeight">@dimen/pspdf__thumbnail_height</item>
+        <item name="pspdf__thumbnailBorderColor">@color/pspdf__color_black</item>
+    </style>
+    <style name="pspdf__ThumbnailGrid">
+        <item name="pspdf__backgroundColor">@color/pspdf__color_black</item>
+    </style>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.3.0/res/values/values.xml -->
+    <eat-comment/>
     <style name="tooltip_bubble_text">
 	    <item name="android:textColor">@android:color/white</item>
 	    <item name="android:gravity">left</item>

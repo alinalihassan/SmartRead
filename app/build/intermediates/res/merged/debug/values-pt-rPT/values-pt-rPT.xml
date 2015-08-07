@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.pspdfkit/pspdfkit/1.2.3/res/values-pt-rPT/values-pt-rPT.xml -->
+    <eat-comment/>
+    <plurals name="pspdf__search_results_found">
+        <item quantity="one">%d correspondência encontrada</item>
+        <item quantity="other">%d correspondências encontradas</item>
+    </plurals>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-pt-rPT/values-pt-rPT.xml -->
     <eat-comment/>
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Navegar para a página inicial"</string>
@@ -82,4 +88,23 @@
     <string msgid="5398645111664294430" name="mr_media_route_controller_stop">"Parar a transmissão"</string>
     <string msgid="5441529851481176817" name="mr_system_route_name">"Sistema"</string>
     <string msgid="7498112907524977311" name="mr_user_route_category_name">"Dispositivos"</string>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.pspdfkit/pspdfkit/1.2.3/res/values-pt-rPT/values-pt-rPT.xml -->
+    <eat-comment/>
+    <string name="pspdf__action_menu_copy">Copiar</string>
+    <string name="pspdf__action_menu_speak">Falar</string>
+    <string name="pspdf__activity_menu_no_outline">Sem contorno</string>
+    <string name="pspdf__activity_menu_outline">Contorno</string>
+    <string name="pspdf__activity_menu_pagegrid">Grelha</string>
+    <string name="pspdf__activity_menu_search">Pesquisar</string>
+    <string name="pspdf__fragment_password_hint">Introduza a palavra-passe.</string>
+    <string name="pspdf__gallery_item_img_desc">Imagem</string>
+    <string name="pspdf__search_btn_next">Seguinte</string>
+    <string name="pspdf__search_btn_previous">Anterior</string>
+    <string name="pspdf__search_complete">Pesquisa concluída</string>
+    <string name="pspdf__search_hint">Pesquisar</string>
+    <string name="pspdf__search_no_matches">Nenhuma correspondência encontrada</string>
+    <string name="pspdf__search_result_of">%1$d de %2$d</string>
+    <string name="pspdf__search_results_page">Página %d</string>
+    <string name="pspdf_page_loading">A carregar…</string>
+    <string name="pspdf_page_overlay">%1$d de %2$d</string>
 </resources>

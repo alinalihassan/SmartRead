@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ pspdf__pdf_activity.xml
+  ~   PSPDFKit
+  ~
+  ~   Copyright (c) 2015 PSPDFKit GmbH. All rights reserved.
+  ~
+  ~   THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
+  ~   AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE PSPDFKIT LICENSE AGREEMENT.
+  ~   UNAUTHORIZED REPRODUCTION OR DISTRIBUTION IS SUBJECT TO CIVIL AND CRIMINAL PENALTIES.
+  ~   This notice may not be removed from this file.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="UnusedAttribute">
+
+    <FrameLayout
+        android:id="@+id/pspdf__activity_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="ltr" />
+
+    <com.pspdfkit.ui.PSPDFKitThumbnailBar
+        android:id="@+id/pspdf__activity_thumbnail_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layoutDirection="ltr"
+        android:background="?android:attr/colorBackground"
+       />
+
+    <TextView
+        android:id="@+id/pspdf__activity_page_overlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/pspdf__activity_thumbnail_bar"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_marginBottom="16dp"
+        android:layoutDirection="ltr"
+        android:textColor="@android:color/white"
+        android:background="@drawable/pspdf__rounded_rect"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-light"
+        android:alpha="0"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        tools:ignore="UnusedAttribute" />
+
+
+    <!-- Wrap into FrameLayout to correctly apply window insets -->
+    <FrameLayout
+        android:id="@+id/pspdf__activity_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <com.pspdfkit.ui.PSPDFKitThumbnailGrid
+            android:id="@+id/pspdf__activity_thumbnail_grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:alpha="0"
+            android:layoutDirection="ltr"
+            android:listSelector="@android:color/transparent"
+            android:visibility="gone" />
+
+
+        <com.pspdfkit.ui.PSPDFKitOutlineView
+            android:id="@+id/pspdf__activity_outline_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+
+</RelativeLayout><!-- From: file:/Users/jernej/Workspace/PSPDFKit/PSPDFKit/android/pspdfkit/src/main/res/layout/pspdf__pdf_activity.xml --><!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.pspdfkit/pspdfkit/1.2.3/res/layout/pspdf__pdf_activity.xml -->

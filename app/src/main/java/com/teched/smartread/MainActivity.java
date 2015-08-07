@@ -21,6 +21,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.PointF;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
@@ -57,6 +58,7 @@ import android.text.Editable;
 import android.text.InputFilter;
 import android.text.TextWatcher;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -85,10 +87,15 @@ import com.heinrichreimersoftware.materialdrawer.DrawerFrameLayout;
 import com.heinrichreimersoftware.materialdrawer.structure.DrawerHeaderItem;
 import com.heinrichreimersoftware.materialdrawer.structure.DrawerItem;
 import com.heinrichreimersoftware.materialdrawer.structure.DrawerProfile;
-import com.joanzapata.pdfview.PDFView;
-import com.joanzapata.pdfview.listener.OnPageChangeListener;
 import com.nononsenseapps.filepicker.FilePickerActivity;
 import com.path.android.jobqueue.JobManager;
+import com.pspdfkit.annotations.Annotation;
+import com.pspdfkit.configuration.PSPDFKitConfiguration;
+import com.pspdfkit.configuration.page.PageFitMode;
+import com.pspdfkit.configuration.page.PageScrollDirection;
+import com.pspdfkit.document.PSPDFDocument;
+import com.pspdfkit.listeners.DocumentListener;
+import com.pspdfkit.ui.PSPDFKitFragment;
 import com.quinny898.library.persistentsearch.SearchBox;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 import com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration;
@@ -125,6 +132,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements Serializable,BillingProcessor.IBillingHandler {
 
+    public static final String PSPDFKIT_LICENSE_KEY = "DZzB8CtniLQXG5kgMflvtQTQz_8VoRJ2NQ0uWn1bKs0aa9oHz4eILQv7JERVclCPiIhmKxxzqFdvQrcYjQxvWqMcPpQbza5a4iYBU90KAKpkkweIzsRblwT6AJJ8rwCpXqglxoHdOO675bAfg45YLVO9d1Ukgs6bozX6kjVb_CcKbN3E7UsNo5hQcKs_LG3cBCgZ8hLk_FB8Rr-hfEODvaAk4124RfujgruuIeeHDFQ7gsP_D9e626lVKD4nWReMjFY9kfFNzJp_H6ahyREMpjMBVxuO-SC95S3nDAc09IaouetfDxwJwHtn5wxcnNlDoc2RdPT4laiAHNWDUDVjF6OQdb7L1p1qWUMDi9TY29uQNbL69IPZVBZ_xxeczow7xAuYgBaNf-cRjNFFOQP90xc1tjrhGJeq90liuQMfEAhxnz7vCk3dGkDOsb97JRLr";
     public static RecyclerView listView;
     public static String billingBookID;
     public static BillingProcessor bp;
@@ -148,7 +156,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     private android.support.v7.widget.Toolbar toolbar;
     private ArrayList<Card> list = new ArrayList<>();
     private final ArrayList<File> pdfs = new ArrayList<>();
-    private PDFView pdf;
     private JSONObject mainObject = null;
     private JSONObject newObject = null;
     private File cposition;
@@ -212,6 +219,9 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     private Question[][] questionTable;
     private int maxPage;
     private int maxQuestions;
+    public static PSPDFKitConfiguration pspdfkitConfiguration;
+    private PSPDFKitFragment fragment;
+    private Uri fileUri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -221,9 +231,11 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         StrictMode.setThreadPolicy(policy);
         firstTime();
         lockOrientation();
+        fragment = (PSPDFKitFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainer);
         bp = new BillingProcessor(this, getResources().getString(R.string.license_key), this);
         jobManager = new JobManager(this);
         final SharedPreferences prefs = this.getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE);
+        pspdfkitConfiguration = new PSPDFKitConfiguration.Builder(PSPDFKIT_LICENSE_KEY).fitMode(PageFitMode.FIT_TO_SCREEN).scrollDirection(prefs.getInt("pref_scroll_direction",1)==1?PageScrollDirection.HORIZONTAL:PageScrollDirection.VERTICAL).build();
         GregorianCalendar c = new GregorianCalendar();
         c.getTime();
         if(prefs.getInt("Day",0)!=0) {
@@ -273,7 +285,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         search = (SearchBox) findViewById(R.id.searchbox);
         teacher = (CoordinatorLayout) findViewById(R.id.teacher);
         panelLayout = (SlidingUpPanelLayout) findViewById(R.id.sliding_layout);
-        pdf = (PDFView) findViewById(R.id.pdfcontent);
         Button nextQuestion = (Button) findViewById(R.id.questionNext);
         ImageView checkButton = (ImageView) findViewById(R.id.check_button);
         AuthorEdit = (EditText) findViewById(R.id.authorEdit);
@@ -462,7 +473,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             @Override
             public void onClick(View view) {
                 if (QuestionRadio.getCheckedRadioButtonId() != -1 && !QuestionEdit.getText().toString().isEmpty() && (!answer1.getText().toString().isEmpty() || !answer2.getText().toString().isEmpty() || !answer3.getText().toString().isEmpty() || !answer4.getText().toString().isEmpty())) {
-                    int page = pageEdit.getText().toString().isEmpty() ? pdf.getCurrentPage()+1 : Integer.parseInt(pageEdit.getText().toString());
+                    int page = pageEdit.getText().toString().isEmpty() ? fragment.getPage() : Integer.parseInt(pageEdit.getText().toString());
                     try {
                         if (newObject.isNull(String.valueOf(page))) {
                             JSONArray arr = new JSONArray();
@@ -1575,7 +1586,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             @Override
             public void onItemClick(View view, int position) {
                 if (!openAbout && !inTransition) {
-                    pdf.invalidate();
                     PDFMode = "PDF";
                     File pdfFile = null;
                     try {
@@ -1590,39 +1600,53 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     final JSONObject mainObject2 = mainObject;
                     try {
                         if (pdfFile != null) {
-                            pdf.fromFile(pdfFile)
-                                    .defaultPage(mainObject.getInt("LastPage") != 0 ? mainObject.getInt("LastPage") : 1)
-                                    .showMinimap(prefs.getBoolean("pref_minimap", false))
-                                    .enableSwipe(true)
-                                    .onPageChange(new OnPageChangeListener() {
-                                        @Override
-                                        public void onPageChanged(int page, int pageCount) {
-                                            try {
-                                                JSONArray array;
-                                                boolean canDo = false;
-                                                if(mainObject2.getString("Date").equals("")) {
-                                                    SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd");
-                                                    Date date = new Date();
-                                                    String datetime = dateformat.format(date);
-                                                    mainObject2.put("Date",datetime);
-                                                }
-                                                if (page == pdf.getPageCount())
-                                                    mainObject2.put("Finished", true);
-                                                mainObject2.put("LastPage", page);
-                                                if(mainObject2.getInt("MaxPage")<page)
-                                                    mainObject2.put("MaxPage", page);
-                                                array = mainObject2.getJSONArray(String.valueOf(page));
-                                                if (array != null) canDo = true;
-                                                if (canDo && !array.getBoolean(0)) {
-                                                    QuestionPage(array, 2, mainObject2);
-                                                    AnimateQuestion(true);
-                                                }
-                                            } catch (JSONException e) {
-                                                e.printStackTrace();
-                                            }
+                            fragment = PSPDFKitFragment.newInstance(Uri.fromFile(cposition),pspdfkitConfiguration);
+                            fragment.setPage(mainObject.getInt("LastPage") != 0 ? mainObject.getInt("LastPage") : 0);
+                            fragment.setDocumentListener(new DocumentListener() {
+                                @Override
+                                public void onDocumentLoaded(@NonNull PSPDFDocument pspdfDocument) {
+                                }
+
+                                @Override
+                                public void onDocumentLoadFailed(Throwable throwable) {
+                                }
+
+                                @Override
+                                public boolean onPageClick(@NonNull PSPDFDocument pspdfDocument, int i, @Nullable MotionEvent motionEvent, @Nullable PointF pointF, @Nullable Annotation annotation) {
+                                    return true;
+                                }
+
+                                @Override
+                                public void onPageChanged(@NonNull PSPDFDocument pspdfDocument, int i) {
+                                    try {
+                                        JSONArray array;
+                                        boolean canDo = false;
+                                        if (mainObject2.getString("Date").equals("")) {
+                                            SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd");
+                                            Date date = new Date();
+                                            String datetime = dateformat.format(date);
+                                            mainObject2.put("Date", datetime);
                                         }
-                                    })
-                                    .load();
+                                        if (i == pspdfDocument.getPageCount())
+                                            mainObject2.put("Finished", true);
+                                        mainObject2.put("LastPage", i);
+                                        if (mainObject2.getInt("MaxPage") < i)
+                                            mainObject2.put("MaxPage", i);
+                                        array = mainObject2.getJSONArray(String.valueOf(i));
+                                        if (array != null) canDo = true;
+                                        if (canDo && !array.getBoolean(0)) {
+                                            QuestionPage(array, 2, mainObject2);
+                                            AnimateQuestion(true);
+                                        }
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+                            });
+                            getSupportFragmentManager()
+                                    .beginTransaction()
+                                    .replace(R.id.fragmentContainer, fragment)
+                                    .commit();
                         }
                     } catch (Exception e) {
                         e.printStackTrace();
@@ -1639,6 +1663,35 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         if(mAdapter!=null)
             setupForegroundDispatch(this, mAdapter);
         handleIntent(getIntent());
+        if(fileUri!=null) {
+            teacherFile = new File(fileUri.getPath());
+            fileUri=null;
+            PDFMode = "Teacher";
+            TextView title = (TextView) findViewById(R.id.pdfTitle);
+            title.setText(teacherFile.getName().replace(".pdf", ""));
+            AnimateTeacher(true);
+            fragment = PSPDFKitFragment.newInstance(Uri.fromFile(teacherFile),pspdfkitConfiguration);
+            fragment.setPage(0);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.fragmentContainer, fragment)
+                            .commit();
+                }
+            }, 100);
+            try {
+                newObject = new JSONObject();
+                newObject.put("Finished", false);
+                newObject.put("Favorite", false);
+                newObject.put("LastPage", 0);
+                newObject.put("MaxPage", 0);
+                newObject.put("Date","");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     @Override
@@ -1854,15 +1907,14 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     overviewFlipper.setInAnimation(getApplicationContext(), R.anim.slide_in_from_left);
                     overviewFlipper.setOutAnimation(getApplicationContext(), R.anim.slide_out_to_right);
                     overviewFlipper.showPrevious();
-                }
-                else
+                } else
                     super.onBackPressed();
             }
         }
     }
 
     public void AnimatePDF(boolean bool) {
-        if(inTransition) return;
+        if (inTransition) return;
         inTransition = true;
         final View myView = findViewById(R.id.sliding_layout);
         panelLayout.setPanelState(SlidingUpPanelLayout.PanelState.HIDDEN);
@@ -1893,9 +1945,9 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             openPdf = true;
             if(this.getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE).getBoolean("pref_keepon",false))
                 getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-            pdf.enableSwipe(true);
+            //pdf.enableSwipe(true);
         } else {
-            pdf.enableSwipe(false);
+            //pdf.enableSwipe(false);
             openPdf = false;
             getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
             YoYo.with(Techniques.ZoomOut)
@@ -1981,7 +2033,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                             quest1.setVisibility(View.INVISIBLE);
                             quest = findViewById(R.id.button);
                             quest.setVisibility(View.INVISIBLE);
-                            pdf.enableSwipe(true);
+                            //pdf.enableSwipe(true);
                             drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
                         }
 
@@ -2062,37 +2114,37 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         inTransition = true;
         final View myView = findViewById(R.id.sliding_layout);
 
-        YoYo.with(Techniques.ZoomIn)
-                .duration(400)
-                .interpolate(new AccelerateInterpolator())
-                .withListener(new com.nineoldandroids.animation.Animator.AnimatorListener() {
-                    @Override
-                    public void onAnimationStart(com.nineoldandroids.animation.Animator animation) {
-                    }
-
-                    @Override
-                    public void onAnimationEnd(com.nineoldandroids.animation.Animator animation) {
-                        panelLayout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
-                        inTransition = false;
-                    }
-
-                    @Override
-                    public void onAnimationCancel(com.nineoldandroids.animation.Animator animation) {
-                    }
-
-                    @Override
-                    public void onAnimationRepeat(com.nineoldandroids.animation.Animator animation) {
-                    }
-                })
-                .playOn(myView);
         if (bool) {
+            YoYo.with(Techniques.ZoomIn)
+                    .duration(400)
+                    .interpolate(new AccelerateInterpolator())
+                    .withListener(new com.nineoldandroids.animation.Animator.AnimatorListener() {
+                        @Override
+                        public void onAnimationStart(com.nineoldandroids.animation.Animator animation) {
+                        }
+
+                        @Override
+                        public void onAnimationEnd(com.nineoldandroids.animation.Animator animation) {
+                            panelLayout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
+                            inTransition = false;
+                        }
+
+                        @Override
+                        public void onAnimationCancel(com.nineoldandroids.animation.Animator animation) {
+                        }
+
+                        @Override
+                        public void onAnimationRepeat(com.nineoldandroids.animation.Animator animation) {
+                        }
+                    })
+                    .playOn(myView);
             myView.setVisibility(View.VISIBLE);
             openPdf = true;
             if(this.getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE).getBoolean("pref_keepon",false))
                 getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-            pdf.enableSwipe(true);
+            //pdf.enableSwipe(true);
         } else {
-            pdf.enableSwipe(false);
+            //pdf.enableSwipe(false);
             openPdf = false;
             panelLayout.setPanelState(SlidingUpPanelLayout.PanelState.HIDDEN);
             getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
@@ -2215,7 +2267,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             final int max = main.getInt("LastPage");
             final JSONObject obj = array.getJSONObject(i);
             JSONArray jsonArray = obj.getJSONArray("Answers");
-            pdf.enableSwipe(false);
+            //pdf.enableSwipe(false);
             final RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
             TextView quest = (TextView) findViewById(R.id.Question);
             fade(quest, obj.getString("Question"));
@@ -2261,7 +2313,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                                     break;
                                                 }
                                             }
-                                            pdf.jumpTo(page);
+                                            fragment.setPage(page);
                                         }
                                     }, 350);
                                 }
@@ -2464,28 +2516,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (!bp.handleActivityResult(requestCode, resultCode, data)) {
             if (requestCode == FILE_CODE && resultCode == Activity.RESULT_OK && data.getData().getPath().endsWith(".pdf")) {
-                Uri uri = data.getData();
-                teacherFile = new File(uri.getPath());
-                pdf.invalidate();
-                PDFMode = "Teacher";
-                TextView title = (TextView) findViewById(R.id.pdfTitle);
-                title.setText(teacherFile.getName().replace(".pdf", ""));
-                pdf.fromFile(teacherFile)
-                        .defaultPage(1)
-                        .showMinimap(this.getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE).getBoolean("pref_minimap", false))
-                        .enableSwipe(true)
-                        .load();
-                AnimateTeacher(true);
-                try {
-                    newObject = new JSONObject();
-                    newObject.put("Finished", false);
-                    newObject.put("Favorite", false);
-                    newObject.put("LastPage", 0);
-                    newObject.put("MaxPage", 0);
-                    newObject.put("Date","");
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+                fileUri = data.getData();
             } else if (requestCode == 1234 && resultCode == RESULT_OK) {
                 ArrayList<String> matches = data
                         .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
@@ -2694,11 +2725,12 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     @Override
                     public void onResult(Boolean result) {
                         adapter4.notifyDataSetChanged();
-                        ((ClassAdapter)adapter4).flushFilter();
-                        if(refreshClasses.isRefreshing()) refreshClasses .setRefreshing(false);
+                        ((ClassAdapter) adapter4).flushFilter();
+                        if (refreshClasses.isRefreshing()) refreshClasses.setRefreshing(false);
                     }
                 }).create().start();
     }
+
     private void refreshOverview() {
         new AsyncJob.AsyncJobBuilder<Boolean>()
                 .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
@@ -2726,30 +2758,30 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     public void onResult(Boolean result) {
                         adapter7.notifyDataSetChanged();
                         ((TeacherAdapter) adapter7).flushFilter();
-                        if(refreshOverview.isRefreshing()) refreshOverview.setRefreshing(false);
+                        if (refreshOverview.isRefreshing()) refreshOverview.setRefreshing(false);
                     }
                 }).create().start();
     }
 
-    private void refreshUsers(final JSONArray Classes,final JSONArray Classes2) {
+    private void refreshUsers(final JSONArray Classes, final JSONArray Classes2) {
         new AsyncJob.AsyncJobBuilder<Boolean>()
-            .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
-                @Override
-                public Boolean doAsync() {
-                    try {
-                        usersList.clear();
-                        for (int i = 0; i < Classes.length(); i++) {
-                            usersList.add(new Users());
-                            JSONObject Class = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_user.php?id=" + Classes.getString(i))).getJSONArray("users").getJSONObject(0);
-                            Users currentClass = usersList.get(usersList.size() - 1);
-                            currentClass.name = Class.getString("name");
-                            currentClass.id = Classes.getString(i);
-                            currentClass.email = Class.getString("email");
-                            currentClass.profileUrl = Class.getString("profileUrl");
-                        }
-                        for (int i = 0; i < Classes2.length(); i++) {
-                            usersList.add(new Users());
-                            JSONObject Class = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_user.php?id=" + Classes2.getString(i))).getJSONArray("users").getJSONObject(0);
+                .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
+                    @Override
+                    public Boolean doAsync() {
+                        try {
+                            usersList.clear();
+                            for (int i = 0; i < Classes.length(); i++) {
+                                usersList.add(new Users());
+                                JSONObject Class = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_user.php?id=" + Classes.getString(i))).getJSONArray("users").getJSONObject(0);
+                                Users currentClass = usersList.get(usersList.size() - 1);
+                                currentClass.name = Class.getString("name");
+                                currentClass.id = Classes.getString(i);
+                                currentClass.email = Class.getString("email");
+                                currentClass.profileUrl = Class.getString("profileUrl");
+                            }
+                            for (int i = 0; i < Classes2.length(); i++) {
+                                usersList.add(new Users());
+                                JSONObject Class = new JSONObject(JsonClass.getJSON("http://php-smartread.rhcloud.com/get_user.php?id=" + Classes2.getString(i))).getJSONArray("users").getJSONObject(0);
                             Users currentClass = usersList.get(usersList.size() - 1);
                             currentClass.name = Class.getString("name");
                             currentClass.id = Classes2.getString(i);
@@ -3196,7 +3228,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                         int sum2 = 0;
                         for(Users aUser: topList)
                             sum+=aUser.answerRate;
-                        for(Question aUser: questionsList)
+                        for(Question aUser : questionsList)
                             sum2+=aUser.sum/ aUser.entries;
                         ((ArcProgress)findViewById(R.id.arc_progress)).setProgress(topList.size()!=0?sum/topList.size():0);
                         ((ArcProgress)findViewById(R.id.arc_progress2)).setProgress(questionsList.size()!=0?sum2/questionsList.size():0);

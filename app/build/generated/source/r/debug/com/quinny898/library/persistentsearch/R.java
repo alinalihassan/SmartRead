@@ -11,48 +11,48 @@ public final class R {
 		public static final int anim_down = 0x7f05000a;
 	}
 	public static final class attr {
-		public static final int mm_color = 0x7f010097;
-		public static final int mm_rtlEnabled = 0x7f01009c;
-		public static final int mm_scale = 0x7f010099;
-		public static final int mm_strokeWidth = 0x7f01009b;
-		public static final int mm_transformDuration = 0x7f01009a;
+		public static final int mm_color = 0x7f0100be;
+		public static final int mm_rtlEnabled = 0x7f0100c3;
+		public static final int mm_scale = 0x7f0100c0;
+		public static final int mm_strokeWidth = 0x7f0100c2;
+		public static final int mm_transformDuration = 0x7f0100c1;
 	}
 	public static final class dimen {
-		public static final int mm_up_arrow_margin = 0x7f090079;
+		public static final int mm_up_arrow_margin = 0x7f0a007b;
 	}
 	public static final class drawable {
 		public static final int ic_action_mic = 0x7f020072;
 		public static final int ic_clear = 0x7f02007f;
 		public static final int ic_up = 0x7f0200a0;
-		public static final int search_bg = 0x7f0200c5;
-		public static final int search_bg_shadow = 0x7f0200c6;
-		public static final int search_bg_transparent = 0x7f0200c7;
-		public static final int search_frame = 0x7f0200c8;
+		public static final int search_bg = 0x7f0200d2;
+		public static final int search_bg_shadow = 0x7f0200d3;
+		public static final int search_bg_transparent = 0x7f0200d4;
+		public static final int search_frame = 0x7f0200d5;
 	}
 	public static final class id {
-		public static final int border = 0x7f0f0141;
-		public static final int card_view = 0x7f0f0145;
-		public static final int icon = 0x7f0f008c;
-		public static final int logo = 0x7f0f0146;
-		public static final int material_menu_button = 0x7f0f0147;
-		public static final int mic = 0x7f0f0148;
-		public static final int pb = 0x7f0f014a;
-		public static final int results = 0x7f0f0144;
-		public static final int search = 0x7f0f0149;
-		public static final int search_root = 0x7f0f0143;
-		public static final int searchbox_rfl = 0x7f0f0142;
-		public static final int title = 0x7f0f008d;
-		public static final int up = 0x7f0f002c;
+		public static final int border = 0x7f100165;
+		public static final int card_view = 0x7f100169;
+		public static final int icon = 0x7f100091;
+		public static final int logo = 0x7f10016a;
+		public static final int material_menu_button = 0x7f10016b;
+		public static final int mic = 0x7f10016c;
+		public static final int pb = 0x7f10016e;
+		public static final int results = 0x7f100168;
+		public static final int search = 0x7f10016d;
+		public static final int search_root = 0x7f100167;
+		public static final int searchbox_rfl = 0x7f100166;
+		public static final int title = 0x7f100092;
+		public static final int up = 0x7f100031;
 	}
 	public static final class layout {
-		public static final int search_option = 0x7f04004a;
-		public static final int searchbox = 0x7f04004b;
+		public static final int search_option = 0x7f040057;
+		public static final int searchbox = 0x7f040058;
 	}
 	public static final class string {
-		public static final int speak_now = 0x7f08007d;
+		public static final int speak_now = 0x7f08008e;
 	}
 	public static final class styleable {
-		public static final int[] MaterialMenuView = { 0x7f010097, 0x7f010098, 0x7f010099, 0x7f01009a, 0x7f01009b, 0x7f01009c };
+		public static final int[] MaterialMenuView = { 0x7f0100be, 0x7f0100bf, 0x7f0100c0, 0x7f0100c1, 0x7f0100c2, 0x7f0100c3 };
 		public static final int MaterialMenuView_mm_color = 0;
 		public static final int MaterialMenuView_mm_rtlEnabled = 5;
 		public static final int MaterialMenuView_mm_scale = 2;

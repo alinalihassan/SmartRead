@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.pspdfkit/pspdfkit/1.2.3/res/values-ru/values-ru.xml -->
+    <eat-comment/>
+    <plurals name="pspdf__search_results_found">
+        <item quantity="one">%d совпадение обнаружено</item>
+        <item quantity="few">%d совпадения обнаружено</item>
+        <item quantity="many">%d совпадений обнаружено</item>
+    </plurals>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-ru/values-ru.xml -->
     <eat-comment/>
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Перейти на главный экран"</string>
@@ -82,4 +89,23 @@
     <string msgid="5398645111664294430" name="mr_media_route_controller_stop">"Остановить трансляцию"</string>
     <string msgid="5441529851481176817" name="mr_system_route_name">"Система"</string>
     <string msgid="7498112907524977311" name="mr_user_route_category_name">"Устройства"</string>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.pspdfkit/pspdfkit/1.2.3/res/values-ru/values-ru.xml -->
+    <eat-comment/>
+    <string name="pspdf__action_menu_copy">Скопировать</string>
+    <string name="pspdf__action_menu_speak">Произнести</string>
+    <string name="pspdf__activity_menu_no_outline">Без содержания</string>
+    <string name="pspdf__activity_menu_outline">Содержание</string>
+    <string name="pspdf__activity_menu_pagegrid">Сетка</string>
+    <string name="pspdf__activity_menu_search">Поиск</string>
+    <string name="pspdf__fragment_password_hint">Введите пароль.</string>
+    <string name="pspdf__gallery_item_img_desc">Изображение</string>
+    <string name="pspdf__search_btn_next">Далее</string>
+    <string name="pspdf__search_btn_previous">Назад</string>
+    <string name="pspdf__search_complete">Поиск завершен</string>
+    <string name="pspdf__search_hint">Поиск</string>
+    <string name="pspdf__search_no_matches">Совпадений не обнаружено</string>
+    <string name="pspdf__search_result_of">%1$d из %2$d</string>
+    <string name="pspdf__search_results_page">Страница %d</string>
+    <string name="pspdf_page_loading">Загрузка…</string>
+    <string name="pspdf_page_overlay">%1$d из %2$d</string>
 </resources>

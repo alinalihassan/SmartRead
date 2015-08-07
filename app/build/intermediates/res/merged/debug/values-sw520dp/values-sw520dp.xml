@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.pspdfkit/pspdfkit/1.2.3/res/values-sw520dp/values-sw520dp.xml -->
+    <eat-comment/>
+    <dimen name="pspdf__thumbnail_height">57dp</dimen>
+    <dimen name="pspdf__thumbnail_width">41dp</dimen>
+</resources>

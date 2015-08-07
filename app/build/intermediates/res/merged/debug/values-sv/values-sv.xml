@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.pspdfkit/pspdfkit/1.2.3/res/values-sv/values-sv.xml -->
+    <eat-comment/>
+    <plurals name="pspdf__search_results_found">
+        <item quantity="one">Hittade %d träff</item>
+        <item quantity="other">Hittade %d träffar</item>
+    </plurals>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-sv/values-sv.xml -->
     <eat-comment/>
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Visa startsidan"</string>
@@ -82,4 +88,23 @@
     <string msgid="5398645111664294430" name="mr_media_route_controller_stop">"Sluta casta"</string>
     <string msgid="5441529851481176817" name="mr_system_route_name">"System"</string>
     <string msgid="7498112907524977311" name="mr_user_route_category_name">"Enheter"</string>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.pspdfkit/pspdfkit/1.2.3/res/values-sv/values-sv.xml -->
+    <eat-comment/>
+    <string name="pspdf__action_menu_copy">Kopiera</string>
+    <string name="pspdf__action_menu_speak">Tala</string>
+    <string name="pspdf__activity_menu_no_outline">Inget innehåll</string>
+    <string name="pspdf__activity_menu_outline">Innehåll</string>
+    <string name="pspdf__activity_menu_pagegrid">Rutnät</string>
+    <string name="pspdf__activity_menu_search">Sök</string>
+    <string name="pspdf__fragment_password_hint">Ange lösenordet.</string>
+    <string name="pspdf__gallery_item_img_desc">Bild</string>
+    <string name="pspdf__search_btn_next">Nästa</string>
+    <string name="pspdf__search_btn_previous">Föregående</string>
+    <string name="pspdf__search_complete">Sökningen är klar</string>
+    <string name="pspdf__search_hint">Sök</string>
+    <string name="pspdf__search_no_matches">Hittade inga träffar</string>
+    <string name="pspdf__search_result_of">%1$d av %2$d</string>
+    <string name="pspdf__search_results_page">Sida %d</string>
+    <string name="pspdf_page_loading">Läser in…</string>
+    <string name="pspdf_page_overlay">%1$d av %2$d</string>
 </resources>

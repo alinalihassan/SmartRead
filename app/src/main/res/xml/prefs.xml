@@ -4,17 +4,19 @@
     <PreferenceCategory
         android:title="General">
         <CheckBoxPreference
-            android:key="pref_minimap"
-            android:title="Show Minimap"
-            android:summary="Show a minimap while zooming a pdf"
-            android:selectable="true"
-            android:defaultValue="false"/>
-        <CheckBoxPreference
             android:key="pref_keepon"
             android:title="Keep Screen On"
             android:summary="Keep screen awake while reading"
             android:selectable="true"
             android:defaultValue="false"/>
+        <ListPreference
+            android:key="pref_scroll_direction"
+            android:title="Scroll Direction"
+            android:summary="Scroll direction of the document"
+            android:entries="@array/scrollentries"
+            android:entryValues="@array/scrollvalues"
+            android:defaultValue="1"
+            android:selectable="true"/>
         <ListPreference
             android:key="pref_frequency"
             android:title="Sync Frequency"

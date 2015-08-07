@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.pspdfkit/pspdfkit/1.2.3/res/values-ms/values-ms.xml -->
+    <eat-comment/>
+    <plurals name="pspdf__search_results_found">
+        <item quantity="other">%d padanan dijumpai</item>
+    </plurals>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.3.0/res/values-ms/values-ms.xml -->
     <eat-comment/>
     <string name="com_facebook_image_download_unknown_error">Ralat tidak dijangka ketika memuat turun imej.</string>
@@ -19,4 +24,23 @@
     <string name="com_facebook_share_button_text">Kongsi</string>
     <string name="com_facebook_tooltip_default">Baru! Anda yang mengawal - pilih maklumat yang anda ingin kongsi dengan aplikasi.</string>
     <string name="messenger_send_button_text">Hantar</string>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.pspdfkit/pspdfkit/1.2.3/res/values-ms/values-ms.xml -->
+    <eat-comment/>
+    <string name="pspdf__action_menu_copy">Salin</string>
+    <string name="pspdf__action_menu_speak">Sebut</string>
+    <string name="pspdf__activity_menu_no_outline">Tiada Ringkasan</string>
+    <string name="pspdf__activity_menu_outline">Ringkasan</string>
+    <string name="pspdf__activity_menu_pagegrid">Grid</string>
+    <string name="pspdf__activity_menu_search">Cari</string>
+    <string name="pspdf__fragment_password_hint">Sila masukkan kata laluan.</string>
+    <string name="pspdf__gallery_item_img_desc">Imej</string>
+    <string name="pspdf__search_btn_next">Seterusnya</string>
+    <string name="pspdf__search_btn_previous">Sebelumnya</string>
+    <string name="pspdf__search_complete">Carian Selesai</string>
+    <string name="pspdf__search_hint">Cari</string>
+    <string name="pspdf__search_no_matches">Tiada padanan dijumpai</string>
+    <string name="pspdf__search_result_of">%1$d daripada %2$d</string>
+    <string name="pspdf__search_results_page">Halaman %d</string>
+    <string name="pspdf_page_loading">Memuatkan…</string>
+    <string name="pspdf_page_overlay">%1$d daripada %2$d</string>
 </resources>

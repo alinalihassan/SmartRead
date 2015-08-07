@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\superalin98\Documents\SmartRead2\app\src\main\AndroidManifest.xml:2:1-86:12
+ADDED from C:\Users\superalin98\Documents\SmartRead2\app\src\main\AndroidManifest.xml:2:1-90:12
 	xmlns:android
 		ADDED from C:\Users\superalin98\Documents\SmartRead2\app\src\main\AndroidManifest.xml:2:11-69
 	package
@@ -83,7 +83,7 @@ ADDED from C:\Users\superalin98\Documents\SmartRead2\app\src\main\AndroidManifes
 	android:name
 		ADDED from C:\Users\superalin98\Documents\SmartRead2\app\src\main\AndroidManifest.xml:16:9-60
 application
-ADDED from C:\Users\superalin98\Documents\SmartRead2\app\src\main\AndroidManifest.xml:19:5-84:19
+ADDED from C:\Users\superalin98\Documents\SmartRead2\app\src\main\AndroidManifest.xml:19:5-88:19
 MERGED from [com.android.support:cardview-v7:22.2.1] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\22.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:22.2.1] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:22.2.1] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:22:5-20
@@ -346,8 +346,18 @@ action#android.intent.action.GET_CONTENT
 ADDED from C:\Users\superalin98\Documents\SmartRead2\app\src\main\AndroidManifest.xml:80:17-76
 	android:name
 		ADDED from C:\Users\superalin98\Documents\SmartRead2\app\src\main\AndroidManifest.xml:80:25-73
+activity#com.pspdfkit.ui.PSPDFKitAppCompatActivity
+ADDED from C:\Users\superalin98\Documents\SmartRead2\app\src\main\AndroidManifest.xml:84:9-87:59
+	android:windowSoftInputMode
+		ADDED from C:\Users\superalin98\Documents\SmartRead2\app\src\main\AndroidManifest.xml:87:13-56
+	android:theme
+		ADDED from C:\Users\superalin98\Documents\SmartRead2\app\src\main\AndroidManifest.xml:86:13-46
+	android:name
+		ADDED from C:\Users\superalin98\Documents\SmartRead2\app\src\main\AndroidManifest.xml:85:13-69
 uses-sdk
 INJECTED from C:\Users\superalin98\Documents\SmartRead2\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:multidex:1.0.1] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\AndroidManifest.xml:18:5-42
+MERGED from [com.pspdfkit:pspdfkit:1.2.3] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.pspdfkit\pspdfkit\1.2.3\AndroidManifest.xml:17:5-19:41
 MERGED from [com.android.support:cardview-v7:22.2.1] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\22.2.1\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:recyclerview-v7:22.2.1] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.1\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:22.2.1] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:20:5-43
@@ -358,7 +368,6 @@ MERGED from [com.android.support:design:22.2.1] C:\Users\superalin98\Documents\S
 MERGED from [com.android.support:appcompat-v7:22.2.1] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:22.2.1] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:22.2.1] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:20:5-43
-MERGED from [com.joanzapata.pdfview:android-pdfview:1.0.4] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.joanzapata.pdfview\android-pdfview\1.0.4\AndroidManifest.xml:23:2-69
 MERGED from [com.daimajia.easing:library:1.0.2] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.daimajia.easing\library\1.0.2\AndroidManifest.xml:8:5-10:41
 MERGED from [com.daimajia.androidanimations:library:1.1.3] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.daimajia.androidanimations\library\1.1.3\AndroidManifest.xml:8:5-10:41
 MERGED from [com.balysv.materialmenu:material-menu-toolbar:1.5.4] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.balysv.materialmenu\material-menu-toolbar\1.5.4\AndroidManifest.xml:8:5-10:41
@@ -511,7 +520,7 @@ MERGED from [com.google.android.gms:play-services-maps:7.5.0] C:\Users\superalin
 	android:glEsVersion
 		ADDED from [com.google.android.gms:play-services-maps:7.5.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\AndroidManifest.xml:25:8-40
 android:uses-permission#android.permission.READ_EXTERNAL_STORAGE
-IMPLIED from C:\Users\superalin98\Documents\SmartRead2\app\src\main\AndroidManifest.xml:2:1-86:12 reason: com.google.android.gms.maps requested WRITE_EXTERNAL_STORAGE
+IMPLIED from C:\Users\superalin98\Documents\SmartRead2\app\src\main\AndroidManifest.xml:2:1-90:12 reason: com.google.android.gms.maps requested WRITE_EXTERNAL_STORAGE
 meta-data#com.google.android.gms.wallet.api.enabled
 ADDED from [com.google.android.gms:play-services-wallet:7.5.0] C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.5.0\AndroidManifest.xml:25:9-27:36
 	android:name

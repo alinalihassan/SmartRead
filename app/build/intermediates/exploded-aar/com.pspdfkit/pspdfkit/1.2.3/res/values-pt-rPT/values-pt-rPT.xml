@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/jernej/Workspace/PSPDFKit/PSPDFKit/android/pspdfkit/src/main/res/values-pt-rPT/strings.xml -->
+    <eat-comment/>
+    <plurals name="pspdf__search_results_found">
+        <item quantity="one">%d correspondência encontrada</item>
+        <item quantity="other">%d correspondências encontradas</item>
+    </plurals>
+    <string name="pspdf__action_menu_copy">Copiar</string>
+    <string name="pspdf__action_menu_speak">Falar</string>
+    <string name="pspdf__activity_menu_no_outline">Sem contorno</string>
+    <string name="pspdf__activity_menu_outline">Contorno</string>
+    <string name="pspdf__activity_menu_pagegrid">Grelha</string>
+    <string name="pspdf__activity_menu_search">Pesquisar</string>
+    <string name="pspdf__fragment_password_hint">Introduza a palavra-passe.</string>
+    <string name="pspdf__gallery_item_img_desc">Imagem</string>
+    <string name="pspdf__search_btn_next">Seguinte</string>
+    <string name="pspdf__search_btn_previous">Anterior</string>
+    <string name="pspdf__search_complete">Pesquisa concluída</string>
+    <string name="pspdf__search_hint">Pesquisar</string>
+    <string name="pspdf__search_no_matches">Nenhuma correspondência encontrada</string>
+    <string name="pspdf__search_result_of">%1$d de %2$d</string>
+    <string name="pspdf__search_results_page">Página %d</string>
+    <string name="pspdf_page_loading">A carregar…</string>
+    <string name="pspdf_page_overlay">%1$d de %2$d</string>
+</resources>

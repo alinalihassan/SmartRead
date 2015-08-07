@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ pspdf__search_view_modular.xmlular.xml
+  ~   PSPDFKit
+  ~
+  ~   Copyright (c) 2014-2015 PSPDFKit GmbH. All rights reserved.
+  ~
+  ~   THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
+  ~   AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE PSPDFKIT LICENSE AGREEMENT.
+  ~   UNAUTHORIZED REPRODUCTION OR DISTRIBUTION IS SUBJECT TO CIVIL AND CRIMINAL PENALTIES.
+  ~   This notice may not be removed from this file.
+  -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:elevation="16dp"
+    tools:ignore="UnusedAttribute,Overdraw">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/pspdf__search_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:imeOptions="actionSearch|flagNoExtractUi"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:hint="@string/pspdf__search_hint" />
+
+        <ProgressBar
+            android:id="@+id/pspdf__search_progress"
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_gravity="right"
+            android:indeterminate="true"
+            style="?android:progressBarStyleSmall"
+            android:visibility="invisible"
+            tools:ignore="RtlHardcoded" /> <!-- Right side is ok even for RTL. -->
+
+    </FrameLayout>
+
+    <View android:id="@+id/pspdf__separator"
+          android:layout_width="match_parent"
+          android:layout_height="1px" />
+
+    <ListView
+        android:id="@+id/pspdf__search_resultlist"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:choiceMode="singleChoice" />
+
+</LinearLayout><!-- From: file:/Users/jernej/Workspace/PSPDFKit/PSPDFKit/android/pspdfkit/src/main/res/layout/pspdf__search_view_modular.xml --><!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.pspdfkit/pspdfkit/1.2.3/res/layout/pspdf__search_view_modular.xml -->

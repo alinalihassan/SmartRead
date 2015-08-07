@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/jernej/Workspace/PSPDFKit/PSPDFKit/android/pspdfkit/src/main/res/values-sw600dp/layouts.xml -->
+    <eat-comment/>
+    <bool name="pspdf__is_phone">false</bool>
+    <bool name="pspdf__is_tablet">true</bool>
+</resources>

@@ -81,6 +81,10 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.pspdfkit.ui.PSPDFKitAppCompatActivity"
+            android:theme="@style/StoreTheme"
+            android:windowSoftInputMode="adjustNothing" />
     </application>
 
 </manifest>

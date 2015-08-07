@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/jernej/Workspace/PSPDFKit/PSPDFKit/android/pspdfkit/src/main/res/values-ko/strings.xml -->
+    <eat-comment/>
+    <plurals name="pspdf__search_results_found">
+        <item quantity="other">%d개의 일치하는 결과 발견</item>
+    </plurals>
+    <string name="pspdf__action_menu_copy">복사</string>
+    <string name="pspdf__action_menu_speak">말하기</string>
+    <string name="pspdf__activity_menu_no_outline">개요 없음</string>
+    <string name="pspdf__activity_menu_outline">개요</string>
+    <string name="pspdf__activity_menu_pagegrid">격자</string>
+    <string name="pspdf__activity_menu_search">검색</string>
+    <string name="pspdf__fragment_password_hint">암호를 입력하세요.</string>
+    <string name="pspdf__gallery_item_img_desc">이미지</string>
+    <string name="pspdf__search_btn_next">다음</string>
+    <string name="pspdf__search_btn_previous">이전</string>
+    <string name="pspdf__search_complete">검색 완료</string>
+    <string name="pspdf__search_hint">검색</string>
+    <string name="pspdf__search_no_matches">일치하는 결과 없음</string>
+    <string name="pspdf__search_result_of">%1$d/%2$d</string>
+    <string name="pspdf__search_results_page">페이지 %d</string>
+    <string name="pspdf_page_loading">로딩 중…</string>
+    <string name="pspdf_page_overlay">%1$d/%2$d</string>
+</resources>

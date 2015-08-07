@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/jernej/Workspace/PSPDFKit/PSPDFKit/android/pspdfkit/src/main/res/values-nl/strings.xml -->
+    <eat-comment/>
+    <plurals name="pspdf__search_results_found">
+        <item quantity="one">%d resultaat</item>
+        <item quantity="other">%d resultaten</item>
+    </plurals>
+    <string name="pspdf__action_menu_copy">Kopieer</string>
+    <string name="pspdf__action_menu_speak">Spreek</string>
+    <string name="pspdf__activity_menu_no_outline">Geen contour</string>
+    <string name="pspdf__activity_menu_outline">Contour</string>
+    <string name="pspdf__activity_menu_pagegrid">Raster</string>
+    <string name="pspdf__activity_menu_search">Zoek</string>
+    <string name="pspdf__fragment_password_hint">Voer het wachtwoord in.</string>
+    <string name="pspdf__gallery_item_img_desc">Afbeelding</string>
+    <string name="pspdf__search_btn_next">Volgende</string>
+    <string name="pspdf__search_btn_previous">Vorige</string>
+    <string name="pspdf__search_complete">Zoeken voltooid</string>
+    <string name="pspdf__search_hint">Zoek</string>
+    <string name="pspdf__search_no_matches">Geen resultaten</string>
+    <string name="pspdf__search_result_of">%1$d van %2$d</string>
+    <string name="pspdf__search_results_page">Pagina %d</string>
+    <string name="pspdf_page_loading">Laden…</string>
+    <string name="pspdf_page_overlay">%1$d van %2$d</string>
+</resources>

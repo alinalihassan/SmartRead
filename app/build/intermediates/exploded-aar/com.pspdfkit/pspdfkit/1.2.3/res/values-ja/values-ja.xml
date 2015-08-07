@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/jernej/Workspace/PSPDFKit/PSPDFKit/android/pspdfkit/src/main/res/values-ja/strings.xml -->
+    <eat-comment/>
+    <plurals name="pspdf__search_results_found">
+        <item quantity="other">一致する項目が%d件見つかりました</item>
+    </plurals>
+    <string name="pspdf__action_menu_copy">コピー</string>
+    <string name="pspdf__action_menu_speak">み上げ</string>
+    <string name="pspdf__activity_menu_no_outline">アウトラインがありません</string>
+    <string name="pspdf__activity_menu_outline">アウトライン</string>
+    <string name="pspdf__activity_menu_pagegrid">グリッド</string>
+    <string name="pspdf__activity_menu_search">検索</string>
+    <string name="pspdf__fragment_password_hint">パスワードを入力してください。</string>
+    <string name="pspdf__gallery_item_img_desc">イメージ</string>
+    <string name="pspdf__search_btn_next">次へ</string>
+    <string name="pspdf__search_btn_previous">前へ</string>
+    <string name="pspdf__search_complete">検索を完了</string>
+    <string name="pspdf__search_hint">検索</string>
+    <string name="pspdf__search_no_matches">一致する項目が見つかりません</string>
+    <string name="pspdf__search_result_of">%1$d / %2$d</string>
+    <string name="pspdf__search_results_page">ページ %d</string>
+    <string name="pspdf_page_loading">読み込み中…</string>
+    <string name="pspdf_page_overlay">%1$d / %2$d</string>
+</resources>

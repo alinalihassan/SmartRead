@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.pspdfkit/pspdfkit/1.2.3/res/values-zh-rTW/values-zh-rTW.xml -->
+    <eat-comment/>
+    <plurals name="pspdf__search_results_found">
+        <item quantity="other">找到%d個配對</item>
+    </plurals>
     <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-zh-rTW/values-zh-rTW.xml -->
     <eat-comment/>
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"瀏覽首頁"</string>
@@ -82,4 +87,23 @@
     <string msgid="5398645111664294430" name="mr_media_route_controller_stop">"停止投放"</string>
     <string msgid="5441529851481176817" name="mr_system_route_name">"系統"</string>
     <string msgid="7498112907524977311" name="mr_user_route_category_name">"裝置"</string>
+    <!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.pspdfkit/pspdfkit/1.2.3/res/values-zh-rTW/values-zh-rTW.xml -->
+    <eat-comment/>
+    <string name="pspdf__action_menu_copy">複製</string>
+    <string name="pspdf__action_menu_speak">朗讀</string>
+    <string name="pspdf__activity_menu_no_outline">無輪廓</string>
+    <string name="pspdf__activity_menu_outline">中空字</string>
+    <string name="pspdf__activity_menu_pagegrid">格框</string>
+    <string name="pspdf__activity_menu_search">搜尋</string>
+    <string name="pspdf__fragment_password_hint">請鍵入密碼。</string>
+    <string name="pspdf__gallery_item_img_desc">影像</string>
+    <string name="pspdf__search_btn_next">下一步</string>
+    <string name="pspdf__search_btn_previous">上一個</string>
+    <string name="pspdf__search_complete">搜尋完畢</string>
+    <string name="pspdf__search_hint">搜尋</string>
+    <string name="pspdf__search_no_matches">找不到配對</string>
+    <string name="pspdf__search_result_of">第%1$d頁（全%2$d頁）</string>
+    <string name="pspdf__search_results_page">頁面 %d</string>
+    <string name="pspdf_page_loading">正在載入…</string>
+    <string name="pspdf_page_overlay">第%1$d頁（全%2$d頁）</string>
 </resources>

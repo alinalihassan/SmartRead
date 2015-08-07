@@ -21,6 +21,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.pspdfkit.configuration.PSPDFKitConfiguration;
+import com.pspdfkit.configuration.page.PageFitMode;
+import com.pspdfkit.configuration.page.PageScrollDirection;
+
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -79,6 +83,12 @@ public class SettingsActivity extends PreferenceActivity {
                         ((MainAdapter) MainActivity.listView.getAdapter()).flushFilter();
                         break;
                     }
+                    case "pref_scroll_direction": {
+                        ListPreference listPreference = (ListPreference) findPreference(key);
+                        preferences.edit().putInt(key, Integer.valueOf(listPreference.getValue())).apply();
+                        MainActivity.pspdfkitConfiguration = new PSPDFKitConfiguration.Builder(MainActivity.PSPDFKIT_LICENSE_KEY).fitMode(PageFitMode.FIT_TO_SCREEN).scrollDirection(Integer.valueOf(listPreference.getValue())==1? PageScrollDirection.HORIZONTAL:PageScrollDirection.VERTICAL).build();
+                        break;
+                    }
                 }
                 Backup();
             }
@@ -106,7 +116,7 @@ public class SettingsActivity extends PreferenceActivity {
         });
         privacy.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             public boolean onPreferenceClick(Preference preference) {
-                String url = "http://www.google.com";
+                String url = "http://www.smartreadapp.com";
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
                 try {
@@ -176,7 +186,7 @@ public class SettingsActivity extends PreferenceActivity {
                                     for (int i = 0; i < jsonObject.getInt("MaxPage"); i++) {
                                         if (!jsonObject.isNull(String.valueOf(i))) {
                                             jsonObject.getJSONArray(String.valueOf(i)).put(0, false);
-                                            jsonObject.getJSONArray(String.valueOf(i)).put(2, 0);
+                                            jsonObject.getJSONArray(String.valueOf(i)).getJSONObject(2).put("Trials",0);
                                         }
                                     }
                                     jsonObject.put("LastPage", 0);
