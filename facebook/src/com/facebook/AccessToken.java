@@ -254,9 +254,9 @@ public final class AccessToken implements Parcelable {
          *
          * @param token the access token created from the native link intent.
          */
-        public void onSuccess(AccessToken token);
+        void onSuccess(AccessToken token);
 
-        public void onError(FacebookException error);
+        void onError(FacebookException error);
     }
 
     /**

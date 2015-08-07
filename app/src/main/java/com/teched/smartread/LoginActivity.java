@@ -154,16 +154,6 @@ public class LoginActivity extends AppCompatActivity implements
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-    }
-
-    @Override
     public void onConnectionFailed(ConnectionResult result) {
         if (!mIntentInProgress) {
             if (mSignInClicked && result.hasResolution()) {

@@ -455,5 +455,5 @@ public final class FacebookRequestError {
          * Indicates that the error is transient, the request can be attempted again.
          */
         TRANSIENT,
-    };
+    }
 }

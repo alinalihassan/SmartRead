@@ -11,6 +11,9 @@ import android.widget.TextView;
 
 import org.json.JSONArray;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class ClassAdapter extends RecyclerView.Adapter<ClassAdapter.ViewHolder> {
@@ -28,6 +31,21 @@ public class ClassAdapter extends RecyclerView.Adapter<ClassAdapter.ViewHolder> 
 
     public void flushFilter(){
         visibleCards = cards;
+        setFilter("");
+    }
+    public void setFilter(String queryText) {
+        visibleCards = new ArrayList<>();
+        for (Class item: cards) {
+                if ((queryText.equals("") || item.name.toLowerCase().contains(queryText.toLowerCase()) || item.name.toLowerCase().contains(queryText.toLowerCase())))
+                    visibleCards.add(item);
+        }
+        Collections.sort(visibleCards, new Comparator<Class>() {
+            @Override
+            public int compare(Class o1, Class o2) {
+                return o1.name.compareTo(o2.name);
+            }
+        });
+        notifyDataSetChanged();
     }
 
     public String getName(int position) {

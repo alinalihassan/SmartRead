@@ -44,7 +44,7 @@ public enum LoginBehavior {
     private final boolean allowsKatanaAuth;
     private final boolean allowsWebViewAuth;
 
-    private LoginBehavior(boolean allowsKatanaAuth, boolean allowsWebViewAuth) {
+    LoginBehavior(boolean allowsKatanaAuth, boolean allowsWebViewAuth) {
         this.allowsKatanaAuth = allowsKatanaAuth;
         this.allowsWebViewAuth = allowsWebViewAuth;
     }

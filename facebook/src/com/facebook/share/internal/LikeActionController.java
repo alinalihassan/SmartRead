@@ -1268,7 +1268,7 @@ public class LikeActionController {
      * Used by the call to getControllerForObjectId()
      */
     public interface CreationCallback {
-        public void onComplete(
+        void onComplete(
                 LikeActionController likeActionController,
                 FacebookException error);
     }

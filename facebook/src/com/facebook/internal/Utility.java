@@ -541,9 +541,9 @@ public final class Utility {
         } else if (value instanceof String) {
             bundle.putString(key, (String) value);
         } else if (value instanceof JSONArray) {
-            bundle.putString(key, ((JSONArray) value).toString());
+            bundle.putString(key, value.toString());
         } else if (value instanceof JSONObject) {
-            bundle.putString(key, ((JSONObject) value).toString());
+            bundle.putString(key, value.toString());
         } else {
             return false;
         }
@@ -1120,7 +1120,7 @@ public final class Utility {
     }
 
     public interface Predicate<T> {
-        public boolean apply(T item);
+        boolean apply(T item);
     }
 
     public static <T> List<T> filter(final List<T> target, final Predicate<T> predicate) {
@@ -1137,7 +1137,7 @@ public final class Utility {
     }
 
     public interface Mapper<T, K> {
-        public K apply(T item);
+        K apply(T item);
     }
 
     public static <T, K> List<K> map(final List<T> target, final Mapper<T, K> mapper) {

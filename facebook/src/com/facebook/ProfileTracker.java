@@ -97,9 +97,9 @@ abstract public class ProfileTracker {
         public void onReceive(Context context, Intent intent) {
             if (ProfileManager.ACTION_CURRENT_PROFILE_CHANGED.equals(intent.getAction())) {
 
-                Profile oldProfile = (Profile) intent
+                Profile oldProfile = intent
                         .getParcelableExtra(ProfileManager.EXTRA_OLD_PROFILE);
-                Profile newProfile = (Profile) intent
+                Profile newProfile = intent
                         .getParcelableExtra(ProfileManager.EXTRA_NEW_PROFILE);
 
                 onCurrentProfileChanged(oldProfile, newProfile);

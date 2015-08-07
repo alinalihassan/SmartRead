@@ -230,7 +230,7 @@ public class ShareContentValidation {
             throw new FacebookException("ShareOpenGraphAction must have a non-empty actionType");
         }
 
-        validator.validate((ShareOpenGraphValueContainer) openGraphAction, false);
+        validator.validate(openGraphAction, false);
     }
 
     private static void validateOpenGraphObject(
@@ -240,7 +240,7 @@ public class ShareContentValidation {
             throw new FacebookException("Cannot share a null ShareOpenGraphObject");
         }
 
-        validator.validate((ShareOpenGraphValueContainer) openGraphObject, true);
+        validator.validate(openGraphObject, true);
     }
 
     private static void validateOpenGraphValueContainer(

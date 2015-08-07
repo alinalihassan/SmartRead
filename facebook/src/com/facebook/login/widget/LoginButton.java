@@ -122,7 +122,7 @@ public class LoginButton extends FacebookButtonBase {
 
     static class LoginButtonProperties {
         private DefaultAudience defaultAudience = DefaultAudience.FRIENDS;
-        private List<String> permissions = Collections.<String>emptyList();
+        private List<String> permissions = Collections.emptyList();
         private LoginAuthorizationType authorizationType = null;
         private LoginBehavior loginBehavior = LoginBehavior.SSO_WITH_FALLBACK;
 

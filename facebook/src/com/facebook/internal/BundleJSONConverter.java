@@ -129,8 +129,8 @@ public class BundleJSONConverter {
     }
 
     public interface Setter {
-        public void setOnBundle(Bundle bundle, String key, Object value) throws JSONException;
-        public void setOnJSON(JSONObject json, String key, Object value) throws JSONException;
+        void setOnBundle(Bundle bundle, String key, Object value) throws JSONException;
+        void setOnJSON(JSONObject json, String key, Object value) throws JSONException;
     }
 
     public static JSONObject convertToJSON(Bundle bundle) throws JSONException {

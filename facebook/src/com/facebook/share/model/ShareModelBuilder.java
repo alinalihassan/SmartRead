@@ -36,7 +36,7 @@ public interface ShareModelBuilder<P extends ShareModel, E extends ShareModelBui
      * @param model The source ShareModel
      * @return The builder.
      */
-    public E readFrom(P model);
+    E readFrom(P model);
 
     /**
      * Reads the values from a parcel into the builder.  The parcel must have packaged an instance
@@ -44,5 +44,5 @@ public interface ShareModelBuilder<P extends ShareModel, E extends ShareModelBui
      * @param parcel The Parcel that contains the ShareModel.
      * @return The builder.
      */
-    public E readFrom(Parcel parcel);
+    E readFrom(Parcel parcel);
 }

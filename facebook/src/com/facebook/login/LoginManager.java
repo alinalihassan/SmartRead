@@ -163,8 +163,7 @@ public class LoginManager {
 
         boolean isCanceled = false;
         if (data != null) {
-            LoginClient.Result result = (LoginClient.Result)
-                    data.getParcelableExtra(LoginFragment.RESULT_KEY);
+            LoginClient.Result result = data.getParcelableExtra(LoginFragment.RESULT_KEY);
             if (result != null) {
                 code = result.code;
                 if (resultCode == Activity.RESULT_OK) {
@@ -445,10 +444,7 @@ public class LoginManager {
     private boolean resolveIntent(Intent intent) {
         ResolveInfo resolveInfo = FacebookSdk.getApplicationContext().getPackageManager()
             .resolveActivity(intent, 0);
-        if (resolveInfo == null) {
-            return false;
-        }
-        return true;
+        return resolveInfo != null;
     }
 
     private Intent getFacebookActivityIntent(LoginClient.Request request) {

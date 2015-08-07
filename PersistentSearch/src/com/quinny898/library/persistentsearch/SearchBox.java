@@ -722,35 +722,35 @@ public class SearchBox extends RelativeLayout {
 		/**
 		 * Called when the searchbox is opened
 		 */
-		public void onSearchOpened();
+		void onSearchOpened();
 
 		/**
 		 * Called when the clear button is pressed
 		 */
-		public void onSearchCleared();
+		void onSearchCleared();
 
 		/**
 		 * Called when the searchbox is closed
 		 */
-		public void onSearchClosed();
+		void onSearchClosed();
 
 		/**
 		 * Called when the searchbox's edittext changes
 		 */
-		public void onSearchTermChanged();
+		void onSearchTermChanged();
 
 		/**
 		 * Called when a search happens, with a result
 		 * @param result
 		 */
-		public void onSearch(String result);
+		void onSearch(String result);
 	}
 
 	public interface MenuListener {
 		/**
 		 * Called when the menu button is pressed
 		 */
-		public void onMenuClick();
+		void onMenuClick();
 	}
 
 

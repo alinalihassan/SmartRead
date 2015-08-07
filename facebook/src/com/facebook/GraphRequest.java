@@ -1610,10 +1610,7 @@ public class GraphRequest {
             // Group 1 contains the path aside from version
             path = matcher.group(1);
         }
-        if (path.startsWith("me/") || path.startsWith("/me/")) {
-            return true;
-        }
-        return false;
+        return path.startsWith("me/") || path.startsWith("/me/");
     }
 
     private static void processGraphObject(

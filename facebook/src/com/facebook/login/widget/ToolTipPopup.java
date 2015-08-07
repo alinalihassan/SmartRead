@@ -42,7 +42,7 @@ public class ToolTipPopup {
     /**
      * The values here describe the styles available for the tool tip class.
      */
-    public static enum Style {
+    public enum Style {
         /**
          * The tool tip will be shown with a blue style; including a blue background and blue
          * arrows.

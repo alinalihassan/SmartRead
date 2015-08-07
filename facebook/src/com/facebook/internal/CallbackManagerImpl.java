@@ -85,7 +85,7 @@ public final class CallbackManagerImpl implements CallbackManager {
     }
 
     public interface Callback {
-        public boolean onActivityResult(int resultCode, Intent data);
+        boolean onActivityResult(int resultCode, Intent data);
     }
 
     public enum RequestCodeOffset {

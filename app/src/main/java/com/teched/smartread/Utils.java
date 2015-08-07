@@ -11,9 +11,6 @@ import android.graphics.RectF;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.RectShape;
 import android.support.v7.graphics.Palette;
-import android.util.DisplayMetrics;
-
-import java.io.File;
 
 public class Utils {
     public static int calculateColorBase(String name) {

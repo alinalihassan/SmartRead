@@ -197,11 +197,8 @@ final class LegacyTokenHelper {
         }
 
         long expiresMilliseconds = bundle.getLong(EXPIRATION_DATE_KEY, 0L);
-        if (expiresMilliseconds == 0L) {
-            return false;
-        }
+        return expiresMilliseconds != 0L;
 
-        return true;
     }
 
     public static String getToken(Bundle bundle) {
@@ -360,7 +357,7 @@ final class LegacyTokenHelper {
             json.put(JSON_VALUE, value.toString());
         } else if (value instanceof String) {
             supportedType = TYPE_STRING;
-            json.put(JSON_VALUE, (String)value);
+            json.put(JSON_VALUE, value);
         } else if (value instanceof Enum<?>) {
             supportedType = TYPE_ENUM;
             json.put(JSON_VALUE, value.toString());

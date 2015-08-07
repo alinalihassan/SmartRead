@@ -71,10 +71,14 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     }
 
     public void setFilter(String queryText) {
+        JSONObject mainObject;
         visibleCards = new ArrayList<>();
         for (Card item: cards) {
-            if ((queryText.equals("") || item.name.toLowerCase().contains(queryText.toLowerCase()) || item.author.toLowerCase().contains(queryText.toLowerCase())) && hasType(item))
-                visibleCards.add(item);
+            try {
+                mainObject = new JSONObject(MainActivity.readFromFile(mPath + "/" + item.name + ".json"));
+                if ((queryText.equals("") || mainObject.getString("Title").toLowerCase().contains(queryText.toLowerCase()) || mainObject.getString("Author").toLowerCase().contains(queryText.toLowerCase())) && hasType(item))
+                    visibleCards.add(item);
+            } catch (Exception e) {e.printStackTrace();}
         }
         Collections.sort(visibleCards, new Comparator<Card>() {
             @Override

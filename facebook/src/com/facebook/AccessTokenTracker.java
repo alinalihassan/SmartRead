@@ -99,9 +99,9 @@ public abstract class AccessTokenTracker {
         public void onReceive(Context context, Intent intent) {
             if (AccessTokenManager.ACTION_CURRENT_ACCESS_TOKEN_CHANGED.equals(intent.getAction())) {
 
-                AccessToken oldAccessToken = (AccessToken) intent
+                AccessToken oldAccessToken = intent
                         .getParcelableExtra(AccessTokenManager.EXTRA_OLD_ACCESS_TOKEN);
-                AccessToken newAccessToken = (AccessToken) intent
+                AccessToken newAccessToken = intent
                         .getParcelableExtra(AccessTokenManager.EXTRA_NEW_ACCESS_TOKEN);
 
                 onCurrentAccessTokenChanged(oldAccessToken, newAccessToken);

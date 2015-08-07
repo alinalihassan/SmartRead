@@ -116,6 +116,6 @@ public final class OpenGraphJSONUtility {
     private OpenGraphJSONUtility() {}
 
     public interface PhotoJSONProcessor {
-        public JSONObject toJSONObject(SharePhoto photo);
+        JSONObject toJSONObject(SharePhoto photo);
     }
 }

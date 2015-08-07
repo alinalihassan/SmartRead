@@ -496,8 +496,6 @@ public final class ShareInternalUtility {
         return new Pair<>(namespace, fieldName);
     }
 
-    ;
-
     private ShareInternalUtility() {
     }
 

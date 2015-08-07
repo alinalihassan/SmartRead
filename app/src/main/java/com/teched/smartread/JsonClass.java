@@ -28,6 +28,7 @@ public class JsonClass {
             httpConn.setAllowUserInteraction(false);
             httpConn.setInstanceFollowRedirects(true);
             httpConn.setRequestMethod("GET");
+            httpConn.setConnectTimeout(9999999);
             httpConn.connect();
 
             InputStream is = httpConn.getInputStream();
@@ -66,6 +67,7 @@ public class JsonClass {
 
             URLConnection ucon = url.openConnection();
             InputStream is = ucon.getInputStream();
+            ucon.setConnectTimeout(9999999);
             BufferedInputStream bis = new BufferedInputStream(is);
             ByteArrayBuffer baf = new ByteArrayBuffer(50);
             int current;
@@ -87,6 +89,7 @@ public class JsonClass {
             File file = new File(s,bookName);
 
             URLConnection ucon = url.openConnection();
+            ucon.setConnectTimeout(9999999);
             InputStream is = ucon.getInputStream();
             BufferedInputStream bis = new BufferedInputStream(is);
             ByteArrayBuffer baf = new ByteArrayBuffer(50);
@@ -123,6 +126,7 @@ public class JsonClass {
             conn.setRequestProperty("ENCTYPE", "multipart/form-data");
             conn.setRequestProperty("Content-Type", "multipart/form-data;boundary=" + boundary);
             conn.setRequestProperty("uploaded_file", sourceFileUri);
+            conn.setConnectTimeout(9999999);
 
             dos = new DataOutputStream(conn.getOutputStream());
 
@@ -187,6 +191,7 @@ public class JsonClass {
             conn.setRequestProperty("Content-Type", "multipart/form-data;boundary=" + boundary);
             conn.setRequestProperty("uploaded_file", sourceFileUri);
             conn.setRequestProperty("uploaded_file2", sourceFileUri2);
+            conn.setConnectTimeout(9999999);
 
             dos = new DataOutputStream(conn.getOutputStream());
 

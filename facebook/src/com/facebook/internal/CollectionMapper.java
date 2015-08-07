@@ -86,26 +86,26 @@ public class CollectionMapper {
         jobCompleteListener.onComplete();
     }
 
-    public static interface OnErrorListener {
-        public void onError(FacebookException exception);
+    public interface OnErrorListener {
+        void onError(FacebookException exception);
     }
 
-    public static interface OnMapperCompleteListener extends OnErrorListener {
-        public void onComplete();
+    public interface OnMapperCompleteListener extends OnErrorListener {
+        void onComplete();
     }
 
-    public static interface OnMapValueCompleteListener extends OnErrorListener {
-        public void onComplete(Object mappedValue);
+    public interface OnMapValueCompleteListener extends OnErrorListener {
+        void onComplete(Object mappedValue);
     }
 
-    public static interface ValueMapper {
-        public void mapValue(Object value, OnMapValueCompleteListener onMapValueCompleteListener);
+    public interface ValueMapper {
+        void mapValue(Object value, OnMapValueCompleteListener onMapValueCompleteListener);
     }
 
-    public static interface Collection<T> {
-        public Iterator<T> keyIterator();
-        public Object get(T key);
-        public void set(T key, Object value, OnErrorListener onErrorListener);
+    public interface Collection<T> {
+        Iterator<T> keyIterator();
+        Object get(T key);
+        void set(T key, Object value, OnErrorListener onErrorListener);
     }
 
     private CollectionMapper() {}

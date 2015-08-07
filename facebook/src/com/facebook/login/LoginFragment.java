@@ -79,8 +79,7 @@ public class LoginFragment extends Fragment {
 
         initializeCallingPackage(activity);
         if (activity.getIntent() != null) {
-            request = (LoginClient.Request)
-                    activity.getIntent().getParcelableExtra(EXTRA_REQUEST);
+            request = activity.getIntent().getParcelableExtra(EXTRA_REQUEST);
         }
     }
 
