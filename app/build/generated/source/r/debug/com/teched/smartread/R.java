@@ -3900,13 +3900,13 @@ containing a value of this type.
         public static final int action_bar_title=0x7f10008d;
         public static final int action_context_bar=0x7f1000ab;
         public static final int action_divider=0x7f100143;
-        public static final int action_join=0x7f10017a;
+        public static final int action_join=0x7f10017d;
         public static final int action_menu_divider=0x7f100002;
         public static final int action_menu_presenter=0x7f100003;
         public static final int action_mode_bar=0x7f1000a7;
         public static final int action_mode_bar_stub=0x7f1000a6;
         public static final int action_mode_close_button=0x7f10008f;
-        public static final int action_search=0x7f100179;
+        public static final int action_search=0x7f10017c;
         public static final int activity_chooser_view_content=0x7f100090;
         public static final int adjust_height=0x7f10005a;
         public static final int adjust_width=0x7f10005b;
@@ -3956,7 +3956,7 @@ containing a value of this type.
         public static final int classListLayout=0x7f1000c8;
         public static final int className=0x7f10011c;
         public static final int classProgress=0x7f10016b;
-        public static final int classStatus=0x7f100178;
+        public static final int classStatus=0x7f10017b;
         public static final int classUsersLayout=0x7f1000cc;
         public static final int classes=0x7f1000c6;
         public static final int classic=0x7f10007b;
@@ -3972,6 +3972,7 @@ containing a value of this type.
         public static final int com_facebook_tooltip_bubble_view_text_body=0x7f100122;
         public static final int com_facebook_tooltip_bubble_view_top_pointer=0x7f100120;
         public static final int contentPanel=0x7f10009b;
+        public static final int content_box=0x7f100178;
         public static final int custom=0x7f10009f;
         public static final int customPanel=0x7f10009e;
         public static final int decor_content_parent=0x7f1000a8;
@@ -4084,7 +4085,7 @@ containing a value of this type.
         public static final int multiply=0x7f10004d;
         public static final int never=0x7f100062;
         public static final int never_display=0x7f10008a;
-        public static final int nnf_action_createdir=0x7f10017b;
+        public static final int nnf_action_createdir=0x7f10017e;
         public static final int nnf_button_cancel=0x7f100139;
         public static final int nnf_button_container=0x7f10013e;
         public static final int nnf_button_ok=0x7f10013b;
@@ -4126,11 +4127,11 @@ containing a value of this type.
         public static final int pspdf__gallery_item_img=0x7f10014c;
         public static final int pspdf__loading_progress=0x7f100151;
         public static final int pspdf__media_dialog_root=0x7f100150;
-        public static final int pspdf__menu_copy=0x7f10017d;
+        public static final int pspdf__menu_copy=0x7f100180;
         public static final int pspdf__menu_option_outline=0x7f10002b;
         public static final int pspdf__menu_option_search=0x7f10002c;
         public static final int pspdf__menu_option_thumbnail_grid=0x7f10002d;
-        public static final int pspdf__menu_speak=0x7f10017c;
+        public static final int pspdf__menu_speak=0x7f10017f;
         public static final int pspdf__outline_list=0x7f100154;
         public static final int pspdf__outline_page_number=0x7f100153;
         public static final int pspdf__outline_text=0x7f100152;
@@ -4247,6 +4248,8 @@ containing a value of this type.
         public static final int topList=0x7f1000dd;
         public static final int topPanel=0x7f100098;
         public static final int topPerformers=0x7f1000db;
+        public static final int tv_content=0x7f100179;
+        public static final int tv_dismiss=0x7f10017a;
         public static final int unknown=0x7f100083;
         public static final int up=0x7f100031;
         public static final int useLogo=0x7f10003c;
@@ -4362,9 +4365,10 @@ containing a value of this type.
         public static final int select_dialog_singlechoice_material=0x7f04005a;
         public static final int settings_toolbar=0x7f04005b;
         public static final int settings_toolbar_l=0x7f04005c;
-        public static final int statisticsview=0x7f04005d;
-        public static final int support_simple_spinner_dropdown_item=0x7f04005e;
-        public static final int teacherbookview=0x7f04005f;
+        public static final int showcase_content=0x7f04005d;
+        public static final int statisticsview=0x7f04005e;
+        public static final int support_simple_spinner_dropdown_item=0x7f04005f;
+        public static final int teacherbookview=0x7f040060;
     }
     public static final class menu {
         public static final int menu=0x7f110000;

@@ -16,8 +16,8 @@ android {
         applicationId "com.teched.smartread"
         minSdkVersion 17
         targetSdkVersion 23
-        versionCode 94
-        versionName "4.2.0"
+        versionCode 95
+        versionName "4.2.2"
         multiDexEnabled = true
     }
     lintOptions {
@@ -73,5 +73,5 @@ dependencies {
     compile 'com.github.lzyzsd:circleprogress:1.2.0'
     compile 'net.yanzm:mth:1.0.4'
     compile 'com.quinny898.library.persistentsearch:library:1.0.0-SNAPSHOT'
-//    compile project(':PersistentSearch')
+    compile 'com.github.deano2390:MaterialShowcaseView:1.0.4'
 }

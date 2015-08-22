@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;
 import android.app.Activity;
+import android.app.Application;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.ContextWrapper;
@@ -63,6 +64,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.view.WindowManager;
 import android.view.animation.AccelerateInterpolator;
 import android.view.inputmethod.InputMethodManager;
@@ -128,6 +130,10 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.LinkedHashSet;
 import java.util.List;
+
+import uk.co.deanwild.materialshowcaseview.MaterialShowcaseSequence;
+import uk.co.deanwild.materialshowcaseview.MaterialShowcaseView;
+import uk.co.deanwild.materialshowcaseview.ShowcaseConfig;
 
 public class MainActivity extends AppCompatActivity implements Serializable,BillingProcessor.IBillingHandler {
 
@@ -221,6 +227,8 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     public static PSPDFKitConfiguration pspdfkitConfiguration;
     private PSPDFKitFragment fragment;
     private Uri fileUri;
+    private boolean showcaseEvent = false;
+    private Activity activity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -234,6 +242,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         bp = new BillingProcessor(this, getResources().getString(R.string.license_key), this);
         jobManager = new JobManager(this);
         final SharedPreferences prefs = this.getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE);
+        activity = this;
         GregorianCalendar c = new GregorianCalendar();
         c.getTime();
         if(prefs.getInt("Day",0)!=0) {
@@ -309,7 +318,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         classes = (RelativeLayout) findViewById(R.id.classes);
         store = (RelativeLayout) findViewById(R.id.store);
         overview = (RelativeLayout) findViewById(R.id.overview);
-        FloatingActionButton teacherFab = (FloatingActionButton) findViewById(R.id.teacherFab);
+        final FloatingActionButton teacherFab = (FloatingActionButton) findViewById(R.id.teacherFab);
         classFab = (FloatingActionButton) findViewById(R.id.classFab);
         FloatingActionButton usersFab = (FloatingActionButton) findViewById(R.id.usersFab);
         accessText = (TextView) findViewById(R.id.access_text);
@@ -322,8 +331,8 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         authorInput = (TextInputLayout) findViewById(R.id.authorTitle);
         questionInput = (TextInputLayout) findViewById(R.id.questionTitle);
         pageInput = (TextInputLayout) findViewById(R.id.pageTitle);
-        setupFloatingLabelError(titleInput,"You must enter a Title!");
-        setupFloatingLabelError(authorInput,"You must enter an Author!");
+        setupFloatingLabelError(titleInput, "You must enter a Title!");
+        setupFloatingLabelError(authorInput, "You must enter an Author!");
         DisplayMetrics displaymetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
         MaterialTabHost tabHost = (MaterialTabHost) findViewById(R.id.tabhost);
@@ -334,6 +343,25 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         final ViewPager viewPager2 = (ViewPager) findViewById(R.id.overviewpager);
         viewPager2.setAdapter(pagerAdapter);
         viewPager2.setOnPageChangeListener(tabHost);
+        final ViewTreeObserver viewTreeObserver = getWindow().getDecorView().getViewTreeObserver();
+        viewTreeObserver.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                View menuButton = findViewById(R.id.action_search);
+                View menuButton2 = findViewById(R.id.action_join);
+                if (menuButton != null && menuButton2 != null && !showcaseEvent) {
+                    showcaseEvent = true;
+                    ShowcaseConfig config = new ShowcaseConfig();
+                    config.setDelay(250);
+                    MaterialShowcaseSequence sequence = new MaterialShowcaseSequence(activity,"1");
+                    sequence.setConfig(config);
+                    sequence.addSequenceItem(menuButton, "Use this to search among contents and books by title or author", "GOT IT");
+                    sequence.addSequenceItem(menuButton2, "Use this to join classes using an access code", "GOT IT");
+                    sequence.start();
+                }
+            }
+        });
+
 
         tabHost.setOnTabChangeListener(new MaterialTabHost.OnTabChangeListener() {
             @Override
@@ -1005,6 +1033,13 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                     findViewById(R.id.toolbarCard).setElevation(4);
                                     findViewById(R.id.toolbar2).setElevation(4);
                                 }
+                                new MaterialShowcaseView.Builder(activity)
+                                        .setTarget(teacherFab)
+                                        .setDismissText("GOT IT")
+                                        .setContentText("Create your own classes")
+                                        .setDelay(250) // optional but starting animations immediately in onCreate can make them choppy
+                                        .singleUse("3") // provide a unique ID used to ensure it is only shown once
+                                        .show();
                             }
                         })
         );
@@ -1035,6 +1070,13 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                                     findViewById(R.id.toolbarCard).setElevation(4);
                                     findViewById(R.id.toolbar2).setElevation(4);
                                 }
+                                new MaterialShowcaseView.Builder(activity)
+                                        .setTarget(teacherFab)
+                                        .setDismissText("GOT IT")
+                                        .setContentText("Crate your own documents")
+                                        .setDelay(250) // optional but starting animations immediately in onCreate can make them choppy
+                                        .singleUse("2") // provide a unique ID used to ensure it is only shown once
+                                        .show();
                             }
                         })
         );
@@ -3125,6 +3167,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     }
                 }).create().start();
     }
+
     private void refreshJSON() {
         final File folder = new File(Path2);
         new AsyncJob.AsyncJobBuilder<Boolean>()

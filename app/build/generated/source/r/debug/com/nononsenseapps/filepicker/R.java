@@ -506,7 +506,7 @@ public final class R {
 		public static final int middle = 0x7f100059;
 		public static final int multiply = 0x7f10004d;
 		public static final int never = 0x7f100062;
-		public static final int nnf_action_createdir = 0x7f10017b;
+		public static final int nnf_action_createdir = 0x7f10017e;
 		public static final int nnf_button_cancel = 0x7f100139;
 		public static final int nnf_button_container = 0x7f10013e;
 		public static final int nnf_button_ok = 0x7f10013b;
@@ -603,7 +603,7 @@ public final class R {
 		public static final int select_dialog_item_material = 0x7f040058;
 		public static final int select_dialog_multichoice_material = 0x7f040059;
 		public static final int select_dialog_singlechoice_material = 0x7f04005a;
-		public static final int support_simple_spinner_dropdown_item = 0x7f04005e;
+		public static final int support_simple_spinner_dropdown_item = 0x7f04005f;
 	}
 	public static final class menu {
 		public static final int picker_actions = 0x7f110001;

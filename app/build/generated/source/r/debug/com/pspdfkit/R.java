@@ -564,11 +564,11 @@ public final class R {
 		public static final int pspdf__gallery_item_img = 0x7f10014c;
 		public static final int pspdf__loading_progress = 0x7f100151;
 		public static final int pspdf__media_dialog_root = 0x7f100150;
-		public static final int pspdf__menu_copy = 0x7f10017d;
+		public static final int pspdf__menu_copy = 0x7f100180;
 		public static final int pspdf__menu_option_outline = 0x7f10002b;
 		public static final int pspdf__menu_option_search = 0x7f10002c;
 		public static final int pspdf__menu_option_thumbnail_grid = 0x7f10002d;
-		public static final int pspdf__menu_speak = 0x7f10017c;
+		public static final int pspdf__menu_speak = 0x7f10017f;
 		public static final int pspdf__outline_list = 0x7f100154;
 		public static final int pspdf__outline_page_number = 0x7f100153;
 		public static final int pspdf__outline_text = 0x7f100152;
@@ -682,7 +682,7 @@ public final class R {
 		public static final int select_dialog_item_material = 0x7f040058;
 		public static final int select_dialog_multichoice_material = 0x7f040059;
 		public static final int select_dialog_singlechoice_material = 0x7f04005a;
-		public static final int support_simple_spinner_dropdown_item = 0x7f04005e;
+		public static final int support_simple_spinner_dropdown_item = 0x7f04005f;
 	}
 	public static final class menu {
 		public static final int pspdf__menu_text_selection = 0x7f110002;

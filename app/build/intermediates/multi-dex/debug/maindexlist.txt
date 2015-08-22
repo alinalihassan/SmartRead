@@ -1,11 +1,9 @@
 
-com/pspdfkit/R.class
 com/teched/smartread/MainActivity$7.class
 android/support/v4/media/session/MediaSessionCompat$OnActiveChangeListener.class
 com/google/android/gms/ads/internal/overlay/zzd$zza.class
 com/google/android/gms/ads/internal/request/AdResponseParcel.class
 com/google/android/gms/internal/zzet.class
-com/pspdfkit/R$menu.class
 android/support/v4/view/GravityCompat.class
 com/teched/smartread/MainActivity$49.class
 com/pspdfkit/annotations/actions/Action.class
@@ -49,7 +47,6 @@ com/google/android/gms/internal/zzjh$zza.class
 android/support/v7/widget/CardViewDelegate.class
 com/pspdfkit/framework/jni/PDFAction.class
 android/support/v4/media/VolumeProviderCompat$ControlType.class
-rx/functions/Function.class
 com/balysv/materialmenu/MaterialMenuDrawable.class
 android/support/design/widget/CoordinatorLayout$LayoutParams.class
 com/google/android/gms/common/internal/safeparcel/SafeParcelable.class
@@ -61,11 +58,10 @@ android/support/v4/app/FragmentManagerImpl.class
 com/teched/smartread/MainActivity$70.class
 com/google/android/gms/internal/zzie.class
 android/support/v4/view/OnApplyWindowInsetsListener.class
-com/pspdfkit/ui/PSPDFKitViews.class
 android/support/design/widget/CoordinatorLayout$1.class
 com/yqritc/recyclerviewflexibledivider/FlexibleDividerDecoration$Builder.class
-com/teched/smartread/MainActivity$12.class
 com/facebook/FacebookCallback.class
+com/teched/smartread/MainActivity$12.class
 com/google/android/gms/wallet/fragment/WalletFragmentStyle$LogoImageType.class
 android/support/design/widget/TabLayout$SlidingTabStrip.class
 com/google/android/gms/internal/zzgg.class
@@ -102,10 +98,9 @@ com/google/android/gms/internal/zzdh$zza.class
 android/support/design/widget/CoordinatorLayout$HierarchyChangeListener.class
 com/teched/smartread/SettingsActivity$2.class
 android/support/v4/app/BackStackRecord.class
-com/facebook/login/widget/LoginButton.class
 android/support/v7/widget/RecyclerView$Adapter.class
 com/teched/smartread/MainAdapter.class
-com/pspdfkit/listeners/DefaultTextSelectionListener.class
+com/facebook/login/widget/LoginButton.class
 -keep class com.nononsenseapps.filepicker.FilePickerActivity { <init>(); }
 com/google/android/gms/ads/internal/client/zzc.class
 android/support/v7/app/ActionBar$OnMenuVisibilityListener.class
@@ -129,7 +124,6 @@ com/google/android/gms/ads/doubleclick/PublisherAdRequest$Builder.class
 com/google/android/gms/internal/zzdu.class
 android/support/v4/app/LoaderManager.class
 com/google/android/gms/internal/zzgp.class
-com/pspdfkit/framework/events/b$b.class
 com/teched/smartread/MainActivity$19.class
 com/google/android/gms/ads/internal/overlay/zzd.class
 com/balysv/materialmenu/MaterialMenuDrawable$Stroke.class
@@ -137,12 +131,11 @@ com/google/android/gms/drive/query/Query.class
 android/support/v4/app/FragmentTabHost.class
 com/heinrichreimersoftware/materialdrawer/structure/DrawerItem.class
 android/support/annotation/RawRes.class
-com/google/android/gms/wearable/ChannelApi$CloseReason.class
 bolts/WebViewAppLinkResolver$2$2.class
 android/support/v7/app/AppCompatActivity.class
 com/google/android/gms/ads/internal/zzf.class
+com/google/android/gms/wearable/ChannelApi$CloseReason.class
 com/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel.class
-com/pspdfkit/exceptions/PSPDFKitInvalidLayoutException.class
 com/google/android/gms/common/api/GoogleApiClient.class
 com/google/ads/mediation/MediationServerParameters.class
 android/support/v4/media/session/PlaybackStateCompat$State.class
@@ -182,11 +175,9 @@ com/google/android/gms/internal/zzez.class
 android/support/design/widget/SnackbarManager.class
 com/google/android/gms/internal/zzhm.class
 android/support/design/widget/Snackbar$7.class
-com/pspdfkit/R$style.class
 com/heinrichreimersoftware/materialdrawer/structure/DrawerItem$OnItemClickListener.class
 android/support/v7/appcompat/R$attr.class
 com/google/android/gms/ads/internal/formats/zze.class
-com/pspdfkit/R$plurals.class
 com/google/android/gms/internal/zzeq.class
 com/yqritc/recyclerviewflexibledivider/FlexibleDividerDecoration.class
 -keep class com.google.android.gms.ads.AdActivity { <init>(); }
@@ -196,7 +187,6 @@ com/google/android/gms/internal/zzfu.class
 com/google/android/gms/internal/zzbj.class
 com/google/android/gms/internal/zzfe.class
 android/support/v4/app/FragmentContainer.class
-rx/Observable.class
 com/teched/smartread/MainActivity$68.class
 android/support/design/widget/ViewUtils.class
 android/support/design/widget/CoordinatorLayout$OnPreDrawListener.class
@@ -205,8 +195,6 @@ com/google/android/gms/analytics/GoogleAnalytics.class
 android/support/v7/widget/LinearLayoutCompat.class
 android/support/v4/view/PagerAdapter.class
 com/pspdfkit/ui/PSPDFKitFragment.class
-com/pspdfkit/listeners/ActivityListener.class
-com/pspdfkit/framework/views/page/utils/a$a.class
 android/support/annotation/RequiresPermission$Read.class
 com/google/android/gms/internal/zzk.class
 com/google/android/gms/ads/internal/purchase/zzf.class
@@ -230,7 +218,6 @@ android/support/v4/app/FragmentHostCallback.class
 android/support/v4/content/PermissionChecker.class
 com/google/android/gms/ads/search/SearchAdRequest.class
 net/yanzm/mth/MaterialTabHost$OnTabChangeListener.class
-com/pspdfkit/listeners/OnVisibilityChangedListener.class
 com/google/android/gms/wearable/ChannelApi.class
 com/google/android/gms/games/internal/experience/ExperienceEvent.class
 com/google/android/gms/wallet/fragment/WalletFragmentStyle.class
@@ -245,14 +232,13 @@ android/support/v7/widget/helper/ItemTouchHelper$Callback.class
 com/google/android/gms/common/internal/safeparcel/zza$zza.class
 com/google/android/gms/internal/zzee.class
 android/support/v4/app/NoSaveStateFrameLayout.class
-com/google/android/gms/location/places/PlaceFilter.class
 android/support/v4/app/BackStackRecord$TransitionState.class
+com/google/android/gms/location/places/PlaceFilter.class
 com/google/android/gms/ads/internal/zzb.class
 android/support/v4/app/SharedElementCallback.class
 -keep public class * extends java.lang.annotation.Annotation {
 com/google/ads/mediation/MediationBannerAdapter.class
 com/google/ads/mediation/AbstractAdViewAdapter.class
-com/pspdfkit/framework/utilities/d.class
 com/teched/smartread/MainActivity$35.class
 android/support/v7/widget/Toolbar.class
 android/support/v4/app/TaskStackBuilder.class
@@ -277,17 +263,16 @@ android/support/v7/app/ActionBarDrawerToggle.class
 com/google/android/gms/internal/zzhw.class
 android/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase.class
 com/google/android/gms/ads/internal/purchase/zzi.class
-com/google/android/gms/games/Player.class
 android/support/v4/content/PermissionChecker$PermissionResult.class
+com/google/android/gms/games/Player.class
 android/support/annotation/RequiresPermission$Write.class
 com/teched/smartread/LoginActivity$4.class
-com/google/android/gms/ads/internal/overlay/zzm.class
 com/google/android/gms/ads/internal/formats/zzf.class
+com/google/android/gms/ads/internal/overlay/zzm.class
 com/google/android/gms/internal/zzdh$zzb.class
 android/support/v4/view/LayoutInflaterFactory.class
 com/google/android/gms/internal/zzbw.class
 com/google/android/gms/location/internal/zze.class
-com/pspdfkit/R$styleable.class
 com/facebook/internal/FacebookDialogFragment.class
 android/support/v4/media/session/MediaSessionCompat$Token.class
 com/teched/smartread/MainActivity$76.class
@@ -295,13 +280,11 @@ com/google/android/gms/R.class
 android/support/v7/widget/LinearLayoutManager.class
 com/google/android/gms/internal/zzit.class
 android/support/v7/appcompat/R.class
-com/pspdfkit/R$anim.class
 com/google/android/gms/internal/zzhc.class
 android/support/v7/widget/RecyclerView$ItemDecoration.class
 android/support/design/widget/Snackbar$SnackbarLayout.class
 com/anjlab/android/iab/v3/BillingProcessor$IBillingHandler.class
 android/support/v4/util/DebugUtils.class
-com/pspdfkit/ui/PSPDFKitActivityImpl$3.class
 com/google/android/gms/internal/zzbk$zza.class
 android/support/annotation/MainThread.class
 com/google/android/gms/internal/zzfd.class
@@ -328,15 +311,12 @@ android/support/design/widget/SnackbarManager$Callback.class
 android/support/v7/widget/ActionMenuView$LayoutParams.class
 android/support/annotation/Size.class
 android/support/v7/widget/LinearLayoutCompat$OrientationMode.class
-com/pspdfkit/R$color.class
-rx/functions/Action.class
 com/google/android/gms/location/GeofencingApi.class
 android/support/v4/view/ScrollingView.class
 com/google/android/gms/ads/internal/zzn.class
 android/support/design/widget/Snackbar$5.class
 android/support/design/widget/CoordinatorLayout$SavedState.class
 android/support/v7/widget/Toolbar$OnMenuItemClickListener.class
-com/pspdfkit/configuration/theming/ActionBarIconsThemeConfiguration$Builder.class
 com/teched/smartread/MainActivity$67.class
 android/support/v4/app/DialogFragment.class
 com/google/android/gms/common/annotation/KeepName.class
@@ -346,7 +326,6 @@ android/support/design/R$anim.class
 android/support/design/widget/TabLayout$TabGravity.class
 android/support/v7/app/ActionBar$TabListener.class
 com/google/android/gms/ads/internal/purchase/zzk.class
-com/pspdfkit/listeners/TextSelectionListener.class
 com/google/android/gms/internal/zzhj$zza.class
 android/support/v4/media/RatingCompat$StarStyle.class
 com/google/android/gms/wearable/internal/zza.class
@@ -357,11 +336,9 @@ com/google/android/gms/internal/zzhs.class
 android/support/v4/app/FragmentManager$OnBackStackChangedListener.class
 com/teched/smartread/ClassAdapter.class
 com/google/android/gms/ads/internal/request/zzd$zza.class
-com/pspdfkit/ui/PSPDFKitActivityImpl$4.class
 com/google/android/gms/plus/Account.class
 com/google/android/gms/maps/GoogleMap.class
 android/support/annotation/StyleableRes.class
-com/pspdfkit/exceptions/PSPDFKitException.class
 com/google/android/gms/ads/internal/purchase/zzl.class
 android/support/v4/media/RatingCompat$Style.class
 com/teched/smartread/MainActivity$14.class
@@ -407,8 +384,8 @@ com/google/android/gms/games/Game.class
 com/google/android/gms/internal/zzlv.class
 android/support/v7/app/ActionBar$DisplayOptions.class
 com/google/android/gms/internal/zzfz.class
-com/teched/smartread/MainActivity$72.class
 android/support/v7/widget/RecyclerView$OnItemTouchListener.class
+com/teched/smartread/MainActivity$72.class
 com/teched/smartread/MainActivity$22.class
 android/support/v4/app/FragmentActivity$1.class
 com/google/android/gms/internal/zzho.class
@@ -433,14 +410,13 @@ android/support/design/widget/ValueAnimatorCompat$AnimatorUpdateListener.class
 com/teched/smartread/MainActivity$48.class
 com/google/android/gms/internal/zzgn.class
 android/support/design/widget/CoordinatorLayoutInsetsHelper.class
-com/pspdfkit/ui/PSPDFKitActivityImpl.class
 android/support/v4/media/session/MediaSessionCompat$QueueItem.class
 android/support/design/widget/TabLayout$Tab.class
 com/google/android/gms/maps/SupportMapFragment.class
-android/support/annotation/ArrayRes.class
 com/google/android/gms/internal/zzfs.class
 com/pspdfkit/listeners/DocumentListener.class
 com/google/android/gms/internal/zzgo.class
+android/support/annotation/ArrayRes.class
 com/facebook/internal/NativeAppCallAttachmentStore.class
 com/google/android/gms/location/places/NearbyAlertRequest.class
 android/support/design/widget/Snackbar$6.class
@@ -479,8 +455,8 @@ android/support/v4/media/MediaMetadataCompat$RatingKey.class
 com/google/android/gms/internal/zzdp.class
 com/google/android/gms/analytics/HitBuilders$ItemBuilder.class
 com/teched/smartread/MainActivity$16.class
-com/google/android/gms/ads/internal/request/zzd.class
 com/pspdfkit/configuration/theming/ModularSearchThemeConfiguration.class
+com/google/android/gms/ads/internal/request/zzd.class
 com/arasthel/asyncjob/AsyncJob$AsyncJobBuilder.class
 android/support/v4/widget/MaterialProgressDrawable$2.class
 com/google/android/gms/maps/MapFragment.class
@@ -490,8 +466,6 @@ com/google/android/gms/internal/zzfk.class
 android/support/v7/widget/LinearLayoutCompat$DividerMode.class
 android/support/v4/app/Fragment.class
 android/support/v7/view/ActionMode.class
-com/pspdfkit/framework/model/d.class
-com/pspdfkit/document/PSPDFDocumentMetadata.class
 com/google/android/gms/ads/internal/util/client/zza.class
 android/support/v7/widget/RecyclerView$SmoothScroller.class
 com/nononsenseapps/filepicker/FilePickerActivity.class
@@ -513,7 +487,6 @@ com/google/android/gms/internal/zzbd.class
 com/google/android/gms/internal/zzen.class
 com/google/android/gms/internal/zzis$zza.class
 com/google/android/gms/ads/mediation/NetworkExtras.class
-rx/functions/Action1.class
 com/teched/smartread/MainActivity$5.class
 com/google/android/gms/auth/AccountChangeEventsRequest.class
 com/pspdfkit/configuration/theming/DocumentThemeConfiguration.class
@@ -523,7 +496,6 @@ com/google/android/gms/internal/zzdo.class
 android/support/design/R$layout.class
 com/teched/smartread/StoreActivity$1.class
 android/support/v7/widget/RecyclerView$OnChildAttachStateChangeListener.class
-com/pspdfkit/ui/PSPDFKitActivityImpl$2.class
 com/google/android/gms/internal/zzgf.class
 android/support/v4/app/FragmentController.class
 com/heinrichreimersoftware/materialdrawer/DrawerFrameLayout.class
@@ -532,14 +504,13 @@ com/google/android/gms/ads/internal/client/zzg.class
 com/google/android/gms/cast/Cast$CastApi.class
 com/google/android/gms/ads/internal/client/zzac.class
 com/nononsenseapps/filepicker/AbstractFilePickerFragment.class
-rx/subscriptions/CompositeSubscription.class
 com/teched/smartread/Users.class
 android/support/v7/widget/RecyclerView$ViewHolder.class
 android/support/annotation/StringDef.class
 android/support/annotation/RequiresPermission.class
 com/teched/smartread/SettingsActivity$8.class
-android/support/design/widget/SwipeDismissBehavior.class
 com/google/android/gms/ads/internal/zzq.class
+android/support/design/widget/SwipeDismissBehavior.class
 android/support/v4/app/FragmentTransaction.class
 net/yanzm/mth/MaterialTabHost$Type.class
 com/facebook/FacebookContentProvider.class
@@ -550,8 +521,8 @@ android/support/v4/app/BaseFragmentActivityDonut.class
 android/support/v4/media/session/PlaybackStateCompat$1.class
 com/google/android/gms/internal/zzec.class
 com/google/android/gms/internal/zzga.class
-com/nononsenseapps/filepicker/R$layout.class
 com/google/android/gms/maps/GoogleMap$OnMyLocationChangeListener.class
+com/nononsenseapps/filepicker/R$layout.class
 com/google/android/gms/wallet/MaskedWallet.class
 com/google/android/gms/ads/internal/request/zzb$zza.class
 com/teched/smartread/DistributeAdapter$ViewHolder.class
@@ -559,10 +530,8 @@ com/teched/smartread/MainActivity$44.class
 android/support/v7/widget/CardView.class
 android/support/design/widget/Snackbar$1.class
 com/google/android/gms/ads/internal/request/zzm.class
-com/pspdfkit/ui/PSPDFKitActivityImpl$1.class
 com/nononsenseapps/filepicker/FilePickerFragment.class
 com/google/android/gms/internal/zzik.class
-com/pspdfkit/R$attr.class
 com/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks.class
 com/google/android/gms/internal/zzed.class
 com/daimajia/androidanimations/library/Techniques.class
@@ -571,7 +540,6 @@ com/google/android/gms/fitness/data/DataType.class
 com/google/android/gms/games/achievement/Achievement.class
 com/google/android/gms/ads/internal/overlay/zza.class
 android/support/v7/widget/RecyclerView.class
-com/pspdfkit/framework/events/b$e.class
 android/support/v7/widget/LinearLayoutCompat$LayoutParams.class
 com/google/android/gms/internal/zzhu.class
 com/teched/smartread/MainActivity$47.class
@@ -586,7 +554,6 @@ com/google/android/gms/internal/zzbq.class
 com/arasthel/asyncjob/AsyncJob$AsyncAction.class
 com/facebook/CallbackManager$Factory.class
 android/support/v4/util/ContainerHelpers.class
-com/pspdfkit/R$string.class
 com/google/android/gms/internal/zzev.class
 android/support/v4/widget/DrawerLayoutImpl.class
 com/google/android/gms/internal/zzcs.class
@@ -599,7 +566,6 @@ com/google/android/gms/internal/zzfr.class
 com/google/android/gms/ads/internal/overlay/AdLauncherIntentInfoParcel.class
 com/teched/smartread/MainActivity$38.class
 com/google/android/gms/internal/zzfw.class
-com/pspdfkit/R$id.class
 com/google/android/gms/internal/zzge.class
 com/google/ads/mediation/MediationBannerListener.class
 com/google/android/gms/location/places/ui/PlacePicker$IntentBuilder.class
@@ -613,15 +579,13 @@ android/support/v4/app/FragmentActivity.class
 com/google/android/gms/internal/zzbu.class
 com/sothree/slidinguppanel/SlidingUpPanelLayout.class
 com/google/android/gms/wallet/WalletConstants$CardNetwork.class
-com/teched/smartread/QuestionAdapter.class
 com/google/android/gms/ads/internal/client/zzi.class
+com/teched/smartread/QuestionAdapter.class
 android/support/design/widget/SwipeDismissBehavior$OnDismissListener.class
 android/support/v4/widget/ResourceCursorAdapter.class
-com/pspdfkit/configuration/theming/DocumentThemeConfiguration$Builder.class
 android/support/v4/media/VolumeProviderCompat.class
-rx/Subscription.class
-com/google/android/gms/ads/internal/zzh.class
 rx/android/schedulers/HandlerThreadScheduler.class
+com/google/android/gms/ads/internal/zzh.class
 com/google/android/gms/internal/zzdj.class
 android/support/v7/app/AlertDialog.class
 android/support/design/widget/AppBarLayout.class
@@ -664,7 +628,6 @@ com/google/ads/mediation/EmptyNetworkExtras.class
 android/support/annotation/ColorInt.class
     *;
 com/teched/smartread/MainActivity$58.class
-com/pspdfkit/R$drawable.class
 com/google/android/gms/ads/internal/reward/mediation/client/zzb.class
 android/support/design/widget/Snackbar$Duration.class
 com/arasthel/asyncjob/AsyncJob.class
@@ -689,11 +652,9 @@ com/google/android/gms/wallet/MaskedWallet$Builder.class
 com/teched/smartread/MainActivity$65.class
 android/support/v4/media/MediaMetadataCompat$LongKey.class
 com/google/android/gms/internal/zzbh.class
-com/pspdfkit/ui/PSPDFKitThumbnailGrid.class
 com/teched/smartread/MainActivity$50.class
 android/support/design/R$style.class
 com/google/ads/mediation/MediationAdRequest.class
-com/pspdfkit/framework/events/b$c.class
 com/google/android/gms/plus/PlusShare.class
 com/google/android/gms/internal/zzgb.class
 com/google/android/gms/internal/zzds.class
@@ -702,11 +663,11 @@ com/google/android/gms/internal/zzef.class
 com/google/android/gms/common/ConnectionResult.class
 com/google/android/gms/nearby/sharing/SharedContent.class
 com/google/android/gms/internal/zzby.class
-com/pspdfkit/ui/PSPDFKitThumbnailBar.class
 android/support/v7/app/ActionBar$NavigationMode.class
 android/support/v7/graphics/drawable/DrawerArrowDrawable$ArrowDirection.class
 com/google/android/gms/games/quest/Quest.class
 android/support/v4/app/ActivityCompat$OnRequestPermissionsResultCallback.class
+com/teched/smartread/MainActivity$80.class
 android/support/v7/app/ActionBar$OnNavigationListener.class
 com/google/android/gms/ads/internal/overlay/zzk.class
 com/google/android/gms/internal/zziv.class
@@ -719,7 +680,6 @@ com/google/android/gms/internal/zzgd.class
 com/google/android/gms/ads/internal/overlay/zzc.class
 com/google/android/gms/analytics/HitBuilders$TransactionBuilder.class
 com/google/ads/mediation/MediationAdapter.class
-com/pspdfkit/document/PSPDFDocument.class
 android/support/v7/widget/DefaultItemAnimator.class
 android/support/v4/app/Fragment$SavedState.class
 com/teched/smartread/MainActivity$42.class
@@ -738,8 +698,8 @@ com/facebook/internal/NativeProtocol.class
 com/google/ads/AdRequest.class
 com/teched/smartread/SettingsActivity$3.class
 com/google/android/gms/wallet/fragment/BuyButtonAppearance.class
-android/support/design/widget/Snackbar$4.class
 com/google/android/gms/internal/zzpm.class
+android/support/design/widget/Snackbar$4.class
 com/google/android/gms/internal/zzip.class
 com/google/android/gms/internal/zzfa.class
 com/teched/smartread/MainActivity$57.class
@@ -748,7 +708,6 @@ com/google/android/gms/internal/zzhh.class
 android/support/design/widget/CoordinatorLayout.class
 android/support/annotation/VisibleForTesting.class
 com/google/android/gms/internal/zzea.class
-com/pspdfkit/document/DataProvider.class
 com/google/android/gms/ads/internal/request/zzb.class
 android/support/annotation/InterpolatorRes.class
 com/teched/smartread/MainActivity$31.class
@@ -758,8 +717,8 @@ com/google/android/gms/fitness/Fitness.class
 com/google/android/gms/wallet/CountrySpecification.class
 android/support/annotation/CheckResult.class
 com/google/ads/mediation/customevent/CustomEventInterstitial.class
-com/google/android/gms/internal/zzdr.class
 android/support/design/widget/Snackbar$2.class
+com/google/android/gms/internal/zzdr.class
 com/google/android/gms/common/GooglePlayServicesUtil.class
 com/google/android/gms/analytics/ecommerce/ProductAction.class
 com/google/android/gms/internal/zzgj.class
@@ -769,7 +728,6 @@ android/support/v4/media/session/MediaSessionCompat$1.class
 com/google/android/gms/internal/zzif.class
 com/google/android/gms/internal/zzdn.class
 com/google/android/gms/internal/zzhp.class
-com/pspdfkit/ui/PSPDFKitOutlineView.class
 android/support/v7/app/AlertDialog$Builder.class
 com/path/android/jobqueue/BaseJob.class
 android/support/v4/widget/MaterialProgressDrawable$3.class
@@ -785,8 +743,8 @@ com/teched/smartread/UsersAdapter$ViewHolder.class
 android/support/design/widget/CoordinatorLayout$DefaultBehavior.class
 com/google/android/gms/drive/query/Query$Builder.class
 com/google/android/gms/appstate/AppState.class
-com/google/android/gms/internal/zzgk.class
 com/google/android/gms/internal/zzfn.class
+com/google/android/gms/internal/zzgk.class
 com/arasthel/asyncjob/AsyncJob$AsyncResultAction.class
 com/teched/smartread/MainActivity$63.class
 com/teched/smartread/MainActivity$28.class
@@ -812,31 +770,28 @@ android/support/annotation/FloatRange.class
 com/google/android/gms/internal/zzck.class
 com/google/android/gms/ads/internal/util/client/zzb.class
 android/support/design/widget/Snackbar$Callback$DismissEvent.class
--keep class com.pspdfkit.ui.PSPDFKitAppCompatActivity { <init>(); }
 com/google/android/gms/internal/zzrs.class
 android/support/design/widget/TabLayout$Mode.class
 com/google/android/gms/ads/internal/purchase/zzb.class
-com/google/android/gms/internal/zziu.class
 com/google/android/gms/internal/zzix.class
+com/google/android/gms/internal/zziu.class
 android/support/v4/media/session/PlaybackStateCompatApi22.class
 com/nononsenseapps/filepicker/NewItemFragment$OnNewFolderListener.class
 com/google/android/gms/internal/zzbr.class
 android/support/annotation/MenuRes.class
 com/google/android/gms/ads/internal/purchase/zze.class
 android/support/design/widget/TabLayout$1.class
-com/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener.class
 com/teched/smartread/MainActivity$20.class
 com/google/android/gms/appstate/AppStateManager.class
+com/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener.class
     <init>();
 com/teched/smartread/MainActivity$2.class
 com/google/android/gms/internal/zzgx.class
 com/google/android/gms/auth/GoogleAuthUtil.class
 com/pspdfkit/configuration/page/PageScrollDirection.class
 com/google/android/gms/internal/zzce.class
-com/pspdfkit/R$bool.class
 com/google/android/gms/internal/zzcq.class
 com/google/android/gms/internal/zzgi.class
-com/pspdfkit/framework/model/b.class
 com/google/android/gms/internal/zzhr.class
 bolts/AggregateException.class
 android/support/v7/widget/helper/ItemTouchHelper.class
@@ -847,7 +802,6 @@ com/google/android/gms/ads/internal/formats/zzh.class
 com/teched/smartread/MainActivity$71.class
 com/nononsenseapps/filepicker/R.class
 com/teched/smartread/TeacherBook.class
-com/pspdfkit/ui/PSPDFKitSearchViewInline.class
 com/google/android/gms/internal/zzay.class
 com/google/android/gms/internal/zzfb.class
 com/teched/smartread/LoginActivity.class
@@ -860,8 +814,8 @@ com/facebook/R.class
 com/google/android/gms/internal/zzcy.class
 com/nineoldandroids/animation/Animator.class
 com/teched/smartread/UsersAdapter.class
-com/google/android/gms/internal/zzeu.class
 com/google/android/gms/drive/MetadataBuffer.class
+com/google/android/gms/internal/zzeu.class
 android/support/annotation/BinderThread.class
 com/nononsenseapps/filepicker/R$id.class
 com/google/android/gms/ads/internal/purchase/zzc.class
@@ -875,8 +829,6 @@ com/teched/smartread/MainActivity$27.class
 android/support/design/R$styleable.class
 com/google/android/gms/internal/zzex.class
 android/support/v4/app/NotificationCompat$Builder.class
-com/pspdfkit/R$layout.class
-com/pspdfkit/ui/PSPDFKitSearchViewModular.class
 android/support/v4/widget/SlidingPaneLayout.class
 com/google/android/gms/maps/MapView.class
 android/support/v4/widget/CursorAdapter.class
@@ -884,7 +836,6 @@ android/support/v4/content/ContextCompat.class
 android/support/design/widget/AppBarLayout$Behavior.class
 com/pspdfkit/configuration/activity/PSPDFKitActivityConfiguration$Builder.class
 com/google/android/gms/ads/internal/zzp.class
-com/pspdfkit/R$dimen.class
 android/support/annotation/AnimRes.class
 com/google/android/gms/internal/zzgm.class
 android/support/annotation/CallSuper.class
@@ -898,7 +849,6 @@ android/support/annotation/AnyRes.class
 android/support/annotation/PluralsRes.class
 android/support/v4/widget/SwipeRefreshLayout$OnRefreshListener.class
 com/teched/smartread/MainActivity$69.class
-com/pspdfkit/framework/events/a.class
 com/google/android/gms/internal/zzcf.class
 android/support/v4/widget/SwipeRefreshLayout.class
 android/support/design/widget/Snackbar.class
@@ -909,7 +859,6 @@ com/google/android/gms/ads/internal/zza.class
 com/teched/smartread/MainActivity$39.class
 android/support/v4/app/LoaderManagerImpl.class
 com/google/android/gms/ads/AdActivity.class
-com/pspdfkit/framework/events/b.class
 android/support/v4/media/MediaMetadataCompat.class
 android/support/v4/app/FragmentManagerImpl$4.class
 com/google/android/gms/analytics/internal/Command$1.class
@@ -925,7 +874,6 @@ android/support/v4/app/ActivityCompatApi23.class
 com/google/android/gms/location/places/PlaceFilter$zza.class
 com/quinny898/library/persistentsearch/SearchBox$MenuListener.class
 com/pspdfkit/configuration/theming/ThumbnailGridThemeConfiguration.class
-com/pspdfkit/ui/PSPDFKitAppCompatActivity.class
 com/teched/smartread/MainActivity$6.class
 com/teched/smartread/RecyclerItemClickListener.class
 com/facebook/R$id.class
@@ -934,7 +882,6 @@ android/support/annotation/StyleRes.class
 android/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21.class
 android/support/v4/view/animation/FastOutSlowInInterpolator.class
 com/teched/smartread/SettingsActivity$1.class
-com/pspdfkit/R$integer.class
 com/google/ads/mediation/customevent/CustomEventListener.class
 android/support/v4/media/VolumeProviderCompat$Callback.class
 com/teched/smartread/SettingsActivity$4.class
