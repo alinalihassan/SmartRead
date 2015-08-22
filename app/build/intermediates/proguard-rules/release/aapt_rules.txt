@@ -5,7 +5,7 @@
 -keep class android.support.design.internal.NavigationMenuView { <init>(...); }
 
 # view res/layout/activity_main.xml #generated:255
-# view res/layout/activity_main.xml #generated:624
+# view res/layout/activity_main.xml #generated:631
 # view res/layout/activity_main.xml #generated:69
 # view res/layout/activity_main.xml #generated:93
 # view res/layout/activity_store.xml #generated:64
@@ -16,8 +16,8 @@
 # view res/layout/activity_main.xml #generated:84
 -keep class android.support.design.widget.FloatingActionButton { <init>(...); }
 
-# view res/layout/layout_snackbar.xml #generated:18
-# view sw600dp-v13\res/layout-sw600dp-v13/layout_snackbar.xml #generated:18
+# view res/layout/design_layout_snackbar.xml #generated:18
+# view sw600dp-v13\res/layout-sw600dp-v13/design_layout_snackbar.xml #generated:18
 -keep class android.support.design.widget.Snackbar$SnackbarLayout { <init>(...); }
 
 # view res/layout/activity_main.xml #generated:189
@@ -103,7 +103,7 @@
 # view res/layout/activity_main.xml #generated:50
 # view res/layout/activity_main.xml #generated:78
 # view res/layout/activity_main.xml #generated:98
-# view res/layout/fragment_filepicker.xml #generated:45
+# view res/layout/nnf_fragment_filepicker.xml #generated:44
 -keep class android.support.v7.widget.RecyclerView { <init>(...); }
 
 # view res/layout/abc_search_view.xml #generated:78
@@ -112,13 +112,13 @@
 # view res/layout/abc_screen_toolbar.xml #generated:36
 # view res/layout/activity_main.xml #generated:21
 # view res/layout/activity_main.xml #generated:37
-# view res/layout/fragment_filepicker.xml #generated:26
 # view res/layout/md_drawer_activity.xml #generated:14
+# view res/layout/nnf_fragment_filepicker.xml #generated:26
 # view res/layout/settings_toolbar.xml #generated:2
 # view res/layout/settings_toolbar_l.xml #generated:9
 -keep class android.support.v7.widget.Toolbar { <init>(...); }
 
-# view res/layout/searchbox.xml #generated:78
+# view res/layout/searchbox.xml #generated:79
 -keep class com.balysv.materialmenu.MaterialMenuView { <init>(...); }
 
 # view AndroidManifest.xml #generated:79
@@ -139,8 +139,8 @@
 # view AndroidManifest.xml #generated:106
 -keep class com.google.android.gms.ads.purchase.InAppPurchaseActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:114
--keep class com.google.android.gms.wallet.EnableWalletOptimizationReceiver { <init>(...); }
+# view res/layout/pspdf__you_tube_activity.xml #generated:26
+-keep class com.google.android.youtube.player.YouTubePlayerView { <init>(...); }
 
 # view res/layout/activity_main.xml #generated:1
 # view res/layout/md_drawer_activity.xml #generated:2
@@ -154,11 +154,20 @@
 # view res/layout/md_drawer_view.xml #generated:233
 -keep class com.heinrichreimersoftware.materialdrawer.widget.LinearListView { <init>(...); }
 
-# view res/layout/activity_main.xml #generated:317
--keep class com.joanzapata.pdfview.PDFView { <init>(...); }
-
 # view AndroidManifest.xml #generated:91
 -keep class com.nononsenseapps.filepicker.FilePickerActivity { <init>(...); }
+
+# view res/layout/pspdf__page_view.xml #generated:14
+-keep class com.pspdfkit.framework.views.page.PDFInternalPageView { <init>(...); }
+
+# view res/layout/pspdf__pdf_activity.xml #generated:76
+-keep class com.pspdfkit.ui.PSPDFKitOutlineView { <init>(...); }
+
+# view res/layout/pspdf__pdf_activity.xml #generated:26
+-keep class com.pspdfkit.ui.PSPDFKitThumbnailBar { <init>(...); }
+
+# view res/layout/pspdf__pdf_activity.xml #generated:65
+-keep class com.pspdfkit.ui.PSPDFKitThumbnailGrid { <init>(...); }
 
 # view res/layout/activity_main.xml #generated:246
 -keep class com.quinny898.library.persistentsearch.SearchBox { <init>(...); }
@@ -169,10 +178,10 @@
 # view AndroidManifest.xml #generated:37
 -keep class com.teched.smartread.BackupAgent { <init>(...); }
 
-# view res/layout/activity_main.xml #generated:335
-# view res/layout/activity_main.xml #generated:352
-# view res/layout/activity_main.xml #generated:366
-# view res/layout/activity_main.xml #generated:379
+# view res/layout/activity_main.xml #generated:336
+# view res/layout/activity_main.xml #generated:353
+# view res/layout/activity_main.xml #generated:367
+# view res/layout/activity_main.xml #generated:380
 -keep class com.teched.smartread.CustomTextInputLayout { <init>(...); }
 
 # view AndroidManifest.xml #generated:83
@@ -193,6 +202,6 @@
 # view res/layout/activity_main.xml #generated:183
 -keep class net.yanzm.mth.MaterialTabHost { <init>(...); }
 
-# onClick res/layout/searchbox.xml #generated:66
+# onClick res/layout/searchbox.xml #generated:67
 -keepclassmembers class * { *** mic(...); }
 

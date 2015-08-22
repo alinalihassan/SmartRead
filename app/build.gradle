@@ -16,8 +16,8 @@ android {
         applicationId "com.teched.smartread"
         minSdkVersion 17
         targetSdkVersion 23
-        versionCode 95
-        versionName "4.2.2"
+        versionCode 96
+        versionName "4.2.4"
         multiDexEnabled = true
     }
     lintOptions {
@@ -26,9 +26,10 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'),
                     'proguard-rules.pro'
+            signingConfig = signingConfigs.config
         }
     }
     repositories {
@@ -64,7 +65,7 @@ dependencies {
     compile 'com.facebook.android:facebook-android-sdk:4.3.0'
     compile 'com.sothree.slidinguppanel:library:3.1.1'
     compile 'com.nononsenseapps:filepicker:2.3.1'
-    compile 'com.google.android.gms:play-services:7.8.0'
+    compile 'com.google.android.gms:play-services:6.5+'
     compile 'com.anjlab.android.iab.v3:library:1.0.26'
     compile 'com.path:android-priority-jobqueue:1.1.2'
     compile 'com.nineoldandroids:library:2.4.0'

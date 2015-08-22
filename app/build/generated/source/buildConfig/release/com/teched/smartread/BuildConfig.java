@@ -8,6 +8,6 @@ public final class BuildConfig {
   public static final String APPLICATION_ID = "com.teched.smartread";
   public static final String BUILD_TYPE = "release";
   public static final String FLAVOR = "";
-  public static final int VERSION_CODE = 91;
-  public static final String VERSION_NAME = "3.9.7";
+  public static final int VERSION_CODE = 96;
+  public static final String VERSION_NAME = "4.2.4";
 }

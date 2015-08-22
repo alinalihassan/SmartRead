@@ -17,4 +17,4 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:color="#ffffffff" android:state_selected="true" />
     <item android:color="#99ffffff" />
-</selector><!-- From: file:/Users/yanzm/Project/MaterialTabHost/mth/src/main/res/color/mth_tab_widget_text.xml --><!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/net.yanzm/mth/1.0.4/res/color/mth_tab_widget_text.xml -->
+</selector><!-- From: file:/Users/yanzm/Project/MaterialTabHost/mth/src/main/res/color/mth_tab_widget_text.xml --><!-- From: file:/C:/Users/super/Documents/SmartRead2/app/build/intermediates/exploded-aar/net.yanzm/mth/1.0.4/res/color/mth_tab_widget_text.xml -->

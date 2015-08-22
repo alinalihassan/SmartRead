@@ -1,5 +1,6 @@
 package com.teched.smartread;
 
+import android.Manifest;
 import android.animation.Animator;
 import android.content.Context;
 import android.content.Intent;
@@ -9,6 +10,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Build;
 import android.os.Bundle;
 
 import com.arasthel.asyncjob.AsyncJob;
@@ -143,14 +145,33 @@ public class LoginActivity extends AppCompatActivity implements
             @Override
             public void onClick(View v) {
                 if(isOnline()) {
-                    mSignInClicked = true;
-                    mGoogleApiClient.connect();
+                    if(Build.VERSION.SDK_INT> 22) {
+                        if (checkSelfPermission(Manifest.permission.GET_ACCOUNTS) != PackageManager.PERMISSION_GRANTED)
+                            requestPermissions(new String[]{Manifest.permission.GET_ACCOUNTS}, 3);
+                        else {
+                            mSignInClicked = true;
+                            mGoogleApiClient.connect();
+                        }
+                    }
+                    else {
+                        mSignInClicked = true;
+                        mGoogleApiClient.connect();
+                    }
                 }
                 else
                     Snackbar.make(findViewById(R.id.loginScreen), R.string.no_connection, Snackbar.LENGTH_SHORT)
                             .show();
             }
         });
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        if(requestCode==3) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                mSignInClicked = true;
+                mGoogleApiClient.connect();
+            }
+        }
     }
 
     @Override

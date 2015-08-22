@@ -7,4 +7,4 @@
     <item android:state_pressed="true" android:drawable="@color/md_selected_dark" />
     <item android:drawable="@android:color/transparent" />
 
-</selector><!-- From: file:/C:/Users/Agando/AndroidStudioProjects/libraries/material-drawer/library/src/main/res/drawable/md_selector_dark.xml --><!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.heinrichreimersoftware.materialdrawer/library/2.1.2/res/drawable/md_selector_dark.xml -->
+</selector><!-- From: file:/C:/Users/Agando/AndroidStudioProjects/libraries/material-drawer/library/src/main/res/drawable/md_selector_dark.xml --><!-- From: file:/C:/Users/super/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.heinrichreimersoftware.materialdrawer/library/2.1.2/res/drawable/md_selector_dark.xml -->

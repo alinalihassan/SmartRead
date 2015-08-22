@@ -65,4 +65,4 @@
         android:id="@+id/storeLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-</RelativeLayout><!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/layout/activity_store.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/super/Documents/SmartRead2/app/src/main/res/layout/activity_store.xml -->

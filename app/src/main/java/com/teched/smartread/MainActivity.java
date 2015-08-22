@@ -748,7 +748,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     @Override
                     public void run() {
                         if (isOnline())
-                            refreshStore();
+                            if(adapter6!=null) refreshStore();
                         else {
                             showSnackbar(getResources().getString(R.string.no_connection),Snackbar.LENGTH_SHORT);
                             refreshBooks.setRefreshing(false);
@@ -1272,9 +1272,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         RecyclerView.LayoutManager mLayoutManager4 = new LinearLayoutManager(this);
         mStoreRecyclerView.setLayoutManager(mLayoutManager4);
         mStoreRecyclerView.setItemAnimator(new DefaultItemAnimator());
-        adapter6 = new BookAdapter(booksList, R.layout.bookview, this);
-        mStoreRecyclerView.setAdapter(adapter6);
-        ((BookAdapter) mStoreRecyclerView.getAdapter()).flushFilter();
         mStoreRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getApplicationContext(), mStoreRecyclerView, new RecyclerItemClickListener.OnItemClickListener() {
 
             @Override
@@ -1284,9 +1281,9 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             @Override
             public void onItemClick(View view, int position) {
                 try {
-                    if(!isOnline())
+                    if (!isOnline())
                         showSnackbar(getResources().getString(R.string.no_connection), Snackbar.LENGTH_SHORT);
-                    else if(!readyToPurchase)
+                    else if (!readyToPurchase)
                         showSnackbar("Something went wrong, please try again later", Snackbar.LENGTH_SHORT);
                     else {
                         billingBookID = ((BookAdapter) mStoreRecyclerView.getAdapter()).getID(position);
@@ -1294,10 +1291,11 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                         startActivity(intent);
                     }
 
-                } catch (Exception e) { e.printStackTrace();}
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         }));
-        refreshStore();
 
 
         usersList = new ArrayList<>();
@@ -1878,6 +1876,10 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
     @Override
     public void onBillingInitialized() {
         readyToPurchase = true;
+        adapter6 = new BookAdapter(booksList, R.layout.bookview, this);
+        mStoreRecyclerView.setAdapter(adapter6);
+        ((BookAdapter) mStoreRecyclerView.getAdapter()).flushFilter();
+        refreshStore();
     }
     @Override
     public void onPurchaseHistoryRestored() {
@@ -2532,7 +2534,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     toolbar.setTitle(searchTerm);
                     switch (menuString) {
                         case "Store":
-                            ((BookAdapter) mStoreRecyclerView.getAdapter()).setFilter(searchTerm);
+                            if(adapter6!=null) ((BookAdapter) mStoreRecyclerView.getAdapter()).setFilter(searchTerm);
                             break;
                         case "Class":
                             ((ClassAdapter) adapter4).setFilter(searchTerm);

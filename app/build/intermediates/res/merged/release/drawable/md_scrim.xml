@@ -16,4 +16,4 @@
         android:startColor="@color/md_scrim_start"
         android:endColor="@color/md_scrim_end"
         android:angle="270" />
-</shape><!-- From: file:/C:/Users/Agando/AndroidStudioProjects/libraries/material-drawer/library/src/main/res/drawable/md_scrim.xml --><!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.heinrichreimersoftware.materialdrawer/library/2.1.2/res/drawable/md_scrim.xml -->
+</shape><!-- From: file:/C:/Users/Agando/AndroidStudioProjects/libraries/material-drawer/library/src/main/res/drawable/md_scrim.xml --><!-- From: file:/C:/Users/super/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.heinrichreimersoftware.materialdrawer/library/2.1.2/res/drawable/md_scrim.xml -->
