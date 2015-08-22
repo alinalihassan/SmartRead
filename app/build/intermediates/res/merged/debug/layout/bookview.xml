@@ -57,4 +57,4 @@
             android:textSize="16sp"
             android:textColor="@color/color_accent" />
     </RelativeLayout>
-</android.support.v7.widget.CardView><!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/layout/bookview.xml -->
+</android.support.v7.widget.CardView><!-- From: file:/C:/Users/super/Documents/SmartRead2/app/src/main/res/layout/bookview.xml -->

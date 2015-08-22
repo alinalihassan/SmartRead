@@ -61,4 +61,4 @@
         sothree:arc_text_color="#000000"
         sothree:arc_unfinished_color="?android:colorBackground"
         sothree:arc_finished_color="@color/color_accent"/>
-    </RelativeLayout><!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/layout/statisticsview.xml -->
+    </RelativeLayout><!-- From: file:/C:/Users/super/Documents/SmartRead2/app/src/main/res/layout/statisticsview.xml -->

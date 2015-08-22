@@ -3,4 +3,4 @@
     android:shape="rectangle" android:padding="10dp">
     <solid android:color="@color/color_accent"/>
     <corners android:radius="2dp"/>
-</shape><!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/drawable/purchase_button.xml -->
+</shape><!-- From: file:/C:/Users/super/Documents/SmartRead2/app/src/main/res/drawable/purchase_button.xml -->

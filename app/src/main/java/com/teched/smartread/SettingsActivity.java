@@ -83,10 +83,10 @@ public class SettingsActivity extends PreferenceActivity {
                         ((MainAdapter) MainActivity.listView.getAdapter()).flushFilter();
                         break;
                     }
+                    case "pref_night_mode":
                     case "pref_scroll_direction": {
                         ListPreference listPreference = (ListPreference) findPreference(key);
                         preferences.edit().putInt(key, Integer.valueOf(listPreference.getValue())).apply();
-                        MainActivity.pspdfkitConfiguration = new PSPDFKitConfiguration.Builder(MainActivity.PSPDFKIT_LICENSE_KEY).fitMode(PageFitMode.FIT_TO_SCREEN).scrollDirection(Integer.valueOf(listPreference.getValue())==1? PageScrollDirection.HORIZONTAL:PageScrollDirection.VERTICAL).build();
                         break;
                     }
                 }

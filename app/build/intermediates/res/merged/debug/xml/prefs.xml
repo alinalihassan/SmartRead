@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <PreferenceCategory
         android:title="General">
@@ -10,23 +11,32 @@
             android:selectable="true"
             android:defaultValue="false"/>
         <ListPreference
+            android:key="pref_night_mode"
+            android:title="Night Mode"
+            android:summary="%s"
+            android:entries="@array/nightentries"
+            android:entryValues="@array/nightvalues"
+            android:defaultValue="1"
+            android:selectable="true"/>
+        <ListPreference
             android:key="pref_scroll_direction"
             android:title="Scroll Direction"
-            android:summary="Scroll direction of the document"
+            android:summary="%s"
             android:entries="@array/scrollentries"
             android:entryValues="@array/scrollvalues"
+            android:defaultValue="1"
             android:selectable="true"/>
         <ListPreference
             android:key="pref_frequency"
             android:title="Sync Frequency"
-            android:summary="Periodic time between sync updates"
+            android:summary="%s"
             android:entries="@array/syncentries"
             android:entryValues="@array/syncvalues"
-            android:defaultValue="2"/>
+            android:defaultValue="1"/>
         <ListPreference
             android:key="pref_sort"
             android:title="Sorting method"
-            android:summary="Sort method for library"
+            android:summary="%s"
             android:entries="@array/sortentries"
             android:entryValues="@array/sortvalues"
             android:defaultValue="1"/>
@@ -49,4 +59,5 @@
             android:key="privacy_policy"
             android:title="Privacy Policy"/>
     </PreferenceCategory>
-</PreferenceScreen><!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/src/main/res/xml/prefs.xml -->
+
+</PreferenceScreen><!-- From: file:/C:/Users/super/Documents/SmartRead2/app/src/main/res/xml/prefs.xml -->

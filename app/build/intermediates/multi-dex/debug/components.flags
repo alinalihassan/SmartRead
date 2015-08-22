@@ -1,14 +1,14 @@
--injars 'C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\multi-dex\debug\allclasses.jar'
--outjars 'C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\multi-dex\debug\componentClasses.jar'
+-injars 'C:\Users\super\Documents\SmartRead2\app\build\intermediates\multi-dex\debug\allclasses.jar'
+-outjars 'C:\Users\super\Documents\SmartRead2\app\build\intermediates\multi-dex\debug\componentClasses.jar'
 
--libraryjars 'C:\Users\superalin98\AppData\Local\Android\sdk\build-tools\22.0.1\lib\shrinkedAndroid.jar'
+-libraryjars 'C:\Users\super\AppData\Local\Android\sdk\build-tools\23.0.0\lib\shrinkedAndroid.jar'
 
 -forceprocessing
 -dontoptimize
 -dontobfuscate
 -dontpreverify
 -dontwarn
--printconfiguration 'C:\Users\superalin98\Documents\SmartRead2\app\build\intermediates\multi-dex\debug\components.flags'
+-printconfiguration 'C:\Users\super\Documents\SmartRead2\app\build\intermediates\multi-dex\debug\components.flags'
 
 
 -keep class com.facebook.FacebookContentProvider {
@@ -53,10 +53,6 @@
 }
 
 -keep class com.google.android.gms.ads.purchase.InAppPurchaseActivity {
-    <init>();
-}
-
--keep class com.google.android.gms.wallet.EnableWalletOptimizationReceiver {
     <init>();
 }
 

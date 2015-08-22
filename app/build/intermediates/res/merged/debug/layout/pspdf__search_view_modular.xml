@@ -60,4 +60,4 @@
         android:layout_weight="1"
         android:choiceMode="singleChoice" />
 
-</LinearLayout><!-- From: file:/Users/jernej/Workspace/PSPDFKit/PSPDFKit/android/pspdfkit/src/main/res/layout/pspdf__search_view_modular.xml --><!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.pspdfkit/pspdfkit/1.2.3/res/layout/pspdf__search_view_modular.xml -->
+</LinearLayout><!-- From: file:/Users/jernej/Workspace/PSPDFKit/PSPDFKit/android/pspdfkit/src/main/res/layout/pspdf__search_view_modular.xml --><!-- From: file:/C:/Users/super/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.pspdfkit/pspdfkit/1.2.3/res/layout/pspdf__search_view_modular.xml -->

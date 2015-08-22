@@ -4,4 +4,4 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="start"
-    android:fitsSystemWindows="true" /><!-- From: file:/C:/Users/Agando/AndroidStudioProjects/libraries/material-drawer/library/src/main/res/layout/md_drawer_frame_layout.xml --><!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.heinrichreimersoftware.materialdrawer/library/2.1.2/res/layout/md_drawer_frame_layout.xml -->
+    android:fitsSystemWindows="true" /><!-- From: file:/C:/Users/Agando/AndroidStudioProjects/libraries/material-drawer/library/src/main/res/layout/md_drawer_frame_layout.xml --><!-- From: file:/C:/Users/super/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.heinrichreimersoftware.materialdrawer/library/2.1.2/res/layout/md_drawer_frame_layout.xml -->

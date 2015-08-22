@@ -58,7 +58,6 @@ import android.text.Editable;
 import android.text.InputFilter;
 import android.text.TextWatcher;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -235,7 +234,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         bp = new BillingProcessor(this, getResources().getString(R.string.license_key), this);
         jobManager = new JobManager(this);
         final SharedPreferences prefs = this.getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE);
-        pspdfkitConfiguration = new PSPDFKitConfiguration.Builder(PSPDFKIT_LICENSE_KEY).fitMode(PageFitMode.FIT_TO_SCREEN).scrollDirection(prefs.getInt("pref_scroll_direction",1)==1?PageScrollDirection.HORIZONTAL:PageScrollDirection.VERTICAL).build();
         GregorianCalendar c = new GregorianCalendar();
         c.getTime();
         if(prefs.getInt("Day",0)!=0) {
@@ -283,6 +281,8 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         final MaterialMenuDrawable materialMenu = new MaterialMenuDrawable(this, Color.WHITE, MaterialMenuDrawable.Stroke.THIN);
         drawer = (DrawerFrameLayout) findViewById(R.id.drawer);
         search = (SearchBox) findViewById(R.id.searchbox);
+        search.enableVoiceRecognition(this);
+        search.setLogoText("");
         teacher = (CoordinatorLayout) findViewById(R.id.teacher);
         panelLayout = (SlidingUpPanelLayout) findViewById(R.id.sliding_layout);
         Button nextQuestion = (Button) findViewById(R.id.questionNext);
@@ -1600,7 +1600,14 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                     final JSONObject mainObject2 = mainObject;
                     try {
                         if (pdfFile != null) {
-                            fragment = PSPDFKitFragment.newInstance(Uri.fromFile(cposition),pspdfkitConfiguration);
+                            pspdfkitConfiguration = new PSPDFKitConfiguration.Builder(PSPDFKIT_LICENSE_KEY)
+                                    .fitMode(PageFitMode.FIT_TO_SCREEN)
+                                    .scrollDirection(prefs.getInt("pref_scroll_direction",1)==1?PageScrollDirection.HORIZONTAL:PageScrollDirection.VERTICAL)
+                                    .toGrayscale(isNight())
+                                    .invertColors(isNight())
+                                    .build();
+                            fragment = PSPDFKitFragment.newInstance(Uri.fromFile(cposition), pspdfkitConfiguration);
+                            fragment.setBackgroundColor(isNight()?Color.BLACK:Color.WHITE);
                             fragment.setPage(mainObject.getInt("LastPage") != 0 ? mainObject.getInt("LastPage") : 0);
                             fragment.setDocumentListener(new DocumentListener() {
                                 @Override
@@ -1670,7 +1677,14 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             TextView title = (TextView) findViewById(R.id.pdfTitle);
             title.setText(teacherFile.getName().replace(".pdf", ""));
             AnimateTeacher(true);
-            fragment = PSPDFKitFragment.newInstance(Uri.fromFile(teacherFile),pspdfkitConfiguration);
+            pspdfkitConfiguration = new PSPDFKitConfiguration.Builder(PSPDFKIT_LICENSE_KEY)
+                    .fitMode(PageFitMode.FIT_TO_SCREEN)
+                    .scrollDirection(this.getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE).getInt("pref_scroll_direction", 1)==1?PageScrollDirection.HORIZONTAL:PageScrollDirection.VERTICAL)
+                    .toGrayscale(isNight())
+                    .invertColors(isNight())
+                    .build();
+            fragment = PSPDFKitFragment.newInstance(Uri.fromFile(teacherFile), pspdfkitConfiguration);
+            fragment.setBackgroundColor(isNight()?Color.BLACK:Color.WHITE);
             fragment.setPage(0);
             new Handler().postDelayed(new Runnable() {
                 @Override
@@ -2526,9 +2540,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         }
     }
 
-    public void mic(View v) {
-        search.micClick(this);
-    }
 
     protected void closeSearch() {
         search.hideCircularly(this);
@@ -3247,5 +3258,18 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             return responseCode == 200;
         } catch (Exception e) {e.printStackTrace(); }
         return false;
+    }
+    public boolean isNight() {
+        int value = this.getSharedPreferences("com.teched.smartread", Context.MODE_PRIVATE).getInt("pref_night_mode",1);
+        if(value==1)
+            return false;
+        else if(value==2)
+            return true;
+        else {
+            Calendar cal = Calendar.getInstance();
+            int hour = cal.get(Calendar.HOUR_OF_DAY);
+            return hour < 6 || hour > 18;
+        }
+
     }
 }

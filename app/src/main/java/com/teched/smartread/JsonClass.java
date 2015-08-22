@@ -1,6 +1,5 @@
 package com.teched.smartread;
 
-import org.apache.http.util.ByteArrayBuffer;
 import org.json.JSONObject;
 
 import java.io.BufferedInputStream;

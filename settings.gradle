@@ -1,1 +1,1 @@
-include ':app', ':PersistentSearch', ':facebook'
+include ':app', ':facebook'

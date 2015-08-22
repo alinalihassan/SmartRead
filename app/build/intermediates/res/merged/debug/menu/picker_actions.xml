@@ -18,10 +18,10 @@
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:id="@+id/action_createdir"
-        android:title="@string/new_folder"
+    <item android:id="@+id/nnf_action_createdir"
+        android:title="@string/nnf_new_folder"
         app:showAsAction="always"
         android:orderInCategory="1"
-        android:icon="@drawable/ic_collections_add_collection"
+        android:icon="@drawable/nnf_ic_collections_add_collection"
         />
-</menu><!-- From: file:/home/jonas/workspace/NoNonsenseFilePicker/library/src/main/res/menu/picker_actions.xml --><!-- From: file:/C:/Users/superalin98/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.nononsenseapps/filepicker/2.1/res/menu/picker_actions.xml -->
+</menu><!-- From: file:/home/jonas/workspace/NoNonsenseFilePicker/library/src/main/res/menu/picker_actions.xml --><!-- From: file:/C:/Users/super/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.nononsenseapps/filepicker/2.3.1/res/menu/picker_actions.xml -->
