@@ -33,6 +33,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.view.View;
@@ -145,14 +146,8 @@ public class LoginActivity extends AppCompatActivity implements
             @Override
             public void onClick(View v) {
                 if(isOnline()) {
-                    if(Build.VERSION.SDK_INT> 22) {
-                        if (checkSelfPermission(Manifest.permission.GET_ACCOUNTS) != PackageManager.PERMISSION_GRANTED)
-                            requestPermissions(new String[]{Manifest.permission.GET_ACCOUNTS}, 3);
-                        else {
-                            mSignInClicked = true;
-                            mGoogleApiClient.connect();
-                        }
-                    }
+                    if (ContextCompat.checkSelfPermission(getApplicationContext(),Manifest.permission.GET_ACCOUNTS) != PackageManager.PERMISSION_GRANTED)
+                        requestPermissions(new String[]{Manifest.permission.GET_ACCOUNTS}, 3);
                     else {
                         mSignInClicked = true;
                         mGoogleApiClient.connect();

@@ -57,6 +57,7 @@ import android.support.v7.widget.Toolbar;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.text.Editable;
 import android.text.InputFilter;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.DisplayMetrics;
 import android.view.Menu;
@@ -343,26 +344,6 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         final ViewPager viewPager2 = (ViewPager) findViewById(R.id.overviewpager);
         viewPager2.setAdapter(pagerAdapter);
         viewPager2.setOnPageChangeListener(tabHost);
-        final ViewTreeObserver viewTreeObserver = getWindow().getDecorView().getViewTreeObserver();
-        viewTreeObserver.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-            @Override
-            public void onGlobalLayout() {
-                View menuButton = findViewById(R.id.action_search);
-                View menuButton2 = findViewById(R.id.action_join);
-                if (menuButton != null && menuButton2 != null && !showcaseEvent) {
-                    showcaseEvent = true;
-                    ShowcaseConfig config = new ShowcaseConfig();
-                    config.setDelay(250);
-                    MaterialShowcaseSequence sequence = new MaterialShowcaseSequence(activity,"1");
-                    sequence.setConfig(config);
-                    sequence.addSequenceItem(menuButton, "Use this to search among contents and books by title or author", "GOT IT");
-                    sequence.addSequenceItem(menuButton2, "Use this to join classes using an access code", "GOT IT");
-                    sequence.start();
-                }
-            }
-        });
-
-
         tabHost.setOnTabChangeListener(new MaterialTabHost.OnTabChangeListener() {
             @Override
             public void onTabSelected(int position) {
@@ -408,7 +389,7 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
         teacherFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), FilePickerActivity.class);
+                Intent i = new Intent(getApplicationContext(), FilteredFilePickerActivity.class);
 
                 i.putExtra(FilePickerActivity.EXTRA_ALLOW_MULTIPLE, false);
                 i.putExtra(FilePickerActivity.EXTRA_ALLOW_CREATE_DIR, false);
@@ -417,6 +398,24 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
                 i.putExtra(FilePickerActivity.EXTRA_START_PATH, "/storage/emulated/0/");
 
                 startActivityForResult(i, FILE_CODE);
+            }
+        });
+        final ViewTreeObserver viewTreeObserver = getWindow().getDecorView().getViewTreeObserver();
+        viewTreeObserver.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                View menuButton = findViewById(R.id.action_search);
+                View menuButton2 = findViewById(R.id.action_join);
+                if (menuButton != null && menuButton2 != null && !showcaseEvent) {
+                    showcaseEvent = true;
+                    ShowcaseConfig config = new ShowcaseConfig();
+                    config.setDelay(250);
+                    MaterialShowcaseSequence sequence = new MaterialShowcaseSequence(activity, "1");
+                    sequence.setConfig(config);
+                    sequence.addSequenceItem(menuButton, "Use this to search among contents and books by title or author", "GOT IT");
+                    sequence.addSequenceItem(menuButton2, "Use this to join classes using an access code", "GOT IT");
+                    sequence.start();
+                }
             }
         });
         classFab.setOnClickListener(new View.OnClickListener() {
@@ -3315,6 +3314,5 @@ public class MainActivity extends AppCompatActivity implements Serializable,Bill
             int hour = cal.get(Calendar.HOUR_OF_DAY);
             return hour < 6 || hour > 18;
         }
-
     }
 }
