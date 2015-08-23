@@ -9,21 +9,17 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
-import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
-
-import com.pspdfkit.configuration.PSPDFKitConfiguration;
-import com.pspdfkit.configuration.page.PageFitMode;
-import com.pspdfkit.configuration.page.PageScrollDirection;
 
 import org.json.JSONObject;
 

@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckedTextView;
+
 import java.util.List;
 
 public class DistributeAdapter extends RecyclerView.Adapter<DistributeAdapter.ViewHolder> {
