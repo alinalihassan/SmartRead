@@ -1,0 +1,17 @@
+-keep class com.facebook.FacebookContentProvider { <init>(); }
+-keep class null {
+    <init>();
+    void attachBaseContext(android.content.Context);
+}
+-keep class com.teched.smartread.MainActivity { <init>(); }
+-keep class com.teched.smartread.SettingsActivity { <init>(); }
+-keep class com.facebook.FacebookActivity { <init>(); }
+-keep class com.teched.smartread.LoginActivity { <init>(); }
+-keep class com.teched.smartread.StoreActivity { <init>(); }
+-keep class com.teched.smartread.FilteredFilePickerActivity { <init>(); }
+-keep public class * extends android.app.backup.BackupAgent {
+    <init>();
+}
+-keep public class * extends java.lang.annotation.Annotation {
+    *;
+}

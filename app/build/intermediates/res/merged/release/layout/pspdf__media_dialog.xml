@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ pspdf__media_dialog.xml
+  ~   PSPDFKit
+  ~
+  ~   Copyright (c) 2014-2015 PSPDFKit GmbH. All rights reserved.
+  ~
+  ~   THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
+  ~   AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE PSPDFKIT LICENSE AGREEMENT.
+  ~   UNAUTHORIZED REPRODUCTION OR DISTRIBUTION IS SUBJECT TO CIVIL AND CRIMINAL PENALTIES.
+  ~   This notice may not be removed from this file.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:background="#000000"
+              android:id="@+id/pspdf__media_dialog_root">
+
+    <ProgressBar
+        android:id="@+id/pspdf__loading_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout><!-- From: file:/Users/jernej/Workspace/PSPDFKit/PSPDFKit/android/pspdfkit/src/main/res/layout/pspdf__media_dialog.xml --><!-- From: file:/C:/Users/super/Documents/SmartRead2/app/build/intermediates/exploded-aar/com.pspdfkit/pspdfkit/1.2.3/res/layout/pspdf__media_dialog.xml -->
